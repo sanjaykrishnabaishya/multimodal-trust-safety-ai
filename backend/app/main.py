@@ -13,8 +13,8 @@ from app.moderation_schemas import (
     ModerationResponse,
     ModerationTextRequest,
 )
-from app.services.moderation_service import (
-    moderate_text,
+from app.services.fusion_service import (
+    fuse_moderation_decision,
 )
 
 
@@ -22,9 +22,10 @@ app = FastAPI(
     title="AI Trust & Safety API",
     description=(
         "Multimodal extraction, moderation, "
-        "and policy-retrieval API."
+        "policy retrieval, and decision-fusion API "
+        "for text, documents, images, and videos."
     ),
-    version="0.4.0",
+    version="0.5.0",
 )
 
 app.include_router(extraction_router)
@@ -39,7 +40,7 @@ def home() -> dict[str, str]:
             "AI Trust & Safety API is running."
         ),
         "documentation": "/docs",
-        "version": "0.4.0",
+        "version": "0.5.0",
     }
 
 
@@ -47,6 +48,7 @@ def home() -> dict[str, str]:
 def health_check() -> dict[str, str]:
     return {
         "status": "healthy",
+        "version": "0.5.0",
     }
 
 
@@ -58,14 +60,23 @@ def health_check() -> dict[str, str]:
 def legacy_moderate_content(
     request: ModerationTextRequest,
 ) -> ModerationResponse:
-    decision = moderate_text(
+    decision = fuse_moderation_decision(
         text=request.text,
         source_context=request.source_context,
+        input_sources=["text"],
+    )
+
+    fusion_warnings = decision.pop(
+        "fusion_warnings",
+        [],
     )
 
     return ModerationResponse(
         content_type="text",
         source_context=request.source_context,
-        analyzed_text_preview=request.text[:500],
+        analyzed_text_preview=(
+            request.text[:500]
+        ),
+        warnings=fusion_warnings,
         **decision,
     )

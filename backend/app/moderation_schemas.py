@@ -52,6 +52,20 @@ class ModerationResponse(BaseModel):
     matched_signals: list[str] = Field(
         default_factory=list
     )
+    decision_sources: list[str] = Field(
+        default_factory=list
+    )
+
+    rag_used: bool = False
+    rag_consensus: dict[str, Any] = Field(
+        default_factory=dict
+    )
+    retrieved_evidence: list[
+        dict[str, Any]
+    ] = Field(
+        default_factory=list
+    )
+
     analyzed_text_preview: str = ""
     extraction_metadata: dict[str, Any] = Field(
         default_factory=dict

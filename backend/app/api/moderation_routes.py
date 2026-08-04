@@ -17,6 +17,9 @@ from app.services.document_processor import (
     DocumentProcessingError,
     process_document,
 )
+from app.services.fusion_service import (
+    fuse_moderation_decision,
+)
 from app.services.image_processor import (
     SUPPORTED_IMAGE_EXTENSIONS,
     ImageProcessingError,
@@ -24,7 +27,9 @@ from app.services.image_processor import (
 )
 from app.services.moderation_service import (
     combine_extracted_signals,
-    moderate_text,
+)
+from app.services.rag_service import (
+    get_rag_status,
 )
 from app.services.video_processor import (
     SUPPORTED_VIDEO_EXTENSIONS,
@@ -49,11 +54,18 @@ ALL_SUPPORTED_EXTENSIONS = (
 
 @router.get("/health")
 def moderation_health() -> dict:
+    rag_status = get_rag_status()
+
     return {
         "status": "available",
-        "engine": "baseline-rule-engine",
-        "rag_connected": False,
-        "visual_model_connected": False,
+        "engine": "multimodal-decision-fusion",
+        "rule_engine_connected": True,
+        "rag_connected": rag_status[
+            "available"
+        ],
+        "visual_model_connected": True,
+        "ocr_connected": True,
+        "transcription_connected": True,
     }
 
 
@@ -64,17 +76,26 @@ def moderation_health() -> dict:
 def moderate_plain_text(
     request: ModerationTextRequest,
 ) -> ModerationResponse:
-    decision = moderate_text(
-        text=request.text,
+    cleaned_text = request.text.strip()
+
+    decision = fuse_moderation_decision(
+        text=cleaned_text,
         source_context=request.source_context,
+        input_sources=["text"],
     )
 
-    preview = request.text.strip()[:500]
+    fusion_warnings = decision.pop(
+        "fusion_warnings",
+        [],
+    )
 
     return ModerationResponse(
         content_type="text",
         source_context=request.source_context,
-        analyzed_text_preview=preview,
+        analyzed_text_preview=(
+            cleaned_text[:500]
+        ),
+        warnings=fusion_warnings,
         **decision,
     )
 
@@ -87,9 +108,14 @@ async def moderate_uploaded_file(
     file: UploadFile = File(...),
     source_context: str = Form(default="user"),
 ) -> ModerationResponse:
-    original_name = file.filename or "unnamed_file"
+    original_name = (
+        file.filename or "unnamed_file"
+    )
     safe_name = Path(original_name).name
-    extension = Path(safe_name).suffix.lower()
+
+    extension = Path(
+        safe_name
+    ).suffix.lower()
 
     if extension not in ALL_SUPPORTED_EXTENSIONS:
         allowed = ", ".join(
@@ -130,6 +156,7 @@ async def moderate_uploaded_file(
     try:
         if extension in SUPPORTED_DOCUMENT_EXTENSIONS:
             content_type = "document"
+
             extraction = process_document(
                 safe_name,
                 file_bytes,
@@ -137,6 +164,7 @@ async def moderate_uploaded_file(
 
         elif extension in SUPPORTED_IMAGE_EXTENSIONS:
             content_type = "image"
+
             extraction = process_image(
                 safe_name,
                 file_bytes,
@@ -144,6 +172,7 @@ async def moderate_uploaded_file(
 
         else:
             content_type = "video"
+
             extraction = process_video(
                 safe_name,
                 file_bytes,
@@ -159,42 +188,84 @@ async def moderate_uploaded_file(
             detail=str(exc),
         ) from exc
 
-    combined_text = combine_extracted_signals(
-        extracted_text=extraction.get(
-            "extracted_text",
-            "",
-        ),
-        ocr_text=extraction.get(
-            "ocr_text",
-            "",
-        ),
-        audio_transcript=extraction.get(
-            "audio_transcript",
-            "",
-        ),
-        visual_description=extraction.get(
-            "visual_description",
-            "",
-        ),
+    extracted_text = extraction.get(
+        "extracted_text",
+        "",
+    )
+    ocr_text = extraction.get(
+        "ocr_text",
+        "",
+    )
+    audio_transcript = extraction.get(
+        "audio_transcript",
+        "",
+    )
+    visual_description = extraction.get(
+        "visual_description",
+        "",
     )
 
-    decision = moderate_text(
+    combined_text = combine_extracted_signals(
+        extracted_text=extracted_text,
+        ocr_text=ocr_text,
+        audio_transcript=audio_transcript,
+        visual_description=visual_description,
+    )
+
+    input_sources: list[str] = []
+
+    if extracted_text.strip():
+        input_sources.append(
+            "extracted_text"
+        )
+
+    if ocr_text.strip():
+        input_sources.append(
+            "ocr_text"
+        )
+
+    if audio_transcript.strip():
+        input_sources.append(
+            "audio_transcript"
+        )
+
+    if visual_description.strip():
+        input_sources.append(
+            "visual_description"
+        )
+
+    decision = fuse_moderation_decision(
         text=combined_text,
         source_context=source_context,
+        input_sources=input_sources,
+    )
+
+    fusion_warnings = decision.pop(
+        "fusion_warnings",
+        [],
+    )
+
+    extraction_warnings = extraction.get(
+        "warnings",
+        [],
+    )
+
+    all_warnings = (
+        extraction_warnings
+        + fusion_warnings
     )
 
     return ModerationResponse(
         content_type=content_type,
         file_name=safe_name,
         source_context=source_context,
-        analyzed_text_preview=combined_text[:500],
+        analyzed_text_preview=(
+            combined_text[:500]
+        ),
         extraction_metadata=extraction.get(
             "metadata",
             {},
         ),
-        warnings=extraction.get(
-            "warnings",
-            [],
-        ),
+        warnings=all_warnings,
         **decision,
     )
