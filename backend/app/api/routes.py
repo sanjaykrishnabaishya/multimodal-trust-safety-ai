@@ -22,7 +22,9 @@ from app.services.image_processor import (
     ImageProcessingError,
     process_image,
 )
-from app.services.ocr_service import get_ocr_status
+from app.services.ocr_service import (
+    get_ocr_status,
+)
 from app.services.transcription_service import (
     get_transcription_status,
 )
@@ -30,6 +32,9 @@ from app.services.video_processor import (
     SUPPORTED_VIDEO_EXTENSIONS,
     VideoProcessingError,
     process_video,
+)
+from app.services.visual_service import (
+    get_visual_status,
 )
 
 
@@ -65,6 +70,11 @@ def transcription_health() -> dict:
     return get_transcription_status()
 
 
+@router.get("/visual-health")
+def visual_health() -> dict:
+    return get_visual_status()
+
+
 @router.post(
     "/text",
     response_model=ExtractionResponse,
@@ -98,6 +108,7 @@ async def extract_file(
     original_name = (
         file.filename or "unnamed_file"
     )
+
     safe_name = Path(original_name).name
     extension = Path(
         safe_name

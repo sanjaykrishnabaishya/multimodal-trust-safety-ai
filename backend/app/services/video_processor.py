@@ -13,6 +13,10 @@ from app.services.transcription_service import (
     TranscriptionProcessingError,
     transcribe_media,
 )
+from app.services.visual_service import (
+    VisualProcessingError,
+    describe_pil_image,
+)
 
 
 SUPPORTED_VIDEO_EXTENSIONS = {
@@ -24,6 +28,7 @@ SUPPORTED_VIDEO_EXTENSIONS = {
 }
 
 MAX_SAMPLE_FRAMES = 12
+MAX_VISUAL_DESCRIPTION_FRAMES = 4
 
 
 class VideoProcessingError(Exception):
@@ -54,7 +59,9 @@ def process_video(
     file_name: str,
     file_bytes: bytes,
 ) -> dict:
-    extension = Path(file_name).suffix.lower()
+    extension = Path(
+        file_name
+    ).suffix.lower()
 
     if extension not in SUPPORTED_VIDEO_EXTENSIONS:
         raise VideoProcessingError(
@@ -72,24 +79,35 @@ def process_video(
             temporary_file.write(file_bytes)
             temporary_path = temporary_file.name
 
-        capture = cv2.VideoCapture(temporary_path)
+        capture = cv2.VideoCapture(
+            temporary_path
+        )
 
         if not capture.isOpened():
             raise VideoProcessingError(
-                "The video could not be opened or decoded."
+                "The video could not be "
+                "opened or decoded."
             )
 
         fps = float(
-            capture.get(cv2.CAP_PROP_FPS)
+            capture.get(
+                cv2.CAP_PROP_FPS
+            )
         )
         frame_count = int(
-            capture.get(cv2.CAP_PROP_FRAME_COUNT)
+            capture.get(
+                cv2.CAP_PROP_FRAME_COUNT
+            )
         )
         width = int(
-            capture.get(cv2.CAP_PROP_FRAME_WIDTH)
+            capture.get(
+                cv2.CAP_PROP_FRAME_WIDTH
+            )
         )
         height = int(
-            capture.get(cv2.CAP_PROP_FRAME_HEIGHT)
+            capture.get(
+                cv2.CAP_PROP_FRAME_HEIGHT
+            )
         )
 
         duration_seconds = (
@@ -102,7 +120,8 @@ def process_video(
             MAX_SAMPLE_FRAMES,
             max(
                 1,
-                int(duration_seconds // 5) + 1,
+                int(duration_seconds // 5)
+                + 1,
             ),
         )
 
@@ -113,8 +132,13 @@ def process_video(
 
         sample_timestamps: list[float] = []
         frame_ocr_results: list[str] = []
+        frame_visual_results: list[str] = []
+        seen_visual_descriptions: set[str] = set()
+
         readable_frame_count = 0
+        visual_frame_count = 0
         ocr_failure_count = 0
+        visual_failure_count = 0
 
         for position in positions:
             capture.set(
@@ -143,16 +167,16 @@ def process_video(
             )
             readable_frame_count += 1
 
+            rgb_frame = cv2.cvtColor(
+                frame,
+                cv2.COLOR_BGR2RGB,
+            )
+
+            pil_image = Image.fromarray(
+                rgb_frame
+            )
+
             try:
-                rgb_frame = cv2.cvtColor(
-                    frame,
-                    cv2.COLOR_BGR2RGB,
-                )
-
-                pil_image = Image.fromarray(
-                    rgb_frame
-                )
-
                 detected_text = (
                     extract_text_from_pil_image(
                         pil_image
@@ -168,6 +192,42 @@ def process_video(
 
             except OCRProcessingError:
                 ocr_failure_count += 1
+
+            if (
+                visual_frame_count
+                < MAX_VISUAL_DESCRIPTION_FRAMES
+            ):
+                try:
+                    description = (
+                        describe_pil_image(
+                            pil_image
+                        )
+                    ).strip()
+
+                    visual_frame_count += 1
+
+                    normalized_description = (
+                        description.lower()
+                    )
+
+                    if (
+                        description
+                        and normalized_description
+                        not in seen_visual_descriptions
+                    ):
+                        seen_visual_descriptions.add(
+                            normalized_description
+                        )
+
+                        frame_visual_results.append(
+                            f"[Frame at "
+                            f"{rounded_timestamp} seconds] "
+                            f"{description}"
+                        )
+
+                except VisualProcessingError:
+                    visual_failure_count += 1
+                    visual_frame_count += 1
 
         if readable_frame_count == 0:
             raise VideoProcessingError(
@@ -189,13 +249,14 @@ def process_video(
 
             if not audio_transcript:
                 transcription_warning = (
-                    "No intelligible speech was detected "
-                    "in the video audio."
+                    "No intelligible speech was "
+                    "detected in the video audio."
                 )
 
         except TranscriptionProcessingError as exc:
             transcription_warning = (
-                f"Speech transcription warning: {exc}"
+                "Speech transcription warning: "
+                f"{exc}"
             )
 
         metadata = {
@@ -213,7 +274,18 @@ def process_video(
             "frames_with_ocr_text": len(
                 frame_ocr_results
             ),
-            "ocr_failure_count": ocr_failure_count,
+            "visually_analyzed_frame_count": (
+                visual_frame_count
+            ),
+            "unique_visual_description_count": (
+                len(frame_visual_results)
+            ),
+            "ocr_failure_count": (
+                ocr_failure_count
+            ),
+            "visual_failure_count": (
+                visual_failure_count
+            ),
             "sample_timestamps_seconds": (
                 sample_timestamps
             ),
@@ -221,24 +293,39 @@ def process_video(
         }
 
         warnings = [
-            "Video metadata and sample frames "
+            "Video metadata and sampled frames "
             "were processed.",
-            "Sampled frames were not permanently stored.",
-            "OCR checked visible text in sampled frames.",
-            "Full visual scene understanding has "
-            "not been connected yet.",
+            "Sampled frames were not "
+            "permanently stored.",
+            "OCR used a minimum-confidence filter.",
+            "Visual descriptions were generated "
+            "from a limited number of frames.",
+            "General visual captions can be "
+            "incomplete or inaccurate.",
         ]
 
         if not frame_ocr_results:
             warnings.append(
-                "No readable English text was detected "
-                "in the sampled video frames."
+                "No sufficiently confident English "
+                "text was detected in sampled frames."
+            )
+
+        if not frame_visual_results:
+            warnings.append(
+                "No visual frame description "
+                "was generated."
             )
 
         if ocr_failure_count:
             warnings.append(
-                f"OCR failed on {ocr_failure_count} "
-                f"sampled frame(s)."
+                f"OCR failed on "
+                f"{ocr_failure_count} frame(s)."
+            )
+
+        if visual_failure_count:
+            warnings.append(
+                f"Visual description failed on "
+                f"{visual_failure_count} frame(s)."
             )
 
         if transcription_warning:
@@ -251,7 +338,9 @@ def process_video(
             "ocr_text": "\n\n".join(
                 frame_ocr_results
             ),
-            "visual_description": "",
+            "visual_description": "\n".join(
+                frame_visual_results
+            ),
             "metadata": metadata,
             "warnings": warnings,
         }
@@ -271,9 +360,13 @@ def process_video(
 
         if (
             temporary_path
-            and os.path.exists(temporary_path)
+            and os.path.exists(
+                temporary_path
+            )
         ):
             try:
-                os.remove(temporary_path)
+                os.remove(
+                    temporary_path
+                )
             except OSError:
                 pass
