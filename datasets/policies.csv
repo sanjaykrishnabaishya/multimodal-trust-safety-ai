@@ -1,0 +1,10 @@
+﻿category,default_severity,default_action,human_review_required,notes
+Child Abuse,Critical,Block and escalate,True,Never store explicit child exploitation media. Use safe descriptions and escalate suspected cases.
+Spam,Low,Limit distribution,False,"Consider repetition, consent, relevance, and sender behaviour."
+Scam,High,Block and warn,False,"Look for credential theft, payment requests, impersonation, and unrealistic returns."
+Harassment/Cyberbullying,Medium,Restrict and warn,False,"Consider targeting, repetition, power imbalance, humour, and credible threats."
+Hate Speech,High,Block,True,"Distinguish attacks from counterspeech, news reporting, and education."
+Fake News,Medium,Label and reduce distribution,True,"Check evidence, source reliability, satire, corrections, and potential real-world harm."
+Violence,High,Block or show warning,True,"Differentiate threats and graphic media from news, history, sport, and gaming."
+Nudity,High,Block or age-restrict,True,"Allow contextual exceptions for medical, educational, artistic, and news content."
+Normal/Ignore,None,Allow,False,Content has no meaningful policy violation.

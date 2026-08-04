@@ -1,0 +1,63 @@
+# Python virtual environments
+.venv/
+backend/.venv/
+venv/
+env/
+
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# VS Code local settings
+.vscode/
+*.code-workspace
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Uploaded user media
+sample_uploads/documents/*
+sample_uploads/images/*
+sample_uploads/videos/*
+
+# Keep the empty sample-upload folders
+!sample_uploads/documents/.gitkeep
+!sample_uploads/images/.gitkeep
+!sample_uploads/videos/.gitkeep
+
+# Downloaded AI models and caches
+models/
+model_cache/
+.cache/
+huggingface/
+
+# Generated video frames or audio
+extracted_frames/
+extracted_audio/
+backend/storage/
