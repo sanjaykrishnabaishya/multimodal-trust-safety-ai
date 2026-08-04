@@ -23,6 +23,9 @@ from app.services.image_processor import (
     process_image,
 )
 from app.services.ocr_service import get_ocr_status
+from app.services.transcription_service import (
+    get_transcription_status,
+)
 from app.services.video_processor import (
     SUPPORTED_VIDEO_EXTENSIONS,
     VideoProcessingError,
@@ -57,6 +60,11 @@ def ocr_health() -> dict:
     return status
 
 
+@router.get("/transcription-health")
+def transcription_health() -> dict:
+    return get_transcription_status()
+
+
 @router.post(
     "/text",
     response_model=ExtractionResponse,
@@ -72,7 +80,9 @@ def extract_text(
         source_context=request.source_context,
         metadata={
             "character_count": len(cleaned_text),
-            "word_count": len(cleaned_text.split()),
+            "word_count": len(
+                cleaned_text.split()
+            ),
         },
     )
 
@@ -85,9 +95,13 @@ async def extract_file(
     file: UploadFile = File(...),
     source_context: str = Form(default="user"),
 ) -> ExtractionResponse:
-    original_name = file.filename or "unnamed_file"
+    original_name = (
+        file.filename or "unnamed_file"
+    )
     safe_name = Path(original_name).name
-    extension = Path(safe_name).suffix.lower()
+    extension = Path(
+        safe_name
+    ).suffix.lower()
 
     if extension not in ALL_SUPPORTED_EXTENSIONS:
         allowed = ", ".join(

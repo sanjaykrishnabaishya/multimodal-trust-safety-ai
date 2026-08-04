@@ -9,6 +9,10 @@ from app.services.ocr_service import (
     OCRProcessingError,
     extract_text_from_pil_image,
 )
+from app.services.transcription_service import (
+    TranscriptionProcessingError,
+    transcribe_media,
+)
 
 
 SUPPORTED_VIDEO_EXTENSIONS = {
@@ -37,7 +41,11 @@ def calculate_sample_positions(
         return [0]
 
     return [
-        round(index * (frame_count - 1) / (sample_count - 1))
+        round(
+            index
+            * (frame_count - 1)
+            / (sample_count - 1)
+        )
         for index in range(sample_count)
     ]
 
@@ -71,7 +79,9 @@ def process_video(
                 "The video could not be opened or decoded."
             )
 
-        fps = float(capture.get(cv2.CAP_PROP_FPS))
+        fps = float(
+            capture.get(cv2.CAP_PROP_FPS)
+        )
         frame_count = int(
             capture.get(cv2.CAP_PROP_FRAME_COUNT)
         )
@@ -90,7 +100,10 @@ def process_video(
 
         desired_samples = min(
             MAX_SAMPLE_FRAMES,
-            max(1, int(duration_seconds // 5) + 1),
+            max(
+                1,
+                int(duration_seconds // 5) + 1,
+            ),
         )
 
         positions = calculate_sample_positions(
@@ -120,9 +133,14 @@ def process_video(
                 else 0.0
             )
 
-            rounded_timestamp = round(timestamp, 2)
+            rounded_timestamp = round(
+                timestamp,
+                2,
+            )
 
-            sample_timestamps.append(rounded_timestamp)
+            sample_timestamps.append(
+                rounded_timestamp
+            )
             readable_frame_count += 1
 
             try:
@@ -131,7 +149,9 @@ def process_video(
                     cv2.COLOR_BGR2RGB,
                 )
 
-                pil_image = Image.fromarray(rgb_frame)
+                pil_image = Image.fromarray(
+                    rgb_frame
+                )
 
                 detected_text = (
                     extract_text_from_pil_image(
@@ -151,8 +171,31 @@ def process_video(
 
         if readable_frame_count == 0:
             raise VideoProcessingError(
-                "No readable frames could be extracted "
-                "from the video."
+                "No readable frames could be "
+                "extracted from the video."
+            )
+
+        audio_transcript = ""
+        transcription_metadata: dict = {}
+        transcription_warning: str | None = None
+
+        try:
+            (
+                audio_transcript,
+                transcription_metadata,
+            ) = transcribe_media(
+                temporary_path
+            )
+
+            if not audio_transcript:
+                transcription_warning = (
+                    "No intelligible speech was detected "
+                    "in the video audio."
+                )
+
+        except TranscriptionProcessingError as exc:
+            transcription_warning = (
+                f"Speech transcription warning: {exc}"
             )
 
         metadata = {
@@ -174,14 +217,16 @@ def process_video(
             "sample_timestamps_seconds": (
                 sample_timestamps
             ),
+            **transcription_metadata,
         }
 
         warnings = [
-            "Video metadata and sample frames were processed.",
+            "Video metadata and sample frames "
+            "were processed.",
             "Sampled frames were not permanently stored.",
             "OCR checked visible text in sampled frames.",
-            "Speech transcription and full visual "
-            "understanding have not been connected yet.",
+            "Full visual scene understanding has "
+            "not been connected yet.",
         ]
 
         if not frame_ocr_results:
@@ -196,8 +241,13 @@ def process_video(
                 f"sampled frame(s)."
             )
 
+        if transcription_warning:
+            warnings.append(
+                transcription_warning
+            )
+
         return {
-            "audio_transcript": "",
+            "audio_transcript": audio_transcript,
             "ocr_text": "\n\n".join(
                 frame_ocr_results
             ),

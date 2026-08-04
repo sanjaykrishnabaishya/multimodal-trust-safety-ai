@@ -77,26 +77,23 @@ OCR reads visible words but does not understand the complete visual scene, objec
 
 ## Stage 5 — Speech transcription
 
-Status: Not started
+Status: Complete
 
-Planned work:
+Completed work:
 
-- Add local Whisper speech transcription
-- Extract spoken words from video audio
-- Detect spoken language
-- Return timestamped transcript segments
-- Combine audio transcript with video OCR
+- Installed faster-whisper
+- Added a local multilingual speech model
+- Added CPU INT8 transcription
+- Added video audio decoding
+- Added language detection
+- Added timestamped transcript segments
+- Added audio transcripts to video extraction responses
+- Added the `/extract/transcription-health` endpoint
+- Kept transcription failures as warnings so video processing can continue
 
-## Later stages
+Current limitations:
 
-Planned work:
-
-- Visual scene understanding
-- Policy-rule engine
-- RAG retrieval
-- Multimodal decision fusion
-- Confidence thresholds
-- Human-review workflow
-- Frontend
-- Automated testing
-- Deployment
+- The first transcription requires a model download
+- CPU transcription may take time for long videos
+- Background noise may reduce accuracy
+- Full visual scene understanding has not yet been connected
