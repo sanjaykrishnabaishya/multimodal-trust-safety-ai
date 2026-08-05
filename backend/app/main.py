@@ -1,4 +1,7 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import (
+    CORSMiddleware,
+)
 
 from app.api.moderation_routes import (
     router as moderation_router,
@@ -25,7 +28,20 @@ app = FastAPI(
         "policy retrieval, and decision-fusion API "
         "for text, documents, images, and videos."
     ),
-    version="0.5.0",
+    version="0.6.0",
+)
+
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(extraction_router)
@@ -40,7 +56,7 @@ def home() -> dict[str, str]:
             "AI Trust & Safety API is running."
         ),
         "documentation": "/docs",
-        "version": "0.5.0",
+        "version": "0.6.0",
     }
 
 
@@ -48,7 +64,7 @@ def home() -> dict[str, str]:
 def health_check() -> dict[str, str]:
     return {
         "status": "healthy",
-        "version": "0.5.0",
+        "version": "0.6.0",
     }
 
 
