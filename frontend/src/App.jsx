@@ -1,4 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+
 import "./App.css";
 
 
@@ -6,40 +11,91 @@ const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
   "http://127.0.0.1:8010";
 
-const SOURCE_CONTEXTS = [
-  { value: "user", label: "User-generated content" },
-  { value: "news", label: "News reporting" },
-  { value: "education", label: "Educational content" },
-  { value: "art", label: "Art or museum" },
-  { value: "medical", label: "Medical content" },
-  { value: "gaming", label: "Gaming" },
-  { value: "satire", label: "Satire" },
-  { value: "history", label: "Historical content" },
-];
-
 const ACCEPTED_FILES =
   ".txt,.pdf,.docx,.jpg,.jpeg,.png,.webp,.mp4,.mov,.avi,.mkv,.webm";
 
 
 function formatLabel(value) {
-  if (!value) return "Not available";
+  if (!value) {
+    return "Not available";
+  }
 
   return value
     .replaceAll("_", " ")
-    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+    .replace(
+      /\b\w/g,
+      (letter) =>
+        letter.toUpperCase()
+    );
 }
 
 
-function getCategoryClass(category) {
+function formatFileSize(bytes) {
+  if (
+    bytes === null ||
+    bytes === undefined
+  ) {
+    return "Not available";
+  }
+
+  if (bytes < 1024) {
+    return `${bytes} bytes`;
+  }
+
+  if (bytes < 1024 * 1024) {
+    return `${(
+      bytes / 1024
+    ).toFixed(2)} KB`;
+  }
+
+  return `${(
+    bytes /
+    1024 /
+    1024
+  ).toFixed(2)} MB`;
+}
+
+
+function formatDuration(seconds) {
+  if (
+    seconds === null ||
+    seconds === undefined
+  ) {
+    return "Not applicable";
+  }
+
+  const totalSeconds = Math.round(
+    seconds
+  );
+
+  const minutes = Math.floor(
+    totalSeconds / 60
+  );
+
+  const remainingSeconds =
+    totalSeconds % 60;
+
+  if (minutes === 0) {
+    return `${remainingSeconds} seconds`;
+  }
+
+  return (
+    `${minutes} min ` +
+    `${remainingSeconds} sec`
+  );
+}
+
+
+function getDecisionClass(category) {
   if (category === "Normal/Ignore") {
-    return "category-safe";
+    return "decision-safe";
   }
 
   if (
     category === "Child Abuse" ||
     category === "Violence"
   ) {
-    return "category-critical";
+    return "decision-critical";
   }
 
   if (
@@ -47,326 +103,537 @@ function getCategoryClass(category) {
     category === "Hate Speech" ||
     category === "Nudity"
   ) {
-    return "category-high";
+    return "decision-high";
   }
 
-  return "category-medium";
+  return "decision-medium";
 }
 
 
-function ResultPanel({ result }) {
-  if (!result) {
-    return (
-      <section className="empty-result">
-        <div className="empty-symbol">TS</div>
-        <h2>No analysis yet</h2>
-        <p>
-          Submit text or upload a file to see the
-          moderation decision and supporting evidence.
-        </p>
-      </section>
-    );
+function DeepAnalysisReport({
+  deepResult,
+}) {
+  if (!deepResult) {
+    return null;
   }
 
-  const confidencePercent = Math.round(
-    (result.confidence || 0) * 100
-  );
+  const scenes =
+    deepResult
+      .scene_by_scene_summary || [];
 
-  const evidence =
-    result.retrieved_evidence || [];
+  const factChecks =
+    deepResult
+      .fact_check_suggestions || [];
 
-  const consensus =
-    result.rag_consensus || {};
+  const size =
+    deepResult.content_size || {};
 
   return (
-    <section className="result-panel">
-      <div className="result-heading">
+    <section className="deep-report">
+      <div className="deep-report-heading">
         <div>
-          <p className="eyebrow">Moderation decision</p>
-          <h2>{result.category}</h2>
+          <p className="eyebrow">
+            Extended review
+          </p>
+
+          <h3>
+            Deep analysis report
+          </h3>
         </div>
 
-        <span
-          className={`category-badge ${getCategoryClass(
-            result.category
-          )}`}
-        >
-          {result.action}
+        <span className="confidence-badge">
+          {Math.round(
+            (
+              deepResult
+                .confidence_score ||
+              0
+            ) * 100
+          )}
+          % confidence
         </span>
       </div>
 
-      <div className="decision-grid">
-        <article className="metric-card">
-          <span>Severity</span>
-          <strong>{result.severity}</strong>
-        </article>
+      <article className="deep-section">
+        <h4>Summary</h4>
 
-        <article className="metric-card">
-          <span>Confidence</span>
-          <strong>{confidencePercent}%</strong>
-        </article>
-
-        <article className="metric-card">
-          <span>Human review</span>
-          <strong>
-            {result.human_review_required
-              ? "Required"
-              : "Not required"}
-          </strong>
-        </article>
-
-        <article className="metric-card">
-          <span>Content type</span>
-          <strong>
-            {formatLabel(result.content_type)}
-          </strong>
-        </article>
-      </div>
-
-      <div className="confidence-block">
-        <div className="confidence-label">
-          <span>Decision confidence</span>
-          <span>{confidencePercent}%</span>
-        </div>
-
-        <div className="confidence-track">
-          <div
-            className="confidence-fill"
-            style={{
-              width: `${confidencePercent}%`,
-            }}
-          />
-        </div>
-      </div>
-
-      <article
-        className={
-          result.human_review_required
-            ? "review-banner review-required"
-            : "review-banner review-clear"
-        }
-      >
-        <strong>
-          {result.human_review_required
-            ? "Human review required"
-            : "Automated decision available"}
-        </strong>
-        <p>{result.reason}</p>
+        <p>
+          {deepResult.summary ||
+            "No summary was generated."}
+        </p>
       </article>
 
-      {!!result.decision_sources?.length && (
-        <article className="result-section">
-          <h3>Decision sources</h3>
+      {deepResult.content_type ===
+        "video" && (
+        <article className="deep-section">
+          <h4>
+            Scene-by-scene summary
+          </h4>
 
-          <div className="chip-list">
-            {result.decision_sources.map(
-              (source) => (
-                <span
-                  className="chip"
-                  key={source}
-                >
-                  {formatLabel(source)}
-                </span>
-              )
-            )}
-          </div>
-        </article>
-      )}
+          {scenes.length > 0 ? (
+            <div className="scene-list">
+              {scenes.map(
+                (scene, index) => (
+                  <div
+                    className="scene-item"
+                    key={
+                      `${scene.timestamp_seconds}-${index}`
+                    }
+                  >
+                    <span>
+                      {formatDuration(
+                        scene
+                          .timestamp_seconds
+                      )}
+                    </span>
 
-      {!!result.matched_signals?.length && (
-        <article className="result-section">
-          <h3>Matched signals</h3>
-
-          <div className="chip-list">
-            {result.matched_signals.map(
-              (signal) => (
-                <span
-                  className="chip signal-chip"
-                  key={signal}
-                >
-                  {signal}
-                </span>
-              )
-            )}
-          </div>
-        </article>
-      )}
-
-      {result.rag_used && (
-        <article className="result-section">
-          <div className="section-heading">
-            <h3>RAG consensus</h3>
-            <span className="status-dot">
-              Connected
-            </span>
-          </div>
-
-          <div className="rag-summary">
-            <div>
-              <span>Suggested category</span>
-              <strong>
-                {consensus.category ||
-                  "No consensus"}
-              </strong>
-            </div>
-
-            <div>
-              <span>Agreement</span>
-              <strong>
-                {Math.round(
-                  (consensus.agreement || 0) *
-                    100
-                )}
-                %
-              </strong>
-            </div>
-
-            <div>
-              <span>Top similarity</span>
-              <strong>
-                {Math.round(
-                  (consensus.top_similarity ||
-                    0) * 100
-                )}
-                %
-              </strong>
-            </div>
-          </div>
-        </article>
-      )}
-
-      {!!result.analyzed_text_preview && (
-        <details className="result-details">
-          <summary>Analyzed content</summary>
-          <pre>
-            {result.analyzed_text_preview}
-          </pre>
-        </details>
-      )}
-
-      {!!evidence.length && (
-        <details className="result-details">
-          <summary>
-            Retrieved evidence ({evidence.length})
-          </summary>
-
-          <div className="evidence-list">
-            {evidence.map((item) => (
-              <article
-                className="evidence-card"
-                key={item.rag_id}
-              >
-                <div className="evidence-heading">
-                  <strong>
-                    #{item.rank} {item.category}
-                  </strong>
-                  <span>
-                    {Math.round(
-                      item.similarity * 100
-                    )}
-                    % similar
-                  </span>
-                </div>
-
-                <p>{item.reason}</p>
-
-                <dl>
-                  <div>
-                    <dt>Source</dt>
-                    <dd>{item.source_file}</dd>
+                    <p>
+                      {scene.summary}
+                    </p>
                   </div>
-                  <div>
-                    <dt>Context</dt>
-                    <dd>
-                      {item.source_context ||
-                        "Not specified"}
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>Action</dt>
-                    <dd>
-                      {item.action ||
-                        "Not specified"}
-                    </dd>
-                  </div>
-                </dl>
-              </article>
-            ))}
-          </div>
-        </details>
-      )}
-
-      {!!result.warnings?.length && (
-        <details className="result-details warning-details">
-          <summary>
-            Processing warnings (
-            {result.warnings.length})
-          </summary>
-
-          <ul>
-            {result.warnings.map(
-              (warning, index) => (
-                <li key={`${warning}-${index}`}>
-                  {warning}
-                </li>
-              )
-            )}
-          </ul>
-        </details>
-      )}
-
-      {result.extraction_metadata &&
-        Object.keys(
-          result.extraction_metadata
-        ).length > 0 && (
-          <details className="result-details">
-            <summary>
-              Technical extraction details
-            </summary>
-            <pre>
-              {JSON.stringify(
-                result.extraction_metadata,
-                null,
-                2
+                )
               )}
+            </div>
+          ) : (
+            <p className="empty-detail">
+              No reliable sampled-scene
+              summaries were generated.
+            </p>
+          )}
+        </article>
+      )}
+
+      {(deepResult.content_type ===
+        "image" ||
+        deepResult.content_type ===
+          "video") && (
+        <article className="deep-section">
+          <h4>Exact OCR text</h4>
+
+          {deepResult
+            .exact_ocr_text ? (
+            <pre className="ocr-output">
+              {
+                deepResult
+                  .exact_ocr_text
+              }
             </pre>
-          </details>
+          ) : (
+            <p className="empty-detail">
+              No readable text was
+              detected.
+            </p>
+          )}
+        </article>
+      )}
+
+      <div className="deep-metric-grid">
+        <article className="deep-metric-card">
+          <span>File/text size</span>
+
+          <strong>
+            {formatFileSize(
+              size.size_bytes
+            )}
+          </strong>
+
+          <small>
+            {(
+              size.character_count ||
+              0
+            ).toLocaleString()}
+            {" characters · "}
+            {(
+              size.word_count || 0
+            ).toLocaleString()}
+            {" words"}
+          </small>
+        </article>
+
+        <article className="deep-metric-card">
+          <span>
+            Media duration
+          </span>
+
+          <strong>
+            {formatDuration(
+              deepResult
+                .media_duration_seconds
+            )}
+          </strong>
+
+          <small>
+            Available for video
+            content
+          </small>
+        </article>
+
+        <article className="deep-metric-card">
+          <span>
+            Confidence score
+          </span>
+
+          <strong>
+            {Math.round(
+              (
+                deepResult
+                  .confidence_score ||
+                0
+              ) * 100
+            )}
+            %
+          </strong>
+
+          <small>
+            Based on available
+            extracted evidence
+          </small>
+        </article>
+      </div>
+
+      <article className="deep-section">
+        <h4>
+          Fact-check suggestions
+        </h4>
+
+        {factChecks.length > 0 ? (
+          <div className="fact-check-list">
+            {factChecks.map(
+              (item, index) => (
+                <div
+                  className="fact-check-item"
+                  key={index}
+                >
+                  <span
+                    className={
+                      `priority-badge ` +
+                      `priority-${(
+                        item.priority ||
+                        "medium"
+                      ).toLowerCase()}`
+                    }
+                  >
+                    {item.priority ||
+                      "Medium"}
+                  </span>
+
+                  <strong>
+                    {item.claim}
+                  </strong>
+
+                  <p>
+                    {item.suggestion}
+                  </p>
+                </div>
+              )
+            )}
+          </div>
+        ) : (
+          <p className="empty-detail">
+            No specific factual claims
+            were flagged for
+            verification.
+          </p>
         )}
+      </article>
+
+      <article className="next-step-card">
+        <span>Suggested next step</span>
+
+        <p>
+          {
+            deepResult
+              .suggested_next_step
+          }
+        </p>
+      </article>
     </section>
   );
 }
 
 
-function App() {
-  const [mode, setMode] = useState("text");
-  const [text, setText] = useState("");
-  const [file, setFile] = useState(null);
-  const [sourceContext, setSourceContext] =
-    useState("user");
+function ResultPanel({
+  result,
+  deepResult,
+  deepLoading,
+  deepError,
+  onRunDeepAnalysis,
+  onStartNewAnalysis,
+}) {
+  if (!result) {
+    return (
+      <section className="empty-result">
+        <div className="empty-symbol">
+          TS
+        </div>
 
-  const [result, setResult] = useState(null);
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [backendStatus, setBackendStatus] =
-    useState("checking");
+        <h2>No analysis yet</h2>
+
+        <p>
+          Submit text or upload a file
+          to receive a moderation
+          decision.
+        </p>
+      </section>
+    );
+  }
+
+  return (
+    <section className="result-panel">
+      <div className="result-heading">
+        <div>
+          <p className="eyebrow">
+            Analysis complete
+          </p>
+
+          <h2>Moderation result</h2>
+        </div>
+      </div>
+
+      <div className="primary-decision-grid">
+        <article
+          className={
+            `primary-decision-card ` +
+            getDecisionClass(
+              result.category
+            )
+          }
+        >
+          <span>
+            Moderation Decision
+          </span>
+
+          <strong>
+            {result.category}
+          </strong>
+        </article>
+
+        <article className="primary-decision-card">
+          <span>
+            Action needs to be taken
+          </span>
+
+          <strong>
+            {result.action}
+          </strong>
+        </article>
+
+        <article
+          className={
+            result
+              .human_review_required
+              ? "primary-decision-card review-needed-card"
+              : "primary-decision-card review-clear-card"
+          }
+        >
+          <span>Human review</span>
+
+          <strong>
+            {result
+              .human_review_required
+              ? "Needed"
+              : "Not needed"}
+          </strong>
+        </article>
+
+        <article className="primary-decision-card">
+          <span>Content type</span>
+
+          <strong>
+            {formatLabel(
+              result.content_type
+            )}
+          </strong>
+        </article>
+      </div>
+
+      {deepError && (
+        <div
+          className="error-message"
+          role="alert"
+        >
+          {deepError}
+        </div>
+      )}
+
+      <div className="result-action-row">
+        <button
+          className="deep-analysis-button"
+          type="button"
+          disabled={deepLoading}
+          onClick={
+            onRunDeepAnalysis
+          }
+        >
+          {deepLoading
+            ? "Running deep analysis..."
+            : deepResult
+              ? "Run deep analysis again"
+              : "Run deep analysis"}
+        </button>
+
+        <button
+          className="new-analysis-button"
+          type="button"
+          disabled={deepLoading}
+          onClick={
+            onStartNewAnalysis
+          }
+        >
+          Start New Analysis
+        </button>
+      </div>
+
+      {deepLoading && (
+        <p className="processing-note">
+          Deep analysis may take
+          several minutes for images,
+          documents, and videos. Keep
+          this page open.
+        </p>
+      )}
+
+      <DeepAnalysisReport
+        deepResult={deepResult}
+      />
+    </section>
+  );
+}
+
+
+function FilePreview({
+  file,
+  previewUrl,
+  onChooseAnother,
+}) {
+  if (!file) {
+    return null;
+  }
+
+  const extension =
+    file.name
+      .split(".")
+      .pop()
+      ?.toUpperCase() || "FILE";
+
+  return (
+    <div className="selected-file">
+      {file.type.startsWith(
+        "image/"
+      ) && previewUrl ? (
+        <img
+          className="selected-media-preview"
+          src={previewUrl}
+          alt="Selected file preview"
+        />
+      ) : file.type.startsWith(
+          "video/"
+        ) && previewUrl ? (
+        <video
+          className="selected-media-preview"
+          src={previewUrl}
+          controls
+        />
+      ) : (
+        <div className="document-preview">
+          <span>{extension}</span>
+
+          <small>
+            Document selected
+          </small>
+        </div>
+      )}
+
+      <p className="selected-file-name">
+        {file.name}
+      </p>
+
+      <p className="selected-file-size">
+        {formatFileSize(file.size)}
+      </p>
+
+      <button
+        className="change-file-button"
+        type="button"
+        onClick={onChooseAnother}
+      >
+        Choose another file
+      </button>
+    </div>
+  );
+}
+
+
+function App() {
+  const [mode, setMode] =
+    useState("text");
+
+  const [text, setText] =
+    useState("");
+
+  const [file, setFile] =
+    useState(null);
+
+  const [
+    fileInputVersion,
+    setFileInputVersion,
+  ] = useState(0);
+
+  const [result, setResult] =
+    useState(null);
+
+  const [
+    deepResult,
+    setDeepResult,
+  ] = useState(null);
+
+  const [error, setError] =
+    useState("");
+
+  const [
+    deepError,
+    setDeepError,
+  ] = useState("");
+
+  const [loading, setLoading] =
+    useState(false);
+
+  const [
+    deepLoading,
+    setDeepLoading,
+  ] = useState(false);
+
+  const [
+    backendStatus,
+    setBackendStatus,
+  ] = useState("checking");
 
   const previewUrl = useMemo(() => {
-    if (!file) return "";
+    if (!file) {
+      return "";
+    }
 
     if (
-      !file.type.startsWith("image/") &&
-      !file.type.startsWith("video/")
+      !file.type.startsWith(
+        "image/"
+      ) &&
+      !file.type.startsWith(
+        "video/"
+      )
     ) {
       return "";
     }
 
-    return URL.createObjectURL(file);
+    return URL.createObjectURL(
+      file
+    );
   }, [file]);
 
   useEffect(() => {
     return () => {
       if (previewUrl) {
-        URL.revokeObjectURL(previewUrl);
+        URL.revokeObjectURL(
+          previewUrl
+        );
       }
     };
   }, [previewUrl]);
@@ -382,35 +649,83 @@ function App() {
           throw new Error();
         }
 
-        setBackendStatus("connected");
+        setBackendStatus(
+          "connected"
+        );
       } catch {
-        setBackendStatus("offline");
+        setBackendStatus(
+          "offline"
+        );
       }
     }
 
     checkBackend();
   }, []);
 
-  function selectMode(nextMode) {
-    setMode(nextMode);
-    setError("");
+  function clearResults() {
     setResult(null);
+    setDeepResult(null);
+    setError("");
+    setDeepError("");
+  }
+
+  function clearCase() {
+    setText("");
+    setFile(null);
+    clearResults();
+    setLoading(false);
+    setDeepLoading(false);
+
+    setFileInputVersion(
+      (current) => current + 1
+    );
+  }
+
+  function selectMode(nextMode) {
+    clearCase();
+    setMode(nextMode);
+  }
+
+  function handleTextChange(event) {
+    setText(event.target.value);
+    clearResults();
   }
 
   function handleFile(event) {
     const selectedFile =
-      event.target.files?.[0] || null;
+      event.target.files?.[0] ||
+      null;
 
     setFile(selectedFile);
-    setError("");
-    setResult(null);
+    clearResults();
+  }
+
+  function chooseAnotherFile() {
+    setFile(null);
+    clearResults();
+
+    setFileInputVersion(
+      (current) => current + 1
+    );
+
+    window.setTimeout(() => {
+      document
+        .getElementById(
+          "content-file"
+        )
+        ?.click();
+    }, 0);
   }
 
   async function readError(response) {
     try {
-      const data = await response.json();
+      const data =
+        await response.json();
 
-      if (typeof data.detail === "string") {
+      if (
+        typeof data.detail ===
+        "string"
+      ) {
         return data.detail;
       }
 
@@ -418,23 +733,35 @@ function App() {
         data.detail || data
       );
     } catch {
-      return `Request failed with status ${response.status}.`;
+      return (
+        "Request failed with status " +
+        `${response.status}.`
+      );
     }
   }
 
   async function handleSubmit(event) {
     event.preventDefault();
-    setError("");
-    setResult(null);
 
-    if (mode === "text" && !text.trim()) {
+    setError("");
+    setDeepError("");
+    setResult(null);
+    setDeepResult(null);
+
+    if (
+      mode === "text" &&
+      !text.trim()
+    ) {
       setError(
         "Enter some text before starting analysis."
       );
       return;
     }
 
-    if (mode === "file" && !file) {
+    if (
+      mode === "file" &&
+      !file
+    ) {
       setError(
         "Choose a document, image, or video first."
       );
@@ -458,17 +785,22 @@ function App() {
             body: JSON.stringify({
               text: text.trim(),
               source_context:
-                sourceContext,
+                "unknown",
             }),
           }
         );
       } else {
-        const formData = new FormData();
+        const formData =
+          new FormData();
 
-        formData.append("file", file);
+        formData.append(
+          "file",
+          file
+        );
+
         formData.append(
           "source_context",
-          sourceContext
+          "unknown"
         );
 
         response = await fetch(
@@ -486,7 +818,9 @@ function App() {
         );
       }
 
-      const data = await response.json();
+      const data =
+        await response.json();
+
       setResult(data);
     } catch (requestError) {
       setError(
@@ -498,13 +832,95 @@ function App() {
     }
   }
 
+  async function runDeepAnalysis() {
+    if (!result) {
+      return;
+    }
+
+    setDeepError("");
+    setDeepResult(null);
+    setDeepLoading(true);
+
+    try {
+      let response;
+
+      if (mode === "text") {
+        response = await fetch(
+          `${API_BASE_URL}/deep-analysis/text`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+            body: JSON.stringify({
+              text: text.trim(),
+            }),
+          }
+        );
+      } else {
+        const formData =
+          new FormData();
+
+        formData.append(
+          "file",
+          file
+        );
+
+        response = await fetch(
+          `${API_BASE_URL}/deep-analysis/file`,
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
+      }
+
+      if (!response.ok) {
+        throw new Error(
+          await readError(response)
+        );
+      }
+
+      const data =
+        await response.json();
+
+      setDeepResult(data);
+    } catch (requestError) {
+      setDeepError(
+        requestError.message ||
+          "The deep-analysis request failed."
+      );
+    } finally {
+      setDeepLoading(false);
+    }
+  }
+
+  const hasCaseData =
+    Boolean(text) ||
+    Boolean(file) ||
+    Boolean(result) ||
+    Boolean(error);
+
+  const processing =
+    loading || deepLoading;
+
   return (
     <div className="app-shell">
       <header className="topbar">
-        <a className="brand" href="/">
-          <span className="brand-mark">TS</span>
+        <a
+          className="brand"
+          href="/"
+        >
+          <span className="brand-mark">
+            TS
+          </span>
+
           <span>
-            <strong>TrustScope</strong>
+            <strong>
+              TrustScope
+            </strong>
+
             <small>
               Multimodal safety review
             </small>
@@ -512,12 +928,18 @@ function App() {
         </a>
 
         <div
-          className={`backend-status ${backendStatus}`}
+          className={
+            `backend-status ` +
+            backendStatus
+          }
         >
           <span />
-          {backendStatus === "connected"
+
+          {backendStatus ===
+          "connected"
             ? "Backend connected"
-            : backendStatus === "offline"
+            : backendStatus ===
+                "offline"
               ? "Backend offline"
               : "Checking backend"}
         </div>
@@ -528,15 +950,17 @@ function App() {
           <p className="eyebrow">
             Multimodal Trust & Safety
           </p>
+
           <h1>
-            Review content with context,
-            evidence, and human oversight.
+            Review content with clarity
+            and human oversight.
           </h1>
+
           <p>
-            Analyze text, documents, images,
-            and videos using OCR, speech
-            transcription, visual descriptions,
-            policy retrieval, and decision fusion.
+            Analyze text, documents,
+            images, and videos without
+            requiring users to identify
+            the source.
           </p>
         </section>
 
@@ -550,6 +974,7 @@ function App() {
                     : ""
                 }
                 type="button"
+                disabled={processing}
                 onClick={() =>
                   selectMode("text")
                 }
@@ -564,6 +989,7 @@ function App() {
                     : ""
                 }
                 type="button"
+                disabled={processing}
                 onClick={() =>
                   selectMode("file")
                 }
@@ -573,34 +999,6 @@ function App() {
             </div>
 
             <form onSubmit={handleSubmit}>
-              <label
-                className="field-label"
-                htmlFor="source-context"
-              >
-                Source context
-              </label>
-
-              <select
-                id="source-context"
-                value={sourceContext}
-                onChange={(event) =>
-                  setSourceContext(
-                    event.target.value
-                  )
-                }
-              >
-                {SOURCE_CONTEXTS.map(
-                  (context) => (
-                    <option
-                      key={context.value}
-                      value={context.value}
-                    >
-                      {context.label}
-                    </option>
-                  )
-                )}
-              </select>
-
               {mode === "text" ? (
                 <>
                   <label
@@ -613,10 +1011,9 @@ function App() {
                   <textarea
                     id="content-text"
                     value={text}
-                    onChange={(event) =>
-                      setText(
-                        event.target.value
-                      )
+                    disabled={processing}
+                    onChange={
+                      handleTextChange
                     }
                     placeholder="Paste a message, post, comment, article, or other text..."
                     rows={12}
@@ -625,7 +1022,8 @@ function App() {
                   <div className="field-footer">
                     <span>
                       {text.length.toLocaleString()}
-                      {" / "}100,000 characters
+                      {" / "}
+                      100,000 characters
                     </span>
                   </div>
                 </>
@@ -635,76 +1033,57 @@ function App() {
                     className="field-label"
                     htmlFor="content-file"
                   >
-                    Document, image, or video
+                    Document, image,
+                    or video
                   </label>
 
-                  <label
-                    className="upload-zone"
-                    htmlFor="content-file"
-                  >
-                    <input
-                      id="content-file"
-                      type="file"
-                      accept={ACCEPTED_FILES}
-                      onChange={handleFile}
+                  <input
+                    key={
+                      fileInputVersion
+                    }
+                    className="hidden-file-input"
+                    id="content-file"
+                    type="file"
+                    accept={
+                      ACCEPTED_FILES
+                    }
+                    disabled={processing}
+                    onChange={
+                      handleFile
+                    }
+                  />
+
+                  {!file ? (
+                    <label
+                      className="upload-zone"
+                      htmlFor="content-file"
+                    >
+                      <span className="upload-symbol">
+                        ↑
+                      </span>
+
+                      <strong>
+                        Choose a file
+                      </strong>
+
+                      <span>
+                        TXT, PDF, DOCX,
+                        JPG, PNG, WEBP,
+                        MP4, MOV, AVI,
+                        MKV or WEBM
+                      </span>
+                    </label>
+                  ) : (
+                    <FilePreview
+                      file={file}
+                      previewUrl={
+                        previewUrl
+                      }
+                      onChooseAnother={
+                        chooseAnotherFile
+                      }
                     />
-
-                    <span className="upload-symbol">
-                      ↑
-                    </span>
-
-                    {file ? (
-                      <>
-                        <strong>{file.name}</strong>
-                        <span>
-                          {(
-                            file.size /
-                            1024 /
-                            1024
-                          ).toFixed(2)}
-                          {" MB"}
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <strong>
-                          Choose a file
-                        </strong>
-                        <span>
-                          TXT, PDF, DOCX, JPG,
-                          PNG, WEBP, MP4, MOV,
-                          AVI, MKV or WEBM
-                        </span>
-                      </>
-                    )}
-                  </label>
-
-                  {previewUrl &&
-                    file?.type.startsWith(
-                      "image/"
-                    ) && (
-                      <img
-                        className="media-preview"
-                        src={previewUrl}
-                        alt="Selected upload preview"
-                      />
-                    )}
-
-                  {previewUrl &&
-                    file?.type.startsWith(
-                      "video/"
-                    ) && (
-                      <video
-                        className="media-preview"
-                        src={previewUrl}
-                        controls
-                      >
-                        <track
-                          kind="captions"
-                          label="No captions available"
-                        />
-                      </video>
-                    )}
+                  )}
                 </>
               )}
 
@@ -717,36 +1096,63 @@ function App() {
                 </div>
               )}
 
-              <button
-                className="analyze-button"
-                type="submit"
-                disabled={loading}
-              >
-                {loading
-                  ? mode === "file"
-                    ? "Processing media..."
-                    : "Analyzing..."
-                  : "Run safety analysis"}
-              </button>
+              <div className="button-row">
+                <button
+                  className="analyze-button"
+                  type="submit"
+                  disabled={processing}
+                >
+                  {loading
+                    ? mode === "file"
+                      ? "Processing media..."
+                      : "Analyzing..."
+                    : "Run safety analysis"}
+                </button>
+
+                <button
+                  className="reset-button"
+                  type="button"
+                  disabled={
+                    processing ||
+                    !hasCaseData
+                  }
+                  onClick={clearCase}
+                >
+                  Clear
+                </button>
+              </div>
 
               {loading && (
                 <p className="processing-note">
-                  Video, vision, and transcription
-                  requests can take several minutes.
+                  Video, vision, and
+                  transcription requests
+                  can take several minutes.
                   Keep this page open.
                 </p>
               )}
             </form>
           </section>
 
-          <ResultPanel result={result} />
+          <ResultPanel
+            result={result}
+            deepResult={deepResult}
+            deepLoading={deepLoading}
+            deepError={deepError}
+            onRunDeepAnalysis={
+              runDeepAnalysis
+            }
+            onStartNewAnalysis={
+              clearCase
+            }
+          />
         </div>
       </main>
 
       <footer>
         <p>
-          Automated decisions can be incomplete.
-          High-risk and uncertain cases require
+          Automated decisions can be
+          incomplete. High-risk and
+          uncertain cases require
           qualified human review.
         </p>
       </footer>

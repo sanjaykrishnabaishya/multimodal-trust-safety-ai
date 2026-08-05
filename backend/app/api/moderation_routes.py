@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Any
 
 from fastapi import (
     APIRouter,
@@ -31,6 +32,10 @@ from app.services.moderation_service import (
 from app.services.rag_service import (
     get_rag_status,
 )
+from app.services.review_database_service import (
+    ReviewDatabaseError,
+    create_review_case,
+)
 from app.services.video_processor import (
     SUPPORTED_VIDEO_EXTENSIONS,
     VideoProcessingError,
@@ -43,7 +48,9 @@ router = APIRouter(
     tags=["Moderation"],
 )
 
-MAX_FILE_SIZE_BYTES = 100 * 1024 * 1024
+MAX_FILE_SIZE_BYTES = (
+    100 * 1024 * 1024
+)
 
 ALL_SUPPORTED_EXTENSIONS = (
     SUPPORTED_DOCUMENT_EXTENSIONS
@@ -52,13 +59,101 @@ ALL_SUPPORTED_EXTENSIONS = (
 )
 
 
+def prepare_stored_preview(
+    *,
+    category: str,
+    text: str,
+) -> str:
+    if category == "Child Abuse":
+        return (
+            "[Sensitive child-safety "
+            "content omitted from the "
+            "review database.]"
+        )
+
+    cleaned_text = text.strip()
+
+    if not cleaned_text:
+        return (
+            "[No readable text preview "
+            "was available.]"
+        )
+
+    return cleaned_text[:500]
+
+
+def save_moderation_case(
+    *,
+    content_type: str,
+    file_name: str | None,
+    analyzed_text: str,
+    decision: dict[str, Any],
+    warnings: list[str],
+) -> tuple[
+    str | None,
+    str | None,
+]:
+    preview = prepare_stored_preview(
+        category=decision[
+            "category"
+        ],
+        text=analyzed_text,
+    )
+
+    try:
+        saved_case = create_review_case(
+            content_type=content_type,
+            file_name=file_name,
+            content_preview=preview,
+            category=decision[
+                "category"
+            ],
+            severity=decision[
+                "severity"
+            ],
+            action=decision[
+                "action"
+            ],
+            confidence=float(
+                decision[
+                    "confidence"
+                ]
+            ),
+            human_review_required=bool(
+                decision[
+                    "human_review_required"
+                ]
+            ),
+            reason=decision[
+                "reason"
+            ],
+        )
+
+        return (
+            saved_case["case_id"],
+            saved_case[
+                "review_status"
+            ],
+        )
+
+    except ReviewDatabaseError as exc:
+        warnings.append(
+            "Review-record warning: "
+            f"{exc}"
+        )
+
+        return None, None
+
+
 @router.get("/health")
 def moderation_health() -> dict:
     rag_status = get_rag_status()
 
     return {
         "status": "available",
-        "engine": "multimodal-decision-fusion",
+        "engine": (
+            "multimodal-decision-fusion"
+        ),
         "rule_engine_connected": True,
         "rag_connected": rag_status[
             "available"
@@ -66,6 +161,7 @@ def moderation_health() -> dict:
         "visual_model_connected": True,
         "ocr_connected": True,
         "transcription_connected": True,
+        "review_storage_enabled": True,
     }
 
 
@@ -76,12 +172,18 @@ def moderation_health() -> dict:
 def moderate_plain_text(
     request: ModerationTextRequest,
 ) -> ModerationResponse:
-    cleaned_text = request.text.strip()
+    cleaned_text = (
+        request.text.strip()
+    )
 
-    decision = fuse_moderation_decision(
-        text=cleaned_text,
-        source_context=request.source_context,
-        input_sources=["text"],
+    decision = (
+        fuse_moderation_decision(
+            text=cleaned_text,
+            source_context=(
+                request.source_context
+            ),
+            input_sources=["text"],
+        )
     )
 
     fusion_warnings = decision.pop(
@@ -89,13 +191,36 @@ def moderate_plain_text(
         [],
     )
 
+    warnings = list(
+        fusion_warnings
+    )
+
+    (
+        review_case_id,
+        review_status,
+    ) = save_moderation_case(
+        content_type="text",
+        file_name=None,
+        analyzed_text=cleaned_text,
+        decision=decision,
+        warnings=warnings,
+    )
+
     return ModerationResponse(
         content_type="text",
-        source_context=request.source_context,
+        source_context=(
+            request.source_context
+        ),
         analyzed_text_preview=(
             cleaned_text[:500]
         ),
-        warnings=fusion_warnings,
+        review_case_id=(
+            review_case_id
+        ),
+        review_status=(
+            review_status
+        ),
+        warnings=warnings,
         **decision,
     )
 
@@ -106,28 +231,40 @@ def moderate_plain_text(
 )
 async def moderate_uploaded_file(
     file: UploadFile = File(...),
-    source_context: str = Form(default="user"),
+    source_context: str = Form(
+        default="unknown"
+    ),
 ) -> ModerationResponse:
     original_name = (
-        file.filename or "unnamed_file"
+        file.filename
+        or "unnamed_file"
     )
-    safe_name = Path(original_name).name
+
+    safe_name = Path(
+        original_name
+    ).name
 
     extension = Path(
         safe_name
     ).suffix.lower()
 
-    if extension not in ALL_SUPPORTED_EXTENSIONS:
+    if (
+        extension
+        not in ALL_SUPPORTED_EXTENSIONS
+    ):
         allowed = ", ".join(
-            sorted(ALL_SUPPORTED_EXTENSIONS)
+            sorted(
+                ALL_SUPPORTED_EXTENSIONS
+            )
         )
 
         raise HTTPException(
             status_code=415,
             detail=(
-                f"Unsupported file extension "
+                "Unsupported file extension "
                 f"'{extension}'. "
-                f"Allowed extensions: {allowed}"
+                "Allowed extensions: "
+                f"{allowed}"
             ),
         )
 
@@ -135,16 +272,22 @@ async def moderate_uploaded_file(
         file_bytes = await file.read(
             MAX_FILE_SIZE_BYTES + 1
         )
+
     finally:
         await file.close()
 
     if not file_bytes:
         raise HTTPException(
             status_code=400,
-            detail="The uploaded file is empty.",
+            detail=(
+                "The uploaded file is empty."
+            ),
         )
 
-    if len(file_bytes) > MAX_FILE_SIZE_BYTES:
+    if (
+        len(file_bytes)
+        > MAX_FILE_SIZE_BYTES
+    ):
         raise HTTPException(
             status_code=413,
             detail=(
@@ -154,15 +297,23 @@ async def moderate_uploaded_file(
         )
 
     try:
-        if extension in SUPPORTED_DOCUMENT_EXTENSIONS:
+        if (
+            extension
+            in SUPPORTED_DOCUMENT_EXTENSIONS
+        ):
             content_type = "document"
 
-            extraction = process_document(
-                safe_name,
-                file_bytes,
+            extraction = (
+                process_document(
+                    safe_name,
+                    file_bytes,
+                )
             )
 
-        elif extension in SUPPORTED_IMAGE_EXTENSIONS:
+        elif (
+            extension
+            in SUPPORTED_IMAGE_EXTENSIONS
+        ):
             content_type = "image"
 
             extraction = process_image(
@@ -192,24 +343,39 @@ async def moderate_uploaded_file(
         "extracted_text",
         "",
     )
+
     ocr_text = extraction.get(
         "ocr_text",
         "",
     )
-    audio_transcript = extraction.get(
-        "audio_transcript",
-        "",
-    )
-    visual_description = extraction.get(
-        "visual_description",
-        "",
+
+    audio_transcript = (
+        extraction.get(
+            "audio_transcript",
+            "",
+        )
     )
 
-    combined_text = combine_extracted_signals(
-        extracted_text=extracted_text,
-        ocr_text=ocr_text,
-        audio_transcript=audio_transcript,
-        visual_description=visual_description,
+    visual_description = (
+        extraction.get(
+            "visual_description",
+            "",
+        )
+    )
+
+    combined_text = (
+        combine_extracted_signals(
+            extracted_text=(
+                extracted_text
+            ),
+            ocr_text=ocr_text,
+            audio_transcript=(
+                audio_transcript
+            ),
+            visual_description=(
+                visual_description
+            ),
+        )
     )
 
     input_sources: list[str] = []
@@ -234,10 +400,16 @@ async def moderate_uploaded_file(
             "visual_description"
         )
 
-    decision = fuse_moderation_decision(
-        text=combined_text,
-        source_context=source_context,
-        input_sources=input_sources,
+    decision = (
+        fuse_moderation_decision(
+            text=combined_text,
+            source_context=(
+                source_context
+            ),
+            input_sources=(
+                input_sources
+            ),
+        )
     )
 
     fusion_warnings = decision.pop(
@@ -245,14 +417,28 @@ async def moderate_uploaded_file(
         [],
     )
 
-    extraction_warnings = extraction.get(
-        "warnings",
-        [],
+    extraction_warnings = (
+        extraction.get(
+            "warnings",
+            [],
+        )
     )
 
-    all_warnings = (
+    warnings = list(
         extraction_warnings
-        + fusion_warnings
+    ) + list(
+        fusion_warnings
+    )
+
+    (
+        review_case_id,
+        review_status,
+    ) = save_moderation_case(
+        content_type=content_type,
+        file_name=safe_name,
+        analyzed_text=combined_text,
+        decision=decision,
+        warnings=warnings,
     )
 
     return ModerationResponse(
@@ -262,10 +448,18 @@ async def moderate_uploaded_file(
         analyzed_text_preview=(
             combined_text[:500]
         ),
-        extraction_metadata=extraction.get(
-            "metadata",
-            {},
+        review_case_id=(
+            review_case_id
         ),
-        warnings=all_warnings,
+        review_status=(
+            review_status
+        ),
+        extraction_metadata=(
+            extraction.get(
+                "metadata",
+                {},
+            )
+        ),
+        warnings=warnings,
         **decision,
     )

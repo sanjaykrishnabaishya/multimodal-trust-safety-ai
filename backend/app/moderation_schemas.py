@@ -1,6 +1,12 @@
-from typing import Any, Literal
+from typing import (
+    Any,
+    Literal,
+)
 
-from pydantic import BaseModel, Field
+from pydantic import (
+    BaseModel,
+    Field,
+)
 
 
 ModerationCategory = Literal[
@@ -28,8 +34,9 @@ class ModerationTextRequest(BaseModel):
         min_length=1,
         max_length=100_000,
     )
+
     source_context: str = Field(
-        default="user",
+        default="unknown",
         max_length=100,
     )
 
@@ -41,35 +48,56 @@ class ModerationResponse(BaseModel):
     category: ModerationCategory
     severity: str
     action: str
+
     confidence: float = Field(
         ge=0.0,
         le=1.0,
     )
+
     human_review_required: bool
     reason: str
 
+    review_case_id: str | None = None
+    review_status: str | None = None
+
     source_context: str
-    matched_signals: list[str] = Field(
-        default_factory=list
+
+    matched_signals: list[
+        str
+    ] = Field(
+        default_factory=list,
     )
-    decision_sources: list[str] = Field(
-        default_factory=list
+
+    decision_sources: list[
+        str
+    ] = Field(
+        default_factory=list,
     )
 
     rag_used: bool = False
-    rag_consensus: dict[str, Any] = Field(
-        default_factory=dict
+
+    rag_consensus: dict[
+        str,
+        Any,
+    ] = Field(
+        default_factory=dict,
     )
+
     retrieved_evidence: list[
         dict[str, Any]
     ] = Field(
-        default_factory=list
+        default_factory=list,
     )
 
     analyzed_text_preview: str = ""
-    extraction_metadata: dict[str, Any] = Field(
-        default_factory=dict
+
+    extraction_metadata: dict[
+        str,
+        Any,
+    ] = Field(
+        default_factory=dict,
     )
+
     warnings: list[str] = Field(
-        default_factory=list
+        default_factory=list,
     )

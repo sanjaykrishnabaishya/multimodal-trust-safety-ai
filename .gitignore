@@ -16,6 +16,11 @@ build/
 dist/
 *.egg-info/
 
+# Frontend dependencies and generated files
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
 # Environment files and secrets
 .env
 .env.*
@@ -46,7 +51,7 @@ sample_uploads/documents/*
 sample_uploads/images/*
 sample_uploads/videos/*
 
-# Keep the empty sample-upload folders
+# Keep empty sample-upload folders
 !sample_uploads/documents/.gitkeep
 !sample_uploads/images/.gitkeep
 !sample_uploads/videos/.gitkeep
@@ -61,3 +66,12 @@ huggingface/
 extracted_frames/
 extracted_audio/
 backend/storage/
+
+# Local review database
+# Contains submitted content and must not be uploaded to GitHub
+backend/data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3

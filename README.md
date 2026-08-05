@@ -21,6 +21,9 @@ The application currently supports:
 - OCR for sampled video frames
 - Synthetic multimodal moderation datasets
 - Shared Trust and Safety policy labels
+- Local video speech transcription
+- Automatic spoken-language detection
+- Timestamped video transcript segments
 
 ## Planned capabilities
 
@@ -67,3 +70,5 @@ trust-safety-ai/
 ├── sample_uploads/
 ├── .gitignore
 └── README.md
+
+
