@@ -6,20 +6,14 @@ from typing import (
 from pydantic import (
     BaseModel,
     Field,
+    field_validator,
 )
 
+from app.policy_config import (
+    ModerationCategory,
+    normalize_category_name,
+)
 
-ModerationCategory = Literal[
-    "Child Abuse",
-    "Spam",
-    "Scam",
-    "Harassment/Cyberbullying",
-    "Hate Speech",
-    "Fake News",
-    "Violence",
-    "Nudity",
-    "Normal/Ignore",
-]
 
 ContentType = Literal[
     "text",
@@ -29,7 +23,9 @@ ContentType = Literal[
 ]
 
 
-class ModerationTextRequest(BaseModel):
+class ModerationTextRequest(
+    BaseModel
+):
     text: str = Field(
         min_length=1,
         max_length=100_000,
@@ -41,12 +37,19 @@ class ModerationTextRequest(BaseModel):
     )
 
 
-class ModerationResponse(BaseModel):
+class ModerationResponse(
+    BaseModel
+):
     content_type: ContentType
-    file_name: str | None = None
+
+    file_name: (
+        str | None
+    ) = None
 
     category: ModerationCategory
+
     severity: str
+
     action: str
 
     confidence: float = Field(
@@ -55,10 +58,16 @@ class ModerationResponse(BaseModel):
     )
 
     human_review_required: bool
+
     reason: str
 
-    review_case_id: str | None = None
-    review_status: str | None = None
+    review_case_id: (
+        str | None
+    ) = None
+
+    review_status: (
+        str | None
+    ) = None
 
     source_context: str
 
@@ -98,6 +107,48 @@ class ModerationResponse(BaseModel):
         default_factory=dict,
     )
 
-    warnings: list[str] = Field(
+    warnings: list[
+        str
+    ] = Field(
         default_factory=list,
     )
+
+    @field_validator(
+        "category",
+        mode="before",
+    )
+    @classmethod
+    def normalize_category(
+        cls,
+        value: object,
+    ) -> str:
+        if isinstance(
+            value,
+            ModerationCategory,
+        ):
+            return value.value
+
+        if not isinstance(
+            value,
+            str,
+        ):
+            raise ValueError(
+                "Moderation category "
+                "must be text."
+            )
+
+        try:
+            return (
+                normalize_category_name(
+                    value
+                )
+            )
+
+        except (
+            ValueError,
+            KeyError,
+        ) as exc:
+            raise ValueError(
+                "Unsupported moderation "
+                f"category: {value}"
+            ) from exc

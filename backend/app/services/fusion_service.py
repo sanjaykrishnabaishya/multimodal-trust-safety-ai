@@ -1,12 +1,26 @@
 from typing import Any
 
+from app.policy_config import (
+    ModerationCategory,
+    normalize_category_name,
+)
 from app.services.moderation_service import (
     apply_context_policy,
     moderate_text,
 )
+
+from app.services.private_information_service import (
+    analyze_private_information,
+)
 from app.services.rag_service import (
     RAGProcessingError,
     retrieve_evidence,
+)
+from app.services.sms_spam_model_service import (
+    analyze_sms_spam_probability,
+)
+from app.services.spam_dictionary_service import (
+    analyze_spam_signals,
 )
 
 
@@ -14,21 +28,85 @@ MINIMUM_RAG_SIMILARITY = 0.35
 STRONG_RAG_SIMILARITY = 0.62
 DEFAULT_RAG_RESULTS = 5
 
+NORMAL_CATEGORY = (
+    ModerationCategory.NORMAL_IGNORE.value
+)
+
+SPAM_CATEGORY = (
+    ModerationCategory
+    .SPAM_SCAM_PHISHING
+    .value
+)
+
+CHILD_EXPLOITATION_CATEGORY = (
+    ModerationCategory
+    .CHILD_EXPLOITATION
+    .value
+)
+
+
+SAFE_CONTEXT_SIGNALS = {
+    "context:educational_or_reporting",
+    "context:category_exception",
+    "context:negation_or_condemnation",
+}
+
+
+def safely_normalize_category(
+    category: str,
+) -> str:
+    try:
+        return normalize_category_name(
+            category
+        )
+
+    except (
+        ValueError,
+        KeyError,
+    ):
+        return category
+
+
+def categories_are_equivalent(
+    first_category: str,
+    second_category: str,
+) -> bool:
+    if (
+        not first_category
+        or not second_category
+    ):
+        return False
+
+    return (
+        safely_normalize_category(
+            first_category
+        )
+        ==
+        safely_normalize_category(
+            second_category
+        )
+    )
+
 
 def build_rag_consensus(
     evidence: list[dict],
 ) -> dict[str, Any]:
-    qualified = [
+    qualified_results = [
         result
         for result in evidence
         if (
             result.get("category")
-            and result.get("similarity", 0)
+            and float(
+                result.get(
+                    "similarity",
+                    0.0,
+                )
+            )
             >= MINIMUM_RAG_SIMILARITY
         )
     ]
 
-    if not qualified:
+    if not qualified_results:
         return {
             "category": "",
             "agreement": 0.0,
@@ -37,11 +115,23 @@ def build_rag_consensus(
             "qualified_results": 0,
         }
 
-    category_weights: dict[str, float] = {}
-    category_counts: dict[str, int] = {}
+    category_weights: dict[
+        str,
+        float,
+    ] = {}
 
-    for result in qualified:
-        category = result["category"]
+    category_counts: dict[
+        str,
+        int,
+    ] = {}
+
+    for result in qualified_results:
+        category = (
+            safely_normalize_category(
+                str(result["category"])
+            )
+        )
+
         similarity = float(
             result["similarity"]
         )
@@ -72,19 +162,27 @@ def build_rag_consensus(
     )
 
     agreement = (
-        category_weights[consensus_category]
+        category_weights[
+            consensus_category
+        ]
         / total_weight
         if total_weight > 0
         else 0.0
     )
 
-    top_similarity = max(
+    supporting_similarities = [
         float(result["similarity"])
-        for result in qualified
-        if (
-            result["category"]
-            == consensus_category
+        for result in qualified_results
+        if categories_are_equivalent(
+            str(result["category"]),
+            consensus_category,
         )
+    ]
+
+    top_similarity = (
+        max(supporting_similarities)
+        if supporting_similarities
+        else 0.0
     )
 
     return {
@@ -98,17 +196,22 @@ def build_rag_consensus(
             4,
         ),
         "supporting_results": (
-            category_counts[consensus_category]
+            category_counts[
+                consensus_category
+            ]
         ),
         "qualified_results": len(
-            qualified
+            qualified_results
         ),
     }
 
 
 def retrieve_rag_safely(
     text: str,
-) -> tuple[list[dict], str | None]:
+) -> tuple[
+    list[dict],
+    str | None,
+]:
     try:
         evidence = retrieve_evidence(
             query=text,
@@ -121,66 +224,587 @@ def retrieve_rag_safely(
         return [], str(exc)
 
 
+def apply_spam_dictionary_decision(
+    *,
+    baseline: dict[str, Any],
+    spam_analysis: dict[str, Any],
+) -> tuple[
+    dict[str, Any],
+    bool,
+]:
+    if not spam_analysis.get(
+        "is_likely_spam",
+        False,
+    ):
+        return baseline, False
+
+    baseline_category = (
+        safely_normalize_category(
+            str(
+                baseline.get(
+                    "category",
+                    NORMAL_CATEGORY,
+                )
+            )
+        )
+    )
+
+    if baseline_category not in {
+        NORMAL_CATEGORY,
+        SPAM_CATEGORY,
+    }:
+        return baseline, False
+
+    confidence = float(
+        spam_analysis.get(
+            "confidence",
+            0.70,
+        )
+    )
+
+    signal_groups = set(
+        spam_analysis.get(
+            "signal_groups",
+            [],
+        )
+    )
+
+    high_risk_groups = {
+        "credential_request",
+        "money_request",
+        "prize_or_return",
+    }
+
+    high_risk_detected = bool(
+        signal_groups
+        & high_risk_groups
+    )
+
+    if high_risk_detected:
+        severity = "High"
+        action = "Block and warn"
+
+        human_review_required = (
+            confidence < 0.80
+        )
+
+        reason = (
+            "Multiple scam or phishing "
+            "signals were detected together "
+            "with financial, credential, "
+            "payment, prize, urgency, contact, "
+            "or multilingual evidence."
+        )
+
+    else:
+        severity = "Medium"
+
+        action = (
+            "Limit distribution and warn"
+        )
+
+        human_review_required = (
+            confidence < 0.72
+        )
+
+        reason = (
+            "Multiple unsolicited, repetitive, "
+            "promotional, urgency, contact, "
+            "gibberish, or multilingual spam "
+            "signals were detected together."
+        )
+
+    baseline_signals = list(
+        baseline.get(
+            "matched_signals",
+            [],
+        )
+    )
+
+    spam_signals = list(
+        spam_analysis.get(
+            "matched_signals",
+            [],
+        )
+    )
+
+    updated_baseline = dict(
+        baseline
+    )
+
+    updated_baseline.update(
+        {
+            "category": SPAM_CATEGORY,
+            "severity": severity,
+            "action": action,
+            "confidence": confidence,
+            "human_review_required": (
+                human_review_required
+            ),
+            "reason": reason,
+            "matched_signals": list(
+                dict.fromkeys(
+                    baseline_signals
+                    + spam_signals
+                )
+            ),
+        }
+    )
+
+    return updated_baseline, True
+
+
+def apply_sms_spam_specialist(
+    *,
+    text: str,
+    source_context: str,
+    input_sources: list[str],
+    baseline: dict[str, Any],
+    spam_analysis: dict[str, Any],
+) -> tuple[
+    dict[str, Any],
+    bool,
+    dict[str, Any],
+]:
+    model_analysis = (
+        analyze_sms_spam_probability(
+            text
+        )
+    )
+
+    if not model_analysis.get(
+        "available",
+        False,
+    ):
+        return (
+            baseline,
+            False,
+            model_analysis,
+        )
+
+    spam_probability = float(
+        model_analysis.get(
+            "spam_probability",
+            0.0,
+        )
+    )
+
+    model_threshold = float(
+        model_analysis.get(
+            "threshold",
+            1.0,
+        )
+    )
+
+    baseline_category = (
+        safely_normalize_category(
+            str(
+                baseline.get(
+                    "category",
+                    NORMAL_CATEGORY,
+                )
+            )
+        )
+    )
+
+    baseline_signals = list(
+        baseline.get(
+            "matched_signals",
+            [],
+        )
+    )
+
+    safe_context_detected = any(
+        signal
+        in SAFE_CONTEXT_SIGNALS
+        for signal in baseline_signals
+    )
+
+    direct_text_available = any(
+        source in input_sources
+        for source in (
+            "text",
+            "extracted_text",
+        )
+    )
+
+    derived_text_available = any(
+        source in input_sources
+        for source in (
+            "ocr_text",
+            "audio_transcript",
+        )
+    )
+
+
+
+    visual_only = (
+        "visual_description"
+        in input_sources
+        and not direct_text_available
+        and not derived_text_available
+    )
+
+    if visual_only:
+        model_analysis[
+            "fusion_status"
+        ] = (
+            "Not applied because the "
+            "available evidence is visual-only."
+        )
+
+        return (
+            baseline,
+            False,
+            model_analysis,
+        )
+
+    required_threshold = (
+        model_threshold
+    )
+
+    if (
+        derived_text_available
+        and not direct_text_available
+    ):
+        required_threshold = max(
+            required_threshold,
+            0.80,
+        )
+
+    dictionary_supports_spam = bool(
+        spam_analysis.get(
+            "is_likely_spam",
+            False,
+        )
+    )
+
+    rule_supports_spam = (
+        baseline_category
+        == SPAM_CATEGORY
+    )
+
+    another_category_detected = (
+        baseline_category
+        not in {
+            NORMAL_CATEGORY,
+            SPAM_CATEGORY,
+        }
+    )
+
+    if another_category_detected:
+        model_analysis[
+            "fusion_status"
+        ] = (
+            "Not applied because another "
+            "category has stronger rule evidence."
+        )
+
+        return (
+            baseline,
+            False,
+            model_analysis,
+        )
+
+    if safe_context_detected:
+        model_analysis[
+            "fusion_status"
+        ] = (
+            "Not applied because negation, "
+            "reporting, educational, or "
+            "exception context was detected."
+        )
+
+        return (
+            baseline,
+            False,
+            model_analysis,
+        )
+
+    if (
+        spam_probability
+        < required_threshold
+    ):
+        model_analysis[
+            "fusion_status"
+        ] = (
+            "Not applied because the spam "
+            "probability did not meet the "
+            "required threshold."
+        )
+
+        model_analysis[
+            "required_fusion_threshold"
+        ] = round(
+            required_threshold,
+            4,
+        )
+
+        return (
+            baseline,
+            False,
+            model_analysis,
+        )
+
+    if (
+        derived_text_available
+        and not direct_text_available
+        and not dictionary_supports_spam
+        and not rule_supports_spam
+        and spam_probability < 0.90
+    ):
+        model_analysis[
+            "fusion_status"
+        ] = (
+            "Not applied because OCR or "
+            "transcript-only evidence requires "
+            "dictionary, rule, or very-high "
+            "model support."
+        )
+
+        model_analysis[
+            "required_fusion_threshold"
+        ] = 0.90
+
+        return (
+            baseline,
+            False,
+            model_analysis,
+        )
+
+    confidence = min(
+        0.98,
+        max(
+            float(
+                baseline.get(
+                    "confidence",
+                    0.0,
+                )
+            ),
+            spam_probability,
+        ),
+    )
+
+    specialist_signal = (
+        "sms_spam_specialist:"
+        f"{spam_probability:.4f}"
+    )
+
+    policy = apply_context_policy(
+        category=SPAM_CATEGORY,
+        source_context=source_context,
+        confidence=confidence,
+        matched_signals=(
+            baseline_signals
+            + [specialist_signal]
+        ),
+    )
+
+    reason = (
+        "The calibrated SMS spam specialist "
+        "produced a spam probability of "
+        f"{spam_probability:.2%}."
+    )
+
+    if dictionary_supports_spam:
+        reason += (
+            " The multilingual spam dictionary "
+            "also supports the decision."
+        )
+
+    if rule_supports_spam:
+        reason += (
+            " The policy rule engine also "
+            "supports the decision."
+        )
+
+    updated_baseline = dict(
+        baseline
+    )
+
+    updated_baseline.update(
+        {
+            "category": SPAM_CATEGORY,
+            "severity": policy[
+                "severity"
+            ],
+            "action": policy[
+                "action"
+            ],
+            "confidence": round(
+                confidence,
+                2,
+            ),
+            "human_review_required": (
+                policy[
+                    "human_review_required"
+                ]
+            ),
+            "reason": reason,
+            "matched_signals": list(
+                dict.fromkeys(
+                    baseline_signals
+                    + [specialist_signal]
+                )
+            ),
+        }
+    )
+
+    model_analysis[
+        "fusion_status"
+    ] = "Applied"
+
+    model_analysis[
+        "required_fusion_threshold"
+    ] = round(
+        required_threshold,
+        4,
+    )
+
+    return (
+        updated_baseline,
+        True,
+        model_analysis,
+    )
+
+
 def fuse_moderation_decision(
     text: str,
     source_context: str,
     input_sources: list[str],
-) -> dict:
+) -> dict[str, Any]:
     baseline = moderate_text(
         text=text,
         source_context=source_context,
     )
 
-    evidence, rag_error = retrieve_rag_safely(
-        text
+
+    private_information_analysis = (
+        analyze_private_information(
+            text
+        )
     )
 
-    rag_used = bool(evidence)
+    spam_analysis = (
+        analyze_spam_signals(
+            text
+        )
+    )
+
+    (
+        baseline,
+        spam_decision_applied,
+    ) = apply_spam_dictionary_decision(
+        baseline=baseline,
+        spam_analysis=spam_analysis,
+    )
+
+    (
+        baseline,
+        sms_specialist_applied,
+        sms_specialist_analysis,
+    ) = apply_sms_spam_specialist(
+        text=text,
+        source_context=source_context,
+        input_sources=input_sources,
+        baseline=baseline,
+        spam_analysis=spam_analysis,
+    )
+
+    evidence, rag_error = (
+        retrieve_rag_safely(
+            text
+        )
+    )
+
+    rag_used = bool(
+        evidence
+    )
+
     consensus = build_rag_consensus(
         evidence
     )
 
-    category = baseline["category"]
-    severity = baseline["severity"]
-    action = baseline["action"]
+    category = (
+        safely_normalize_category(
+            str(baseline["category"])
+        )
+    )
+
+    severity = str(
+        baseline["severity"]
+    )
+
+    action = str(
+        baseline["action"]
+    )
+
     confidence = float(
         baseline["confidence"]
     )
+
     human_review_required = bool(
-        baseline["human_review_required"]
-    )
-    reason = baseline["reason"]
-    matched_signals = list(
-        baseline["matched_signals"]
+        baseline[
+            "human_review_required"
+        ]
     )
 
-    consensus_category = consensus[
-        "category"
-    ]
+    reason = str(
+        baseline["reason"]
+    )
+
+    matched_signals = list(
+        baseline.get(
+            "matched_signals",
+            [],
+        )
+    )
+
+    consensus_category = str(
+        consensus["category"]
+    )
+
     agreement = float(
         consensus["agreement"]
     )
+
     top_similarity = float(
         consensus["top_similarity"]
     )
 
     rule_detected_category = (
-        category != "Normal/Ignore"
+        category != NORMAL_CATEGORY
     )
 
     rag_has_strong_support = (
-        consensus_category
+        bool(consensus_category)
         and consensus_category
-        != "Normal/Ignore"
+        != NORMAL_CATEGORY
         and top_similarity
         >= STRONG_RAG_SIMILARITY
         and agreement >= 0.55
     )
 
-    if (
+    rag_supports_decision = (
         rule_detected_category
-        and consensus_category == category
-    ):
+        and categories_are_equivalent(
+            consensus_category,
+            category,
+        )
+    )
+
+    rag_conflicts_with_decision = (
+        rule_detected_category
+        and bool(consensus_category)
+        and not categories_are_equivalent(
+            consensus_category,
+            category,
+        )
+        and top_similarity
+        >= MINIMUM_RAG_SIMILARITY
+    )
+
+    if rag_supports_decision:
         confidence = min(
             0.98,
             confidence
@@ -188,37 +812,38 @@ def fuse_moderation_decision(
         )
 
         reason = (
-            f"{reason} Retrieved policy examples "
-            f"support the {category} decision."
+            f"{reason} Retrieved policy "
+            "examples support the "
+            f"{category} decision."
         )
 
     elif (
-        rule_detected_category
-        and consensus_category
-        and consensus_category
-        != category
-        and top_similarity
-        >= MINIMUM_RAG_SIMILARITY
+        rag_conflicts_with_decision
+        and not spam_decision_applied
+        and not sms_specialist_applied
     ):
         human_review_required = True
+
         confidence = max(
             0.50,
             confidence - 0.08,
         )
 
         reason = (
-            f"{reason} The rule engine selected "
-            f"{category}, while retrieved examples "
-            f"most strongly support "
-            f"{consensus_category}. Human review "
-            f"is required."
+            f"{reason} The policy engine "
+            f"selected {category}, while "
+            "retrieved examples support "
+            f"{consensus_category}. The "
+            "result requires additional review."
         )
 
     elif (
         not rule_detected_category
         and rag_has_strong_support
     ):
-        category = consensus_category
+        category = (
+            consensus_category
+        )
 
         policy = apply_context_policy(
             category=category,
@@ -227,35 +852,42 @@ def fuse_moderation_decision(
             matched_signals=[],
         )
 
-        severity = policy["severity"]
-        action = policy["action"]
+        severity = str(
+            policy["severity"]
+        )
+
+        action = str(
+            policy["action"]
+        )
 
         confidence = min(
             0.82,
             max(
                 0.60,
-                top_similarity * agreement,
+                top_similarity
+                * agreement,
             ),
         )
 
         human_review_required = True
 
         matched_signals.append(
-            f"rag_consensus:{category}"
+            "rag_consensus:"
+            f"{consensus_category}"
         )
 
         reason = (
-            "No exact rule phrase was detected, "
-            f"but semantically similar policy "
-            f"examples support the {category} "
-            f"category. Human review is required "
-            f"before enforcement."
+            "No sufficiently supported rule "
+            "combination was detected, but "
+            "similar policy examples support "
+            f"{consensus_category}. Additional "
+            "review is required before enforcement."
         )
 
     elif (
-        category == "Normal/Ignore"
+        category == NORMAL_CATEGORY
         and consensus_category
-        == "Normal/Ignore"
+        == NORMAL_CATEGORY
     ):
         confidence = min(
             0.90,
@@ -265,44 +897,184 @@ def fuse_moderation_decision(
 
         reason = (
             f"{reason} Retrieved normal-content "
-            f"examples support allowing the content."
+            "examples also support allowing "
+            "the content."
         )
 
+    safe_context_detected = any(
+        signal in SAFE_CONTEXT_SIGNALS
+        for signal in matched_signals
+    )
+
+    direct_action_detected = (
+        "context:direct_action"
+        in matched_signals
+    )
+
+    if (
+        category == SPAM_CATEGORY
+        and safe_context_detected
+        and not direct_action_detected
+        and not sms_specialist_applied
+    ):
+        category = NORMAL_CATEGORY
+        severity = "None"
+        action = "Allow"
+
+        confidence = max(
+            0.75,
+            min(
+                confidence,
+                0.90,
+            ),
+        )
+
+        human_review_required = False
+
+        reason = (
+            "Spam-related terms were mentioned "
+            "in a negated, educational, reporting, "
+            "warning, or preventative context. "
+            "No direct request to send money, "
+            "credentials, passwords, or OTPs "
+            "was detected."
+        )
+
+        matched_signals.append(
+            "fusion:safe_context_override"
+        )
+
+    private_information_detected = bool(
+        private_information_analysis.get(
+            "pii_detected",
+            False,
+        )
+    )
+
+    if private_information_detected:
+        private_category = str(
+            private_information_analysis.get(
+                "category",
+                "Publishing Private Information",
+            )
+        )
+
+        private_confidence = float(
+            private_information_analysis.get(
+                "confidence",
+                0.70,
+            )
+        )
+
+        private_reason = str(
+            private_information_analysis.get(
+                "reason",
+                (
+                    "Actionable private information "
+                    "was detected."
+                ),
+            )
+        )
+
+        private_signal = (
+            "private_information:"
+            + ",".join(
+                private_information_analysis.get(
+                    "information_types",
+                    [],
+                )
+            )
+        )
+
+        matched_signals.append(
+            private_signal
+        )
+
+        if category == NORMAL_CATEGORY:
+            category = private_category
+            severity = "High"
+            action = "Refer to human review"
+
+            confidence = max(
+                confidence,
+                private_confidence,
+            )
+
+            human_review_required = True
+            reason = private_reason
+
+        else:
+            human_review_required = True
+
+            reason = (
+                f"{reason} Actionable private "
+                "information was also detected. "
+                "Human review is required before "
+                "any final enforcement decision."
+            )
+
     visual_only = (
-        "visual_description" in input_sources
-        and "text" not in input_sources
-        and "extracted_text" not in input_sources
-        and "ocr_text" not in input_sources
-        and "audio_transcript" not in input_sources
+        "visual_description"
+        in input_sources
+        and "text"
+        not in input_sources
+        and "extracted_text"
+        not in input_sources
+        and "ocr_text"
+        not in input_sources
+        and "audio_transcript"
+        not in input_sources
     )
 
     if (
         visual_only
-        and category != "Normal/Ignore"
+        and category != NORMAL_CATEGORY
     ):
         confidence = min(
             confidence,
             0.75,
         )
+
         human_review_required = True
 
         reason = (
-            f"{reason} The decision relies only "
-            f"on a general visual description, "
-            f"so human review is required."
+            f"{reason} The decision relies "
+            "only on a general visual "
+            "description."
         )
 
-    if category in {
-        "Child Abuse",
-    }:
+    if category == (
+        CHILD_EXPLOITATION_CATEGORY
+    ):
         severity = "Critical"
-        action = "Block and escalate"
+
+        action = (
+            "Block and immediately escalate"
+        )
+
         human_review_required = True
 
     decision_sources = list(
         dict.fromkeys(
             input_sources
             + ["rule_engine"]
+            + (
+                ["private_information_detector"]
+                if private_information_detected
+                else []
+            )
+            + (
+                ["spam_dictionary"]
+                if spam_analysis.get(
+                    "dictionary_matches"
+                )
+                else []
+            )
+            + (
+                ["sms_spam_specialist"]
+                if sms_specialist_applied
+                else []
+            )
             + (
                 ["rag"]
                 if rag_used
@@ -318,8 +1090,35 @@ def fuse_moderation_decision(
             f"RAG warning: {rag_error}"
         )
 
+    if (
+        spam_analysis.get(
+            "dictionary_matches"
+        )
+        and not spam_decision_applied
+    ):
+        warnings.append(
+            "Multilingual spam dictionary "
+            "terms were detected, but the "
+            "combined contextual evidence "
+            "did not meet the automatic "
+            "spam threshold."
+        )
+
+    if (
+        spam_decision_applied
+        and rag_conflicts_with_decision
+    ):
+        warnings.append(
+            "RAG evidence conflicts with the "
+            "context-supported spam decision."
+        )
+
     return {
-        "category": category,
+        "category": (
+            safely_normalize_category(
+                category
+            )
+        ),
         "severity": severity,
         "action": action,
         "confidence": round(
@@ -330,9 +1129,24 @@ def fuse_moderation_decision(
             human_review_required
         ),
         "reason": reason,
-        "matched_signals": matched_signals,
+        "matched_signals": (
+            matched_signals
+        ),
         "decision_sources": (
             decision_sources
+        ),
+        "private_information_detector_used": (
+            private_information_detected
+        ),
+        "private_information": (
+            private_information_analysis
+        ),
+
+        "sms_spam_specialist_used": (
+            sms_specialist_applied
+        ),
+        "sms_spam_specialist": (
+            sms_specialist_analysis
         ),
         "rag_used": rag_used,
         "rag_consensus": consensus,

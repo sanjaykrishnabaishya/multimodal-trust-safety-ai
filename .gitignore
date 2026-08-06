@@ -75,3 +75,9 @@ backend/data/
 *.db-wal
 *.sqlite
 *.sqlite3
+# Downloaded public benchmark datasets
+datasets/public/
+
+# Generated evaluation outputs and mismatches
+reports/
+backend/evaluation_reports/

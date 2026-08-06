@@ -1,0 +1,48 @@
+{
+  "source_pdf": "C:\\Users\\Asus\\Downloads\\Spam words Indian .pdf",
+  "dictionary_pages_processed": 16,
+  "total_entries_accepted": 3103,
+  "total_corrupted_or_invalid_skipped": 7172,
+  "total_duplicates_skipped": 8,
+  "total_exclusions_applied": 20,
+  "accepted_by_language": {
+    "english": 1082,
+    "hindi": 261,
+    "kannada": 28,
+    "tamil": 55,
+    "telugu": 14,
+    "marathi": 204,
+    "bengali": 234,
+    "assamese": 302,
+    "gujarati": 279,
+    "punjabi": 644
+  },
+  "corrupted_or_invalid_by_language": {
+    "english": 4,
+    "hindi": 772,
+    "kannada": 998,
+    "tamil": 949,
+    "telugu": 1016,
+    "marathi": 808,
+    "bengali": 770,
+    "assamese": 731,
+    "gujarati": 747,
+    "punjabi": 377
+  },
+  "duplicates_by_language": {
+    "english": 0,
+    "hindi": 0,
+    "kannada": 0,
+    "tamil": 4,
+    "telugu": 0,
+    "marathi": 1,
+    "bengali": 0,
+    "assamese": 2,
+    "gujarati": 1,
+    "punjabi": 0
+  },
+  "quality_warning": "The source PDF contains broken font mappings in some Indian-language cells. Entries containing PDF CID placeholders or corrupted characters were intentionally excluded.",
+  "dictionary_output": "C:\\Users\\Asus\\OneDrive\\Desktop\\trust-safety-ai\\datasets\\spam_dictionary.csv",
+  "exclusion_output": "C:\\Users\\Asus\\OneDrive\\Desktop\\trust-safety-ai\\datasets\\spam_dictionary_exclusions.csv",
+  "report_output": "C:\\Users\\Asus\\OneDrive\\Desktop\\trust-safety-ai\\docs\\spam_dictionary_import_report.json"
+}

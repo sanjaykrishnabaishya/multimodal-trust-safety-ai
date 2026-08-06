@@ -1,563 +1,1244 @@
 import csv
-import random
+import sys
 from pathlib import Path
 
 
-RANDOM_SEED = 42
-random.seed(RANDOM_SEED)
+BACKEND_DIRECTORY = (
+    Path(__file__)
+    .resolve()
+    .parents[1]
+)
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DATASET_DIR = PROJECT_ROOT / "datasets"
+PROJECT_ROOT = (
+    BACKEND_DIRECTORY.parent
+)
 
-CATEGORIES = [
-    "Child Abuse",
-    "Spam",
-    "Scam",
-    "Harassment/Cyberbullying",
-    "Hate Speech",
-    "Fake News",
-    "Violence",
-    "Nudity",
-    "Normal/Ignore",
-]
+DATASET_DIRECTORY = (
+    PROJECT_ROOT
+    / "datasets"
+)
 
-CATEGORY_DATA = {
-    "Child Abuse": {
-        "contexts": ["private_message", "social_media", "child_safety_report"],
-        "examples": [
-            "An adult asks a minor to keep their private conversation secret.",
-            "An account asks a child to send personal images.",
-            "A user repeatedly attempts to move a conversation with a minor to a private app.",
-            "A child-safety report describes suspicious contact without graphic details.",
-        ],
-    },
-    "Spam": {
-        "contexts": ["advertisement", "comment_section", "direct_message"],
-        "examples": [
-            "The same promotional message is posted repeatedly.",
-            "An account sends unsolicited advertisements to many users.",
-            "A comment contains repeated links unrelated to the discussion.",
-            "A business announcement may be legitimate but was sent without consent.",
-        ],
-    },
-    "Scam": {
-        "contexts": ["banking", "shopping", "investment", "job_offer"],
-        "examples": [
-            "The message asks for an OTP to restore a blocked bank account.",
-            "The sender promises a large guaranteed investment return.",
-            "A fake prize notice asks the recipient to pay a processing fee.",
-            "An unfamiliar recruiter requests payment before an interview.",
-        ],
-    },
-    "Harassment/Cyberbullying": {
-        "contexts": ["social_media", "gaming", "school", "workplace"],
-        "examples": [
-            "A user repeatedly posts humiliating comments about another person.",
-            "Several accounts coordinate unwanted insulting messages.",
-            "A person threatens to publish private messages to embarrass someone.",
-            "Two friends exchange language that may be joking or insulting.",
-        ],
-    },
-    "Hate Speech": {
-        "contexts": ["comment_section", "forum", "news_report", "education"],
-        "examples": [
-            "A post attacks people because of a protected characteristic.",
-            "A user calls for a protected group to be excluded from public life.",
-            "A news report quotes hateful rhetoric while criticizing it.",
-            "An educational document examines the history of discriminatory propaganda.",
-        ],
-    },
-    "Fake News": {
-        "contexts": ["social_media", "blog", "satire", "verified_news"],
-        "examples": [
-            "An unverified post presents a fabricated public event as fact.",
-            "A manipulated headline makes a claim unsupported by its article.",
-            "A satire article uses an intentionally fictional headline.",
-            "A verified report corrects a previously circulated false claim.",
-        ],
-    },
-    "Violence": {
-        "contexts": ["real_threat", "news", "education", "gaming"],
-        "examples": [
-            "A person makes a specific threat to physically harm someone.",
-            "A news report shows non-graphic footage of a damaged building.",
-            "A history lesson discusses a past armed conflict.",
-            "Players discuss defeating opponents inside a fictional game.",
-        ],
-    },
-    "Nudity": {
-        "contexts": ["explicit", "art", "medical", "news"],
-        "examples": [
-            "The content appears to contain explicit adult imagery.",
-            "A museum image shows a classical nude marble sculpture.",
-            "A medical lesson contains an anatomical illustration.",
-            "A news report contains a blurred non-explicit image.",
-        ],
-    },
-    "Normal/Ignore": {
-        "contexts": ["personal", "education", "business", "entertainment"],
-        "examples": [
-            "A user shares a photograph of a meal with friends.",
-            "A teacher posts a normal classroom announcement.",
-            "A customer asks a business about its opening hours.",
-            "A video shows a person demonstrating a harmless hobby.",
-        ],
-    },
+sys.path.insert(
+    0,
+    str(BACKEND_DIRECTORY),
+)
+
+from app.policy_config import (  # noqa: E402
+    CATEGORY_POLICIES,
+    POLICY_VERSION,
+    ModerationCategory,
+)
+
+
+CATEGORY_EXAMPLES: dict[
+    ModerationCategory,
+    tuple[str, ...],
+] = {
+    ModerationCategory.RELIGIOUSLY_OFFENSIVE: (
+        (
+            "A post tells users to burn "
+            "another community's religious book."
+        ),
+        (
+            "The message encourages people to "
+            "destroy a religious symbol."
+        ),
+        (
+            "A user posts denigrating abuse "
+            "directed at a religious prophet."
+        ),
+        (
+            "The content celebrates damage to "
+            "a place of worship."
+        ),
+    ),
+
+    ModerationCategory.HATE_SPEECH: (
+        (
+            "A post says that a protected "
+            "group is inferior."
+        ),
+        (
+            "The message calls for a religious "
+            "group to be excluded from society."
+        ),
+        (
+            "A user attacks people because of "
+            "their race and nationality."
+        ),
+        (
+            "The content describes an ethnic "
+            "group as not human."
+        ),
+    ),
+
+    ModerationCategory.TERRORISM: (
+        (
+            "A post praises a banned terrorist "
+            "organization and asks users to join."
+        ),
+        (
+            "The message requests donations for "
+            "a terrorist organization."
+        ),
+        (
+            "The content distributes extremist "
+            "recruitment propaganda."
+        ),
+        (
+            "A user provides instructions "
+            "intended to support a terrorist attack."
+        ),
+    ),
+
+    ModerationCategory.VIOLENT_CONTENT: (
+        (
+            "A person sends the direct threat: "
+            "I will kill you tonight."
+        ),
+        (
+            "The content graphically depicts "
+            "a person being tortured."
+        ),
+        (
+            "The image description contains "
+            "visible internal organs after an attack."
+        ),
+        (
+            "A user says they are going to stab "
+            "a specific person."
+        ),
+    ),
+
+    ModerationCategory.DANGEROUS_CONTENT: (
+        (
+            "The video tells viewers to try a "
+            "dangerous stunt without safety equipment."
+        ),
+        (
+            "A post encourages users to jump "
+            "from a roof as part of a challenge."
+        ),
+        (
+            "The content gives instructions "
+            "to cause an explosion at home."
+        ),
+        (
+            "A user encourages another person "
+            "to physically harm themselves."
+        ),
+    ),
+
+    ModerationCategory.GRAPHIC_SEXUAL_CONTENT: (
+        (
+            "The content contains explicit "
+            "adult sexual imagery."
+        ),
+        (
+            "The image description indicates "
+            "visible genitalia outside an allowed context."
+        ),
+        (
+            "A post promotes a website selling "
+            "explicit pornographic material."
+        ),
+        (
+            "The content contains a morphed "
+            "sexual image of an adult."
+        ),
+    ),
+
+    ModerationCategory.SEXUAL_HARASSMENT: (
+        (
+            "A user repeatedly demands that "
+            "another person send nude pictures."
+        ),
+        (
+            "The message contains an unwanted "
+            "request for a sexual favour."
+        ),
+        (
+            "A person sends sexually explicit "
+            "messages after being asked to stop."
+        ),
+        (
+            "The content threatens consequences "
+            "unless a person agrees to sexual activity."
+        ),
+    ),
+
+    ModerationCategory.CYBERBULLYING: (
+        (
+            "A user repeatedly tells another "
+            "person that they are worthless."
+        ),
+        (
+            "Several accounts coordinate to "
+            "publicly humiliate one individual."
+        ),
+        (
+            "A person threatens to share private "
+            "messages to embarrass someone."
+        ),
+        (
+            "A user repeatedly pressures someone "
+            "to provide their phone number."
+        ),
+    ),
+
+    ModerationCategory.INVASION_OF_PRIVACY: (
+        (
+            "A private video was secretly "
+            "recorded and shared without consent."
+        ),
+        (
+            "The content contains a leaked "
+            "intimate video posted without consent."
+        ),
+        (
+            "A hidden-camera recording shows "
+            "a person's private moment."
+        ),
+        (
+            "A person reports that their private "
+            "photograph was uploaded without consent."
+        ),
+    ),
+
+    ModerationCategory.ILLEGAL_ACTIVITIES: (
+        (
+            "A post offers illegal drugs for sale."
+        ),
+        (
+            "The message advertises an unapproved "
+            "medicine as a guaranteed cure."
+        ),
+        (
+            "A user advertises a gun for sale "
+            "without a license."
+        ),
+        (
+            "The content promotes an illegal "
+            "foreign gambling website."
+        ),
+    ),
+
+    ModerationCategory.PRIVATE_INFORMATION: (
+        (
+            "A post exposes another person's "
+            "Aadhaar card number without permission."
+        ),
+        (
+            "The content publishes someone's "
+            "credit card number and contact details."
+        ),
+        (
+            "A user leaks another person's "
+            "private email address and phone number."
+        ),
+        (
+            "The image contains an unredacted "
+            "bank account statement."
+        ),
+    ),
+
+    ModerationCategory.IDENTITY_THEFT: (
+        (
+            "An account impersonates a bank "
+            "representative to deceive customers."
+        ),
+        (
+            "A fake customer-support profile "
+            "pretends to represent a company."
+        ),
+        (
+            "A user operates an account using "
+            "another person's stolen identity."
+        ),
+        (
+            "The profile impersonates a public "
+            "figure without a parody label."
+        ),
+    ),
+
+    ModerationCategory.MISINFORMATION: (
+        (
+            "A fabricated report presents a "
+            "made-up public event as fact."
+        ),
+        (
+            "A manipulated headline makes a "
+            "claim unsupported by the article."
+        ),
+        (
+            "The post promotes a false medical "
+            "claim as a confirmed cure."
+        ),
+        (
+            "A fake election result is presented "
+            "as an official announcement."
+        ),
+    ),
+
+    ModerationCategory.SPAM_SCAM_PHISHING: (
+        (
+            "URGENT! Claim your prize now by "
+            "sending your OTP on WhatsApp."
+        ),
+        (
+            "A fake banking message asks the "
+            "recipient to share their password."
+        ),
+        (
+            "An unsolicited promotion promises "
+            "guaranteed income and requests a fee."
+        ),
+        (
+            "A repeated message tells users to "
+            "click a suspicious payment link."
+        ),
+    ),
+
+    ModerationCategory.INTELLECTUAL_PROPERTY: (
+        (
+            "A post distributes a pirated movie "
+            "download without authorization."
+        ),
+        (
+            "The content offers counterfeit "
+            "products using a protected trademark."
+        ),
+        (
+            "A user sells unauthorized copies "
+            "of copyrighted software."
+        ),
+        (
+            "The message provides an illegal "
+            "download of copyrighted material."
+        ),
+    ),
+
+    ModerationCategory.MALICIOUS_PROGRAMS: (
+        (
+            "A post provides a link to download "
+            "credential-stealing malware."
+        ),
+        (
+            "The content distributes a ransomware "
+            "payload intended to compromise devices."
+        ),
+        (
+            "A user shares a phishing kit for "
+            "stealing account credentials."
+        ),
+        (
+            "The instructions tell users to "
+            "disable antivirus and install a trojan."
+        ),
+    ),
+
+    ModerationCategory.ABUSIVE_WORDS: (
+        (
+            "A user directly tells another "
+            "person: you are a disgusting idiot."
+        ),
+        (
+            "The message calls a targeted person "
+            "a stupid loser and piece of trash."
+        ),
+        (
+            "A user repeatedly describes another "
+            "person as worthless and pathetic."
+        ),
+        (
+            "The comment contains obfuscated "
+            "abusive words directed at an individual."
+        ),
+    ),
+
+    ModerationCategory.CHILD_EXPLOITATION: (
+        (
+            "An adult asks a minor to keep "
+            "their private conversation secret."
+        ),
+        (
+            "An account asks a child to send "
+            "private personal images."
+        ),
+        (
+            "A user asks a minor to move to a "
+            "private app and not tell their parents."
+        ),
+        (
+            "The content describes physical "
+            "harm being directed at a child."
+        ),
+    ),
+
+    ModerationCategory.NORMAL_IGNORE: (
+        (
+            "A user shares a photograph of "
+            "a meal with friends."
+        ),
+        (
+            "A teacher posts an ordinary "
+            "classroom announcement."
+        ),
+        (
+            "A customer asks a business about "
+            "its opening hours."
+        ),
+        (
+            "A person tells a friend: you are "
+            "a winner and you are born to rule."
+        ),
+        (
+            "A cybersecurity lesson says never "
+            "to share an OTP or password."
+        ),
+        (
+            "A verified report corrects a "
+            "previously circulated false claim."
+        ),
+        (
+            "A museum description discusses "
+            "a classical nude sculpture."
+        ),
+        (
+            "A medical lesson contains a "
+            "non-explicit anatomy illustration."
+        ),
+        (
+            "A news report discusses violence "
+            "without showing graphic imagery."
+        ),
+        (
+            "A video shows a person demonstrating "
+            "a harmless hobby."
+        ),
+    ),
 }
 
-POLICIES = [
-    {
-        "category": "Child Abuse",
-        "default_severity": "Critical",
-        "default_action": "Block and escalate",
-        "human_review_required": True,
-        "notes": "Never store explicit child exploitation media. Use safe descriptions and escalate suspected cases.",
-    },
-    {
-        "category": "Spam",
-        "default_severity": "Low",
-        "default_action": "Limit distribution",
-        "human_review_required": False,
-        "notes": "Consider repetition, consent, relevance, and sender behaviour.",
-    },
-    {
-        "category": "Scam",
-        "default_severity": "High",
-        "default_action": "Block and warn",
-        "human_review_required": False,
-        "notes": "Look for credential theft, payment requests, impersonation, and unrealistic returns.",
-    },
-    {
-        "category": "Harassment/Cyberbullying",
-        "default_severity": "Medium",
-        "default_action": "Restrict and warn",
-        "human_review_required": False,
-        "notes": "Consider targeting, repetition, power imbalance, humour, and credible threats.",
-    },
-    {
-        "category": "Hate Speech",
-        "default_severity": "High",
-        "default_action": "Block",
-        "human_review_required": True,
-        "notes": "Distinguish attacks from counterspeech, news reporting, and education.",
-    },
-    {
-        "category": "Fake News",
-        "default_severity": "Medium",
-        "default_action": "Label and reduce distribution",
-        "human_review_required": True,
-        "notes": "Check evidence, source reliability, satire, corrections, and potential real-world harm.",
-    },
-    {
-        "category": "Violence",
-        "default_severity": "High",
-        "default_action": "Block or show warning",
-        "human_review_required": True,
-        "notes": "Differentiate threats and graphic media from news, history, sport, and gaming.",
-    },
-    {
-        "category": "Nudity",
-        "default_severity": "High",
-        "default_action": "Block or age-restrict",
-        "human_review_required": True,
-        "notes": "Allow contextual exceptions for medical, educational, artistic, and news content.",
-    },
-    {
-        "category": "Normal/Ignore",
-        "default_severity": "None",
-        "default_action": "Allow",
-        "human_review_required": False,
-        "notes": "Content has no meaningful policy violation.",
-    },
-]
+
+def selected_category(
+    index: int,
+) -> ModerationCategory:
+    categories = list(
+        ModerationCategory
+    )
+
+    return categories[
+        index
+        % len(categories)
+    ]
 
 
-def decision_for(category: str, context: str, index: int) -> dict:
-    grey_case = index % 11 == 0
+def selected_example(
+    *,
+    category: ModerationCategory,
+    index: int,
+) -> str:
+    examples = (
+        CATEGORY_EXAMPLES[
+            category
+        ]
+    )
 
-    if category == "Child Abuse":
-        if context == "child_safety_report":
-            return {
-                "severity": "High",
-                "action": "Allow report and escalate for review",
-                "human_review_required": True,
-                "grey_case": False,
-                "reason": "The content reports a child-safety concern without containing prohibited media.",
-            }
+    category_cycle = (
+        index
+        // len(
+            ModerationCategory
+        )
+    )
 
+    return examples[
+        category_cycle
+        % len(examples)
+    ]
+
+
+def build_decision(
+    *,
+    category: ModerationCategory,
+    index: int,
+) -> dict:
+    policy = (
+        CATEGORY_POLICIES[
+            category
+        ]
+    )
+
+    if category == (
+        ModerationCategory
+        .NORMAL_IGNORE
+    ):
         return {
-            "severity": "Critical",
-            "action": "Block and escalate",
-            "human_review_required": True,
+            "severity": "None",
+            "action": "Allow",
+            "human_review_required": False,
             "grey_case": False,
-            "reason": "The content contains indicators of unsafe contact involving a minor.",
+            "reason": (
+                "The content is safe, generic, "
+                "educational, corrective, or "
+                "otherwise does not meet a "
+                "restrictive moderation condition."
+            ),
         }
 
-    if category == "Spam":
+    grey_case = (
+        index % 17 == 0
+    )
+
+    if grey_case:
         return {
-            "severity": "Low",
-            "action": "Allow pending review" if grey_case else "Limit distribution",
-            "human_review_required": grey_case,
-            "grey_case": grey_case,
-            "reason": "The content appears repetitive, unsolicited, promotional, or unrelated.",
-        }
-
-    if category == "Scam":
-        return {
-            "severity": "Medium" if grey_case else "High",
-            "action": "Warn and review" if grey_case else "Block and warn",
-            "human_review_required": grey_case,
-            "grey_case": grey_case,
-            "reason": "The content contains possible financial fraud, impersonation, or credential theft.",
-        }
-
-    if category == "Harassment/Cyberbullying":
-        return {
-            "severity": "Medium",
-            "action": "Review context" if context == "gaming" or grey_case else "Restrict and warn",
-            "human_review_required": context == "gaming" or grey_case,
-            "grey_case": context == "gaming" or grey_case,
-            "reason": "The decision depends on targeting, repetition, threat level, and conversational context.",
-        }
-
-    if category == "Hate Speech":
-        if context in {"news_report", "education"}:
-            return {
-                "severity": "Low",
-                "action": "Allow",
-                "human_review_required": False,
-                "grey_case": False,
-                "reason": "Hateful material is discussed in reporting or educational context without endorsement.",
-            }
-
-        return {
-            "severity": "High",
-            "action": "Block",
-            "human_review_required": grey_case,
-            "grey_case": grey_case,
-            "reason": "The content appears to attack people based on a protected characteristic.",
-        }
-
-    if category == "Fake News":
-        if context in {"satire", "verified_news"}:
-            return {
-                "severity": "Low",
-                "action": "Allow with context label",
-                "human_review_required": False,
-                "grey_case": False,
-                "reason": "The context indicates satire, correction, or verified reporting.",
-            }
-
-        return {
-            "severity": "Medium",
-            "action": "Label and reduce distribution",
+            "severity": (
+                policy.default_severity
+            ),
+            "action": (
+                "Flag and send for "
+                "human review"
+            ),
             "human_review_required": True,
             "grey_case": True,
-            "reason": "The factual claim requires source verification before a final decision.",
-        }
-
-    if category == "Violence":
-        if context == "real_threat":
-            return {
-                "severity": "Critical",
-                "action": "Block and escalate",
-                "human_review_required": True,
-                "grey_case": False,
-                "reason": "The content may contain a credible real-world threat.",
-            }
-
-        if context == "news":
-            return {
-                "severity": "Medium",
-                "action": "Allow with sensitive-content warning",
-                "human_review_required": False,
-                "grey_case": False,
-                "reason": "The content depicts or discusses violence in non-graphic news reporting.",
-            }
-
-        if context in {"education", "gaming"}:
-            return {
-                "severity": "Low",
-                "action": "Allow",
-                "human_review_required": context == "gaming" and grey_case,
-                "grey_case": context == "gaming" and grey_case,
-                "reason": "The violent language or imagery is educational, historical, fictional, or game-related.",
-            }
-
-    if category == "Nudity":
-        if context in {"art", "medical"}:
-            return {
-                "severity": "Low",
-                "action": "Allow",
-                "human_review_required": False,
-                "grey_case": False,
-                "reason": "The material has legitimate artistic, medical, or educational context.",
-            }
-
-        if context == "news":
-            return {
-                "severity": "Medium",
-                "action": "Blur and show warning",
-                "human_review_required": grey_case,
-                "grey_case": grey_case,
-                "reason": "The material appears in news context and may require sensitive-content treatment.",
-            }
-
-        return {
-            "severity": "High",
-            "action": "Block or age-restrict",
-            "human_review_required": True,
-            "grey_case": grey_case,
-            "reason": "The content may contain explicit adult nudity and requires age and consent checks.",
+            "reason": (
+                "The content contains indicators "
+                f"of {category.value}, but the "
+                "final enforcement decision "
+                "requires human review."
+            ),
         }
 
     return {
-        "severity": "None",
-        "action": "Allow",
-        "human_review_required": False,
+        "severity": (
+            policy.default_severity
+        ),
+        "action": (
+            policy.default_action
+        ),
+        "human_review_required": (
+            policy.human_review_required
+        ),
         "grey_case": False,
-        "reason": "No meaningful Trust and Safety policy violation was detected.",
+        "reason": (
+            "The content matches the configured "
+            f"conditions for {category.value}."
+        ),
     }
 
 
-def selected_category(index: int) -> str:
-    return CATEGORIES[index % len(CATEGORIES)]
+def make_base_record(
+    *,
+    index: int,
+    content_type: str,
+) -> dict:
+    category = selected_category(
+        index
+    )
 
+    example = selected_example(
+        category=category,
+        index=index,
+    )
 
-def source_for(context: str) -> str:
-    if context in {"news", "news_report", "verified_news"}:
-        return "news"
-    if context in {"education", "medical"}:
-        return "education"
-    if context == "art":
-        return "art"
-    if context == "gaming":
-        return "gaming"
-    return "user"
+    decision = build_decision(
+        category=category,
+        index=index,
+    )
 
-
-def make_base(index: int, content_type: str) -> dict:
-    category = selected_category(index)
-    category_data = CATEGORY_DATA[category]
-    contexts = category_data["contexts"]
-    examples = category_data["examples"]
-
-    context = contexts[(index // len(CATEGORIES)) % len(contexts)]
-    example = examples[(index // len(CATEGORIES)) % len(examples)]
-    decision = decision_for(category, context, index)
+    identifier_prefixes = {
+        "text": "TEX",
+        "document": "DOC",
+        "image": "IMA",
+        "video": "VID",
+    }
 
     return {
-        "id": f"{content_type[:3].upper()}-{index + 1:04d}",
-        "content_type": content_type,
-        "category": category,
-        "source_context": context,
-        "source_type": source_for(context),
-        "severity": decision["severity"],
-        "action": decision["action"],
-        "human_review_required": decision["human_review_required"],
-        "grey_case": decision["grey_case"],
-        "reason": decision["reason"],
+        "id": (
+            identifier_prefixes[
+                content_type
+            ]
+            + "-"
+            + f"{index + 1:04d}"
+        ),
+        "content_type": (
+            content_type
+        ),
+        "category": (
+            category.value
+        ),
+        "severity": (
+            decision[
+                "severity"
+            ]
+        ),
+        "action": (
+            decision[
+                "action"
+            ]
+        ),
+        "human_review_required": (
+            decision[
+                "human_review_required"
+            ]
+        ),
+        "grey_case": (
+            decision[
+                "grey_case"
+            ]
+        ),
+        "reason": (
+            decision[
+                "reason"
+            ]
+        ),
         "example": example,
+        "policy_version": (
+            POLICY_VERSION
+        ),
     }
 
 
-def generate_text_rows(count: int) -> list[dict]:
-    rows = []
+def generate_text_rows(
+    count: int,
+) -> list[dict]:
+    rows: list[
+        dict
+    ] = []
 
-    for index in range(count):
-        base = make_base(index, "text")
-        variation = (index // len(CATEGORIES)) + 1
+    for index in range(
+        count
+    ):
+        base = make_base_record(
+            index=index,
+            content_type="text",
+        )
+
+        variation = (
+            index
+            // len(
+                ModerationCategory
+            )
+            + 1
+        )
 
         rows.append(
             {
                 "id": base["id"],
-                "content_type": base["content_type"],
-                "text": f"{base['example']} Synthetic variation {variation}.",
-                "source_type": base["source_type"],
-                "source_context": base["source_context"],
-                "category": base["category"],
-                "severity": base["severity"],
-                "action": base["action"],
-                "human_review_required": base["human_review_required"],
-                "grey_case": base["grey_case"],
-                "reason": base["reason"],
+                "content_type": (
+                    base[
+                        "content_type"
+                    ]
+                ),
+                "text": (
+                    base["example"]
+                    + " Synthetic variation "
+                    + f"{variation}."
+                ),
+                "category": (
+                    base["category"]
+                ),
+                "severity": (
+                    base["severity"]
+                ),
+                "action": (
+                    base["action"]
+                ),
+                "human_review_required": (
+                    base[
+                        "human_review_required"
+                    ]
+                ),
+                "grey_case": (
+                    base[
+                        "grey_case"
+                    ]
+                ),
+                "reason": (
+                    base["reason"]
+                ),
+                "policy_version": (
+                    base[
+                        "policy_version"
+                    ]
+                ),
             }
         )
 
     return rows
 
 
-def generate_document_rows(count: int) -> list[dict]:
-    rows = []
-    file_types = ["pdf", "docx", "txt"]
+def generate_document_rows(
+    count: int,
+) -> list[dict]:
+    rows: list[
+        dict
+    ] = []
 
-    for index in range(count):
-        base = make_base(index, "document")
-        file_type = file_types[index % len(file_types)]
+    file_types = (
+        "pdf",
+        "docx",
+        "txt",
+    )
+
+    for index in range(
+        count
+    ):
+        base = make_base_record(
+            index=index,
+            content_type="document",
+        )
+
+        file_type = (
+            file_types[
+                index
+                % len(file_types)
+            ]
+        )
 
         rows.append(
             {
                 "id": base["id"],
-                "content_type": base["content_type"],
-                "file_name": f"sample_document_{index + 1:04d}.{file_type}",
-                "file_type": file_type,
-                "document_title": f"Synthetic {base['category']} document example",
-                "extracted_text": base["example"],
+                "content_type": (
+                    base[
+                        "content_type"
+                    ]
+                ),
+                "file_name": (
+                    "sample_document_"
+                    f"{index + 1:04d}."
+                    f"{file_type}"
+                ),
+                "file_type": (
+                    file_type
+                ),
+                "document_title": (
+                    "Synthetic "
+                    f"{base['category']} "
+                    "document"
+                ),
+                "extracted_text": (
+                    base["example"]
+                ),
                 "embedded_image_description": (
                     "No embedded image."
                     if index % 3
-                    else "A safe synthetic illustration relevant to the document."
+                    else (
+                        "A safe synthetic "
+                        "illustration associated "
+                        "with the labeled policy "
+                        "example."
+                    )
                 ),
-                "source_type": base["source_type"],
-                "source_context": base["source_context"],
-                "category": base["category"],
-                "severity": base["severity"],
-                "action": base["action"],
-                "human_review_required": base["human_review_required"],
-                "grey_case": base["grey_case"],
-                "reason": base["reason"],
+                "category": (
+                    base["category"]
+                ),
+                "severity": (
+                    base["severity"]
+                ),
+                "action": (
+                    base["action"]
+                ),
+                "human_review_required": (
+                    base[
+                        "human_review_required"
+                    ]
+                ),
+                "grey_case": (
+                    base[
+                        "grey_case"
+                    ]
+                ),
+                "reason": (
+                    base["reason"]
+                ),
+                "policy_version": (
+                    base[
+                        "policy_version"
+                    ]
+                ),
             }
         )
 
     return rows
 
 
-def generate_image_rows(count: int) -> list[dict]:
-    rows = []
-    image_types = ["jpg", "png", "webp"]
+def generate_image_rows(
+    count: int,
+) -> list[dict]:
+    rows: list[
+        dict
+    ] = []
 
-    for index in range(count):
-        base = make_base(index, "image")
-        image_type = image_types[index % len(image_types)]
+    image_types = (
+        "jpg",
+        "png",
+        "webp",
+    )
+
+    for index in range(
+        count
+    ):
+        base = make_base_record(
+            index=index,
+            content_type="image",
+        )
+
+        image_type = (
+            image_types[
+                index
+                % len(image_types)
+            ]
+        )
 
         rows.append(
             {
                 "id": base["id"],
-                "content_type": base["content_type"],
-                "file_name": f"sample_image_{index + 1:04d}.{image_type}",
-                "image_caption": base["example"],
+                "content_type": (
+                    base[
+                        "content_type"
+                    ]
+                ),
+                "file_name": (
+                    "sample_image_"
+                    f"{index + 1:04d}."
+                    f"{image_type}"
+                ),
+                "image_caption": (
+                    base["example"]
+                ),
                 "ocr_text": (
-                    f"Visible synthetic text related to {base['category']}."
-                    if index % 4 != 0
+                    base["example"]
+                    if index % 4
                     else ""
                 ),
                 "visual_signals": (
-                    f"Safe annotated visual indicators for the {base['category']} category."
+                    "Safe synthetic visual "
+                    "description for the "
+                    f"{base['category']} "
+                    "policy category. No raw "
+                    "harmful media is stored."
                 ),
-                "source_type": base["source_type"],
-                "source_context": base["source_context"],
-                "category": base["category"],
-                "severity": base["severity"],
-                "action": base["action"],
-                "human_review_required": base["human_review_required"],
-                "grey_case": base["grey_case"],
-                "reason": base["reason"],
+                "category": (
+                    base["category"]
+                ),
+                "severity": (
+                    base["severity"]
+                ),
+                "action": (
+                    base["action"]
+                ),
+                "human_review_required": (
+                    base[
+                        "human_review_required"
+                    ]
+                ),
+                "grey_case": (
+                    base[
+                        "grey_case"
+                    ]
+                ),
+                "reason": (
+                    base["reason"]
+                ),
+                "policy_version": (
+                    base[
+                        "policy_version"
+                    ]
+                ),
             }
         )
 
     return rows
 
 
-def generate_video_rows(count: int) -> list[dict]:
-    rows = []
+def generate_video_rows(
+    count: int,
+) -> list[dict]:
+    rows: list[
+        dict
+    ] = []
 
-    for index in range(count):
-        base = make_base(index, "video")
-        duration = 10 + ((index * 7) % 171)
+    for index in range(
+        count
+    ):
+        base = make_base_record(
+            index=index,
+            content_type="video",
+        )
+
+        duration = (
+            10
+            + (
+                index
+                * 7
+            )
+            % 171
+        )
 
         rows.append(
             {
                 "id": base["id"],
-                "content_type": base["content_type"],
-                "file_name": f"sample_video_{index + 1:04d}.mp4",
-                "duration_seconds": duration,
-                "transcript": base["example"],
+                "content_type": (
+                    base[
+                        "content_type"
+                    ]
+                ),
+                "file_name": (
+                    "sample_video_"
+                    f"{index + 1:04d}.mp4"
+                ),
+                "duration_seconds": (
+                    duration
+                ),
+                "transcript": (
+                    base["example"]
+                ),
                 "frame_descriptions": (
-                    f"Sampled frames contain safe synthetic indicators related to "
-                    f"{base['category']} in {base['source_context']} context."
+                    "Sampled frames contain "
+                    "a safe synthetic description "
+                    "associated with the "
+                    f"{base['category']} "
+                    "policy category."
                 ),
                 "ocr_text": (
-                    f"On-screen synthetic text for {base['category']}."
-                    if index % 3 != 0
+                    base["example"]
+                    if index % 3
                     else ""
                 ),
                 "audio_description": (
-                    "Speech and ordinary background audio; no raw media is stored in this dataset."
+                    "Synthetic speech and "
+                    "ordinary background audio. "
+                    "No raw harmful media is "
+                    "stored in the dataset."
                 ),
-                "source_type": base["source_type"],
-                "source_context": base["source_context"],
-                "category": base["category"],
-                "severity": base["severity"],
-                "action": base["action"],
-                "human_review_required": base["human_review_required"],
-                "grey_case": base["grey_case"],
-                "reason": base["reason"],
+                "category": (
+                    base["category"]
+                ),
+                "severity": (
+                    base["severity"]
+                ),
+                "action": (
+                    base["action"]
+                ),
+                "human_review_required": (
+                    base[
+                        "human_review_required"
+                    ]
+                ),
+                "grey_case": (
+                    base[
+                        "grey_case"
+                    ]
+                ),
+                "reason": (
+                    base["reason"]
+                ),
+                "policy_version": (
+                    base[
+                        "policy_version"
+                    ]
+                ),
             }
         )
 
     return rows
 
 
-def write_csv(file_path: Path, rows: list[dict]) -> None:
+def write_csv(
+    file_path: Path,
+    rows: list[dict],
+) -> None:
     if not rows:
-        raise ValueError(f"No rows supplied for {file_path.name}")
-
-    with file_path.open("w", newline="", encoding="utf-8-sig") as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=list(rows[0].keys()))
-        writer.writeheader()
-        writer.writerows(rows)
-
-
-def validate_rows(name: str, rows: list[dict], expected_count: int) -> None:
-    if len(rows) != expected_count:
         raise ValueError(
-            f"{name} has {len(rows)} rows; expected {expected_count}."
+            "No rows supplied for "
+            f"{file_path.name}."
         )
 
-    missing_categories = set(CATEGORIES) - {
-        row["category"] for row in rows
+    with file_path.open(
+        "w",
+        newline="",
+        encoding="utf-8-sig",
+    ) as csv_file:
+        writer = csv.DictWriter(
+            csv_file,
+            fieldnames=list(
+                rows[0].keys()
+            ),
+        )
+
+        writer.writeheader()
+        writer.writerows(
+            rows
+        )
+
+
+def validate_rows(
+    *,
+    file_name: str,
+    rows: list[dict],
+    expected_count: int,
+) -> None:
+    if (
+        len(rows)
+        != expected_count
+    ):
+        raise ValueError(
+            f"{file_name} has "
+            f"{len(rows)} rows; "
+            f"expected {expected_count}."
+        )
+
+    expected_categories = {
+        category.value
+        for category
+        in ModerationCategory
     }
+
+    actual_categories = {
+        row["category"]
+        for row in rows
+    }
+
+    missing_categories = (
+        expected_categories
+        - actual_categories
+    )
+
+    unexpected_categories = (
+        actual_categories
+        - expected_categories
+    )
 
     if missing_categories:
         raise ValueError(
-            f"{name} is missing categories: {sorted(missing_categories)}"
+            f"{file_name} is missing "
+            "categories: "
+            f"{sorted(missing_categories)}"
         )
+
+    if unexpected_categories:
+        raise ValueError(
+            f"{file_name} has unexpected "
+            "categories: "
+            f"{sorted(unexpected_categories)}"
+        )
+
+    identifiers = [
+        row["id"]
+        for row in rows
+    ]
+
+    if (
+        len(identifiers)
+        != len(
+            set(
+                identifiers
+            )
+        )
+    ):
+        raise ValueError(
+            f"{file_name} contains "
+            "duplicate identifiers."
+        )
+
+    for row in rows:
+        if (
+            row[
+                "policy_version"
+            ]
+            != POLICY_VERSION
+        ):
+            raise ValueError(
+                f"{file_name} contains an "
+                "incorrect policy version."
+            )
+
+
+def category_counts(
+    rows: list[dict],
+) -> dict[str, int]:
+    counts: dict[
+        str,
+        int,
+    ] = {}
+
+    for row in rows:
+        category = (
+            row[
+                "category"
+            ]
+        )
+
+        counts[
+            category
+        ] = (
+            counts.get(
+                category,
+                0,
+            )
+            + 1
+        )
+
+    return dict(
+        sorted(
+            counts.items()
+        )
+    )
 
 
 def main() -> None:
-    DATASET_DIR.mkdir(parents=True, exist_ok=True)
-
-    text_rows = generate_text_rows(400)
-    document_rows = generate_document_rows(200)
-    image_rows = generate_image_rows(250)
-    video_rows = generate_video_rows(150)
-
-    validate_rows("text_dataset.csv", text_rows, 400)
-    validate_rows("document_dataset.csv", document_rows, 200)
-    validate_rows("image_dataset.csv", image_rows, 250)
-    validate_rows("video_dataset.csv", video_rows, 150)
-
-    write_csv(DATASET_DIR / "text_dataset.csv", text_rows)
-    write_csv(DATASET_DIR / "document_dataset.csv", document_rows)
-    write_csv(DATASET_DIR / "image_dataset.csv", image_rows)
-    write_csv(DATASET_DIR / "video_dataset.csv", video_rows)
-    write_csv(DATASET_DIR / "policies.csv", POLICIES)
-
-    total_records = (
-        len(text_rows)
-        + len(document_rows)
-        + len(image_rows)
-        + len(video_rows)
+    DATASET_DIRECTORY.mkdir(
+        parents=True,
+        exist_ok=True,
     )
 
-    print("Multimodal dataset generation completed.")
-    print(f"Output folder: {DATASET_DIR}")
-    print(f"Text records: {len(text_rows)}")
-    print(f"Document records: {len(document_rows)}")
-    print(f"Image records: {len(image_rows)}")
-    print(f"Video records: {len(video_rows)}")
-    print(f"Total moderation records: {total_records}")
-    print(f"Policy records: {len(POLICIES)}")
+    text_rows = (
+        generate_text_rows(
+            400
+        )
+    )
+
+    document_rows = (
+        generate_document_rows(
+            200
+        )
+    )
+
+    image_rows = (
+        generate_image_rows(
+            250
+        )
+    )
+
+    video_rows = (
+        generate_video_rows(
+            150
+        )
+    )
+
+    datasets = (
+        (
+            "text_dataset.csv",
+            text_rows,
+            400,
+        ),
+        (
+            "document_dataset.csv",
+            document_rows,
+            200,
+        ),
+        (
+            "image_dataset.csv",
+            image_rows,
+            250,
+        ),
+        (
+            "video_dataset.csv",
+            video_rows,
+            150,
+        ),
+    )
+
+    for (
+        file_name,
+        rows,
+        expected_count,
+    ) in datasets:
+        validate_rows(
+            file_name=file_name,
+            rows=rows,
+            expected_count=(
+                expected_count
+            ),
+        )
+
+        write_csv(
+            DATASET_DIRECTORY
+            / file_name,
+            rows,
+        )
+
+    total_records = sum(
+        len(rows)
+        for _, rows, _
+        in datasets
+    )
+
+    print(
+        "Multimodal dataset generation "
+        "completed."
+    )
+
+    print(
+        "Policy version: "
+        f"{POLICY_VERSION}"
+    )
+
+    print(
+        "Output folder: "
+        f"{DATASET_DIRECTORY}"
+    )
+
+    print(
+        "Text records: "
+        f"{len(text_rows)}"
+    )
+
+    print(
+        "Document records: "
+        f"{len(document_rows)}"
+    )
+
+    print(
+        "Image records: "
+        f"{len(image_rows)}"
+    )
+
+    print(
+        "Video records: "
+        f"{len(video_rows)}"
+    )
+
+    print(
+        "Total moderation records: "
+        f"{total_records}"
+    )
+
+    print()
+    print(
+        "Combined category counts:"
+    )
+
+    combined_rows = (
+        text_rows
+        + document_rows
+        + image_rows
+        + video_rows
+    )
+
+    for category, count in (
+        category_counts(
+            combined_rows
+        ).items()
+    ):
+        print(
+            f"  {category}: {count}"
+        )
+
+    print()
+    print(
+        "policies.csv was preserved."
+    )
+
+    print(
+        "spam_dictionary.csv was "
+        "preserved."
+    )
+
+    print(
+        "spam_dictionary_exclusions.csv "
+        "was preserved."
+    )
 
 
 if __name__ == "__main__":
