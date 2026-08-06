@@ -12,6 +12,10 @@ from app.services.moderation_service import (
 from app.services.private_information_service import (
     analyze_private_information,
 )
+
+from app.services.identity_impersonation_service import (
+    analyze_identity_impersonation,
+)
 from app.services.rag_service import (
     RAGProcessingError,
     retrieve_evidence,
@@ -679,6 +683,13 @@ def fuse_moderation_decision(
     )
 
 
+    identity_impersonation_analysis = (
+        analyze_identity_impersonation(
+            text
+        )
+    )
+
+
     private_information_analysis = (
         analyze_private_information(
             text
@@ -1013,6 +1024,102 @@ def fuse_moderation_decision(
                 "any final enforcement decision."
             )
 
+
+    identity_impersonation_detected = bool(
+        identity_impersonation_analysis.get(
+            "detected",
+            False,
+        )
+    )
+
+    if identity_impersonation_detected:
+        identity_category = str(
+            identity_impersonation_analysis.get(
+                "category",
+                (
+                    "Identity Theft & "
+                    "Impersonation"
+                ),
+            )
+        )
+
+        identity_confidence = min(
+            0.75,
+            float(
+                identity_impersonation_analysis.get(
+                    "confidence",
+                    0.60,
+                )
+            ),
+        )
+
+        identity_signal = (
+            "identity_impersonation:"
+            + ",".join(
+                identity_impersonation_analysis.get(
+                    "explicit_signals",
+                    [],
+                )
+                + identity_impersonation_analysis.get(
+                    "identity_claim_signals",
+                    [],
+                )
+            )
+        )
+
+        matched_signals.append(
+            identity_signal
+        )
+
+        identity_overlaps_with_scam = bool(
+            identity_impersonation_analysis.get(
+                "scam_overlap_detected",
+                False,
+            )
+        )
+
+        if category == NORMAL_CATEGORY:
+            category = identity_category
+            severity = "High"
+            action = "Refer to human review"
+            confidence = identity_confidence
+            human_review_required = True
+
+            reason = (
+                "Text signals suggest possible "
+                "identity theft or impersonation. "
+                "The text-only specialist failed "
+                "its independent recall target, so "
+                "this is supporting evidence only. "
+                "Human review must verify identity "
+                "ownership, authorization, deception, "
+                "and parody status."
+            )
+
+        elif (
+            category == SPAM_CATEGORY
+            and identity_overlaps_with_scam
+        ):
+            human_review_required = True
+
+            reason = (
+                f"{reason} Possible impersonation "
+                "signals were also detected, but "
+                "Spam, Scam & Phishing remains the "
+                "primary category because the content "
+                "requests credentials, money, payment, "
+                "or verification."
+            )
+
+        else:
+            human_review_required = True
+
+            reason = (
+                f"{reason} Supporting identity-"
+                "impersonation signals were also "
+                "detected. Human review is required."
+            )
+
     visual_only = (
         "visual_description"
         in input_sources
@@ -1061,6 +1168,11 @@ def fuse_moderation_decision(
             + (
                 ["private_information_detector"]
                 if private_information_detected
+                else []
+            )
+            + (
+                ["identity_impersonation_detector"]
+                if identity_impersonation_detected
                 else []
             )
             + (
@@ -1134,6 +1246,12 @@ def fuse_moderation_decision(
         ),
         "decision_sources": (
             decision_sources
+        ),
+        "identity_impersonation_detector_used": (
+            identity_impersonation_detected
+        ),
+        "identity_impersonation": (
+            identity_impersonation_analysis
         ),
         "private_information_detector_used": (
             private_information_detected
