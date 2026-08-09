@@ -16,6 +16,9 @@ from app.services.private_information_service import (
 from app.services.identity_impersonation_service import (
     analyze_identity_impersonation,
 )
+from app.services.fact_check_fusion_service import (
+    analyze_fact_check_for_fusion,
+)
 from app.services.rag_service import (
     RAGProcessingError,
     retrieve_evidence,
@@ -1120,6 +1123,96 @@ def fuse_moderation_decision(
                 "detected. Human review is required."
             )
 
+    fact_check_result: dict[str, Any]
+    fact_check_error = ""
+
+    try:
+        fact_check_result = analyze_fact_check_for_fusion(
+            text=text,
+            current_category=safely_normalize_category(category),
+        )
+    except Exception as error:
+        fact_check_error = f"{type(error).__name__}: {error}"
+        fact_check_result = {
+            "fact_check_router_used": True,
+            "fact_check_analysis_used": False,
+            "decision_override_allowed": False,
+            "route_reason": "Fact-check processing failed safely.",
+            "category": "",
+            "evidence_status": "ERROR",
+            "confidence": 0.0,
+            "action": "",
+            "human_review_required": False,
+            "automatic_enforcement_allowed": False,
+            "analysis": {},
+        }
+
+    fact_check_analysis_used = bool(
+        fact_check_result.get("fact_check_analysis_used", False)
+    )
+
+    fact_check_override_allowed = bool(
+        fact_check_result.get("decision_override_allowed", False)
+    )
+
+    if fact_check_analysis_used and fact_check_override_allowed:
+        fact_check_category = str(
+            fact_check_result.get("category", "Uncertain")
+        )
+        fact_check_status = str(
+            fact_check_result.get(
+                "evidence_status",
+                "NOT_ENOUGH_INFO",
+            )
+        )
+        fact_check_confidence = min(
+            0.80,
+            float(fact_check_result.get("confidence", 0.50)),
+        )
+        fact_check_analysis = dict(
+            fact_check_result.get("analysis", {})
+        )
+
+        category = fact_check_category
+        confidence = fact_check_confidence
+        action = str(
+            fact_check_result.get(
+                "action",
+                "Refer to human review",
+            )
+        )
+        human_review_required = bool(
+            fact_check_result.get(
+                "human_review_required",
+                True,
+            )
+        )
+
+        if fact_check_status == "SUPPORTS":
+            severity = "None"
+        elif fact_check_status == "REFUTES":
+            severity = (
+                "High"
+                if fact_check_analysis.get("high_impact_claim", False)
+                else "Medium"
+            )
+        else:
+            severity = "Unknown"
+
+        reason = str(
+            fact_check_analysis.get(
+                "reason",
+                (
+                    "The fact-check component could not reach a "
+                    "sufficiently supported conclusion."
+                ),
+            )
+        )
+
+        matched_signals.append(
+            "fact_check_rc2:" + fact_check_status.casefold()
+        )
+
     visual_only = (
         "visual_description"
         in input_sources
@@ -1176,6 +1269,11 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["fact_check_rc2"]
+                if fact_check_analysis_used
+                else []
+            )
+            + (
                 ["spam_dictionary"]
                 if spam_analysis.get(
                     "dictionary_matches"
@@ -1196,6 +1294,23 @@ def fuse_moderation_decision(
     )
 
     warnings: list[str] = []
+
+    if fact_check_error:
+        warnings.append(
+            f"Fact-check warning: {fact_check_error}"
+        )
+
+    if fact_check_analysis_used:
+        warnings.extend(
+            str(item)
+            for item in fact_check_result.get(
+                "analysis",
+                {},
+            ).get("warnings", [])
+            if str(item).strip()
+        )
+
+    warnings = list(dict.fromkeys(warnings))
 
     if rag_error:
         warnings.append(
@@ -1260,6 +1375,8 @@ def fuse_moderation_decision(
             private_information_analysis
         ),
 
+        "fact_check_used": fact_check_analysis_used,
+        "fact_check": fact_check_result,
         "sms_spam_specialist_used": (
             sms_specialist_applied
         ),

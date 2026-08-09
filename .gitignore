@@ -81,3 +81,25 @@ datasets/public/
 # Generated evaluation outputs and mismatches
 reports/
 backend/evaluation_reports/
+# Private independent holdouts — never publish or use for tuning
+datasets/holdout/
+backend/scripts/*holdout*.py
+# Official evidence data requires separate legal review
+datasets/official_evidence/
+# Local migration backups
+*.backup-*
+*.before-*
+*.phase1-backup
+*.before_*
+backend/app/services/india_evidence_service.py
+backend/app/services/misinformation_service.py
+backend/scripts/diagnose_fever_evidence_pipeline.py
+backend/scripts/download_fever_dataset.py
+backend/scripts/evaluate_fever_misinformation.py
+backend/scripts/fix_*.py
+backend/scripts/install_official_evidence_cache.py
+backend/scripts/integrate_india_evidence_misinformation.py
+backend/scripts/refine_india_evidence_topics.py
+backend/scripts/upgrade_*.py
+backend/scripts/evaluate_india_world_fact_check_challenge.py
+backend/scripts/evaluate_stable_knowledge_benchmark.py

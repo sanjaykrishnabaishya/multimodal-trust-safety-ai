@@ -1,0 +1,221 @@
+﻿case_id,split,topic,relation,expected_status,expected_routing,claim,source_hint,template_type,allowed_for_threshold_tuning,eligible_for_holdout
+DEV-CAP-01-01,development,geography,capital_of,SUPPORTS,stable_knowledge,Ottawa is the capital of Canada.,Wikidata P36,canonical_support,True,False
+DEV-CAP-01-02,development,geography,capital_of,SUPPORTS,stable_knowledge,The capital city of Canada is Ottawa.,Wikidata P36,reverse_support,True,False
+DEV-CAP-01-03,development,geography,capital_of,REFUTES,stable_knowledge,Ottawa is the capital of Australia.,Wikidata P36,wrong_object,True,False
+DEV-CAP-01-04,development,geography,capital_of,REFUTES,stable_knowledge,Ottawa is not the capital of Canada.,Wikidata P36,negated_true_relation,True,False
+DEV-CAP-02-01,development,geography,capital_of,SUPPORTS,stable_knowledge,Canberra is the capital of Australia.,Wikidata P36,canonical_support,True,False
+DEV-CAP-02-02,development,geography,capital_of,SUPPORTS,stable_knowledge,The capital city of Australia is Canberra.,Wikidata P36,reverse_support,True,False
+DEV-CAP-02-03,development,geography,capital_of,REFUTES,stable_knowledge,Canberra is the capital of Japan.,Wikidata P36,wrong_object,True,False
+DEV-CAP-02-04,development,geography,capital_of,REFUTES,stable_knowledge,Canberra is not the capital of Australia.,Wikidata P36,negated_true_relation,True,False
+DEV-CAP-03-01,development,geography,capital_of,SUPPORTS,stable_knowledge,Tokyo is the capital of Japan.,Wikidata P36,canonical_support,True,False
+DEV-CAP-03-02,development,geography,capital_of,SUPPORTS,stable_knowledge,The capital city of Japan is Tokyo.,Wikidata P36,reverse_support,True,False
+DEV-CAP-03-03,development,geography,capital_of,REFUTES,stable_knowledge,Tokyo is the capital of Brazil.,Wikidata P36,wrong_object,True,False
+DEV-CAP-03-04,development,geography,capital_of,REFUTES,stable_knowledge,Tokyo is not the capital of Japan.,Wikidata P36,negated_true_relation,True,False
+DEV-CAP-04-01,development,geography,capital_of,SUPPORTS,stable_knowledge,Brasilia is the capital of Brazil.,Wikidata P36,canonical_support,True,False
+DEV-CAP-04-02,development,geography,capital_of,SUPPORTS,stable_knowledge,The capital city of Brazil is Brasilia.,Wikidata P36,reverse_support,True,False
+DEV-CAP-04-03,development,geography,capital_of,REFUTES,stable_knowledge,Brasilia is the capital of Kenya.,Wikidata P36,wrong_object,True,False
+DEV-CAP-04-04,development,geography,capital_of,REFUTES,stable_knowledge,Brasilia is not the capital of Brazil.,Wikidata P36,negated_true_relation,True,False
+DEV-CAP-05-01,development,geography,capital_of,SUPPORTS,stable_knowledge,Nairobi is the capital of Kenya.,Wikidata P36,canonical_support,True,False
+DEV-CAP-05-02,development,geography,capital_of,SUPPORTS,stable_knowledge,The capital city of Kenya is Nairobi.,Wikidata P36,reverse_support,True,False
+DEV-CAP-05-03,development,geography,capital_of,REFUTES,stable_knowledge,Nairobi is the capital of Thailand.,Wikidata P36,wrong_object,True,False
+DEV-CAP-05-04,development,geography,capital_of,REFUTES,stable_knowledge,Nairobi is not the capital of Kenya.,Wikidata P36,negated_true_relation,True,False
+DEV-CAP-06-01,development,geography,capital_of,SUPPORTS,stable_knowledge,Bangkok is the capital of Thailand.,Wikidata P36,canonical_support,True,False
+DEV-CAP-06-02,development,geography,capital_of,SUPPORTS,stable_knowledge,The capital city of Thailand is Bangkok.,Wikidata P36,reverse_support,True,False
+DEV-CAP-06-03,development,geography,capital_of,REFUTES,stable_knowledge,Bangkok is the capital of Peru.,Wikidata P36,wrong_object,True,False
+DEV-CAP-06-04,development,geography,capital_of,REFUTES,stable_knowledge,Bangkok is not the capital of Thailand.,Wikidata P36,negated_true_relation,True,False
+DEV-CAP-07-01,development,geography,capital_of,SUPPORTS,stable_knowledge,Lima is the capital of Peru.,Wikidata P36,canonical_support,True,False
+DEV-CAP-07-02,development,geography,capital_of,SUPPORTS,stable_knowledge,The capital city of Peru is Lima.,Wikidata P36,reverse_support,True,False
+DEV-CAP-07-03,development,geography,capital_of,REFUTES,stable_knowledge,Lima is the capital of Turkey.,Wikidata P36,wrong_object,True,False
+DEV-CAP-07-04,development,geography,capital_of,REFUTES,stable_knowledge,Lima is not the capital of Peru.,Wikidata P36,negated_true_relation,True,False
+DEV-CAP-08-01,development,geography,capital_of,SUPPORTS,stable_knowledge,Ankara is the capital of Turkey.,Wikidata P36,canonical_support,True,False
+DEV-CAP-08-02,development,geography,capital_of,SUPPORTS,stable_knowledge,The capital city of Turkey is Ankara.,Wikidata P36,reverse_support,True,False
+DEV-CAP-08-03,development,geography,capital_of,REFUTES,stable_knowledge,Ankara is the capital of Canada.,Wikidata P36,wrong_object,True,False
+DEV-CAP-08-04,development,geography,capital_of,REFUTES,stable_knowledge,Ankara is not the capital of Turkey.,Wikidata P36,negated_true_relation,True,False
+DEV-COUNTRY-01-01,development,geography,country_of,SUPPORTS,stable_knowledge,Taj Mahal is part of the country of India.,Wikidata P17,canonical_support,True,False
+DEV-COUNTRY-01-02,development,geography,country_of,SUPPORTS,stable_knowledge,The Taj Mahal is part of the country of India.,Wikidata P17,article_support,True,False
+DEV-COUNTRY-01-03,development,geography,country_of,REFUTES,stable_knowledge,Taj Mahal is part of the country of Egypt.,Wikidata P17,wrong_object,True,False
+DEV-COUNTRY-01-04,development,geography,country_of,REFUTES,stable_knowledge,Taj Mahal is not part of the country of India.,Wikidata P17,negated_true_relation,True,False
+DEV-COUNTRY-02-01,development,geography,country_of,SUPPORTS,stable_knowledge,Colosseum is part of the country of Italy.,Wikidata P17,canonical_support,True,False
+DEV-COUNTRY-02-02,development,geography,country_of,SUPPORTS,stable_knowledge,The Colosseum is part of the country of Italy.,Wikidata P17,article_support,True,False
+DEV-COUNTRY-02-03,development,geography,country_of,REFUTES,stable_knowledge,Colosseum is part of the country of India.,Wikidata P17,wrong_object,True,False
+DEV-COUNTRY-02-04,development,geography,country_of,REFUTES,stable_knowledge,Colosseum is not part of the country of Italy.,Wikidata P17,negated_true_relation,True,False
+DEV-COUNTRY-03-01,development,geography,country_of,SUPPORTS,stable_knowledge,Machu Picchu is part of the country of Peru.,Wikidata P17,canonical_support,True,False
+DEV-COUNTRY-03-02,development,geography,country_of,SUPPORTS,stable_knowledge,The Machu Picchu is part of the country of Peru.,Wikidata P17,article_support,True,False
+DEV-COUNTRY-03-03,development,geography,country_of,REFUTES,stable_knowledge,Machu Picchu is part of the country of Italy.,Wikidata P17,wrong_object,True,False
+DEV-COUNTRY-03-04,development,geography,country_of,REFUTES,stable_knowledge,Machu Picchu is not part of the country of Peru.,Wikidata P17,negated_true_relation,True,False
+DEV-COUNTRY-04-01,development,geography,country_of,SUPPORTS,stable_knowledge,Great Pyramid of Giza is part of the country of Egypt.,Wikidata P17,canonical_support,True,False
+DEV-COUNTRY-04-02,development,geography,country_of,SUPPORTS,stable_knowledge,The Great Pyramid of Giza is part of the country of Egypt.,Wikidata P17,article_support,True,False
+DEV-COUNTRY-04-03,development,geography,country_of,REFUTES,stable_knowledge,Great Pyramid of Giza is part of the country of Peru.,Wikidata P17,wrong_object,True,False
+DEV-COUNTRY-04-04,development,geography,country_of,REFUTES,stable_knowledge,Great Pyramid of Giza is not part of the country of Egypt.,Wikidata P17,negated_true_relation,True,False
+DEV-CONT-01-01,development,geography,continent_of,SUPPORTS,stable_knowledge,India is on the continent of Asia.,Wikidata P30,canonical_support,True,False
+DEV-CONT-01-02,development,geography,continent_of,SUPPORTS,stable_knowledge,India is located on the continent of Asia.,Wikidata P30,located_support,True,False
+DEV-CONT-01-03,development,geography,continent_of,REFUTES,stable_knowledge,India is on the continent of South America.,Wikidata P30,wrong_object,True,False
+DEV-CONT-01-04,development,geography,continent_of,REFUTES,stable_knowledge,India is not on the continent of Asia.,Wikidata P30,negated_true_relation,True,False
+DEV-CONT-02-01,development,geography,continent_of,SUPPORTS,stable_knowledge,Brazil is on the continent of South America.,Wikidata P30,canonical_support,True,False
+DEV-CONT-02-02,development,geography,continent_of,SUPPORTS,stable_knowledge,Brazil is located on the continent of South America.,Wikidata P30,located_support,True,False
+DEV-CONT-02-03,development,geography,continent_of,REFUTES,stable_knowledge,Brazil is on the continent of Africa.,Wikidata P30,wrong_object,True,False
+DEV-CONT-02-04,development,geography,continent_of,REFUTES,stable_knowledge,Brazil is not on the continent of South America.,Wikidata P30,negated_true_relation,True,False
+DEV-CONT-03-01,development,geography,continent_of,SUPPORTS,stable_knowledge,Kenya is on the continent of Africa.,Wikidata P30,canonical_support,True,False
+DEV-CONT-03-02,development,geography,continent_of,SUPPORTS,stable_knowledge,Kenya is located on the continent of Africa.,Wikidata P30,located_support,True,False
+DEV-CONT-03-03,development,geography,continent_of,REFUTES,stable_knowledge,Kenya is on the continent of Europe.,Wikidata P30,wrong_object,True,False
+DEV-CONT-03-04,development,geography,continent_of,REFUTES,stable_knowledge,Kenya is not on the continent of Africa.,Wikidata P30,negated_true_relation,True,False
+DEV-CONT-04-01,development,geography,continent_of,SUPPORTS,stable_knowledge,France is on the continent of Europe.,Wikidata P30,canonical_support,True,False
+DEV-CONT-04-02,development,geography,continent_of,SUPPORTS,stable_knowledge,France is located on the continent of Europe.,Wikidata P30,located_support,True,False
+DEV-CONT-04-03,development,geography,continent_of,REFUTES,stable_knowledge,France is on the continent of Asia.,Wikidata P30,wrong_object,True,False
+DEV-CONT-04-04,development,geography,continent_of,REFUTES,stable_knowledge,France is not on the continent of Europe.,Wikidata P30,negated_true_relation,True,False
+DEV-BORDER-01-01,development,geography,borders,SUPPORTS,stable_knowledge,India borders Pakistan.,Wikidata P47,canonical_support,True,False
+DEV-BORDER-01-02,development,geography,borders,SUPPORTS,stable_knowledge,India shares a border with Pakistan.,Wikidata P47,phrase_support,True,False
+DEV-BORDER-01-03,development,geography,borders,REFUTES,stable_knowledge,India borders United States.,Wikidata P47,wrong_object,True,False
+DEV-BORDER-01-04,development,geography,borders,REFUTES,stable_knowledge,India does not border Pakistan.,Wikidata P47,negated_true_relation,True,False
+DEV-BORDER-02-01,development,geography,borders,SUPPORTS,stable_knowledge,France borders Germany.,Wikidata P47,canonical_support,True,False
+DEV-BORDER-02-02,development,geography,borders,SUPPORTS,stable_knowledge,France shares a border with Germany.,Wikidata P47,phrase_support,True,False
+DEV-BORDER-02-03,development,geography,borders,REFUTES,stable_knowledge,France borders Chile.,Wikidata P47,wrong_object,True,False
+DEV-BORDER-02-04,development,geography,borders,REFUTES,stable_knowledge,France does not border Germany.,Wikidata P47,negated_true_relation,True,False
+DEV-BORDER-03-01,development,geography,borders,SUPPORTS,stable_knowledge,Canada borders United States.,Wikidata P47,canonical_support,True,False
+DEV-BORDER-03-02,development,geography,borders,SUPPORTS,stable_knowledge,Canada shares a border with United States.,Wikidata P47,phrase_support,True,False
+DEV-BORDER-03-03,development,geography,borders,REFUTES,stable_knowledge,Canada borders Pakistan.,Wikidata P47,wrong_object,True,False
+DEV-BORDER-03-04,development,geography,borders,REFUTES,stable_knowledge,Canada does not border United States.,Wikidata P47,negated_true_relation,True,False
+DEV-BORDER-04-01,development,geography,borders,SUPPORTS,stable_knowledge,Argentina borders Chile.,Wikidata P47,canonical_support,True,False
+DEV-BORDER-04-02,development,geography,borders,SUPPORTS,stable_knowledge,Argentina shares a border with Chile.,Wikidata P47,phrase_support,True,False
+DEV-BORDER-04-03,development,geography,borders,REFUTES,stable_knowledge,Argentina borders Germany.,Wikidata P47,wrong_object,True,False
+DEV-BORDER-04-04,development,geography,borders,REFUTES,stable_knowledge,Argentina does not border Chile.,Wikidata P47,negated_true_relation,True,False
+DEV-ORBIT-01-01,development,astronomy,orbits,SUPPORTS,stable_knowledge,Moon orbits Earth.,Wikidata P397 and NASA,canonical_support,True,False
+DEV-ORBIT-01-02,development,astronomy,orbits,SUPPORTS,stable_knowledge,Moon revolves around Earth.,Wikidata P397 and NASA,paraphrase_support,True,False
+DEV-ORBIT-01-03,development,astronomy,orbits,REFUTES,stable_knowledge,Moon orbits Sun.,Wikidata P397 and NASA,wrong_object,True,False
+DEV-ORBIT-01-04,development,astronomy,orbits,REFUTES,stable_knowledge,Moon does not orbit Earth.,Wikidata P397 and NASA,negated_true_relation,True,False
+DEV-ORBIT-02-01,development,astronomy,orbits,SUPPORTS,stable_knowledge,Earth orbits Sun.,Wikidata P397 and NASA,canonical_support,True,False
+DEV-ORBIT-02-02,development,astronomy,orbits,SUPPORTS,stable_knowledge,Earth revolves around Sun.,Wikidata P397 and NASA,paraphrase_support,True,False
+DEV-ORBIT-02-03,development,astronomy,orbits,REFUTES,stable_knowledge,Earth orbits Mars.,Wikidata P397 and NASA,wrong_object,True,False
+DEV-ORBIT-02-04,development,astronomy,orbits,REFUTES,stable_knowledge,Earth does not orbit Sun.,Wikidata P397 and NASA,negated_true_relation,True,False
+DEV-ORBIT-03-01,development,astronomy,orbits,SUPPORTS,stable_knowledge,Mars orbits Sun.,Wikidata P397 and NASA,canonical_support,True,False
+DEV-ORBIT-03-02,development,astronomy,orbits,SUPPORTS,stable_knowledge,Mars revolves around Sun.,Wikidata P397 and NASA,paraphrase_support,True,False
+DEV-ORBIT-03-03,development,astronomy,orbits,REFUTES,stable_knowledge,Mars orbits Jupiter.,Wikidata P397 and NASA,wrong_object,True,False
+DEV-ORBIT-03-04,development,astronomy,orbits,REFUTES,stable_knowledge,Mars does not orbit Sun.,Wikidata P397 and NASA,negated_true_relation,True,False
+DEV-ORBIT-04-01,development,astronomy,orbits,SUPPORTS,stable_knowledge,Phobos orbits Mars.,Wikidata P397 and NASA,canonical_support,True,False
+DEV-ORBIT-04-02,development,astronomy,orbits,SUPPORTS,stable_knowledge,Phobos revolves around Mars.,Wikidata P397 and NASA,paraphrase_support,True,False
+DEV-ORBIT-04-03,development,astronomy,orbits,REFUTES,stable_knowledge,Phobos orbits Jupiter.,Wikidata P397 and NASA,wrong_object,True,False
+DEV-ORBIT-04-04,development,astronomy,orbits,REFUTES,stable_knowledge,Phobos does not orbit Mars.,Wikidata P397 and NASA,negated_true_relation,True,False
+DEV-ORBIT-05-01,development,astronomy,orbits,SUPPORTS,stable_knowledge,Europa orbits Jupiter.,Wikidata P397 and NASA,canonical_support,True,False
+DEV-ORBIT-05-02,development,astronomy,orbits,SUPPORTS,stable_knowledge,Europa revolves around Jupiter.,Wikidata P397 and NASA,paraphrase_support,True,False
+DEV-ORBIT-05-03,development,astronomy,orbits,REFUTES,stable_knowledge,Europa orbits Saturn.,Wikidata P397 and NASA,wrong_object,True,False
+DEV-ORBIT-05-04,development,astronomy,orbits,REFUTES,stable_knowledge,Europa does not orbit Jupiter.,Wikidata P397 and NASA,negated_true_relation,True,False
+DEV-ORBIT-06-01,development,astronomy,orbits,SUPPORTS,stable_knowledge,Titan orbits Saturn.,Wikidata P397 and NASA,canonical_support,True,False
+DEV-ORBIT-06-02,development,astronomy,orbits,SUPPORTS,stable_knowledge,Titan revolves around Saturn.,Wikidata P397 and NASA,paraphrase_support,True,False
+DEV-ORBIT-06-03,development,astronomy,orbits,REFUTES,stable_knowledge,Titan orbits Earth.,Wikidata P397 and NASA,wrong_object,True,False
+DEV-ORBIT-06-04,development,astronomy,orbits,REFUTES,stable_knowledge,Titan does not orbit Saturn.,Wikidata P397 and NASA,negated_true_relation,True,False
+DEV-TYPE-01-01,development,astronomy,instance_of,SUPPORTS,stable_knowledge,Sun is a star.,Wikidata P31 and NASA,canonical_support,True,False
+DEV-TYPE-01-02,development,astronomy,instance_of,SUPPORTS,stable_knowledge,The Sun is a star.,Wikidata P31 and NASA,article_support,True,False
+DEV-TYPE-01-03,development,astronomy,instance_of,REFUTES,stable_knowledge,Sun is a planet.,Wikidata P31 and NASA,wrong_object,True,False
+DEV-TYPE-01-04,development,astronomy,instance_of,REFUTES,stable_knowledge,Sun is not a star.,Wikidata P31 and NASA,negated_true_relation,True,False
+DEV-TYPE-02-01,development,astronomy,instance_of,SUPPORTS,stable_knowledge,Earth is a planet.,Wikidata P31 and NASA,canonical_support,True,False
+DEV-TYPE-02-02,development,astronomy,instance_of,SUPPORTS,stable_knowledge,The Earth is a planet.,Wikidata P31 and NASA,article_support,True,False
+DEV-TYPE-02-03,development,astronomy,instance_of,REFUTES,stable_knowledge,Earth is a star.,Wikidata P31 and NASA,wrong_object,True,False
+DEV-TYPE-02-04,development,astronomy,instance_of,REFUTES,stable_knowledge,Earth is not a planet.,Wikidata P31 and NASA,negated_true_relation,True,False
+DEV-TYPE-03-01,development,astronomy,instance_of,SUPPORTS,stable_knowledge,Mars is a planet.,Wikidata P31 and NASA,canonical_support,True,False
+DEV-TYPE-03-02,development,astronomy,instance_of,SUPPORTS,stable_knowledge,The Mars is a planet.,Wikidata P31 and NASA,article_support,True,False
+DEV-TYPE-03-03,development,astronomy,instance_of,REFUTES,stable_knowledge,Mars is a star.,Wikidata P31 and NASA,wrong_object,True,False
+DEV-TYPE-03-04,development,astronomy,instance_of,REFUTES,stable_knowledge,Mars is not a planet.,Wikidata P31 and NASA,negated_true_relation,True,False
+DEV-SYMBOL-01-01,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol for gold is Au.,Wikidata P246,canonical_support,True,False
+DEV-SYMBOL-01-02,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol of gold is Au.,Wikidata P246,of_support,True,False
+DEV-SYMBOL-01-03,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for gold is C.,Wikidata P246,wrong_object,True,False
+DEV-SYMBOL-01-04,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for gold is not Au.,Wikidata P246,negated_true_relation,True,False
+DEV-SYMBOL-02-01,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol for oxygen is O.,Wikidata P246,canonical_support,True,False
+DEV-SYMBOL-02-02,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol of oxygen is O.,Wikidata P246,of_support,True,False
+DEV-SYMBOL-02-03,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for oxygen is Au.,Wikidata P246,wrong_object,True,False
+DEV-SYMBOL-02-04,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for oxygen is not O.,Wikidata P246,negated_true_relation,True,False
+DEV-SYMBOL-03-01,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol for sodium is Na.,Wikidata P246,canonical_support,True,False
+DEV-SYMBOL-03-02,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol of sodium is Na.,Wikidata P246,of_support,True,False
+DEV-SYMBOL-03-03,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for sodium is O.,Wikidata P246,wrong_object,True,False
+DEV-SYMBOL-03-04,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for sodium is not Na.,Wikidata P246,negated_true_relation,True,False
+DEV-SYMBOL-04-01,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol for iron is Fe.,Wikidata P246,canonical_support,True,False
+DEV-SYMBOL-04-02,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol of iron is Fe.,Wikidata P246,of_support,True,False
+DEV-SYMBOL-04-03,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for iron is Na.,Wikidata P246,wrong_object,True,False
+DEV-SYMBOL-04-04,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for iron is not Fe.,Wikidata P246,negated_true_relation,True,False
+DEV-SYMBOL-05-01,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol for silver is Ag.,Wikidata P246,canonical_support,True,False
+DEV-SYMBOL-05-02,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol of silver is Ag.,Wikidata P246,of_support,True,False
+DEV-SYMBOL-05-03,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for silver is Fe.,Wikidata P246,wrong_object,True,False
+DEV-SYMBOL-05-04,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for silver is not Ag.,Wikidata P246,negated_true_relation,True,False
+DEV-SYMBOL-06-01,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol for carbon is C.,Wikidata P246,canonical_support,True,False
+DEV-SYMBOL-06-02,development,basic_science,chemical_symbol,SUPPORTS,stable_knowledge,The chemical symbol of carbon is C.,Wikidata P246,of_support,True,False
+DEV-SYMBOL-06-03,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for carbon is Ag.,Wikidata P246,wrong_object,True,False
+DEV-SYMBOL-06-04,development,basic_science,chemical_symbol,REFUTES,stable_knowledge,The chemical symbol for carbon is not C.,Wikidata P246,negated_true_relation,True,False
+DEV-ATOMIC-01-01,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number of oxygen is 8.,Wikidata P1086,canonical_support,True,False
+DEV-ATOMIC-01-02,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number for oxygen is 8.,Wikidata P1086,for_support,True,False
+DEV-ATOMIC-01-03,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of oxygen is 47.,Wikidata P1086,wrong_object,True,False
+DEV-ATOMIC-01-04,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of oxygen is not 8.,Wikidata P1086,negated_true_relation,True,False
+DEV-ATOMIC-02-01,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number of gold is 79.,Wikidata P1086,canonical_support,True,False
+DEV-ATOMIC-02-02,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number for gold is 79.,Wikidata P1086,for_support,True,False
+DEV-ATOMIC-02-03,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of gold is 8.,Wikidata P1086,wrong_object,True,False
+DEV-ATOMIC-02-04,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of gold is not 79.,Wikidata P1086,negated_true_relation,True,False
+DEV-ATOMIC-03-01,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number of carbon is 6.,Wikidata P1086,canonical_support,True,False
+DEV-ATOMIC-03-02,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number for carbon is 6.,Wikidata P1086,for_support,True,False
+DEV-ATOMIC-03-03,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of carbon is 79.,Wikidata P1086,wrong_object,True,False
+DEV-ATOMIC-03-04,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of carbon is not 6.,Wikidata P1086,negated_true_relation,True,False
+DEV-ATOMIC-04-01,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number of iron is 26.,Wikidata P1086,canonical_support,True,False
+DEV-ATOMIC-04-02,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number for iron is 26.,Wikidata P1086,for_support,True,False
+DEV-ATOMIC-04-03,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of iron is 6.,Wikidata P1086,wrong_object,True,False
+DEV-ATOMIC-04-04,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of iron is not 26.,Wikidata P1086,negated_true_relation,True,False
+DEV-ATOMIC-05-01,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number of silver is 47.,Wikidata P1086,canonical_support,True,False
+DEV-ATOMIC-05-02,development,basic_science,atomic_number,SUPPORTS,stable_knowledge,The atomic number for silver is 47.,Wikidata P1086,for_support,True,False
+DEV-ATOMIC-05-03,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of silver is 26.,Wikidata P1086,wrong_object,True,False
+DEV-ATOMIC-05-04,development,basic_science,atomic_number,REFUTES,stable_knowledge,The atomic number of silver is not 47.,Wikidata P1086,negated_true_relation,True,False
+DEV-FREEZE-01-01,development,basic_science,freezes_at,SUPPORTS,stable_knowledge,water freezes at 0 degrees Celsius.,Wikidata P2101 and NIST,canonical_support,True,False
+DEV-FREEZE-01-02,development,basic_science,freezes_at,SUPPORTS,stable_knowledge,The water freezes at 0 degrees Celsius.,Wikidata P2101 and NIST,article_support,True,False
+DEV-FREEZE-01-03,development,basic_science,freezes_at,REFUTES,stable_knowledge,water freezes at 25 degrees Celsius.,Wikidata P2101 and NIST,wrong_object,True,False
+DEV-FREEZE-01-04,development,basic_science,freezes_at,REFUTES,stable_knowledge,water does not freeze at 0 degrees Celsius.,Wikidata P2101 and NIST,negated_true_relation,True,False
+DEV-BOIL-01-01,development,basic_science,boils_at,SUPPORTS,stable_knowledge,water boils at 100 degrees Celsius.,Wikidata P2102 and NIST,canonical_support,True,False
+DEV-BOIL-01-02,development,basic_science,boils_at,SUPPORTS,stable_knowledge,The water boils at 100 degrees Celsius.,Wikidata P2102 and NIST,article_support,True,False
+DEV-BOIL-01-03,development,basic_science,boils_at,REFUTES,stable_knowledge,water boils at 50 degrees Celsius.,Wikidata P2102 and NIST,wrong_object,True,False
+DEV-BOIL-01-04,development,basic_science,boils_at,REFUTES,stable_knowledge,water does not boil at 100 degrees Celsius.,Wikidata P2102 and NIST,negated_true_relation,True,False
+DEV-FOUND-01-01,development,established_history,founded_in,SUPPORTS,stable_knowledge,United Nations was founded in 1945.,Wikidata P571,canonical_support,True,False
+DEV-FOUND-01-02,development,established_history,founded_in,SUPPORTS,stable_knowledge,United Nations was established in 1945.,Wikidata P571,established_support,True,False
+DEV-FOUND-01-03,development,established_history,founded_in,REFUTES,stable_knowledge,United Nations was founded in 1958.,Wikidata P571,wrong_object,True,False
+DEV-FOUND-01-04,development,established_history,founded_in,REFUTES,stable_knowledge,United Nations was not founded in 1945.,Wikidata P571,negated_true_relation,True,False
+DEV-FOUND-02-01,development,established_history,founded_in,SUPPORTS,stable_knowledge,NASA was founded in 1958.,Wikidata P571 and NASA,canonical_support,True,False
+DEV-FOUND-02-02,development,established_history,founded_in,SUPPORTS,stable_knowledge,NASA was established in 1958.,Wikidata P571 and NASA,established_support,True,False
+DEV-FOUND-02-03,development,established_history,founded_in,REFUTES,stable_knowledge,NASA was founded in 1998.,Wikidata P571 and NASA,wrong_object,True,False
+DEV-FOUND-02-04,development,established_history,founded_in,REFUTES,stable_knowledge,NASA was not founded in 1958.,Wikidata P571 and NASA,negated_true_relation,True,False
+DEV-FOUND-03-01,development,established_history,founded_in,SUPPORTS,stable_knowledge,Google was founded in 1998.,Wikidata P571,canonical_support,True,False
+DEV-FOUND-03-02,development,established_history,founded_in,SUPPORTS,stable_knowledge,Google was established in 1998.,Wikidata P571,established_support,True,False
+DEV-FOUND-03-03,development,established_history,founded_in,REFUTES,stable_knowledge,Google was founded in 1945.,Wikidata P571,wrong_object,True,False
+DEV-FOUND-03-04,development,established_history,founded_in,REFUTES,stable_knowledge,Google was not founded in 1998.,Wikidata P571,negated_true_relation,True,False
+DEV-INVENT-01-01,development,established_history,invented_by,SUPPORTS,stable_knowledge,The telephone was invented by Alexander Graham Bell.,Wikidata P61 and Library of Congress,canonical_support,True,False
+DEV-INVENT-01-02,development,established_history,invented_by,SUPPORTS,stable_knowledge,The telephone was developed by Alexander Graham Bell.,Wikidata P61 and Library of Congress,developed_support,True,False
+DEV-INVENT-01-03,development,established_history,invented_by,REFUTES,stable_knowledge,The telephone was invented by Tim Berners-Lee.,Wikidata P61 and Library of Congress,wrong_object,True,False
+DEV-INVENT-01-04,development,established_history,invented_by,REFUTES,stable_knowledge,The telephone was not invented by Alexander Graham Bell.,Wikidata P61 and Library of Congress,negated_true_relation,True,False
+DEV-INVENT-02-01,development,established_history,invented_by,SUPPORTS,stable_knowledge,The World Wide Web was invented by Tim Berners-Lee.,Wikidata P61,canonical_support,True,False
+DEV-INVENT-02-02,development,established_history,invented_by,SUPPORTS,stable_knowledge,The World Wide Web was developed by Tim Berners-Lee.,Wikidata P61,developed_support,True,False
+DEV-INVENT-02-03,development,established_history,invented_by,REFUTES,stable_knowledge,The World Wide Web was invented by Alexander Graham Bell.,Wikidata P61,wrong_object,True,False
+DEV-INVENT-02-04,development,established_history,invented_by,REFUTES,stable_knowledge,The World Wide Web was not invented by Tim Berners-Lee.,Wikidata P61,negated_true_relation,True,False
+DEV-DISCOVER-01-01,development,established_history,discovered_by,SUPPORTS,stable_knowledge,penicillin was discovered by Alexander Fleming.,Wikidata P61,canonical_support,True,False
+DEV-DISCOVER-01-02,development,established_history,discovered_by,SUPPORTS,stable_knowledge,The penicillin was discovered by Alexander Fleming.,Wikidata P61,article_support,True,False
+DEV-DISCOVER-01-03,development,established_history,discovered_by,REFUTES,stable_knowledge,penicillin was discovered by Galileo Galilei.,Wikidata P61,wrong_object,True,False
+DEV-DISCOVER-01-04,development,established_history,discovered_by,REFUTES,stable_knowledge,penicillin was not discovered by Alexander Fleming.,Wikidata P61,negated_true_relation,True,False
+DEV-BIRTH-01-01,development,established_history,born_in,SUPPORTS,stable_knowledge,Albert Einstein was born in Ulm.,Wikidata P19,canonical_support,True,False
+DEV-BIRTH-01-02,development,established_history,born_in,SUPPORTS,stable_knowledge,Albert Einstein is born in Ulm.,Wikidata P19,present_support,True,False
+DEV-BIRTH-01-03,development,established_history,born_in,REFUTES,stable_knowledge,Albert Einstein was born in Porbandar.,Wikidata P19,wrong_object,True,False
+DEV-BIRTH-01-04,development,established_history,born_in,REFUTES,stable_knowledge,Albert Einstein was not born in Ulm.,Wikidata P19,negated_true_relation,True,False
+DEV-BIRTH-02-01,development,established_history,born_in,SUPPORTS,stable_knowledge,Mahatma Gandhi was born in Porbandar.,Wikidata P19,canonical_support,True,False
+DEV-BIRTH-02-02,development,established_history,born_in,SUPPORTS,stable_knowledge,Mahatma Gandhi is born in Porbandar.,Wikidata P19,present_support,True,False
+DEV-BIRTH-02-03,development,established_history,born_in,REFUTES,stable_knowledge,Mahatma Gandhi was born in Stratford-upon-Avon.,Wikidata P19,wrong_object,True,False
+DEV-BIRTH-02-04,development,established_history,born_in,REFUTES,stable_knowledge,Mahatma Gandhi was not born in Porbandar.,Wikidata P19,negated_true_relation,True,False
+DEV-BIRTH-03-01,development,established_history,born_in,SUPPORTS,stable_knowledge,William Shakespeare was born in Stratford-upon-Avon.,Wikidata P19,canonical_support,True,False
+DEV-BIRTH-03-02,development,established_history,born_in,SUPPORTS,stable_knowledge,William Shakespeare is born in Stratford-upon-Avon.,Wikidata P19,present_support,True,False
+DEV-BIRTH-03-03,development,established_history,born_in,REFUTES,stable_knowledge,William Shakespeare was born in Ulm.,Wikidata P19,wrong_object,True,False
+DEV-BIRTH-03-04,development,established_history,born_in,REFUTES,stable_knowledge,William Shakespeare was not born in Stratford-upon-Avon.,Wikidata P19,negated_true_relation,True,False
+DEV-END-01-01,development,established_history,ended_in,SUPPORTS,stable_knowledge,World War II ended in 1945.,Wikidata P582 and National Archives,canonical_support,True,False
+DEV-END-01-02,development,established_history,ended_in,SUPPORTS,stable_knowledge,World War II concluded in 1945.,Wikidata P582 and National Archives,concluded_support,True,False
+DEV-END-01-03,development,established_history,ended_in,REFUTES,stable_knowledge,World War II ended in 1939.,Wikidata P582 and National Archives,wrong_object,True,False
+DEV-END-01-04,development,established_history,ended_in,REFUTES,stable_knowledge,World War II did not end in 1945.,Wikidata P582 and National Archives,negated_true_relation,True,False
+BOUNDARY-01,development,current_high_impact_boundary,boundary,NOT_ROUTED,other_policy_path,The election result was announced today.,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-02,development,current_high_impact_boundary,boundary,NOT_ROUTED,other_policy_path,The central bank changed interest rates this week.,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-03,development,current_high_impact_boundary,boundary,NOT_ROUTED,other_policy_path,A new vaccine was approved today.,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-04,development,current_high_impact_boundary,boundary,NOT_ROUTED,other_policy_path,The Supreme Court issued a new order today.,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-05,development,current_high_impact_boundary,boundary,NOT_ROUTED,other_policy_path,The stock price reached a new record this morning.,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-06,development,current_high_impact_boundary,boundary,NOT_ROUTED,other_policy_path,A disease outbreak was reported this month.,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-07,development,question_boundary,boundary,NOT_ROUTED,other_policy_path,Is Ottawa the capital of Canada?,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-08,development,question_boundary,boundary,NOT_ROUTED,other_policy_path,Does the Moon orbit Earth?,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-09,development,opinion_boundary,boundary,NOT_ROUTED,other_policy_path,Paris is the most beautiful capital.,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-10,development,opinion_boundary,boundary,NOT_ROUTED,other_policy_path,Mars is the best planet.,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-11,development,empty_boundary,boundary,NOT_ROUTED,other_policy_path,,Policy routing test; no factual verdict expected,boundary,True,False
+BOUNDARY-12,development,unsupported_relation_boundary,boundary,NOT_ROUTED,other_policy_path,Water tastes pleasant.,Policy routing test; no factual verdict expected,boundary,True,False

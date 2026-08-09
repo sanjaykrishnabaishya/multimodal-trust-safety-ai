@@ -1,0 +1,55 @@
+{
+  "version": "2026.08-v3-development",
+  "created_at": "2026-08-07T13:28:44.369327+00:00",
+  "dataset_path": "C:\\Users\\Asus\\OneDrive\\Desktop\\trust-safety-ai\\datasets\\development\\stable_knowledge_v3\\development.csv",
+  "dataset_sha256": "0b4de2f387315b1be52aba0c2574c9adb6329d894d9c8b2534388a501051d013",
+  "record_count": 220,
+  "status_counts": {
+    "NOT_ROUTED": 12,
+    "REFUTES": 104,
+    "SUPPORTS": 104
+  },
+  "topic_counts": {
+    "astronomy": 36,
+    "basic_science": 52,
+    "current_high_impact_boundary": 6,
+    "empty_boundary": 1,
+    "established_history": 40,
+    "geography": 80,
+    "opinion_boundary": 2,
+    "question_boundary": 2,
+    "unsupported_relation_boundary": 1
+  },
+  "relation_counts": {
+    "atomic_number": 20,
+    "boils_at": 4,
+    "borders": 16,
+    "born_in": 12,
+    "boundary": 12,
+    "capital_of": 32,
+    "chemical_symbol": 24,
+    "continent_of": 16,
+    "country_of": 16,
+    "discovered_by": 4,
+    "ended_in": 4,
+    "founded_in": 12,
+    "freezes_at": 4,
+    "instance_of": 12,
+    "invented_by": 8,
+    "orbits": 24
+  },
+  "split": "development",
+  "allowed_for_threshold_tuning": true,
+  "eligible_for_holdout": false,
+  "contains_copied_webpage_text": false,
+  "contains_personal_information": false,
+  "uses_v2_holdout_records": false,
+  "uses_v2_mismatch_report": false,
+  "persistent_cache_required": false,
+  "instructions": [
+    "This dataset is for development and threshold tuning only.",
+    "Never report performance on this dataset as independent accuracy.",
+    "Never add this dataset to a future independent holdout.",
+    "Do not inspect or tune from the V2 holdout mismatch file."
+  ]
+}
