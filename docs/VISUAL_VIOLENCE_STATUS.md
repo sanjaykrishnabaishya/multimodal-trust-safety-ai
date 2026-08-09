@@ -14,13 +14,20 @@ is not changed by this safety gate.
 
 ## Violent Content V2 RC1
 
-- Status: frozen candidate
+- Status: retired after failing the independent readiness gate
 - Development result: 100% on 200 development records
-- Independent validation: not yet completed
+- Independent holdout records: 100
+- Independent accuracy: 88%
+- Independent precision: 100%
+- Independent recall: 70%
+- Independent F1: 82.35%
+- Exact category and action accuracy: 77%
+- Action-contract failures: 21
 - Production enforcement: not permitted
+- Pilot use: supporting evidence with mandatory human review only
 
-Development results are not independent accuracy and must not be presented as
-production accuracy.
+The 100% development result must not be presented as production accuracy. V2
+RC1 may not be tuned or modified using its sealed holdout.
 
 ## Rejected visual candidates
 

@@ -31,6 +31,7 @@ from app.services.moderation_service import (
 )
 from app.services.multimodal_capability_gate_service import (
     apply_multimodal_capability_gate,
+    apply_violent_content_readiness_gate,
     get_multimodal_capability_status,
 )
 from app.services.rag_service import (
@@ -196,13 +197,20 @@ def moderate_plain_text(
         )
     )
 
+    decision, readiness_warnings = (
+        apply_violent_content_readiness_gate(
+            decision=decision,
+        )
+    )
+
     fusion_warnings = decision.pop(
         "fusion_warnings",
         [],
     )
 
-    warnings = list(
-        fusion_warnings
+    warnings = (
+        list(fusion_warnings)
+        + list(readiness_warnings)
     )
 
     (
@@ -422,6 +430,12 @@ async def moderate_uploaded_file(
         )
     )
 
+    decision, readiness_warnings = (
+        apply_violent_content_readiness_gate(
+            decision=decision,
+        )
+    )
+
     decision, capability_warnings = (
         apply_multimodal_capability_gate(
             decision=decision,
@@ -444,6 +458,7 @@ async def moderate_uploaded_file(
     warnings = (
         list(extraction_warnings)
         + list(fusion_warnings)
+        + list(readiness_warnings)
         + list(capability_warnings)
     )
 
