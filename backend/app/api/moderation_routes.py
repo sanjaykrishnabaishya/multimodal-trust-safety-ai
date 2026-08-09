@@ -29,6 +29,10 @@ from app.services.image_processor import (
 from app.services.moderation_service import (
     combine_extracted_signals,
 )
+from app.services.multimodal_capability_gate_service import (
+    apply_multimodal_capability_gate,
+    get_multimodal_capability_status,
+)
 from app.services.rag_service import (
     get_rag_status,
 )
@@ -159,6 +163,12 @@ def moderation_health() -> dict:
             "available"
         ],
         "visual_model_connected": True,
+        "visual_description_connected": True,
+        "visual_violence_independently_validated": False,
+        "automatic_visual_safety_confirmation_allowed": False,
+        "multimodal_capability_gate": (
+            get_multimodal_capability_status()
+        ),
         "ocr_connected": True,
         "transcription_connected": True,
         "review_storage_enabled": True,
@@ -412,6 +422,13 @@ async def moderate_uploaded_file(
         )
     )
 
+    decision, capability_warnings = (
+        apply_multimodal_capability_gate(
+            decision=decision,
+            content_type=content_type,
+        )
+    )
+
     fusion_warnings = decision.pop(
         "fusion_warnings",
         [],
@@ -424,10 +441,10 @@ async def moderate_uploaded_file(
         )
     )
 
-    warnings = list(
-        extraction_warnings
-    ) + list(
-        fusion_warnings
+    warnings = (
+        list(extraction_warnings)
+        + list(fusion_warnings)
+        + list(capability_warnings)
     )
 
     (

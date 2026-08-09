@@ -22,6 +22,9 @@ ContentType = Literal[
     "video",
 ]
 
+# Uncertain is a decision state, not an additional policy category.
+DecisionCategory = ModerationCategory | Literal["Uncertain"]
+
 
 class ModerationTextRequest(
     BaseModel
@@ -46,7 +49,7 @@ class ModerationResponse(
         str | None
     ) = None
 
-    category: ModerationCategory
+    category: DecisionCategory
 
     severity: str
 
@@ -136,6 +139,9 @@ class ModerationResponse(
                 "Moderation category "
                 "must be text."
             )
+
+        if value.strip() == "Uncertain":
+            return "Uncertain"
 
         try:
             return (

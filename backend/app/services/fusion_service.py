@@ -16,6 +16,12 @@ from app.services.private_information_service import (
 from app.services.identity_impersonation_service import (
     analyze_identity_impersonation,
 )
+from app.services.targeted_threat_service import (
+    analyze_targeted_threat,
+)
+from app.services.violent_content_service import (
+    analyze_violent_content,
+)
 from app.services.fact_check_fusion_service import (
     analyze_fact_check_for_fusion,
 )
@@ -686,6 +692,9 @@ def fuse_moderation_decision(
     )
 
 
+    violent_content_analysis = analyze_violent_content(text)
+    targeted_threat_analysis = analyze_targeted_threat(text)
+
     identity_impersonation_analysis = (
         analyze_identity_impersonation(
             text
@@ -1123,29 +1132,140 @@ def fuse_moderation_decision(
                 "detected. Human review is required."
             )
 
+    violent_content_detected = bool(
+        violent_content_analysis.get("detected", False)
+    )
+    violent_content_safe_override = bool(
+        violent_content_analysis.get("safe_override_allowed", False)
+    )
+    violent_content_decision_applied = False
+
+    if violent_content_safe_override and category == "Violent Content":
+        category = NORMAL_CATEGORY
+        severity = "None"
+        action = "Allow"
+        confidence = max(0.78, min(confidence, 0.90))
+        human_review_required = False
+        reason = str(violent_content_analysis.get("reason", reason))
+        matched_signals.append(
+            "violent_content_specialist:safe_context_override"
+        )
+        violent_content_decision_applied = True
+
+    if violent_content_detected:
+        violence_category = str(
+            violent_content_analysis.get("category", "Violent Content")
+        )
+        violence_signal = (
+            "violent_content_specialist:"
+            + str(violent_content_analysis.get("decision_type", "detected"))
+        )
+        matched_signals.append(violence_signal)
+
+        if category in {NORMAL_CATEGORY, violence_category}:
+            category = violence_category
+            severity = str(violent_content_analysis.get("severity", "High"))
+            action = str(
+                violent_content_analysis.get("action", "Refer to human review")
+            )
+            confidence = max(
+                confidence,
+                float(violent_content_analysis.get("confidence", 0.75)),
+            )
+            human_review_required = bool(
+                violent_content_analysis.get("human_review_required", True)
+            )
+            reason = str(violent_content_analysis.get("reason", reason))
+            violent_content_decision_applied = True
+        else:
+            human_review_required = True
+            reason = (
+                f"{reason} The violence specialist also found supporting "
+                "evidence, but it did not replace the existing primary category."
+            )
+
+    targeted_threat_detected = bool(
+        targeted_threat_analysis.get("detected", False)
+    )
+    targeted_threat_boundary_applied = False
+
+    if targeted_threat_detected:
+        threat_category = str(
+            targeted_threat_analysis.get(
+                "category", "Cyberbullying & Harassment"
+            )
+        )
+        matched_signals.append(
+            "targeted_threat_boundary:targeted_intimidation"
+        )
+
+        if category in {
+            NORMAL_CATEGORY,
+            "Violent Content",
+            threat_category,
+        }:
+            category = threat_category
+            severity = str(targeted_threat_analysis.get("severity", "High"))
+            action = str(
+                targeted_threat_analysis.get(
+                    "action", "Limit, flag, and send for human review"
+                )
+            )
+            confidence = max(
+                confidence,
+                float(targeted_threat_analysis.get("confidence", 0.85)),
+            )
+            human_review_required = True
+            reason = str(targeted_threat_analysis.get("reason", reason))
+            targeted_threat_boundary_applied = True
+        else:
+            human_review_required = True
+            reason = (
+                f"{reason} Targeted physical-intimidation evidence was also "
+                "detected, but it did not replace the existing primary category."
+            )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
-    try:
-        fact_check_result = analyze_fact_check_for_fusion(
-            text=text,
-            current_category=safely_normalize_category(category),
-        )
-    except Exception as error:
-        fact_check_error = f"{type(error).__name__}: {error}"
+    if violent_content_safe_override:
         fact_check_result = {
-            "fact_check_router_used": True,
+            "fact_check_router_used": False,
             "fact_check_analysis_used": False,
             "decision_override_allowed": False,
-            "route_reason": "Fact-check processing failed safely.",
+            "route_reason": (
+                "Fact-check routing was suppressed for a confirmed violence "
+                "metaphor, prevention statement, or documented threat report."
+            ),
             "category": "",
-            "evidence_status": "ERROR",
+            "evidence_status": "NOT_ROUTED",
             "confidence": 0.0,
             "action": "",
             "human_review_required": False,
             "automatic_enforcement_allowed": False,
             "analysis": {},
         }
+    else:
+        try:
+            fact_check_result = analyze_fact_check_for_fusion(
+                text=text,
+                current_category=safely_normalize_category(category),
+            )
+        except Exception as error:
+            fact_check_error = f"{type(error).__name__}: {error}"
+            fact_check_result = {
+                "fact_check_router_used": True,
+                "fact_check_analysis_used": False,
+                "decision_override_allowed": False,
+                "route_reason": "Fact-check processing failed safely.",
+                "category": "",
+                "evidence_status": "ERROR",
+                "confidence": 0.0,
+                "action": "",
+                "human_review_required": False,
+                "automatic_enforcement_allowed": False,
+                "analysis": {},
+            }
 
     fact_check_analysis_used = bool(
         fact_check_result.get("fact_check_analysis_used", False)
@@ -1274,6 +1394,16 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["violent_content_specialist"]
+                if violent_content_decision_applied
+                else []
+            )
+            + (
+                ["targeted_threat_boundary"]
+                if targeted_threat_boundary_applied
+                else []
+            )
+            + (
                 ["spam_dictionary"]
                 if spam_analysis.get(
                     "dictionary_matches"
@@ -1375,6 +1505,16 @@ def fuse_moderation_decision(
             private_information_analysis
         ),
 
+        "targeted_threat_boundary_used": (
+            targeted_threat_boundary_applied
+        ),
+        "targeted_threat": targeted_threat_analysis,
+        "violent_content_specialist_used": (
+            violent_content_decision_applied
+        ),
+        "violent_content_specialist": (
+            violent_content_analysis
+        ),
         "fact_check_used": fact_check_analysis_used,
         "fact_check": fact_check_result,
         "sms_spam_specialist_used": (

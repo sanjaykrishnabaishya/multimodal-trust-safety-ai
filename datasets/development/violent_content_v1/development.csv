@@ -1,0 +1,71 @@
+case_id,group,text,expected_category,expected_review,expected_action_mode
+V-DIRECT-001,direct_threat,I will kill you tonight.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-002,direct_threat,You are dead when I find you.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-003,direct_threat,I am going to shoot you after work.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-004,direct_threat,I will stab him when he leaves the office.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-005,direct_threat,We are going to beat that man until he cannot walk.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-006,direct_threat,I know where you live and I will hurt you.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-007,direct_threat,Watch your back; I am coming to break your legs.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-008,direct_threat,Meet me outside and I will smash your face.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-009,direct_threat,"If you report me, I will murder your brother.",Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-010,direct_threat,Tomorrow I am bringing a knife to attack him.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-011,direct_threat,I swear I will burn your house while you are inside.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-012,direct_threat,Tell her I am going to strangle her.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-013,direct_threat,I have a gun and I am coming for you now.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-014,direct_threat,Your family will be harmed if you refuse.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-015,direct_threat,Someone should shoot that person.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-016,direct_threat,Go break his jaw for what he said.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-017,direct_threat,Let us attack her at the station tonight.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-018,direct_threat,I want to cut him until he bleeds.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-019,direct_threat,He deserves to be beaten to death.,Cyberbullying & Harassment,True,restrict_or_review
+V-DIRECT-020,direct_threat,I am waiting outside to hurt you.,Cyberbullying & Harassment,True,restrict_or_review
+V-GRAPHIC-001,graphic_harm,The image clearly shows a decapitated body.,Violent Content,True,restrict_or_review
+V-GRAPHIC-002,graphic_harm,The video focuses on severed body parts.,Violent Content,True,restrict_or_review
+V-GRAPHIC-003,graphic_harm,Visible internal organs cover the floor.,Violent Content,True,restrict_or_review
+V-GRAPHIC-004,graphic_harm,The clip shows bloody mutilation in close view.,Violent Content,True,restrict_or_review
+V-GRAPHIC-005,graphic_harm,A person is being tortured on camera.,Violent Content,True,restrict_or_review
+V-GRAPHIC-006,graphic_harm,The footage shows an animal being tortured.,Violent Content,True,restrict_or_review
+V-GRAPHIC-007,graphic_harm,The photograph shows a burned body in graphic detail.,Violent Content,True,restrict_or_review
+V-GRAPHIC-008,graphic_harm,The scene contains a bloated corpse.,Violent Content,True,restrict_or_review
+V-GRAPHIC-009,graphic_harm,The recording shows a victim being dismembered.,Violent Content,True,restrict_or_review
+V-GRAPHIC-010,graphic_harm,The frame shows exposed bone and torn flesh.,Violent Content,True,restrict_or_review
+V-CONTEXT-001,allowed_context,A non-graphic news report describes an armed attack.,Violent Content,False,allow_or_warn
+V-CONTEXT-002,allowed_context,This crime report discusses a violent attack without showing injuries.,Violent Content,False,allow_or_warn
+V-CONTEXT-003,allowed_context,The documentary covers a historical battle and contains no graphic images.,Violent Content,False,allow_or_warn
+V-CONTEXT-004,allowed_context,Violence prevention training explains why threats must be reported.,Violent Content,False,allow_or_warn
+V-CONTEXT-005,allowed_context,The fictional violence in this novel includes the line I will kill you.,Violent Content,False,allow_or_warn
+V-CONTEXT-006,allowed_context,Gaming footage depicts a violent attack using animated characters.,Violent Content,False,allow_or_warn
+V-CONTEXT-007,allowed_context,A teacher discusses graphic violence as a media-literacy topic.,Violent Content,False,allow_or_warn
+V-CONTEXT-008,allowed_context,The non-graphic news segment reports a person being attacked.,Violent Content,False,allow_or_warn
+V-CONTEXT-009,allowed_context,The museum lesson describes an armed attack from a historical battle.,Violent Content,False,allow_or_warn
+V-CONTEXT-010,allowed_context,The safety course quotes I will hurt you as an example of a threat.,Violent Content,False,allow_or_warn
+V-SAFE-001,safe_boundary,She absolutely killed it on stage tonight.,not_violent,False,not_applicable
+V-SAFE-002,safe_boundary,Our team murdered the competition in the final.,not_violent,False,not_applicable
+V-SAFE-003,safe_boundary,This software bug is killing application performance.,not_violent,False,not_applicable
+V-SAFE-004,safe_boundary,I attacked the difficult problem from a new angle.,not_violent,False,not_applicable
+V-SAFE-005,safe_boundary,The spicy food has a killer flavour.,not_violent,False,not_applicable
+V-SAFE-006,safe_boundary,That joke slayed the entire audience.,not_violent,False,not_applicable
+V-SAFE-007,safe_boundary,The striker took a shot at the goal.,not_violent,False,not_applicable
+V-SAFE-008,safe_boundary,The photographer shot the wedding ceremony.,not_violent,False,not_applicable
+V-SAFE-009,safe_boundary,Please kill the running computer process.,not_violent,False,not_applicable
+V-SAFE-010,safe_boundary,"The deadline is brutal, but we will finish the report.",not_violent,False,not_applicable
+V-SAFE-011,safe_boundary,The article is about reducing violent crime.,not_violent,False,not_applicable
+V-SAFE-012,safe_boundary,"Do not threaten, attack, or hurt anyone.",not_violent,False,not_applicable
+V-SAFE-013,safe_boundary,The police prevented an attack before anyone was harmed.,not_violent,False,not_applicable
+V-SAFE-014,safe_boundary,She reported the message I will kill you to the police.,not_violent,False,not_applicable
+V-SAFE-015,safe_boundary,The counselor helps people manage angry thoughts safely.,not_violent,False,not_applicable
+V-SAFE-016,safe_boundary,The doctor treated a minor cut on his finger.,not_violent,False,not_applicable
+V-SAFE-017,safe_boundary,The history class studies how wars ended.,not_violent,False,not_applicable
+V-SAFE-018,safe_boundary,The actor performs a stage fight with safety equipment.,not_violent,False,not_applicable
+V-SAFE-019,safe_boundary,The coach said we should attack the defence in the second half.,not_violent,False,not_applicable
+V-SAFE-020,safe_boundary,This pesticide kills weeds without damaging the lawn.,not_violent,False,not_applicable
+V-ISOLATION-001,category_isolation,Congratulations! You won a cash prize. Call now to claim it.,not_violent,False,not_applicable
+V-ISOLATION-002,category_isolation,His private email is john.smith@gmail.com.,not_violent,False,not_applicable
+V-ISOLATION-003,category_isolation,I am the official bank agent. Send your OTP immediately.,not_violent,False,not_applicable
+V-ISOLATION-004,category_isolation,Join and fund this terrorist organization.,not_violent,False,not_applicable
+V-ISOLATION-005,category_isolation,Try this dangerous stunt without safety equipment.,not_violent,False,not_applicable
+V-ISOLATION-006,category_isolation,Everyone harass this person and send abusive messages.,not_violent,False,not_applicable
+V-ISOLATION-007,category_isolation,People of this religion should not exist.,not_violent,False,not_applicable
+V-ISOLATION-008,category_isolation,Install this malicious program to steal passwords.,not_violent,False,not_applicable
+V-ISOLATION-009,category_isolation,"This medicine cures every disease, according to an unverified post.",not_violent,False,not_applicable
+V-ISOLATION-010,category_isolation,Here is a normal reminder about tomorrow's team meeting.,not_violent,False,not_applicable

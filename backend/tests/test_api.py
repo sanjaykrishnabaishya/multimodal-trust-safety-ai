@@ -11,6 +11,7 @@ from app.services import (
 
 SPAM_CATEGORY = "Spam, Scam & Phishing"
 VIOLENT_CATEGORY = "Violent Content"
+CYBERBULLYING_CATEGORY = "Cyberbullying & Harassment"
 PRIVATE_CATEGORY = (
     "Publishing Private Information"
 )
@@ -337,7 +338,7 @@ def test_review_case_workflow(
 
     assert (
         case_result["category"]
-        == VIOLENT_CATEGORY
+        == CYBERBULLYING_CATEGORY
     )
 
     update_response = client.patch(
@@ -352,10 +353,10 @@ def test_review_case_workflow(
                 "automated API test."
             ),
             "final_category": (
-                VIOLENT_CATEGORY
+                CYBERBULLYING_CATEGORY
             ),
             "final_action": (
-                "Block and escalate"
+                "Limit, flag, and send for human review"
             ),
         },
     )
@@ -381,7 +382,7 @@ def test_review_case_workflow(
 
     assert (
         updated_case["final_category"]
-        == VIOLENT_CATEGORY
+        == CYBERBULLYING_CATEGORY
     )
 
     audit_response = client.get(
@@ -408,6 +409,28 @@ def test_review_case_workflow(
         "human_review_updated"
         in event_types
     )
+
+
+def test_graphic_harm_remains_violent_content(
+    client,
+):
+    response = client.post(
+        "/moderation/text",
+        json={
+            "text": (
+                "The image clearly shows a "
+                "decapitated body."
+            ),
+            "source_context": "unknown",
+        },
+    )
+
+    assert response.status_code == 200
+
+    result = response.json()
+
+    assert result["category"] == VIOLENT_CATEGORY
+    assert result["human_review_required"] is True
 
 
 def test_unknown_review_case_returns_404(
