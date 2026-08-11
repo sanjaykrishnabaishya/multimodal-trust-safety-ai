@@ -1,0 +1,121 @@
+﻿case_id,group,text,expected_detected
+CB-REP-001,repeated_targeted_abuse,Every day you post that Riya is stupid and worthless.,True
+CB-REP-002,repeated_targeted_abuse,You keep calling Arjun a disgusting loser under each of his photos.,True
+CB-REP-003,repeated_targeted_abuse,"For the third time this week, they mocked Meera's appearance in the group chat.",True
+CB-REP-004,repeated_targeted_abuse,He repeatedly sends Karan messages saying nobody likes him.,True
+CB-REP-005,repeated_targeted_abuse,The account posts humiliating edits of the same student every morning.,True
+CB-REP-006,repeated_targeted_abuse,They keep tagging Sana in comments that call her useless and pathetic.,True
+CB-REP-007,repeated_targeted_abuse,"Each night, the group sends Amit insulting messages about his body.",True
+CB-REP-008,repeated_targeted_abuse,She repeatedly tells Neha that everyone would be happier without her.,True
+CB-REP-009,repeated_targeted_abuse,The page has posted five cruel memes targeting one classmate.,True
+CB-REP-010,repeated_targeted_abuse,He follows Dev across platforms to call him an idiot again and again.,True
+CB-REP-011,repeated_targeted_abuse,For several days they have publicly mocked Priya's speech difficulty.,True
+CB-REP-012,repeated_targeted_abuse,The same user comments 'you are a failure' on every video Rahul uploads.,True
+CB-REP-013,repeated_targeted_abuse,They repeatedly share an embarrassing picture to humiliate one employee.,True
+CB-REP-014,repeated_targeted_abuse,She keeps sending targeted voice notes calling Leena ugly and unwanted.,True
+CB-REP-015,repeated_targeted_abuse,The chat members repeatedly ridicule one boy's clothes and family income.,True
+CB-REP-016,repeated_targeted_abuse,He created multiple posts solely to embarrass his former friend.,True
+CB-REP-017,repeated_targeted_abuse,Every week the account publishes another insulting collage about Anil.,True
+CB-REP-018,repeated_targeted_abuse,They continue mocking the same child even after he asks them to stop.,True
+CB-REP-019,repeated_targeted_abuse,She repeatedly spreads humiliating nicknames about one coworker.,True
+CB-REP-020,repeated_targeted_abuse,The group targets Nisha with degrading comments whenever she comes online.,True
+CB-UNW-001,unwanted_contact,"I told you to stop, but you keep demanding my phone number.",True
+CB-UNW-002,unwanted_contact,He sends new messages every day after she said she wants no contact.,True
+CB-UNW-003,unwanted_contact,Give me your private number; I will keep asking until you do.,True
+CB-UNW-004,unwanted_contact,"She blocked him twice, and he created another account to contact her.",True
+CB-UNW-005,unwanted_contact,Reply to my private messages or I will continue messaging all night.,True
+CB-UNW-006,unwanted_contact,They repeatedly pressure the student to move the conversation into a private chat.,True
+CB-UNW-007,unwanted_contact,"After I said no, the user kept requesting my address and mobile number.",True
+CB-UNW-008,unwanted_contact,He contacts her through friends because she asked him to leave her alone.,True
+CB-UNW-009,unwanted_contact,The account sends dozens of unwanted messages demanding a response.,True
+CB-UNW-010,unwanted_contact,She keeps asking for personal contact details despite repeated refusals.,True
+CB-UNW-011,unwanted_contact,He says he will not stop messaging until I agree to meet privately.,True
+CB-UNW-012,unwanted_contact,The user opens replacement profiles whenever the recipient blocks him.,True
+CB-UNW-013,unwanted_contact,They continue calling and messaging after being clearly told to stop.,True
+CB-UNW-014,unwanted_contact,Send me a private message now; I will keep bothering you otherwise.,True
+CB-UNW-015,unwanted_contact,He repeatedly asks a minor to share a personal phone number after refusal.,True
+CB-UNW-016,unwanted_contact,She receives unwanted direct messages from the same person every morning.,True
+CB-UNW-017,unwanted_contact,The sender ignores her request for no further contact and writes again.,True
+CB-UNW-018,unwanted_contact,They keep pressuring him to join a private video call he declined.,True
+CB-UNW-019,unwanted_contact,The stranger demands her number in every comment despite her objections.,True
+CB-UNW-020,unwanted_contact,He uses several accounts to continue unwanted contact with one person.,True
+CB-COO-001,coordinated_harassment,Everyone go to Vikram's page and flood it with insulting comments.,True
+CB-COO-002,coordinated_harassment,Let's all mock this student under every post she makes.,True
+CB-COO-003,coordinated_harassment,Share his profile so the whole group can humiliate him tonight.,True
+CB-COO-004,coordinated_harassment,Join me in sending abusive messages to this journalist.,True
+CB-COO-005,coordinated_harassment,The group plans shifts to repeatedly harass one creator online.,True
+CB-COO-006,coordinated_harassment,Go report her account and call her disgusting in the comments.,True
+CB-COO-007,coordinated_harassment,Tell your followers to target this employee with degrading messages.,True
+CB-COO-008,coordinated_harassment,We should fill his inbox with insults until he deletes his page.,True
+CB-COO-009,coordinated_harassment,Everyone repost this embarrassing photo to shame the same person.,True
+CB-COO-010,coordinated_harassment,Bring more people into the chat so we can bully him together.,True
+CB-COO-011,coordinated_harassment,The channel instructs members to ridicule one classmate every day.,True
+CB-COO-012,coordinated_harassment,Send this profile to the group and ask them all to abuse the owner.,True
+CB-COO-013,coordinated_harassment,Let's coordinate hundreds of humiliating replies against her.,True
+CB-COO-014,coordinated_harassment,The administrator encourages members to keep harassing a former member.,True
+CB-COO-015,coordinated_harassment,Go to his livestream and repeatedly call him worthless.,True
+CB-COO-016,coordinated_harassment,Recruit other users to pressure this person into leaving the platform.,True
+CB-COO-017,coordinated_harassment,The post provides instructions for a coordinated pile-on against one woman.,True
+CB-COO-018,coordinated_harassment,Everyone should tag him in cruel memes until he responds.,True
+CB-COO-019,coordinated_harassment,The group agrees to publish insulting edits of one teacher.,True
+CB-COO-020,coordinated_harassment,Ask all your friends to send degrading comments to this account.,True
+CB-TAR-001,targeted_threat,I will break your jaw when you leave work.,True
+CB-TAR-002,targeted_threat,We are waiting outside your home to hurt you.,True
+CB-TAR-003,targeted_threat,Delete that post or your brother will be attacked.,True
+CB-TAR-004,targeted_threat,I have a knife and I am coming for you tonight.,True
+CB-TAR-005,targeted_threat,Meet me after class and I will smash your face.,True
+CB-TAR-006,targeted_threat,You will be beaten if you return here.,True
+CB-TAR-007,targeted_threat,I know your route and plan to injure you on the way home.,True
+CB-TAR-008,targeted_threat,Someone should physically attack him for that opinion.,True
+CB-TAR-009,targeted_threat,I will burn your room while you are inside.,True
+CB-TAR-010,targeted_threat,She deserves to have her legs broken.,True
+CB-TAR-011,targeted_threat,Pay me or my friends will harm your family.,True
+CB-TAR-012,targeted_threat,"When I find you, I am going to stab you.",True
+CB-TAR-013,targeted_threat,We will corner her outside and beat her.,True
+CB-TAR-014,targeted_threat,I bought a weapon specifically to use against you.,True
+CB-TAR-015,targeted_threat,Watch your back because I intend to hurt you.,True
+CB-TAR-016,targeted_threat,You will need a hospital after our next meeting.,True
+CB-TAR-017,targeted_threat,Go attack that person and teach him a lesson.,True
+CB-TAR-018,targeted_threat,I am coming to your office to break your arms.,True
+CB-TAR-019,targeted_threat,Your parents will suffer if you refuse.,True
+CB-TAR-020,targeted_threat,I will send people to assault you tomorrow.,True
+CB-ALL-001,allowed_boundary,I disagree with Rahul's proposal because the cost estimate is incomplete.,False
+CB-ALL-002,allowed_boundary,Please do not contact me again.,False
+CB-ALL-003,allowed_boundary,Would you like to exchange phone numbers? It is completely fine to say no.,False
+CB-ALL-004,allowed_boundary,The article discusses how schools can prevent cyberbullying.,False
+CB-ALL-005,allowed_boundary,She reported the abusive messages to a platform moderator.,False
+CB-ALL-006,allowed_boundary,The documentary examines online harassment without targeting anyone.,False
+CB-ALL-007,allowed_boundary,I dislike this film and think the story is poorly written.,False
+CB-ALL-008,allowed_boundary,Please send the project file in a private message if convenient.,False
+CB-ALL-009,allowed_boundary,He blocked the account and saved the unwanted messages as evidence.,False
+CB-ALL-010,allowed_boundary,The workshop teaches respectful disagreement on social media.,False
+CB-ALL-011,allowed_boundary,One customer left a negative but factual review of the service.,False
+CB-ALL-012,allowed_boundary,The news report quotes a threat while describing a police investigation.,False
+CB-ALL-013,allowed_boundary,Never pressure someone to provide private contact information.,False
+CB-ALL-014,allowed_boundary,The teacher explained why humiliating classmates is unacceptable.,False
+CB-ALL-015,allowed_boundary,I strongly oppose her policy position but respect her right to speak.,False
+CB-ALL-016,allowed_boundary,Could we schedule one call about the invoice? No problem if not.,False
+CB-ALL-017,allowed_boundary,The safety guide tells users how to report coordinated harassment.,False
+CB-ALL-018,allowed_boundary,They discussed a fictional bully in a classroom lesson.,False
+CB-ALL-019,allowed_boundary,The moderator removed insulting comments directed at a user.,False
+CB-ALL-020,allowed_boundary,This critique addresses the argument and contains no personal abuse.,False
+CB-CAT-001,category_isolation,Send your OTP to claim the cash prize.,False
+CB-CAT-002,category_isolation,This post publishes a private home address.,False
+CB-CAT-003,category_isolation,The attachment installs software that steals passwords.,False
+CB-CAT-004,category_isolation,The account impersonates a bank officer and requests money.,False
+CB-CAT-005,category_isolation,The message promotes an extremist organization.,False
+CB-CAT-006,category_isolation,The listing offers illegal drugs for sale.,False
+CB-CAT-007,category_isolation,The page distributes a copyrighted movie without permission.,False
+CB-CAT-008,category_isolation,The article contains a false claim about a national election.,False
+CB-CAT-009,category_isolation,The image contains explicit adult nudity.,False
+CB-CAT-010,category_isolation,The comment attacks an entire religious group.,False
+CB-CAT-011,category_isolation,The message contains an unwanted sexual proposition at work.,False
+CB-CAT-012,category_isolation,The file contains a normal monthly financial report.,False
+CB-CAT-013,category_isolation,The family photographed the Eiffel Tower during their holiday.,False
+CB-CAT-014,category_isolation,The meeting begins at nine tomorrow morning.,False
+CB-CAT-015,category_isolation,The recipe calls for two cups of rice.,False
+CB-CAT-016,category_isolation,A doctor explains a routine medical procedure.,False
+CB-CAT-017,category_isolation,The sports report summarizes yesterday's match.,False
+CB-CAT-018,category_isolation,The student submitted a history assignment.,False
+CB-CAT-019,category_isolation,The shop confirms that the parcel has shipped.,False
+CB-CAT-020,category_isolation,The weather forecast predicts rain this evening.,False

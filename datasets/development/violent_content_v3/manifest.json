@@ -1,0 +1,38 @@
+{
+  "version": "2026.08-v3-development-r2",
+  "created_at_utc": "2026-08-09T21:14:27.295631+00:00",
+  "record_count": 192,
+  "dataset_sha256": "c3353f7fcb0352c871e9e105e6f41b75a9db5dd61cffe426e47c1d5280508993",
+  "split_counts": {
+    "train": 128,
+    "validation": 64
+  },
+  "class_counts": {
+    "allowed_context": 48,
+    "graphic_violence": 48,
+    "safe_or_other": 48,
+    "targeted_threat": 48
+  },
+  "split_class_counts": {
+    "train:allowed_context": 32,
+    "train:graphic_violence": 32,
+    "train:safe_or_other": 32,
+    "train:targeted_threat": 32,
+    "validation:allowed_context": 16,
+    "validation:graphic_violence": 16,
+    "validation:safe_or_other": 16,
+    "validation:targeted_threat": 16
+  },
+  "family_overlap": [],
+  "policy_boundary": {
+    "graphic_violence": "Violent Content",
+    "allowed_context": "Violent Content with warning",
+    "targeted_threat": "Cyberbullying & Harassment",
+    "safe_or_other": "Normal/Ignore or no specialist override"
+  },
+  "prohibited_sources": [
+    "violent-content-v1-rc1 holdout",
+    "violent-content-v2-rc1 holdout"
+  ],
+  "notice": "Synthetic development data only. This is not independent accuracy evidence and must not be added to a holdout."
+}

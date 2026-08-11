@@ -1,0 +1,193 @@
+﻿record_id,split,family_id,semantic_class,expected_category,expected_action,human_review_required,text
+VC3-0124b2691639,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The video contains a close view of exposed internal organs.
+VC3-0305237d7e98,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The camera records exposed internal organs without censorship.
+VC3-04c27ed74be4,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The scene graphically depicts a victim undergoing torture.
+VC3-050b6d35cea4,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The video contains a close view of a victim undergoing torture.
+VC3-060834a8f469,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,This is your warning: I intend to harm your brother tomorrow.
+VC3-06afd0b44e86,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I swear that I will beat you in the parking area.
+VC3-099ef9cf7375,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,the photographer shot a wedding portrait.
+VC3-09bc802e12cd,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,An educational lesson examines violence-prevention procedures with a content warning.
+VC3-0c35f79feb7e,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,"A museum presentation covers peacekeeping work following violent civil unrest, but no graphic detail is visible."
+VC3-0d3e0fea6425,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The scene graphically depicts a severed limb beside the victim.
+VC3-1072027e5889,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,This is your warning: I intend to set fire to your room while you sleep.
+VC3-10736ed282e0,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"According to the summary, the editor cut a paragraph from the article."
+VC3-11b6dfaa68fb,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,Viewers can clearly see a deep open wound with exposed bone in the footage.
+VC3-133fb60b53f5,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I will burn your home while you are inside.
+VC3-1520a9635559,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The camera records a victim undergoing torture without censorship.
+VC3-175beeef24d3,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I swear that I will shoot you if you return.
+VC3-18ac71d1760b,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Meet me there and I will burn your home while you are inside.
+VC3-1c5a21bedcb9,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The video contains a close view of a severed limb beside the victim.
+VC3-1cd28e659935,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,An uncensored frame presents a detached hand lying beside a body.
+VC3-1f2ceb1dacf4,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,This is your warning: I intend to break your legs after the meeting.
+VC3-2048d9ee79b4,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The uploaded image visibly shows a crushed skull with visible injuries.
+VC3-21049a876d88,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,"Yesterday, the striker took a shot at goal."
+VC3-235139420b96,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,The article describes a censored injury in a factual and non-graphic way.
+VC3-2493fcdba199,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,"A museum presentation covers a censored reconstruction of a murder investigation, but no graphic detail is visible."
+VC3-2829614820fa,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The camera records charred human remains without censorship.
+VC3-286421d6cad1,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Watch your back because I am going to hurt you after work.
+VC3-2b1c38f1db19,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,You cannot hide; I plan to make you suffer for refusing.
+VC3-2d82dda103ce,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,"A museum presentation covers public-health measures for preventing violent injury, but no graphic detail is visible."
+VC3-3028b08444e2,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,"A museum presentation covers training about responding to armed violence, but no graphic detail is visible."
+VC3-302f81daef40,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,the pesticide kills weeds.
+VC3-318bc2e9dfdc,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The uploaded image visibly shows a decapitated body.
+VC3-3563eb83cdc4,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,An educational lesson examines a fictional fight scene with a content warning.
+VC3-357fcd36914a,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,People observed that the students studied a diagram of organs.
+VC3-35a50e7e213d,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"According to the summary, the coach reviewed a contact-free practice drill."
+VC3-36706d4e0e96,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The scene graphically depicts a crushed skull with visible injuries.
+VC3-37750d61367a,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,You cannot hide; I plan to crush your jaw near the station.
+VC3-39220d966486,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I will beat you in the parking area.
+VC3-3a80043366c2,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Watch your back because I am going to shoot you if you return.
+VC3-3ea8778fc752,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I swear that I will smash your face outside.
+VC3-40b02c858eae,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"During the day, the camera captured a family celebration."
+VC3-40c1132d812a,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,The report notes that the team destroyed the competition in sales.
+VC3-41897a9c289b,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,People observed that the software terminated a frozen process.
+VC3-421013e99480,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A documentary explains a criminal investigation using blurred archival material.
+VC3-42242dba530c,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,An educational lesson examines a censored injury with a content warning.
+VC3-4289b903535b,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A documentary explains the effects of war using blurred archival material.
+VC3-4361506c6c57,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The video contains a close view of a dismembered body.
+VC3-443774b4315c,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,You cannot hide; I plan to set fire to your room while you sleep.
+VC3-44a46579daf9,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,An educational lesson examines the aftermath of an armed conflict with a content warning.
+VC3-4521da9bf9d5,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,the striker took a shot at goal.
+VC3-46ab1e973491,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The video contains a close view of a mutilated body with exposed tissue.
+VC3-49a76d02abd3,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,An educational lesson examines a reported assault with a content warning.
+VC3-49beabc5a9b6,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,Viewers can clearly see blood-covered human remains in the footage.
+VC3-49cf632e5268,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,the doctor treated a routine fracture.
+VC3-4a0d1e62d671,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The camera records a decapitated body without censorship.
+VC3-4b546ebc7e9a,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I will shoot you if you return.
+VC3-4dd4e700f77f,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Watch your back because I am going to attack your family tonight.
+VC3-4e2550ba8853,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,This is your warning: I intend to bring a weapon and attack you.
+VC3-4f422d760275,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,Viewers can clearly see a body missing multiple parts in the footage.
+VC3-50680fb52182,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"During the day, the chess player attacked the opponent's queen."
+VC3-50d3905e3c2a,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Meet me there and I will hurt you after work.
+VC3-50e1c5db12cb,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I swear that I will break your arms when you arrive.
+VC3-524f95b322e9,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A non-graphic news report discusses a reported assault without showing injuries.
+VC3-55b1402de80a,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I swear that I will attack your family tonight.
+VC3-57f8aeafb50e,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,A safety course refers to a fictional battle sequence for prevention and awareness.
+VC3-58a9c2e732a7,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A documentary explains a censored injury using blurred archival material.
+VC3-5acb92cde2b4,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The uploaded image visibly shows a dismembered body.
+VC3-5ad9bc05a70a,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,Viewers can clearly see a detached hand lying beside a body in the footage.
+VC3-5bb653d7277d,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A non-graphic news report discusses violence-prevention procedures without showing injuries.
+VC3-5d0ccc4c810d,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Meet me there and I will stab you when I find you.
+VC3-5e948833f388,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,You cannot hide; I plan to come after you at your house.
+VC3-602975c77467,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A non-graphic news report discusses the effects of war without showing injuries.
+VC3-6518485a794f,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"According to the summary, the chess player attacked the opponent's queen."
+VC3-67709aafc89e,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I swear that I will hurt you after work.
+VC3-6bc5beea5307,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The uploaded image visibly shows a severed limb beside the victim.
+VC3-6bd961df7dc9,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,This is your warning: I intend to leave you badly injured.
+VC3-6c2f6a182416,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,An uncensored frame presents a corpse torn apart by an explosion.
+VC3-6c75ca6228da,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"According to the summary, the audience exploded with applause."
+VC3-71f4dfcd6358,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,"Yesterday, the pesticide kills weeds."
+VC3-74dfeb857d89,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The scene graphically depicts a mutilated body with exposed tissue.
+VC3-74e8480c6763,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,A safety course refers to peacekeeping work following violent civil unrest for prevention and awareness.
+VC3-74f1bbef11c5,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,The report notes that the photographer shot a wedding portrait.
+VC3-75fe0f4df00d,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,The article describes a reported assault in a factual and non-graphic way.
+VC3-765d5ae7b459,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I will stab you when I find you.
+VC3-79a3f1231663,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I swear that I will stab you when I find you.
+VC3-7b03ea213ca5,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Meet me there and I will smash your face outside.
+VC3-7c07d221bd2c,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The video contains a close view of a crushed skull with visible injuries.
+VC3-7c85a5a7537c,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,The report notes that the striker took a shot at goal.
+VC3-7d17d38e0df2,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Meet me there and I will beat you in the parking area.
+VC3-7db93eae602a,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,The article describes a historical battle in a factual and non-graphic way.
+VC3-7f08e128d7f9,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,An uncensored frame presents a deep open wound with exposed bone.
+VC3-7f9152868b0c,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,The report notes that the doctor treated a routine fracture.
+VC3-814b4f55dc3b,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,Viewers can clearly see a corpse torn apart by an explosion in the footage.
+VC3-817b0867e2b9,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,Viewers can clearly see a victim with severe visible burns in the footage.
+VC3-82f3420792e3,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A non-graphic news report discusses a historical battle without showing injuries.
+VC3-832f8c70c0e0,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,A safety course refers to the casualties of a historical military campaign for prevention and awareness.
+VC3-836dca2af720,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,A safety course refers to public-health measures for preventing violent injury for prevention and awareness.
+VC3-8524205660e6,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"During the day, the coach reviewed a contact-free practice drill."
+VC3-85cce0acc450,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,People observed that the team destroyed the competition in sales.
+VC3-8933453a4554,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The uploaded image visibly shows a victim undergoing torture.
+VC3-89f255b4d77c,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I will smash your face outside.
+VC3-8e54561ad353,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,"A museum presentation covers a court case involving a fatal assault, but no graphic detail is visible."
+VC3-8e9c6f08ce8d,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,the team destroyed the competition in sales.
+VC3-8f4f133a1fcb,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Meet me there and I will shoot you if you return.
+VC3-90c1c7b90c16,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"During the day, the audience exploded with applause."
+VC3-92c2adada33a,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The camera records a dismembered body without censorship.
+VC3-930626c32dba,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,An educational lesson examines a criminal investigation with a content warning.
+VC3-9309aa276f9c,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A documentary explains violence-prevention procedures using blurred archival material.
+VC3-935892669696,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,Viewers can clearly see a fatal injury with visible tissue in the footage.
+VC3-93a05f4796cb,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,This is your warning: I intend to come after you at your house.
+VC3-93c2c1fb7a83,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,You cannot hide; I plan to break your legs after the meeting.
+VC3-951524d35181,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Watch your back because I am going to burn your home while you are inside.
+VC3-96cd9e81139a,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,This is your warning: I intend to make you suffer for refusing.
+VC3-973548984d6e,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,"A museum presentation covers a fictional battle sequence, but no graphic detail is visible."
+VC3-97feff334f70,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,"Yesterday, the team destroyed the competition in sales."
+VC3-99b999efa456,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The camera records a mutilated body with exposed tissue without censorship.
+VC3-9d8ec07b42fc,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"During the day, the battery died during the journey."
+VC3-9e2af79bb035,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The scene graphically depicts a decapitated body.
+VC3-9e3579f90bfb,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,"A museum presentation covers an emergency response after a violent attack, but no graphic detail is visible."
+VC3-9e386c3751e9,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"According to the summary, the battery died during the journey."
+VC3-a4376861d4f7,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,"Yesterday, the photographer shot a wedding portrait."
+VC3-a49bf7c9564b,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,The report notes that the software terminated a frozen process.
+VC3-a6d113957029,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The uploaded image visibly shows exposed internal organs.
+VC3-a75c6cf6194c,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Meet me there and I will attack your family tonight.
+VC3-a98c452fd56b,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I swear that I will burn your home while you are inside.
+VC3-ace55b79b1ca,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,"Yesterday, the doctor treated a routine fracture."
+VC3-b0a6a422c3fc,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,A safety course refers to a court case involving a fatal assault for prevention and awareness.
+VC3-b14851514c76,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,"Yesterday, the singer killed it on stage."
+VC3-b14fc295f4e7,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,Viewers can clearly see a prisoner being physically tortured in the footage.
+VC3-b1d68e930535,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"According to the summary, the spicy sauce has a powerful kick."
+VC3-b2034fb3c293,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,the software terminated a frozen process.
+VC3-b2c9b08cb524,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,The article describes violence-prevention procedures in a factual and non-graphic way.
+VC3-b3918a293a90,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,An uncensored frame presents a prisoner being physically tortured.
+VC3-b60d5ce79250,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"During the day, the surgeon discussed an anatomical model."
+VC3-b66daaef63c7,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,An educational lesson examines a historical battle with a content warning.
+VC3-b79d44fe8611,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,The report notes that the students studied a diagram of organs.
+VC3-b7f2101ac11d,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"During the day, the editor cut a paragraph from the article."
+VC3-b93cf1780acb,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,The article describes the aftermath of an armed conflict in a factual and non-graphic way.
+VC3-bd07f4b5f203,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A non-graphic news report discusses the aftermath of an armed conflict without showing injuries.
+VC3-bd169b0e515f,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The video contains a close view of charred human remains.
+VC3-be65fe4f2dcd,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,People observed that the singer killed it on stage.
+VC3-bf6862763f0c,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,You cannot hide; I plan to harm your brother tomorrow.
+VC3-c05484b18ae6,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,A safety course refers to an emergency response after a violent attack for prevention and awareness.
+VC3-c2197bf6a348,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,People observed that the pesticide kills weeds.
+VC3-c33feadb65de,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A documentary explains a reported assault using blurred archival material.
+VC3-c379d312515d,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,An uncensored frame presents a body missing multiple parts.
+VC3-c3e9c3cb13d5,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,The report notes that the pesticide kills weeds.
+VC3-c488e6665345,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The uploaded image visibly shows charred human remains.
+VC3-c57795aedd8b,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A documentary explains a historical battle using blurred archival material.
+VC3-c5e5ba130726,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,the singer killed it on stage.
+VC3-c62895b182dd,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"According to the summary, the camera captured a family celebration."
+VC3-c6ae0c6a7a55,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,A safety course refers to a censored reconstruction of a murder investigation for prevention and awareness.
+VC3-c850d174b475,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The scene graphically depicts exposed internal organs.
+VC3-c9580e5a27df,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,The report notes that the singer killed it on stage.
+VC3-ca05cd455fff,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,People observed that the photographer shot a wedding portrait.
+VC3-cb97993c73e5,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The scene graphically depicts a dismembered body.
+VC3-ccb051b03b0d,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"According to the summary, the surgeon discussed an anatomical model."
+VC3-cd94656489b5,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A documentary explains a fictional fight scene using blurred archival material.
+VC3-cfa926a8a060,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Watch your back because I am going to stab you when I find you.
+VC3-cfee0a9e3ead,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,You cannot hide; I plan to bring a weapon and attack you.
+VC3-d204a57675ba,validation,safe_validation_boundary,safe_or_other,Normal/Ignore,Allow,False,"During the day, the spicy sauce has a powerful kick."
+VC3-d3d75dd85942,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The camera records a severed limb beside the victim without censorship.
+VC3-d5a55e456585,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I will hurt you after work.
+VC3-d5ff61e14b71,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,"Yesterday, the software terminated a frozen process."
+VC3-d779b449f993,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A non-graphic news report discusses a fictional fight scene without showing injuries.
+VC3-d78207f708f3,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I will break your arms when you arrive.
+VC3-d98bbd23488f,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The video contains a close view of a decapitated body.
+VC3-da00a4c0f82e,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,"Yesterday, the students studied a diagram of organs."
+VC3-da1ab1cf2236,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A non-graphic news report discusses a criminal investigation without showing injuries.
+VC3-da39d495eb98,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Watch your back because I am going to beat you in the parking area.
+VC3-db28bf631e05,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,The article describes a criminal investigation in a factual and non-graphic way.
+VC3-db5a319d8b52,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,I will attack your family tonight.
+VC3-dcca53a7a37c,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The camera records a crushed skull with visible injuries without censorship.
+VC3-df46fac010fa,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,You cannot hide; I plan to leave you badly injured.
+VC3-e502b9190923,validation,threat_validation_intimidation,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,This is your warning: I intend to crush your jaw near the station.
+VC3-e7013b3d400c,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,An uncensored frame presents a victim with severe visible burns.
+VC3-e75e82c8cc51,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Watch your back because I am going to smash your face outside.
+VC3-e8bb16f1ed7a,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,A safety course refers to training about responding to armed violence for prevention and awareness.
+VC3-ebf72bf9c276,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,An educational lesson examines the effects of war with a content warning.
+VC3-ecc8a837667b,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,People observed that the doctor treated a routine fracture.
+VC3-ee3a8955bb9f,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,An uncensored frame presents a fatal injury with visible tissue.
+VC3-f133bc494f2c,validation,graphic_validation_visibility,graphic_violence,Violent Content,Refer to human review,True,An uncensored frame presents blood-covered human remains.
+VC3-f2c9bc566097,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The uploaded image visibly shows a mutilated body with exposed tissue.
+VC3-f3611bce6ada,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A non-graphic news report discusses a censored injury without showing injuries.
+VC3-f375b7873445,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,The article describes the effects of war in a factual and non-graphic way.
+VC3-f44217ebe600,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,A documentary explains the aftermath of an armed conflict using blurred archival material.
+VC3-f63f53a53be3,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Meet me there and I will break your arms when you arrive.
+VC3-f6cff53b464a,train,threat_train_direct,targeted_threat,Cyberbullying & Harassment,Refer to human review,True,Watch your back because I am going to break your arms when you arrive.
+VC3-f6d4c44946e6,validation,context_validation_education,allowed_context,Violent Content,Allow with sensitive-content warning,False,"A museum presentation covers the casualties of a historical military campaign, but no graphic detail is visible."
+VC3-f879e3b4ea8f,train,context_train_reporting,allowed_context,Violent Content,Allow with sensitive-content warning,False,The article describes a fictional fight scene in a factual and non-graphic way.
+VC3-f97ef16ae61b,train,graphic_train_depiction,graphic_violence,Violent Content,Refer to human review,True,The scene graphically depicts charred human remains.
+VC3-fd24d6bc2ad3,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,People observed that the striker took a shot at goal.
+VC3-ff3134b4bd84,train,safe_train_boundary,safe_or_other,Normal/Ignore,Allow,False,the students studied a diagram of organs.
