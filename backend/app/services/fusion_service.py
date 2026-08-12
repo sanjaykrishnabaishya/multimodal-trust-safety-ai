@@ -23,6 +23,10 @@ from app.services.cyberbullying_rc2_service import (
     analyze_cyberbullying_rc2,
     apply_cyberbullying_rc2_fusion,
 )
+from app.services.hate_speech_v7_service import (
+    analyze_hate_speech_v7,
+    apply_hate_speech_v7_fusion,
+)
 from app.services.violent_content_service import (
     analyze_violent_content,
 )
@@ -702,6 +706,10 @@ def fuse_moderation_decision(
         text,
         input_sources,
     )
+    hate_speech_v7_analysis = analyze_hate_speech_v7(
+        text,
+        input_sources,
+    )
 
     identity_impersonation_analysis = (
         analyze_identity_impersonation(
@@ -1268,6 +1276,33 @@ def fuse_moderation_decision(
         cyberbullying_rc2_fusion["decision_applied"]
     )
 
+    hate_speech_v7_fusion = apply_hate_speech_v7_fusion(
+        category=category,
+        severity=severity,
+        action=action,
+        confidence=confidence,
+        human_review_required=human_review_required,
+        reason=reason,
+        matched_signals=matched_signals,
+        analysis=hate_speech_v7_analysis,
+        safe_context_confirmed=(
+            safe_context_detected
+            and not direct_action_detected
+        ),
+    )
+    category = str(hate_speech_v7_fusion["category"])
+    severity = str(hate_speech_v7_fusion["severity"])
+    action = str(hate_speech_v7_fusion["action"])
+    confidence = float(hate_speech_v7_fusion["confidence"])
+    human_review_required = bool(
+        hate_speech_v7_fusion["human_review_required"]
+    )
+    reason = str(hate_speech_v7_fusion["reason"])
+    matched_signals = list(hate_speech_v7_fusion["matched_signals"])
+    hate_speech_v7_applied = bool(
+        hate_speech_v7_fusion["decision_applied"]
+    )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
@@ -1452,6 +1487,11 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["hate_speech_v7_rc1"]
+                if hate_speech_v7_applied
+                else []
+            )
+            + (
                 ["spam_dictionary"]
                 if spam_analysis.get(
                     "dictionary_matches"
@@ -1557,6 +1597,11 @@ def fuse_moderation_decision(
             targeted_threat_boundary_applied
         ),
         "targeted_threat": targeted_threat_analysis,
+        "hate_speech_v7_used": hate_speech_v7_applied,
+        "hate_speech_v7": hate_speech_v7_analysis,
+        "hate_speech_v7_fusion_status": (
+            hate_speech_v7_fusion["fusion_status"]
+        ),
         "cyberbullying_rc2_used": cyberbullying_rc2_applied,
         "cyberbullying_rc2": cyberbullying_rc2_analysis,
         "cyberbullying_rc2_fusion_status": (
