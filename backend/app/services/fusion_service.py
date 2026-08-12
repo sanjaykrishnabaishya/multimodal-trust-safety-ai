@@ -27,6 +27,10 @@ from app.services.hate_speech_v7_service import (
     analyze_hate_speech_v7,
     apply_hate_speech_v7_fusion,
 )
+from app.services.religiously_offensive_v7_rc6_fusion import (
+    analyze_religiously_offensive_v7_rc6_for_fusion,
+    apply_religiously_offensive_v7_rc6_fusion,
+)
 from app.services.violent_content_service import (
     analyze_violent_content,
 )
@@ -710,6 +714,12 @@ def fuse_moderation_decision(
         text,
         input_sources,
     )
+    religiously_offensive_v7_rc6_analysis = (
+        analyze_religiously_offensive_v7_rc6_for_fusion(
+            text,
+            input_sources,
+        )
+    )
 
     identity_impersonation_analysis = (
         analyze_identity_impersonation(
@@ -1303,6 +1313,37 @@ def fuse_moderation_decision(
         hate_speech_v7_fusion["decision_applied"]
     )
 
+    religiously_offensive_v7_rc6_fusion = (
+        apply_religiously_offensive_v7_rc6_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=religiously_offensive_v7_rc6_analysis,
+            safe_context_confirmed=(
+                safe_context_detected
+                and not direct_action_detected
+            ),
+        )
+    )
+    category = str(religiously_offensive_v7_rc6_fusion["category"])
+    severity = str(religiously_offensive_v7_rc6_fusion["severity"])
+    action = str(religiously_offensive_v7_rc6_fusion["action"])
+    confidence = float(religiously_offensive_v7_rc6_fusion["confidence"])
+    human_review_required = bool(
+        religiously_offensive_v7_rc6_fusion["human_review_required"]
+    )
+    reason = str(religiously_offensive_v7_rc6_fusion["reason"])
+    matched_signals = list(
+        religiously_offensive_v7_rc6_fusion["matched_signals"]
+    )
+    religiously_offensive_v7_rc6_applied = bool(
+        religiously_offensive_v7_rc6_fusion["decision_applied"]
+    )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
@@ -1492,6 +1533,11 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["religiously_offensive_v7_rc6"]
+                if religiously_offensive_v7_rc6_applied
+                else []
+            )
+            + (
                 ["spam_dictionary"]
                 if spam_analysis.get(
                     "dictionary_matches"
@@ -1601,6 +1647,15 @@ def fuse_moderation_decision(
         "hate_speech_v7": hate_speech_v7_analysis,
         "hate_speech_v7_fusion_status": (
             hate_speech_v7_fusion["fusion_status"]
+        ),
+        "religiously_offensive_v7_rc6_used": (
+            religiously_offensive_v7_rc6_applied
+        ),
+        "religiously_offensive_v7_rc6": (
+            religiously_offensive_v7_rc6_analysis
+        ),
+        "religiously_offensive_v7_rc6_fusion_status": (
+            religiously_offensive_v7_rc6_fusion["fusion_status"]
         ),
         "cyberbullying_rc2_used": cyberbullying_rc2_applied,
         "cyberbullying_rc2": cyberbullying_rc2_analysis,

@@ -1,0 +1,1221 @@
+split,label,family,text
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to scorch the holy book as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to shred the sacred text as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to deface the religious scripture as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to smash the sacred emblem as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to break the religious symbol as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to trample the sacred image as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to rip the religious statue as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to crush the prayer beads as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to vandalize the ceremonial symbol as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to drag through mud the sacred banner as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to burn the religious flag as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to wreck the religious monument as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to tear the holy scripture as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to damage the sacred object as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to destroy the religious book as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to mutilate the sacred statue as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to desecrate the religious emblem as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to cover with obscene graffiti the sacred symbol as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to torch the holy text as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::sacred_object_or_text_attack,The post tells viewers to dismantle the sacred monument as a deliberate insult.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to mock the deity.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to ridicule the prophet.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to vilify the religious figure.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to demean the spiritual leader.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to humiliate the revered religious teacher.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to insult the sacred figure.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to degrade the religious leader.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to revile the god.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to deride the religious figurehead.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to abuse the sacred leader.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to publish an obscene caricature of the prophet.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to share a degrading depiction of the deity.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to create an abusive caricature of the religious leader.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to circulate an obscene depiction of the spiritual leader.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to post a morphed image to humiliate the sacred figure.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to publicly mock the revered teacher.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to repeatedly insult the god.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to deliberately ridicule the religious figure.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to publish a degrading caricature of the religious figurehead.
+train,religiously_offensive,prior_rc2_development::deity_prophet_or_figure_attack,The account urges people to revile the prophet.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to wreck the temple.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to deface the church.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to smash the mosque.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to demolish the gurudwara.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to vandalize the shrine.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to damage the chapel.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to destroy the monastery.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to desecrate the sanctuary.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to break the altar.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to torch the prayer hall.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to burn the prayer space.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to tear down the place of worship.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to dismantle the worship building.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to raze the religious building.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to cover with obscene graffiti the sacred site.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to mutilate the gurdwara.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to crush the temple.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to scorch the mosque.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to vandalise the church.
+train,religiously_offensive,prior_rc2_development::place_of_worship_attack,A public message calls on supporters to tear apart the shrine.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says religious followers are inferior.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says followers of the faith are parasites.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says followers of that faith are not human.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says people of that religion are less than human.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says people because of their religion are criminals by nature.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says religious believers are inherently dangerous.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says worshippers should not exist.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says faith community should be excluded.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says religious community should be expelled.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says religious group must be forced to leave.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says members of the religion must be boycotted.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says families of that faith should be denied jobs.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says workers of that faith should be denied housing.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says students of that faith should be denied education.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says followers of this faith must be kept out.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says people of this religion should be banned from the town.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says members of that religion must be refused employment.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says members of this religion should be removed from the neighborhood.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says religious followers must be attacked.
+train,protected_followers_hate_boundary,prior_rc2_development::protected_followers_hate_boundary,The post says worshippers should be harmed.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,A news report describes vandals who burned a holy book.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,The article reports that a sacred statue was damaged and later restored.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,A documentary examines why attackers defaced a religious building.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,A historian discusses the destruction of a temple in historical context.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,A religious studies lesson explains why desecrating scripture causes harm.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,Researchers study reports of vandalism against places of worship.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,A museum exhibit documents a damaged sacred monument.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,The teacher explains why people must not burn religious books.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,An educational discussion condemns insults against a prophet.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,An interfaith campaign asks people not to damage sacred objects.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,Community leaders condemned the vandalism of a mosque.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,The safety campaign warns against defacing religious symbols.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,The author respectfully questions a religious doctrine.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,The scholar offers good faith criticism of a belief.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,A student disagrees with the doctrine without insulting believers.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,The museum restored a religious statue that had been broken.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,Volunteers repaired the prayer hall after reported vandalism.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,The article reported an obscene caricature and condemned it.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,A prevention campaign tells viewers never to desecrate a holy text.
+train,safe_reporting_or_criticism,prior_rc2_development::safe_reporting_education_and_criticism,The documentary provides cultural context for the sacred emblem.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,You are rude and dishonest.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,That person is annoying.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The manager behaved badly yesterday.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,I strongly dislike that individual.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The player mocked another player after the match.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,Someone insulted me during a private argument.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The neighbor called him foolish.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,A classmate posted a degrading comment about my clothes.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The customer shouted an insult at the cashier.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,They ridiculed his singing performance.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The critic described the film as worthless.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,A user repeatedly mocked another user's hairstyle.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The supervisor humiliated one employee over a mistake.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,She posted an abusive message about her former friend.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The team captain demeaned a player for losing.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,He shared a morphed image of a schoolmate.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The comedian insulted a celebrity's acting.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,A stranger called the driver disgusting.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The post vilified a corrupt company executive.
+train,no_religious_override,prior_rc2_development::personal_abuse_boundary,The review derided the restaurant's service.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,Send your password now to unlock the account.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The message offers a fake lottery reward for a transfer fee.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,A stranger published somebody's private phone number.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The attachment contains code designed to steal browser data.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The account impersonates a bank employee and requests an OTP.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The video shows a graphic assault between two people.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,A seller advertises counterfeit software keys.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The post coordinates an illegal drug sale.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,A user repeatedly threatens a classmate online.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The article makes an unsupported medical claim.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The email contains many unsolicited advertising links.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,A website republishes a copyrighted film without permission.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The file contains explicit sexual imagery.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The message asks someone to install malicious software.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,A profile pretends to be a government officer for money.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The comment shares another person's home address.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The recording contains a direct threat of physical violence.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The post promotes an extremist organization.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The advertisement uses a stolen brand identity.
+train,no_religious_override,prior_rc2_development::unrelated_category_isolation,The document is a normal meeting agenda for tomorrow.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to burn the holy book.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to incinerate the consecrated icon.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to scorch the devotional image.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to torch the ceremonial object.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to destroy the worship artefact.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to desecrate the devotional relic.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to profane the consecrated object.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to deface the sacred manuscript.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to disfigure the sacred emblem.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to smash the holy statue.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to shatter the sacred banner.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to crush the sacred monument.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to tear apart the religious carving.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to rip up the holy scripture.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to shred the religious scripture.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to trample the religious symbol.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to stomp on the prayer beads.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to drag through mud the religious flag.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to cover with obscene graffiti the holy text.
+train,religiously_offensive,religious_object_train_frame_0,The post urges its audience to mutilate the sacred painting.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should incinerate a sacred manuscript.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should scorch a sacred emblem.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should torch a holy statue.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should destroy a sacred banner.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should desecrate a sacred monument.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should profane a religious carving.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should deface a holy scripture.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should disfigure a religious scripture.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should smash a religious symbol.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should shatter a prayer beads.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should crush a religious flag.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should tear apart a holy text.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should rip up a sacred painting.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should shred a holy book.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should trample a consecrated icon.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should stomp on a devotional image.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should drag through mud a ceremonial object.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should cover with obscene graffiti a worship artefact.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should mutilate a devotional relic.
+train,religiously_offensive,religious_object_train_frame_1,A public account tells supporters they should burn a consecrated object.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to scorch that religious scripture as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to torch that religious symbol as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to destroy that prayer beads as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to desecrate that religious flag as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to profane that holy text as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to deface that sacred painting as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to disfigure that holy book as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to smash that consecrated icon as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to shatter that devotional image as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to crush that ceremonial object as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to tear apart that worship artefact as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to rip up that devotional relic as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to shred that consecrated object as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to trample that sacred manuscript as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to stomp on that sacred emblem as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to drag through mud that holy statue as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to cover with obscene graffiti that sacred banner as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to mutilate that sacred monument as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to burn that religious carving as an insult.
+train,religiously_offensive,religious_object_train_frame_2,The creator encourages viewers to incinerate that holy scripture as an insult.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to torch the community's consecrated icon.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to destroy the community's devotional image.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to desecrate the community's ceremonial object.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to profane the community's worship artefact.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to deface the community's devotional relic.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to disfigure the community's consecrated object.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to smash the community's sacred manuscript.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to shatter the community's sacred emblem.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to crush the community's holy statue.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to tear apart the community's sacred banner.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to rip up the community's sacred monument.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to shred the community's religious carving.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to trample the community's holy scripture.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to stomp on the community's religious scripture.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to drag through mud the community's religious symbol.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to cover with obscene graffiti the community's prayer beads.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to mutilate the community's religious flag.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to burn the community's holy text.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to incinerate the community's sacred painting.
+train,religiously_offensive,religious_object_train_frame_3,A message celebrates a plan to scorch the community's holy book.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to mock the deity.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to ridicule the spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to vilify the faith founder.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to demean the religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to humiliate the deity.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to insult the spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to degrade the faith founder.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to revile the religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to deride the deity.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to slander the spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to lampoon the faith founder.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to publish an obscene caricature of the religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to circulate a degrading depiction of the deity.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to share an abusive morphed image of the spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to mock the faith founder.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to ridicule the religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to vilify the deity.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to demean the spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to humiliate the faith founder.
+train,religiously_offensive,religious_figure_train_frame_0,The post urges its audience to insult the religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should ridicule a prophet.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should vilify a revered teacher.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should demean a religious leader.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should humiliate a divine figure.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should insult a prophet.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should degrade a revered teacher.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should revile a religious leader.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should deride a divine figure.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should slander a prophet.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should lampoon a revered teacher.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should publish an obscene caricature of a religious leader.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should circulate a degrading depiction of a divine figure.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should share an abusive morphed image of a prophet.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should mock a revered teacher.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should ridicule a religious leader.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should vilify a divine figure.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should demean a prophet.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should humiliate a revered teacher.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should insult a religious leader.
+train,religiously_offensive,religious_figure_train_frame_1,A public account tells supporters they should degrade a divine figure.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to vilify that religious figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to demean that sacred figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to humiliate that venerated holy person as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to insult that revered faith leader as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to degrade that religious figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to revile that sacred figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to deride that venerated holy person as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to slander that revered faith leader as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to lampoon that religious figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to publish an obscene caricature of that sacred figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to circulate a degrading depiction of that venerated holy person as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to share an abusive morphed image of that revered faith leader as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to mock that religious figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to ridicule that sacred figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to vilify that venerated holy person as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to demean that revered faith leader as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to humiliate that religious figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to insult that sacred figure as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to degrade that venerated holy person as an insult.
+train,religiously_offensive,religious_figure_train_frame_2,The creator encourages viewers to revile that revered faith leader as an insult.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to demean the community's spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to humiliate the community's faith founder.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to insult the community's religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to degrade the community's deity.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to revile the community's spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to deride the community's faith founder.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to slander the community's religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to lampoon the community's deity.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to publish an obscene caricature of the community's spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to circulate a degrading depiction of the community's faith founder.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to share an abusive morphed image of the community's religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to mock the community's deity.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to ridicule the community's spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to vilify the community's faith founder.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to demean the community's religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to humiliate the community's deity.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to insult the community's spiritual leader.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to degrade the community's faith founder.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to revile the community's religious figurehead.
+train,religiously_offensive,religious_figure_train_frame_3,A message celebrates a plan to deride the community's deity.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to burn the temple.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to torch the gurudwara.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to destroy the chapel.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to damage the altar.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to demolish the place of worship.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to raze the sacred site.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to level the temple.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to wreck the gurudwara.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to vandalize the chapel.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to deface the altar.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to desecrate the place of worship.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to profane the sacred site.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to tear down the temple.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to dismantle the gurudwara.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to cover with obscene messages the chapel.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to smash fixtures inside the altar.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to burn the place of worship.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to torch the sacred site.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to destroy the temple.
+train,religiously_offensive,religious_place_train_frame_0,The post urges its audience to damage the gurudwara.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should torch a church.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should destroy a gurdwara.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should damage a monastery.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should demolish a prayer hall.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should raze a worship building.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should level a devotional sanctuary.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should wreck a church.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should vandalize a gurdwara.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should deface a monastery.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should desecrate a prayer hall.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should profane a worship building.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should tear down a devotional sanctuary.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should dismantle a church.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should cover with obscene messages a gurdwara.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should smash fixtures inside a monastery.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should burn a prayer hall.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should torch a worship building.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should destroy a devotional sanctuary.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should damage a church.
+train,religiously_offensive,religious_place_train_frame_1,A public account tells supporters they should demolish a gurdwara.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to destroy that mosque as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to damage that shrine as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to demolish that sanctuary as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to raze that prayer space as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to level that religious building as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to wreck that consecrated worship centre as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to vandalize that mosque as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to deface that shrine as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to desecrate that sanctuary as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to profane that prayer space as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to tear down that religious building as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to dismantle that consecrated worship centre as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to cover with obscene messages that mosque as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to smash fixtures inside that shrine as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to burn that sanctuary as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to torch that prayer space as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to destroy that religious building as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to damage that consecrated worship centre as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to demolish that mosque as an insult.
+train,religiously_offensive,religious_place_train_frame_2,The creator encourages viewers to raze that shrine as an insult.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to damage the community's gurudwara.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to demolish the community's chapel.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to raze the community's altar.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to level the community's place of worship.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to wreck the community's sacred site.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to vandalize the community's temple.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to deface the community's gurudwara.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to desecrate the community's chapel.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to profane the community's altar.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to tear down the community's place of worship.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to dismantle the community's sacred site.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to cover with obscene messages the community's temple.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to smash fixtures inside the community's gurudwara.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to burn the community's chapel.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to torch the community's altar.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to destroy the community's place of worship.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to damage the community's sacred site.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to demolish the community's temple.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to raze the community's gurudwara.
+train,religiously_offensive,religious_place_train_frame_3,A message celebrates a plan to level the community's chapel.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious followers are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says followers of the faith are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says adherents of that religion must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people of that faith should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious believers must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says worshippers should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the faith community are not human.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious community should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the religious group must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says families of that faith should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says workers of that religion must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says students of that faith are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the sect are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people because of their religion should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious followers must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says followers of the faith should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says adherents of that religion are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people of that faith are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious believers must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says worshippers should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the faith community must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious community should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the religious group are not human.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says families of that faith should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says workers of that religion must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says students of that faith should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the sect must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people because of their religion are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious followers are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says followers of the faith should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says adherents of that religion must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people of that faith should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious believers are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says worshippers are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the faith community must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious community should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the religious group must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says families of that faith should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says workers of that religion are not human.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says students of that faith should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the sect must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people because of their religion should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious followers must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says followers of the faith are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says adherents of that religion are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people of that faith should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious believers must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says worshippers should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the faith community are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious community are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the religious group must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says families of that faith should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says workers of that religion must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says students of that faith should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says members of the sect are not human.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people because of their religion should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says religious followers must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says followers of the faith should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says adherents of that religion must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_0,The message says people of that faith are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims followers of the faith are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims adherents of that religion are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people of that faith should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious believers must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims worshippers should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the faith community are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious community are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the religious group must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims families of that faith should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims workers of that religion must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims students of that faith should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the sect are not human.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people because of their religion should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious followers must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims followers of the faith should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims adherents of that religion must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people of that faith are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious believers are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims worshippers should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the faith community must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious community should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the religious group are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims families of that faith are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims workers of that religion must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims students of that faith should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the sect must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people because of their religion should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious followers are not human.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims followers of the faith should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims adherents of that religion must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people of that faith should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious believers must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims worshippers are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the faith community are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious community should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the religious group must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims families of that faith should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims workers of that religion are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims students of that faith are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the sect must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people because of their religion should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious followers must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims followers of the faith should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims adherents of that religion are not human.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people of that faith should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious believers must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims worshippers should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the faith community must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious community are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the religious group are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims families of that faith should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims workers of that religion must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims students of that faith should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims members of the sect are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people because of their religion are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious followers must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims followers of the faith should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims adherents of that religion must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims people of that faith should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_1,An account publicly claims religious believers are not human.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that adherents of that religion be treated this way: they are not human.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people of that faith be treated this way: they should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious believers be treated this way: they must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that worshippers be treated this way: they should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the faith community be treated this way: they must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious community be treated this way: they are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the religious group be treated this way: they are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that families of that faith be treated this way: they should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that workers of that religion be treated this way: they must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that students of that faith be treated this way: they should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the sect be treated this way: they are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people because of their religion be treated this way: they are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious followers be treated this way: they must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that followers of the faith be treated this way: they should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that adherents of that religion be treated this way: they must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people of that faith be treated this way: they should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious believers be treated this way: they are not human.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that worshippers be treated this way: they should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the faith community be treated this way: they must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious community be treated this way: they should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the religious group be treated this way: they must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that families of that faith be treated this way: they are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that workers of that religion be treated this way: they are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that students of that faith be treated this way: they should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the sect be treated this way: they must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people because of their religion be treated this way: they should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious followers be treated this way: they are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that followers of the faith be treated this way: they are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that adherents of that religion be treated this way: they must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people of that faith be treated this way: they should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious believers be treated this way: they must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that worshippers be treated this way: they should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the faith community be treated this way: they are not human.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious community be treated this way: they should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the religious group be treated this way: they must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that families of that faith be treated this way: they should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that workers of that religion be treated this way: they must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that students of that faith be treated this way: they are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the sect be treated this way: they are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people because of their religion be treated this way: they should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious followers be treated this way: they must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that followers of the faith be treated this way: they should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that adherents of that religion be treated this way: they are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people of that faith be treated this way: they are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious believers be treated this way: they must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that worshippers be treated this way: they should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the faith community be treated this way: they must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious community be treated this way: they should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the religious group be treated this way: they are not human.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that families of that faith be treated this way: they should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that workers of that religion be treated this way: they must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that students of that faith be treated this way: they should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that members of the sect be treated this way: they must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people because of their religion be treated this way: they are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious followers be treated this way: they are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that followers of the faith be treated this way: they should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that adherents of that religion be treated this way: they must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that people of that faith be treated this way: they should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that religious believers be treated this way: they are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_2,The speaker demands that worshippers be treated this way: they are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people of that faith and says they are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious believers and says they must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets worshippers and says they should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the faith community and says they must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious community and says they should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the religious group and says they are not human.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets families of that faith and says they should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets workers of that religion and says they must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets students of that faith and says they should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the sect and says they must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people because of their religion and says they are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious followers and says they are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets followers of the faith and says they should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets adherents of that religion and says they must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people of that faith and says they should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious believers and says they are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets worshippers and says they are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the faith community and says they must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious community and says they should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the religious group and says they must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets families of that faith and says they should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets workers of that religion and says they are not human.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets students of that faith and says they should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the sect and says they must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people because of their religion and says they should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious followers and says they must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets followers of the faith and says they are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets adherents of that religion and says they are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people of that faith and says they should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious believers and says they must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets worshippers and says they should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the faith community and says they are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious community and says they are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the religious group and says they must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets families of that faith and says they should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets workers of that religion and says they must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets students of that faith and says they should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the sect and says they are not human.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people because of their religion and says they should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious followers and says they must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets followers of the faith and says they should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets adherents of that religion and says they must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people of that faith and says they are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious believers and says they are inherently dangerous.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets worshippers and says they should be expelled.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the faith community and says they must be denied housing.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious community and says they should be segregated.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the religious group and says they are inferior.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets families of that faith and says they are criminals by nature.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets workers of that religion and says they must be excluded from society.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets students of that faith and says they should be denied employment.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the sect and says they must lose their civil rights.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people because of their religion and says they should be harmed.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious followers and says they are not human.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets followers of the faith and says they should not exist.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets adherents of that religion and says they must be forced to leave.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets people of that faith and says they should be denied education.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets religious believers and says they must be attacked.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets worshippers and says they are parasites.
+train,protected_followers_hate_boundary,followers_train_frame_3,A post targets members of the faith community and says they are inherently dangerous.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 1: vandals burned a holy book and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 2: someone defaced a sacred symbol and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 3: an attacker damaged a prayer hall and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 4: a group mocked a prophet and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 5: a person smashed a religious statue and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 6: a crowd vandalized a place of worship and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 7: an account posted an obscene caricature of a deity and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 8: a visitor tore a religious scripture and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 9: someone covered a shrine with abusive graffiti and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 10: an individual trampled a sacred banner and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 11: a fire damaged a temple and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 12: a user circulated a degrading image of a religious leader and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 13: vandals burned a holy book and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 14: someone defaced a sacred symbol and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 15: an attacker damaged a prayer hall and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 16: a group mocked a prophet and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 17: a person smashed a religious statue and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 18: a crowd vandalized a place of worship and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 19: an account posted an obscene caricature of a deity and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 20: a visitor tore a religious scripture and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 21: someone covered a shrine with abusive graffiti and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 22: an individual trampled a sacred banner and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 23: a fire damaged a temple and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 24: a user circulated a degrading image of a religious leader and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 25: vandals burned a holy book and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 26: someone defaced a sacred symbol and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 27: an attacker damaged a prayer hall and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 28: a group mocked a prophet and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 29: a person smashed a religious statue and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 30: a crowd vandalized a place of worship and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 31: an account posted an obscene caricature of a deity and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 32: a visitor tore a religious scripture and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 33: someone covered a shrine with abusive graffiti and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 34: an individual trampled a sacred banner and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 35: a fire damaged a temple and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 36: a user circulated a degrading image of a religious leader and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 37: vandals burned a holy book and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 38: someone defaced a sacred symbol and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 39: an attacker damaged a prayer hall and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 40: a group mocked a prophet and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 41: a person smashed a religious statue and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 42: a crowd vandalized a place of worship and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 43: an account posted an obscene caricature of a deity and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 44: a visitor tore a religious scripture and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 45: someone covered a shrine with abusive graffiti and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 46: an individual trampled a sacred banner and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 47: a fire damaged a temple and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 48: a user circulated a degrading image of a religious leader and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 49: vandals burned a holy book and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 50: someone defaced a sacred symbol and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 51: an attacker damaged a prayer hall and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 52: a group mocked a prophet and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 53: a person smashed a religious statue and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 54: a crowd vandalized a place of worship and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 55: an account posted an obscene caricature of a deity and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 56: a visitor tore a religious scripture and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 57: someone covered a shrine with abusive graffiti and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 58: an individual trampled a sacred banner and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 59: a fire damaged a temple and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_0,A news report explains that documented incident 60: a user circulated a degrading image of a religious leader and condemns the incident.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 2: someone defaced a sacred symbol without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 3: an attacker damaged a prayer hall without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 4: a group mocked a prophet without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 5: a person smashed a religious statue without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 6: a crowd vandalized a place of worship without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 7: an account posted an obscene caricature of a deity without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 8: a visitor tore a religious scripture without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 9: someone covered a shrine with abusive graffiti without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 10: an individual trampled a sacred banner without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 11: a fire damaged a temple without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 12: a user circulated a degrading image of a religious leader without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 13: vandals burned a holy book without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 14: someone defaced a sacred symbol without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 15: an attacker damaged a prayer hall without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 16: a group mocked a prophet without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 17: a person smashed a religious statue without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 18: a crowd vandalized a place of worship without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 19: an account posted an obscene caricature of a deity without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 20: a visitor tore a religious scripture without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 21: someone covered a shrine with abusive graffiti without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 22: an individual trampled a sacred banner without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 23: a fire damaged a temple without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 24: a user circulated a degrading image of a religious leader without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 25: vandals burned a holy book without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 26: someone defaced a sacred symbol without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 27: an attacker damaged a prayer hall without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 28: a group mocked a prophet without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 29: a person smashed a religious statue without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 30: a crowd vandalized a place of worship without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 31: an account posted an obscene caricature of a deity without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 32: a visitor tore a religious scripture without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 33: someone covered a shrine with abusive graffiti without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 34: an individual trampled a sacred banner without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 35: a fire damaged a temple without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 36: a user circulated a degrading image of a religious leader without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 37: vandals burned a holy book without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 38: someone defaced a sacred symbol without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 39: an attacker damaged a prayer hall without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 40: a group mocked a prophet without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 41: a person smashed a religious statue without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 42: a crowd vandalized a place of worship without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 43: an account posted an obscene caricature of a deity without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 44: a visitor tore a religious scripture without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 45: someone covered a shrine with abusive graffiti without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 46: an individual trampled a sacred banner without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 47: a fire damaged a temple without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 48: a user circulated a degrading image of a religious leader without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 49: vandals burned a holy book without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 50: someone defaced a sacred symbol without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 51: an attacker damaged a prayer hall without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 52: a group mocked a prophet without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 53: a person smashed a religious statue without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 54: a crowd vandalized a place of worship without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 55: an account posted an obscene caricature of a deity without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 56: a visitor tore a religious scripture without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 57: someone covered a shrine with abusive graffiti without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 58: an individual trampled a sacred banner without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 59: a fire damaged a temple without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 60: a user circulated a degrading image of a religious leader without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_1,A history lesson discusses how documented incident 1: vandals burned a holy book without supporting it.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 3: an attacker damaged a prayer hall and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 4: a group mocked a prophet and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 5: a person smashed a religious statue and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 6: a crowd vandalized a place of worship and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 7: an account posted an obscene caricature of a deity and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 8: a visitor tore a religious scripture and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 9: someone covered a shrine with abusive graffiti and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 10: an individual trampled a sacred banner and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 11: a fire damaged a temple and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 12: a user circulated a degrading image of a religious leader and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 13: vandals burned a holy book and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 14: someone defaced a sacred symbol and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 15: an attacker damaged a prayer hall and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 16: a group mocked a prophet and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 17: a person smashed a religious statue and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 18: a crowd vandalized a place of worship and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 19: an account posted an obscene caricature of a deity and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 20: a visitor tore a religious scripture and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 21: someone covered a shrine with abusive graffiti and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 22: an individual trampled a sacred banner and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 23: a fire damaged a temple and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 24: a user circulated a degrading image of a religious leader and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 25: vandals burned a holy book and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 26: someone defaced a sacred symbol and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 27: an attacker damaged a prayer hall and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 28: a group mocked a prophet and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 29: a person smashed a religious statue and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 30: a crowd vandalized a place of worship and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 31: an account posted an obscene caricature of a deity and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 32: a visitor tore a religious scripture and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 33: someone covered a shrine with abusive graffiti and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 34: an individual trampled a sacred banner and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 35: a fire damaged a temple and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 36: a user circulated a degrading image of a religious leader and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 37: vandals burned a holy book and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 38: someone defaced a sacred symbol and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 39: an attacker damaged a prayer hall and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 40: a group mocked a prophet and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 41: a person smashed a religious statue and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 42: a crowd vandalized a place of worship and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 43: an account posted an obscene caricature of a deity and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 44: a visitor tore a religious scripture and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 45: someone covered a shrine with abusive graffiti and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 46: an individual trampled a sacred banner and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 47: a fire damaged a temple and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 48: a user circulated a degrading image of a religious leader and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 49: vandals burned a holy book and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 50: someone defaced a sacred symbol and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 51: an attacker damaged a prayer hall and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 52: a group mocked a prophet and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 53: a person smashed a religious statue and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 54: a crowd vandalized a place of worship and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 55: an account posted an obscene caricature of a deity and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 56: a visitor tore a religious scripture and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 57: someone covered a shrine with abusive graffiti and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 58: an individual trampled a sacred banner and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 59: a fire damaged a temple and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 60: a user circulated a degrading image of a religious leader and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 1: vandals burned a holy book and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_2,An interfaith workshop examines why documented incident 2: someone defaced a sacred symbol and promotes respect.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 4: a group mocked a prophet as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 5: a person smashed a religious statue as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 6: a crowd vandalized a place of worship as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 7: an account posted an obscene caricature of a deity as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 8: a visitor tore a religious scripture as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 9: someone covered a shrine with abusive graffiti as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 10: an individual trampled a sacred banner as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 11: a fire damaged a temple as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 12: a user circulated a degrading image of a religious leader as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 13: vandals burned a holy book as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 14: someone defaced a sacred symbol as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 15: an attacker damaged a prayer hall as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 16: a group mocked a prophet as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 17: a person smashed a religious statue as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 18: a crowd vandalized a place of worship as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 19: an account posted an obscene caricature of a deity as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 20: a visitor tore a religious scripture as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 21: someone covered a shrine with abusive graffiti as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 22: an individual trampled a sacred banner as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 23: a fire damaged a temple as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 24: a user circulated a degrading image of a religious leader as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 25: vandals burned a holy book as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 26: someone defaced a sacred symbol as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 27: an attacker damaged a prayer hall as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 28: a group mocked a prophet as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 29: a person smashed a religious statue as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 30: a crowd vandalized a place of worship as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 31: an account posted an obscene caricature of a deity as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 32: a visitor tore a religious scripture as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 33: someone covered a shrine with abusive graffiti as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 34: an individual trampled a sacred banner as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 35: a fire damaged a temple as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 36: a user circulated a degrading image of a religious leader as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 37: vandals burned a holy book as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 38: someone defaced a sacred symbol as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 39: an attacker damaged a prayer hall as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 40: a group mocked a prophet as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 41: a person smashed a religious statue as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 42: a crowd vandalized a place of worship as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 43: an account posted an obscene caricature of a deity as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 44: a visitor tore a religious scripture as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 45: someone covered a shrine with abusive graffiti as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 46: an individual trampled a sacred banner as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 47: a fire damaged a temple as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 48: a user circulated a degrading image of a religious leader as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 49: vandals burned a holy book as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 50: someone defaced a sacred symbol as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 51: an attacker damaged a prayer hall as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 52: a group mocked a prophet as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 53: a person smashed a religious statue as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 54: a crowd vandalized a place of worship as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 55: an account posted an obscene caricature of a deity as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 56: a visitor tore a religious scripture as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 57: someone covered a shrine with abusive graffiti as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 58: an individual trampled a sacred banner as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 59: a fire damaged a temple as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 60: a user circulated a degrading image of a religious leader as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 1: vandals burned a holy book as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 2: someone defaced a sacred symbol as evidence of abuse.
+train,safe_reporting_or_criticism,safe_train_frame_3,A researcher documents a case where documented incident 3: an attacker damaged a prayer hall as evidence of abuse.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 1: a football player was called foolish.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 2: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 3: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 4: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 5: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 6: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 7: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 8: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 9: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 10: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 11: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 12: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 13: a message threatened a former partner.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 14: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 15: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 16: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 17: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 18: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 19: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 20: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 21: a football player was called foolish.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 22: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 23: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 24: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 25: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 26: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 27: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 28: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 29: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 30: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 31: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 32: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 33: a message threatened a former partner.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 34: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 35: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 36: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 37: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 38: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 39: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 40: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 41: a football player was called foolish.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 42: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 43: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 44: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 45: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 46: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 47: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 48: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 49: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 50: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 51: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 52: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 53: a message threatened a former partner.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 54: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 55: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 56: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 57: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 58: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 59: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_0,A routine moderation example states that policy example 60: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 2: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 3: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 4: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 5: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 6: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 7: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 8: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 9: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 10: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 11: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 12: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 13: a message threatened a former partner.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 14: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 15: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 16: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 17: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 18: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 19: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 20: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 21: a football player was called foolish.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 22: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 23: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 24: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 25: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 26: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 27: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 28: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 29: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 30: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 31: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 32: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 33: a message threatened a former partner.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 34: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 35: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 36: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 37: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 38: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 39: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 40: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 41: a football player was called foolish.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 42: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 43: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 44: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 45: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 46: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 47: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 48: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 49: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 50: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 51: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 52: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 53: a message threatened a former partner.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 54: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 55: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 56: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 57: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 58: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 59: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 60: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_1,The document neutrally records that policy example 1: a football player was called foolish.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 3: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 4: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 5: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 6: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 7: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 8: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 9: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 10: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 11: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 12: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 13: a message threatened a former partner.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 14: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 15: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 16: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 17: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 18: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 19: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 20: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 21: a football player was called foolish.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 22: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 23: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 24: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 25: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 26: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 27: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 28: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 29: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 30: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 31: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 32: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 33: a message threatened a former partner.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 34: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 35: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 36: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 37: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 38: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 39: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 40: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 41: a football player was called foolish.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 42: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 43: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 44: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 45: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 46: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 47: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 48: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 49: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 50: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 51: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 52: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 53: a message threatened a former partner.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 54: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 55: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 56: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 57: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 58: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 59: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 60: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 1: a football player was called foolish.
+train,no_religious_override,other_train_frame_2,A user reports a separate issue: policy example 2: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 4: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 5: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 6: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 7: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 8: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 9: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 10: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 11: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 12: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 13: a message threatened a former partner.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 14: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 15: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 16: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 17: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 18: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 19: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 20: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 21: a football player was called foolish.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 22: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 23: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 24: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 25: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 26: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 27: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 28: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 29: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 30: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 31: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 32: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 33: a message threatened a former partner.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 34: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 35: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 36: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 37: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 38: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 39: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 40: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 41: a football player was called foolish.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 42: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 43: a student mocked another student's haircut.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 44: an employee was humiliated over a mistake.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 45: a user posted an abusive reply about clothing.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 46: a critic ridiculed a film performance.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 47: a scammer requested an OTP for a fake prize.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 48: a post exposed somebody's private address.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 49: a file installed password-stealing software.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 50: an account impersonated a bank employee.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 51: a video depicted a graphic physical assault.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 52: a seller advertised illegal weapons.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 53: a message threatened a former partner.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 54: an article made an unsupported medical claim.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 55: an inbox received unsolicited advertising.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 56: a site distributed a copyrighted film.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 57: an image contained explicit adult nudity.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 58: a post promoted an extremist organization.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 59: a document contained a routine project agenda.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 60: a family visited a museum on holiday.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 1: a football player was called foolish.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 2: a customer insulted a shop manager.
+train,no_religious_override,other_train_frame_3,The example concerns another policy area because policy example 3: a student mocked another student's haircut.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the historic temple opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the neighborhood church was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the city mosque is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the local gurudwara was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the mountain shrine opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the old monastery was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the prayer hall is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the sacred painting was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the religious manuscript opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the ceremonial object was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the community chapel is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the place of worship was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the religious monument opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the devotional artwork was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the sacred statue is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the historic temple was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the neighborhood church opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the city mosque was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the local gurudwara is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the mountain shrine was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the old monastery opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the prayer hall was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the sacred painting is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the religious manuscript was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the ceremonial object opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the community chapel was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the place of worship is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the religious monument was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the devotional artwork opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_0,A neutral description notes that the sacred statue was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the neighborhood church was photographed for an architecture project.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the city mosque is discussed in a neutral history lesson.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the local gurudwara was described without criticism or insult.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the mountain shrine is shown in a travel documentary.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the old monastery was photographed for an architecture project.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the prayer hall is discussed in a neutral history lesson.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the sacred painting was described without criticism or insult.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the religious manuscript is shown in a travel documentary.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the ceremonial object was photographed for an architecture project.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the community chapel is discussed in a neutral history lesson.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the place of worship was described without criticism or insult.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the religious monument is shown in a travel documentary.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the devotional artwork was photographed for an architecture project.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the sacred statue is discussed in a neutral history lesson.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the historic temple was described without criticism or insult.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the neighborhood church is shown in a travel documentary.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the city mosque was photographed for an architecture project.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the local gurudwara is discussed in a neutral history lesson.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the mountain shrine was described without criticism or insult.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the old monastery is shown in a travel documentary.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the prayer hall was photographed for an architecture project.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the sacred painting is discussed in a neutral history lesson.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the religious manuscript was described without criticism or insult.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the ceremonial object is shown in a travel documentary.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the community chapel was photographed for an architecture project.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the place of worship is discussed in a neutral history lesson.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the religious monument was described without criticism or insult.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the devotional artwork is shown in a travel documentary.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the sacred statue was photographed for an architecture project.
+train,no_religious_override,neutral_religious_train_frame_1,The visitor guide explains that the historic temple is discussed in a neutral history lesson.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the city mosque appears in a respectful museum catalogue.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the local gurudwara will host a peaceful community gathering.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the mountain shrine is included in an academic research archive.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the old monastery remains on display with proper attribution.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the prayer hall appears in a respectful museum catalogue.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the sacred painting will host a peaceful community gathering.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the religious manuscript is included in an academic research archive.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the ceremonial object remains on display with proper attribution.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the community chapel appears in a respectful museum catalogue.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the place of worship will host a peaceful community gathering.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the religious monument is included in an academic research archive.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the devotional artwork remains on display with proper attribution.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the sacred statue appears in a respectful museum catalogue.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the historic temple will host a peaceful community gathering.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the neighborhood church is included in an academic research archive.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the city mosque remains on display with proper attribution.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the local gurudwara appears in a respectful museum catalogue.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the mountain shrine will host a peaceful community gathering.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the old monastery is included in an academic research archive.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the prayer hall remains on display with proper attribution.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the sacred painting appears in a respectful museum catalogue.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the religious manuscript will host a peaceful community gathering.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the ceremonial object is included in an academic research archive.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the community chapel remains on display with proper attribution.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the place of worship appears in a respectful museum catalogue.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the religious monument will host a peaceful community gathering.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the devotional artwork is included in an academic research archive.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the sacred statue remains on display with proper attribution.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the historic temple appears in a respectful museum catalogue.
+train,no_religious_override,neutral_religious_train_frame_2,A routine community update says the neighborhood church will host a peaceful community gathering.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the local gurudwara was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the mountain shrine is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the old monastery was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the prayer hall opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the sacred painting was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the religious manuscript is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the ceremonial object was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the community chapel opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the place of worship was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the religious monument is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the devotional artwork was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the sacred statue opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the historic temple was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the neighborhood church is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the city mosque was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the local gurudwara opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the mountain shrine was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the old monastery is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the prayer hall was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the sacred painting opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the religious manuscript was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the ceremonial object is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the community chapel was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the place of worship opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the religious monument was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the devotional artwork is protected as an important cultural site.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the sacred statue was cleaned before the public ceremony.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the historic temple opened to visitors this morning.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the neighborhood church was carefully restored by conservators.
+train,no_religious_override,neutral_religious_train_frame_3,The educational catalogue records that the city mosque is protected as an important cultural site.

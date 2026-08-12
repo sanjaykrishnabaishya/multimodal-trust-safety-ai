@@ -1,0 +1,121 @@
+split,label,family,text,case_id
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to burn the sacred manuscript.,RC6-D-00-00
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to vandalize the neighborhood shrine.,RC6-D-00-01
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to smash the holy statue.,RC6-D-00-02
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to deface the religious symbol.,RC6-D-00-03
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to tear the sacred scripture.,RC6-D-00-04
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to demolish the prayer hall.,RC6-D-00-05
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to desecrate the temple altar.,RC6-D-00-06
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to mock the revered deity with an obscene image.,RC6-D-00-07
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to ridicule the religious founder with a degrading caricature.,RC6-D-00-08
+development,religiously_offensive,direct_advocacy_frame_0,The organizer called on the audience to trample the ceremonial banner.,RC6-D-00-09
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to burn the sacred manuscript.,RC6-D-01-00
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to vandalize the neighborhood shrine.,RC6-D-01-01
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to smash the holy statue.,RC6-D-01-02
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to deface the religious symbol.,RC6-D-01-03
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to tear the sacred scripture.,RC6-D-01-04
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to demolish the prayer hall.,RC6-D-01-05
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to desecrate the temple altar.,RC6-D-01-06
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to mock the revered deity with an obscene image.,RC6-D-01-07
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to ridicule the religious founder with a degrading caricature.,RC6-D-01-08
+development,religiously_offensive,direct_advocacy_frame_1,An online group is urging its members to trample the ceremonial banner.,RC6-D-01-09
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants burn the sacred manuscript.,RC6-D-02-00
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants vandalize the neighborhood shrine.,RC6-D-02-01
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants smash the holy statue.,RC6-D-02-02
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants deface the religious symbol.,RC6-D-02-03
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants tear the sacred scripture.,RC6-D-02-04
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants demolish the prayer hall.,RC6-D-02-05
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants desecrate the temple altar.,RC6-D-02-06
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants mock the revered deity with an obscene image.,RC6-D-02-07
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants ridicule the religious founder with a degrading caricature.,RC6-D-02-08
+development,religiously_offensive,direct_advocacy_frame_2,The account demanded that participants trample the ceremonial banner.,RC6-D-02-09
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to burn the sacred manuscript; the report condemned the statement.,RC6-R-00-00
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to vandalize the neighborhood shrine; the report condemned the statement.,RC6-R-00-01
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to smash the holy statue; the report condemned the statement.,RC6-R-00-02
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to deface the religious symbol; the report condemned the statement.,RC6-R-00-03
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to tear the sacred scripture; the report condemned the statement.,RC6-R-00-04
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to demolish the prayer hall; the report condemned the statement.,RC6-R-00-05
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to desecrate the temple altar; the report condemned the statement.,RC6-R-00-06
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to mock the revered deity with an obscene image; the report condemned the statement.,RC6-R-00-07
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to ridicule the religious founder with a degrading caricature; the report condemned the statement.,RC6-R-00-08
+development,no_religious_override,reported_advocacy_safe_frame_0,A news report quoted someone calling for people to trample the ceremonial banner; the report condemned the statement.,RC6-R-00-09
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to burn the sacred manuscript; it did not endorse the act.,RC6-R-01-00
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to vandalize the neighborhood shrine; it did not endorse the act.,RC6-R-01-01
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to smash the holy statue; it did not endorse the act.,RC6-R-01-02
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to deface the religious symbol; it did not endorse the act.,RC6-R-01-03
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to tear the sacred scripture; it did not endorse the act.,RC6-R-01-04
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to demolish the prayer hall; it did not endorse the act.,RC6-R-01-05
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to desecrate the temple altar; it did not endorse the act.,RC6-R-01-06
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to mock the revered deity with an obscene image; it did not endorse the act.,RC6-R-01-07
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to ridicule the religious founder with a degrading caricature; it did not endorse the act.,RC6-R-01-08
+development,no_religious_override,reported_advocacy_safe_frame_1,A court transcript recorded that the accused ordered others to trample the ceremonial banner; it did not endorse the act.,RC6-R-01-09
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to burn the sacred manuscript while clearly opposing the campaign.,RC6-R-02-00
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to vandalize the neighborhood shrine while clearly opposing the campaign.,RC6-R-02-01
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to smash the holy statue while clearly opposing the campaign.,RC6-R-02-02
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to deface the religious symbol while clearly opposing the campaign.,RC6-R-02-03
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to tear the sacred scripture while clearly opposing the campaign.,RC6-R-02-04
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to demolish the prayer hall while clearly opposing the campaign.,RC6-R-02-05
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to desecrate the temple altar while clearly opposing the campaign.,RC6-R-02-06
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to mock the revered deity with an obscene image while clearly opposing the campaign.,RC6-R-02-07
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to ridicule the religious founder with a degrading caricature while clearly opposing the campaign.,RC6-R-02-08
+development,no_religious_override,reported_advocacy_safe_frame_2,A documentary recounted a campaign urging viewers to trample the ceremonial banner while clearly opposing the campaign.,RC6-R-02-09
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Followers of that religion are inferior and should be excluded from public life.,RC6-F-00-00
+development,no_religious_override,protected_follower_hate_boundary,Message 1: People belonging to that faith should lose their rights.,RC6-F-00-01
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Those religious believers are dangerous and must be expelled.,RC6-F-00-02
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Members of that faith community should be denied housing.,RC6-F-00-03
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Adherents of that religion are parasites and should be driven away.,RC6-F-00-04
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Religious worshippers from that denomination should be segregated.,RC6-F-00-05
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Workers of that faith should be refused employment.,RC6-F-00-06
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Students from that religious community should be banned from the school.,RC6-F-00-07
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Families following that religion are unfit for citizenship.,RC6-F-00-08
+development,no_religious_override,protected_follower_hate_boundary,Message 1: Believers from that sect should not exist in this neighborhood.,RC6-F-00-09
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Followers of that religion are inferior and should be excluded from public life.,RC6-F-01-00
+development,no_religious_override,protected_follower_hate_boundary,Message 2: People belonging to that faith should lose their rights.,RC6-F-01-01
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Those religious believers are dangerous and must be expelled.,RC6-F-01-02
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Members of that faith community should be denied housing.,RC6-F-01-03
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Adherents of that religion are parasites and should be driven away.,RC6-F-01-04
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Religious worshippers from that denomination should be segregated.,RC6-F-01-05
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Workers of that faith should be refused employment.,RC6-F-01-06
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Students from that religious community should be banned from the school.,RC6-F-01-07
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Families following that religion are unfit for citizenship.,RC6-F-01-08
+development,no_religious_override,protected_follower_hate_boundary,Message 2: Believers from that sect should not exist in this neighborhood.,RC6-F-01-09
+development,no_religious_override,neutral_religious_context,Context 1: Visitors admired the sacred painting during the exhibition.,RC6-N-00-00
+development,no_religious_override,neutral_religious_context,Context 1: The restored prayer hall reopened for a community gathering.,RC6-N-00-01
+development,no_religious_override,neutral_religious_context,Context 1: A scholar translated the holy manuscript for an academic archive.,RC6-N-00-02
+development,no_religious_override,neutral_religious_context,Context 1: The museum displayed a religious statue with historical context.,RC6-N-00-03
+development,no_religious_override,neutral_religious_context,Context 1: The congregation repaired the church roof after the storm.,RC6-N-00-04
+development,no_religious_override,neutral_religious_context,Context 1: Volunteers cleaned the temple courtyard before the ceremony.,RC6-N-00-05
+development,no_religious_override,neutral_religious_context,Context 1: The documentary explains the history of a revered religious teacher.,RC6-N-00-06
+development,no_religious_override,neutral_religious_context,Context 1: The library preserved the sacred text in a protective case.,RC6-N-00-07
+development,no_religious_override,neutral_religious_context,Context 1: An interfaith group visited the mosque during an educational tour.,RC6-N-00-08
+development,no_religious_override,neutral_religious_context,Context 1: A conservator restored the ceremonial icon without altering it.,RC6-N-00-09
+development,no_religious_override,neutral_religious_context,Context 2: Visitors admired the sacred painting during the exhibition.,RC6-N-01-00
+development,no_religious_override,neutral_religious_context,Context 2: The restored prayer hall reopened for a community gathering.,RC6-N-01-01
+development,no_religious_override,neutral_religious_context,Context 2: A scholar translated the holy manuscript for an academic archive.,RC6-N-01-02
+development,no_religious_override,neutral_religious_context,Context 2: The museum displayed a religious statue with historical context.,RC6-N-01-03
+development,no_religious_override,neutral_religious_context,Context 2: The congregation repaired the church roof after the storm.,RC6-N-01-04
+development,no_religious_override,neutral_religious_context,Context 2: Volunteers cleaned the temple courtyard before the ceremony.,RC6-N-01-05
+development,no_religious_override,neutral_religious_context,Context 2: The documentary explains the history of a revered religious teacher.,RC6-N-01-06
+development,no_religious_override,neutral_religious_context,Context 2: The library preserved the sacred text in a protective case.,RC6-N-01-07
+development,no_religious_override,neutral_religious_context,Context 2: An interfaith group visited the mosque during an educational tour.,RC6-N-01-08
+development,no_religious_override,neutral_religious_context,Context 2: A conservator restored the ceremonial icon without altering it.,RC6-N-01-09
+development,no_religious_override,unrelated_category_boundary,Example 1: The manager threatened to smash an employee's phone.,RC6-O-00-00
+development,no_religious_override,unrelated_category_boundary,Example 1: A user repeatedly insulted another person in a private chat.,RC6-O-00-01
+development,no_religious_override,unrelated_category_boundary,Example 1: The advertisement promises a cash prize for sharing a password.,RC6-O-00-02
+development,no_religious_override,unrelated_category_boundary,Example 1: The post publishes a private residential address.,RC6-O-00-03
+development,no_religious_override,unrelated_category_boundary,Example 1: The article makes an unsupported claim about a public election.,RC6-O-00-04
+development,no_religious_override,unrelated_category_boundary,Example 1: A stranger ordered someone to transfer money immediately.,RC6-O-00-05
+development,no_religious_override,unrelated_category_boundary,Example 1: The video depicts a graphic assault on an unidentified person.,RC6-O-00-06
+development,no_religious_override,unrelated_category_boundary,Example 1: The message contains a single personal insult with no religious target.,RC6-O-00-07
+development,no_religious_override,unrelated_category_boundary,Example 1: The file includes malicious code designed to steal credentials.,RC6-O-00-08
+development,no_religious_override,unrelated_category_boundary,Example 1: The seller distributed a copyrighted film without permission.,RC6-O-00-09
+development,no_religious_override,unrelated_category_boundary,Example 2: The manager threatened to smash an employee's phone.,RC6-O-01-00
+development,no_religious_override,unrelated_category_boundary,Example 2: A user repeatedly insulted another person in a private chat.,RC6-O-01-01
+development,no_religious_override,unrelated_category_boundary,Example 2: The advertisement promises a cash prize for sharing a password.,RC6-O-01-02
+development,no_religious_override,unrelated_category_boundary,Example 2: The post publishes a private residential address.,RC6-O-01-03
+development,no_religious_override,unrelated_category_boundary,Example 2: The article makes an unsupported claim about a public election.,RC6-O-01-04
+development,no_religious_override,unrelated_category_boundary,Example 2: A stranger ordered someone to transfer money immediately.,RC6-O-01-05
+development,no_religious_override,unrelated_category_boundary,Example 2: The video depicts a graphic assault on an unidentified person.,RC6-O-01-06
+development,no_religious_override,unrelated_category_boundary,Example 2: The message contains a single personal insult with no religious target.,RC6-O-01-07
+development,no_religious_override,unrelated_category_boundary,Example 2: The file includes malicious code designed to steal credentials.,RC6-O-01-08
+development,no_religious_override,unrelated_category_boundary,Example 2: The seller distributed a copyrighted film without permission.,RC6-O-01-09

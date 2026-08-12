@@ -1,0 +1,141 @@
+case_id,group,text,expected_decision,religious_violation
+REL-V3DEV-001,sacred_object_or_text_attack,The post tells viewers to scorch the holy book as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-002,sacred_object_or_text_attack,The post tells viewers to shred the sacred text as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-003,sacred_object_or_text_attack,The post tells viewers to deface the religious scripture as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-004,sacred_object_or_text_attack,The post tells viewers to smash the sacred emblem as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-005,sacred_object_or_text_attack,The post tells viewers to break the religious symbol as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-006,sacred_object_or_text_attack,The post tells viewers to trample the sacred image as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-007,sacred_object_or_text_attack,The post tells viewers to rip the religious statue as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-008,sacred_object_or_text_attack,The post tells viewers to crush the prayer beads as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-009,sacred_object_or_text_attack,The post tells viewers to vandalize the ceremonial symbol as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-010,sacred_object_or_text_attack,The post tells viewers to drag through mud the sacred banner as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-011,sacred_object_or_text_attack,The post tells viewers to burn the religious flag as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-012,sacred_object_or_text_attack,The post tells viewers to wreck the religious monument as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-013,sacred_object_or_text_attack,The post tells viewers to tear the holy scripture as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-014,sacred_object_or_text_attack,The post tells viewers to damage the sacred object as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-015,sacred_object_or_text_attack,The post tells viewers to destroy the religious book as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-016,sacred_object_or_text_attack,The post tells viewers to mutilate the sacred statue as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-017,sacred_object_or_text_attack,The post tells viewers to desecrate the religious emblem as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-018,sacred_object_or_text_attack,The post tells viewers to cover with obscene graffiti the sacred symbol as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-019,sacred_object_or_text_attack,The post tells viewers to torch the holy text as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-020,sacred_object_or_text_attack,The post tells viewers to dismantle the sacred monument as a deliberate insult.,religiously_offensive_review_only,True
+REL-V3DEV-021,deity_prophet_or_figure_attack,The account urges people to mock the deity.,religiously_offensive_review_only,True
+REL-V3DEV-022,deity_prophet_or_figure_attack,The account urges people to ridicule the prophet.,religiously_offensive_review_only,True
+REL-V3DEV-023,deity_prophet_or_figure_attack,The account urges people to vilify the religious figure.,religiously_offensive_review_only,True
+REL-V3DEV-024,deity_prophet_or_figure_attack,The account urges people to demean the spiritual leader.,religiously_offensive_review_only,True
+REL-V3DEV-025,deity_prophet_or_figure_attack,The account urges people to humiliate the revered religious teacher.,religiously_offensive_review_only,True
+REL-V3DEV-026,deity_prophet_or_figure_attack,The account urges people to insult the sacred figure.,religiously_offensive_review_only,True
+REL-V3DEV-027,deity_prophet_or_figure_attack,The account urges people to degrade the religious leader.,religiously_offensive_review_only,True
+REL-V3DEV-028,deity_prophet_or_figure_attack,The account urges people to revile the god.,religiously_offensive_review_only,True
+REL-V3DEV-029,deity_prophet_or_figure_attack,The account urges people to deride the religious figurehead.,religiously_offensive_review_only,True
+REL-V3DEV-030,deity_prophet_or_figure_attack,The account urges people to abuse the sacred leader.,religiously_offensive_review_only,True
+REL-V3DEV-031,deity_prophet_or_figure_attack,The account urges people to publish an obscene caricature of the prophet.,religiously_offensive_review_only,True
+REL-V3DEV-032,deity_prophet_or_figure_attack,The account urges people to share a degrading depiction of the deity.,religiously_offensive_review_only,True
+REL-V3DEV-033,deity_prophet_or_figure_attack,The account urges people to create an abusive caricature of the religious leader.,religiously_offensive_review_only,True
+REL-V3DEV-034,deity_prophet_or_figure_attack,The account urges people to circulate an obscene depiction of the spiritual leader.,religiously_offensive_review_only,True
+REL-V3DEV-035,deity_prophet_or_figure_attack,The account urges people to post a morphed image to humiliate the sacred figure.,religiously_offensive_review_only,True
+REL-V3DEV-036,deity_prophet_or_figure_attack,The account urges people to publicly mock the revered teacher.,religiously_offensive_review_only,True
+REL-V3DEV-037,deity_prophet_or_figure_attack,The account urges people to repeatedly insult the god.,religiously_offensive_review_only,True
+REL-V3DEV-038,deity_prophet_or_figure_attack,The account urges people to deliberately ridicule the religious figure.,religiously_offensive_review_only,True
+REL-V3DEV-039,deity_prophet_or_figure_attack,The account urges people to publish a degrading caricature of the religious figurehead.,religiously_offensive_review_only,True
+REL-V3DEV-040,deity_prophet_or_figure_attack,The account urges people to revile the prophet.,religiously_offensive_review_only,True
+REL-V3DEV-041,place_of_worship_attack,A public message calls on supporters to wreck the temple.,religiously_offensive_review_only,True
+REL-V3DEV-042,place_of_worship_attack,A public message calls on supporters to deface the church.,religiously_offensive_review_only,True
+REL-V3DEV-043,place_of_worship_attack,A public message calls on supporters to smash the mosque.,religiously_offensive_review_only,True
+REL-V3DEV-044,place_of_worship_attack,A public message calls on supporters to demolish the gurudwara.,religiously_offensive_review_only,True
+REL-V3DEV-045,place_of_worship_attack,A public message calls on supporters to vandalize the shrine.,religiously_offensive_review_only,True
+REL-V3DEV-046,place_of_worship_attack,A public message calls on supporters to damage the chapel.,religiously_offensive_review_only,True
+REL-V3DEV-047,place_of_worship_attack,A public message calls on supporters to destroy the monastery.,religiously_offensive_review_only,True
+REL-V3DEV-048,place_of_worship_attack,A public message calls on supporters to desecrate the sanctuary.,religiously_offensive_review_only,True
+REL-V3DEV-049,place_of_worship_attack,A public message calls on supporters to break the altar.,religiously_offensive_review_only,True
+REL-V3DEV-050,place_of_worship_attack,A public message calls on supporters to torch the prayer hall.,religiously_offensive_review_only,True
+REL-V3DEV-051,place_of_worship_attack,A public message calls on supporters to burn the prayer space.,religiously_offensive_review_only,True
+REL-V3DEV-052,place_of_worship_attack,A public message calls on supporters to tear down the place of worship.,religiously_offensive_review_only,True
+REL-V3DEV-053,place_of_worship_attack,A public message calls on supporters to dismantle the worship building.,religiously_offensive_review_only,True
+REL-V3DEV-054,place_of_worship_attack,A public message calls on supporters to raze the religious building.,religiously_offensive_review_only,True
+REL-V3DEV-055,place_of_worship_attack,A public message calls on supporters to cover with obscene graffiti the sacred site.,religiously_offensive_review_only,True
+REL-V3DEV-056,place_of_worship_attack,A public message calls on supporters to mutilate the gurdwara.,religiously_offensive_review_only,True
+REL-V3DEV-057,place_of_worship_attack,A public message calls on supporters to crush the temple.,religiously_offensive_review_only,True
+REL-V3DEV-058,place_of_worship_attack,A public message calls on supporters to scorch the mosque.,religiously_offensive_review_only,True
+REL-V3DEV-059,place_of_worship_attack,A public message calls on supporters to vandalise the church.,religiously_offensive_review_only,True
+REL-V3DEV-060,place_of_worship_attack,A public message calls on supporters to tear apart the shrine.,religiously_offensive_review_only,True
+REL-V3DEV-061,protected_followers_hate_boundary,The post says religious followers are inferior.,protected_followers_hate_boundary,False
+REL-V3DEV-062,protected_followers_hate_boundary,The post says followers of the faith are parasites.,protected_followers_hate_boundary,False
+REL-V3DEV-063,protected_followers_hate_boundary,The post says followers of that faith are not human.,protected_followers_hate_boundary,False
+REL-V3DEV-064,protected_followers_hate_boundary,The post says people of that religion are less than human.,protected_followers_hate_boundary,False
+REL-V3DEV-065,protected_followers_hate_boundary,The post says people because of their religion are criminals by nature.,protected_followers_hate_boundary,False
+REL-V3DEV-066,protected_followers_hate_boundary,The post says religious believers are inherently dangerous.,protected_followers_hate_boundary,False
+REL-V3DEV-067,protected_followers_hate_boundary,The post says worshippers should not exist.,protected_followers_hate_boundary,False
+REL-V3DEV-068,protected_followers_hate_boundary,The post says faith community should be excluded.,protected_followers_hate_boundary,False
+REL-V3DEV-069,protected_followers_hate_boundary,The post says religious community should be expelled.,protected_followers_hate_boundary,False
+REL-V3DEV-070,protected_followers_hate_boundary,The post says religious group must be forced to leave.,protected_followers_hate_boundary,False
+REL-V3DEV-071,protected_followers_hate_boundary,The post says members of the religion must be boycotted.,protected_followers_hate_boundary,False
+REL-V3DEV-072,protected_followers_hate_boundary,The post says families of that faith should be denied jobs.,protected_followers_hate_boundary,False
+REL-V3DEV-073,protected_followers_hate_boundary,The post says workers of that faith should be denied housing.,protected_followers_hate_boundary,False
+REL-V3DEV-074,protected_followers_hate_boundary,The post says students of that faith should be denied education.,protected_followers_hate_boundary,False
+REL-V3DEV-075,protected_followers_hate_boundary,The post says followers of this faith must be kept out.,protected_followers_hate_boundary,False
+REL-V3DEV-076,protected_followers_hate_boundary,The post says people of this religion should be banned from the town.,protected_followers_hate_boundary,False
+REL-V3DEV-077,protected_followers_hate_boundary,The post says members of that religion must be refused employment.,protected_followers_hate_boundary,False
+REL-V3DEV-078,protected_followers_hate_boundary,The post says members of this religion should be removed from the neighborhood.,protected_followers_hate_boundary,False
+REL-V3DEV-079,protected_followers_hate_boundary,The post says religious followers must be attacked.,protected_followers_hate_boundary,False
+REL-V3DEV-080,protected_followers_hate_boundary,The post says worshippers should be harmed.,protected_followers_hate_boundary,False
+REL-V3DEV-081,safe_reporting_education_and_criticism,A news report describes vandals who burned a holy book.,safe_reporting_education_or_criticism,False
+REL-V3DEV-082,safe_reporting_education_and_criticism,The article reports that a sacred statue was damaged and later restored.,safe_reporting_education_or_criticism,False
+REL-V3DEV-083,safe_reporting_education_and_criticism,A documentary examines why attackers defaced a religious building.,safe_reporting_education_or_criticism,False
+REL-V3DEV-084,safe_reporting_education_and_criticism,A historian discusses the destruction of a temple in historical context.,safe_reporting_education_or_criticism,False
+REL-V3DEV-085,safe_reporting_education_and_criticism,A religious studies lesson explains why desecrating scripture causes harm.,safe_reporting_education_or_criticism,False
+REL-V3DEV-086,safe_reporting_education_and_criticism,Researchers study reports of vandalism against places of worship.,safe_reporting_education_or_criticism,False
+REL-V3DEV-087,safe_reporting_education_and_criticism,A museum exhibit documents a damaged sacred monument.,safe_reporting_education_or_criticism,False
+REL-V3DEV-088,safe_reporting_education_and_criticism,The teacher explains why people must not burn religious books.,safe_reporting_education_or_criticism,False
+REL-V3DEV-089,safe_reporting_education_and_criticism,An educational discussion condemns insults against a prophet.,safe_reporting_education_or_criticism,False
+REL-V3DEV-090,safe_reporting_education_and_criticism,An interfaith campaign asks people not to damage sacred objects.,safe_reporting_education_or_criticism,False
+REL-V3DEV-091,safe_reporting_education_and_criticism,Community leaders condemned the vandalism of a mosque.,safe_reporting_education_or_criticism,False
+REL-V3DEV-092,safe_reporting_education_and_criticism,The safety campaign warns against defacing religious symbols.,safe_reporting_education_or_criticism,False
+REL-V3DEV-093,safe_reporting_education_and_criticism,The author respectfully questions a religious doctrine.,safe_reporting_education_or_criticism,False
+REL-V3DEV-094,safe_reporting_education_and_criticism,The scholar offers good faith criticism of a belief.,safe_reporting_education_or_criticism,False
+REL-V3DEV-095,safe_reporting_education_and_criticism,A student disagrees with the doctrine without insulting believers.,safe_reporting_education_or_criticism,False
+REL-V3DEV-096,safe_reporting_education_and_criticism,The museum restored a religious statue that had been broken.,safe_reporting_education_or_criticism,False
+REL-V3DEV-097,safe_reporting_education_and_criticism,Volunteers repaired the prayer hall after reported vandalism.,safe_reporting_education_or_criticism,False
+REL-V3DEV-098,safe_reporting_education_and_criticism,The article reported an obscene caricature and condemned it.,safe_reporting_education_or_criticism,False
+REL-V3DEV-099,safe_reporting_education_and_criticism,A prevention campaign tells viewers never to desecrate a holy text.,safe_reporting_education_or_criticism,False
+REL-V3DEV-100,safe_reporting_education_and_criticism,The documentary provides cultural context for the sacred emblem.,safe_reporting_education_or_criticism,False
+REL-V3DEV-101,personal_abuse_boundary,You are rude and dishonest.,no_religious_boundary_override,False
+REL-V3DEV-102,personal_abuse_boundary,That person is annoying.,no_religious_boundary_override,False
+REL-V3DEV-103,personal_abuse_boundary,The manager behaved badly yesterday.,no_religious_boundary_override,False
+REL-V3DEV-104,personal_abuse_boundary,I strongly dislike that individual.,no_religious_boundary_override,False
+REL-V3DEV-105,personal_abuse_boundary,The player mocked another player after the match.,no_religious_boundary_override,False
+REL-V3DEV-106,personal_abuse_boundary,Someone insulted me during a private argument.,no_religious_boundary_override,False
+REL-V3DEV-107,personal_abuse_boundary,The neighbor called him foolish.,no_religious_boundary_override,False
+REL-V3DEV-108,personal_abuse_boundary,A classmate posted a degrading comment about my clothes.,no_religious_boundary_override,False
+REL-V3DEV-109,personal_abuse_boundary,The customer shouted an insult at the cashier.,no_religious_boundary_override,False
+REL-V3DEV-110,personal_abuse_boundary,They ridiculed his singing performance.,no_religious_boundary_override,False
+REL-V3DEV-111,personal_abuse_boundary,The critic described the film as worthless.,no_religious_boundary_override,False
+REL-V3DEV-112,personal_abuse_boundary,A user repeatedly mocked another user's hairstyle.,no_religious_boundary_override,False
+REL-V3DEV-113,personal_abuse_boundary,The supervisor humiliated one employee over a mistake.,no_religious_boundary_override,False
+REL-V3DEV-114,personal_abuse_boundary,She posted an abusive message about her former friend.,no_religious_boundary_override,False
+REL-V3DEV-115,personal_abuse_boundary,The team captain demeaned a player for losing.,no_religious_boundary_override,False
+REL-V3DEV-116,personal_abuse_boundary,He shared a morphed image of a schoolmate.,no_religious_boundary_override,False
+REL-V3DEV-117,personal_abuse_boundary,The comedian insulted a celebrity's acting.,no_religious_boundary_override,False
+REL-V3DEV-118,personal_abuse_boundary,A stranger called the driver disgusting.,no_religious_boundary_override,False
+REL-V3DEV-119,personal_abuse_boundary,The post vilified a corrupt company executive.,no_religious_boundary_override,False
+REL-V3DEV-120,personal_abuse_boundary,The review derided the restaurant's service.,no_religious_boundary_override,False
+REL-V3DEV-121,unrelated_category_isolation,Send your password now to unlock the account.,no_religious_boundary_override,False
+REL-V3DEV-122,unrelated_category_isolation,The message offers a fake lottery reward for a transfer fee.,no_religious_boundary_override,False
+REL-V3DEV-123,unrelated_category_isolation,A stranger published somebody's private phone number.,no_religious_boundary_override,False
+REL-V3DEV-124,unrelated_category_isolation,The attachment contains code designed to steal browser data.,no_religious_boundary_override,False
+REL-V3DEV-125,unrelated_category_isolation,The account impersonates a bank employee and requests an OTP.,no_religious_boundary_override,False
+REL-V3DEV-126,unrelated_category_isolation,The video shows a graphic assault between two people.,no_religious_boundary_override,False
+REL-V3DEV-127,unrelated_category_isolation,A seller advertises counterfeit software keys.,no_religious_boundary_override,False
+REL-V3DEV-128,unrelated_category_isolation,The post coordinates an illegal drug sale.,no_religious_boundary_override,False
+REL-V3DEV-129,unrelated_category_isolation,A user repeatedly threatens a classmate online.,no_religious_boundary_override,False
+REL-V3DEV-130,unrelated_category_isolation,The article makes an unsupported medical claim.,no_religious_boundary_override,False
+REL-V3DEV-131,unrelated_category_isolation,The email contains many unsolicited advertising links.,no_religious_boundary_override,False
+REL-V3DEV-132,unrelated_category_isolation,A website republishes a copyrighted film without permission.,no_religious_boundary_override,False
+REL-V3DEV-133,unrelated_category_isolation,The file contains explicit sexual imagery.,no_religious_boundary_override,False
+REL-V3DEV-134,unrelated_category_isolation,The message asks someone to install malicious software.,no_religious_boundary_override,False
+REL-V3DEV-135,unrelated_category_isolation,A profile pretends to be a government officer for money.,no_religious_boundary_override,False
+REL-V3DEV-136,unrelated_category_isolation,The comment shares another person's home address.,no_religious_boundary_override,False
+REL-V3DEV-137,unrelated_category_isolation,The recording contains a direct threat of physical violence.,no_religious_boundary_override,False
+REL-V3DEV-138,unrelated_category_isolation,The post promotes an extremist organization.,no_religious_boundary_override,False
+REL-V3DEV-139,unrelated_category_isolation,The advertisement uses a stolen brand identity.,no_religious_boundary_override,False
+REL-V3DEV-140,unrelated_category_isolation,The document is a normal meeting agenda for tomorrow.,no_religious_boundary_override,False

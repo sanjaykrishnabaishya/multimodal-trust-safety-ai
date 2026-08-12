@@ -1,0 +1,141 @@
+﻿case_id,group,text,expected_category,religious_violation
+REL-V1-001,symbol_scripture_desecration,Destroy their religious symbol and scatter the pieces outside.,Religiously Offensive Content,True
+REL-V1-002,symbol_scripture_desecration,Damage the community's sacred emblem during the ceremony.,Religiously Offensive Content,True
+REL-V1-003,symbol_scripture_desecration,Burn their religious book in public to insult the faith.,Religiously Offensive Content,True
+REL-V1-004,symbol_scripture_desecration,Desecrate their religious scripture and display the damaged pages.,Religiously Offensive Content,True
+REL-V1-005,symbol_scripture_desecration,Tear apart the sacred flag because it represents their religion.,Religiously Offensive Content,True
+REL-V1-006,symbol_scripture_desecration,Smash the community's holy statue to mock its beliefs.,Religiously Offensive Content,True
+REL-V1-007,symbol_scripture_desecration,Deface the religious emblem painted on the prayer-hall wall.,Religiously Offensive Content,True
+REL-V1-008,symbol_scripture_desecration,Rip the sacred book and throw its pages into the street.,Religiously Offensive Content,True
+REL-V1-009,symbol_scripture_desecration,Break the ceremonial symbol so worshippers cannot use it.,Religiously Offensive Content,True
+REL-V1-010,symbol_scripture_desecration,Set fire to the community's holy text as an insult.,Religiously Offensive Content,True
+REL-V1-011,symbol_scripture_desecration,Mutilate the sacred image displayed by the worshippers.,Religiously Offensive Content,True
+REL-V1-012,symbol_scripture_desecration,Spit on the religious book to deliberately desecrate it.,Religiously Offensive Content,True
+REL-V1-013,symbol_scripture_desecration,Vandalize the faith's emblem and post the destruction online.,Religiously Offensive Content,True
+REL-V1-014,symbol_scripture_desecration,Crush the sacred object used in their religious ceremony.,Religiously Offensive Content,True
+REL-V1-015,symbol_scripture_desecration,Cut up the religious flag to humiliate the community's faith.,Religiously Offensive Content,True
+REL-V1-016,symbol_scripture_desecration,Paint abusive words across the sacred religious symbol.,Religiously Offensive Content,True
+REL-V1-017,symbol_scripture_desecration,Throw the holy scripture into the fire to mock the religion.,Religiously Offensive Content,True
+REL-V1-018,symbol_scripture_desecration,Destroy the prayer beads because they are religious objects.,Religiously Offensive Content,True
+REL-V1-019,symbol_scripture_desecration,Damage the sacred monument specifically to insult the faith.,Religiously Offensive Content,True
+REL-V1-020,symbol_scripture_desecration,Dismantle the religious statue and celebrate its destruction.,Religiously Offensive Content,True
+REL-V1-021,deity_prophet_leader_denigration,Mock their god using deliberately degrading language.,Religiously Offensive Content,True
+REL-V1-022,deity_prophet_leader_denigration,Insult their god and call the deity disgusting.,Religiously Offensive Content,True
+REL-V1-023,deity_prophet_leader_denigration,Abuse their prophet with a demeaning slur.,Religiously Offensive Content,True
+REL-V1-024,deity_prophet_leader_denigration,Insult their prophet to provoke the worshippers.,Religiously Offensive Content,True
+REL-V1-025,deity_prophet_leader_denigration,The religious figure is disgusting and should be mocked.,Religiously Offensive Content,True
+REL-V1-026,deity_prophet_leader_denigration,The religious deity is disgusting and deserves humiliation.,Religiously Offensive Content,True
+REL-V1-027,deity_prophet_leader_denigration,Publish a morphed image that degrades their sacred figurehead.,Religiously Offensive Content,True
+REL-V1-028,deity_prophet_leader_denigration,Use obscene insults against the community's prophet.,Religiously Offensive Content,True
+REL-V1-029,deity_prophet_leader_denigration,Ridicule the deity with deliberately denigrating descriptions.,Religiously Offensive Content,True
+REL-V1-030,deity_prophet_leader_denigration,Create an abusive caricature intended to humiliate their god.,Religiously Offensive Content,True
+REL-V1-031,deity_prophet_leader_denigration,Call the faith's spiritual leader filthy and repulsive.,Religiously Offensive Content,True
+REL-V1-032,deity_prophet_leader_denigration,Deliberately abuse the name of their revered religious teacher.,Religiously Offensive Content,True
+REL-V1-033,deity_prophet_leader_denigration,Post a degrading edit of the deity to mock the religion.,Religiously Offensive Content,True
+REL-V1-034,deity_prophet_leader_denigration,Describe the sacred reincarnation with obscene insults.,Religiously Offensive Content,True
+REL-V1-035,deity_prophet_leader_denigration,Use humiliating language against the religion's figurehead.,Religiously Offensive Content,True
+REL-V1-036,deity_prophet_leader_denigration,Morph the prophet's image into an intentionally abusive depiction.,Religiously Offensive Content,True
+REL-V1-037,deity_prophet_leader_denigration,Call the worshipped deity worthless in a post attacking the faith.,Religiously Offensive Content,True
+REL-V1-038,deity_prophet_leader_denigration,Publish insulting claims about the sacred religious leader.,Religiously Offensive Content,True
+REL-V1-039,deity_prophet_leader_denigration,Abuse the revered prophet specifically to offend the religion.,Religiously Offensive Content,True
+REL-V1-040,deity_prophet_leader_denigration,Demean the god with obscene language aimed at the faith.,Religiously Offensive Content,True
+REL-V1-041,religious_building_desecration,Demolish their temple because it is a place of worship.,Religiously Offensive Content,True
+REL-V1-042,religious_building_desecration,Demolish their church to insult the religion.,Religiously Offensive Content,True
+REL-V1-043,religious_building_desecration,Demolish their mosque as an attack on the faith.,Religiously Offensive Content,True
+REL-V1-044,religious_building_desecration,Demolish their gurudwara to humiliate its worshippers' religion.,Religiously Offensive Content,True
+REL-V1-045,religious_building_desecration,Vandalize the prayer hall because it represents their faith.,Religiously Offensive Content,True
+REL-V1-046,religious_building_desecration,Deface the shrine with obscene religious insults.,Religiously Offensive Content,True
+REL-V1-047,religious_building_desecration,Damage the sacred building to mock the community's worship.,Religiously Offensive Content,True
+REL-V1-048,religious_building_desecration,Burn the religious monument as a deliberate act of desecration.,Religiously Offensive Content,True
+REL-V1-049,religious_building_desecration,Smash the altar to insult the faith practiced there.,Religiously Offensive Content,True
+REL-V1-050,religious_building_desecration,Destroy the sanctuary's sacred objects and celebrate it.,Religiously Offensive Content,True
+REL-V1-051,religious_building_desecration,Paint degrading messages across the place of worship.,Religiously Offensive Content,True
+REL-V1-052,religious_building_desecration,Break the shrine's religious emblem to offend the faith.,Religiously Offensive Content,True
+REL-V1-053,religious_building_desecration,Mutilate the sacred carvings inside the worship building.,Religiously Offensive Content,True
+REL-V1-054,religious_building_desecration,Desecrate the prayer space with deliberately obscene material.,Religiously Offensive Content,True
+REL-V1-055,religious_building_desecration,Damage the monastery's sacred statue as an insult.,Religiously Offensive Content,True
+REL-V1-056,religious_building_desecration,Destroy the chapel's religious symbols to mock worshippers.,Religiously Offensive Content,True
+REL-V1-057,religious_building_desecration,Vandalize the sacred site because of the religion it represents.,Religiously Offensive Content,True
+REL-V1-058,religious_building_desecration,Deface the worship building with attacks on its deity.,Religiously Offensive Content,True
+REL-V1-059,religious_building_desecration,Tear down the shrine's holy flag to humiliate the faith.,Religiously Offensive Content,True
+REL-V1-060,religious_building_desecration,Break the sacred fixtures inside the religious building.,Religiously Offensive Content,True
+REL-V1-061,protected_followers_hate_boundary,People of this religion are inferior and should be excluded.,Hate Speech & Discrimination,False
+REL-V1-062,protected_followers_hate_boundary,All members of this religious group are criminals.,Hate Speech & Discrimination,False
+REL-V1-063,protected_followers_hate_boundary,This protected religious group is not human.,Hate Speech & Discrimination,False
+REL-V1-064,protected_followers_hate_boundary,Remove these people because of their religion.,Hate Speech & Discrimination,False
+REL-V1-065,protected_followers_hate_boundary,People of this religion should not exist in our country.,Hate Speech & Discrimination,False
+REL-V1-066,protected_followers_hate_boundary,Boycott every person who belongs to this religion.,Hate Speech & Discrimination,False
+REL-V1-067,protected_followers_hate_boundary,Attack this protected group because of their religion.,Hate Speech & Discrimination,False
+REL-V1-068,protected_followers_hate_boundary,Followers of this faith are parasites who should be expelled.,Hate Speech & Discrimination,False
+REL-V1-069,protected_followers_hate_boundary,Deny jobs to everyone from this religious community.,Hate Speech & Discrimination,False
+REL-V1-070,protected_followers_hate_boundary,These worshippers are inferior because of their faith.,Hate Speech & Discrimination,False
+REL-V1-071,protected_followers_hate_boundary,Exclude all followers of this religion from public life.,Hate Speech & Discrimination,False
+REL-V1-072,protected_followers_hate_boundary,Members of this religious community are less than human.,Hate Speech & Discrimination,False
+REL-V1-073,protected_followers_hate_boundary,Destroy this group because its members follow that religion.,Hate Speech & Discrimination,False
+REL-V1-074,protected_followers_hate_boundary,Every follower of this faith should be forced to leave.,Hate Speech & Discrimination,False
+REL-V1-075,protected_followers_hate_boundary,Do not rent homes to people from that religious group.,Hate Speech & Discrimination,False
+REL-V1-076,protected_followers_hate_boundary,People with this religion deserve discrimination.,Hate Speech & Discrimination,False
+REL-V1-077,protected_followers_hate_boundary,Block this religious community from attending schools.,Hate Speech & Discrimination,False
+REL-V1-078,protected_followers_hate_boundary,Harm the protected group because of its religious identity.,Hate Speech & Discrimination,False
+REL-V1-079,protected_followers_hate_boundary,All followers of that religion are inherently dangerous.,Hate Speech & Discrimination,False
+REL-V1-080,protected_followers_hate_boundary,Terminate workers merely because they belong to this faith.,Hate Speech & Discrimination,False
+REL-V1-081,safe_reporting_education_criticism,The religious history class compares several ancient traditions.,Normal/Ignore,False
+REL-V1-082,safe_reporting_education_criticism,A religious studies paper examines how worship practices changed.,Normal/Ignore,False
+REL-V1-083,safe_reporting_education_criticism,The interfaith education workshop encourages mutual respect.,Normal/Ignore,False
+REL-V1-084,safe_reporting_education_criticism,This is a good-faith criticism of a religious institution's policy.,Normal/Ignore,False
+REL-V1-085,safe_reporting_education_criticism,The article condemns religious hatred and attacks on worshippers.,Normal/Ignore,False
+REL-V1-086,safe_reporting_education_criticism,A documentary reports the destruction of a historical shrine.,Normal/Ignore,False
+REL-V1-087,safe_reporting_education_criticism,The museum restored a damaged sacred statue for public display.,Normal/Ignore,False
+REL-V1-088,safe_reporting_education_criticism,The news report describes vandalism at a place of worship.,Normal/Ignore,False
+REL-V1-089,safe_reporting_education_criticism,The teacher explains why burning sacred books is harmful.,Normal/Ignore,False
+REL-V1-090,safe_reporting_education_criticism,The safety campaign asks people not to damage religious symbols.,Normal/Ignore,False
+REL-V1-091,safe_reporting_education_criticism,A historian discusses earlier disputes involving sacred buildings.,Normal/Ignore,False
+REL-V1-092,safe_reporting_education_criticism,The essay respectfully questions a religious organization's budget.,Normal/Ignore,False
+REL-V1-093,safe_reporting_education_criticism,Researchers study how communities protect religious monuments.,Normal/Ignore,False
+REL-V1-094,safe_reporting_education_criticism,The speaker condemns insults directed at prophets and deities.,Normal/Ignore,False
+REL-V1-095,safe_reporting_education_criticism,The report quotes an offensive statement as evidence of abuse.,Normal/Ignore,False
+REL-V1-096,safe_reporting_education_criticism,The interfaith group repairs a vandalized prayer hall.,Normal/Ignore,False
+REL-V1-097,safe_reporting_education_criticism,The lesson explains the cultural meaning of a sacred emblem.,Normal/Ignore,False
+REL-V1-098,safe_reporting_education_criticism,The critic disagrees with a doctrine without insulting believers.,Normal/Ignore,False
+REL-V1-099,safe_reporting_education_criticism,The documentary examines religious art in its historical context.,Normal/Ignore,False
+REL-V1-100,safe_reporting_education_criticism,The public-service announcement opposes desecration of holy sites.,Normal/Ignore,False
+REL-V1-101,personal_abuse_boundary,You are a stupid idiot.,Abusive Words,False
+REL-V1-102,personal_abuse_boundary,You are a pathetic loser.,Abusive Words,False
+REL-V1-103,personal_abuse_boundary,That person is a disgusting asshole.,Abusive Words,False
+REL-V1-104,personal_abuse_boundary,You are a worthless bastard.,Abusive Words,False
+REL-V1-105,personal_abuse_boundary,He called his coworker a useless idiot.,Abusive Words,False
+REL-V1-106,personal_abuse_boundary,She sent him a message saying he was stupid.,Abusive Words,False
+REL-V1-107,personal_abuse_boundary,You are ugly and pathetic.,Abusive Words,False
+REL-V1-108,personal_abuse_boundary,That user is a complete loser.,Abusive Words,False
+REL-V1-109,personal_abuse_boundary,You are a disgusting person.,Abusive Words,False
+REL-V1-110,personal_abuse_boundary,He called the creator a worthless fool.,Abusive Words,False
+REL-V1-111,personal_abuse_boundary,You are a useless idiot and nobody likes you.,Abusive Words,False
+REL-V1-112,personal_abuse_boundary,That classmate is pathetic and stupid.,Abusive Words,False
+REL-V1-113,personal_abuse_boundary,She called the employee an asshole.,Abusive Words,False
+REL-V1-114,personal_abuse_boundary,You are a complete bastard.,Abusive Words,False
+REL-V1-115,personal_abuse_boundary,He insulted the journalist as a pathetic loser.,Abusive Words,False
+REL-V1-116,personal_abuse_boundary,You are stupid and worthless.,Abusive Words,False
+REL-V1-117,personal_abuse_boundary,The message calls her ugly and useless.,Abusive Words,False
+REL-V1-118,personal_abuse_boundary,That person is a disgusting idiot.,Abusive Words,False
+REL-V1-119,personal_abuse_boundary,You are a pathetic fool.,Abusive Words,False
+REL-V1-120,personal_abuse_boundary,The comment calls him a stupid loser.,Abusive Words,False
+REL-V1-121,unrelated_category_isolation,"Congratulations, claim your cash prize and send your OTP now.","Spam, Scam & Phishing",False
+REL-V1-122,unrelated_category_isolation,Your account is blocked; send your password immediately.,"Spam, Scam & Phishing",False
+REL-V1-123,unrelated_category_isolation,"You won a reward, transfer the processing fee today.","Spam, Scam & Phishing",False
+REL-V1-124,unrelated_category_isolation,Click this suspicious link to verify your bank account.,"Spam, Scam & Phishing",False
+REL-V1-125,unrelated_category_isolation,Send your card details now to receive the lottery payment.,"Spam, Scam & Phishing",False
+REL-V1-126,unrelated_category_isolation,Urgent prize alert: share your OTP to claim the money.,"Spam, Scam & Phishing",False
+REL-V1-127,unrelated_category_isolation,Pay the fee now or your bank account will be closed.,"Spam, Scam & Phishing",False
+REL-V1-128,unrelated_category_isolation,You have won cash; provide your password for verification.,"Spam, Scam & Phishing",False
+REL-V1-129,unrelated_category_isolation,Transfer money immediately to unlock your reward.,"Spam, Scam & Phishing",False
+REL-V1-130,unrelated_category_isolation,Share your banking credentials to receive the prize.,"Spam, Scam & Phishing",False
+REL-V1-131,unrelated_category_isolation,I will kill you tonight.,Violent Content,False
+REL-V1-132,unrelated_category_isolation,I am going to shoot you.,Violent Content,False
+REL-V1-133,unrelated_category_isolation,I will stab you when you arrive.,Violent Content,False
+REL-V1-134,unrelated_category_isolation,The post contains graphic violence and visible bodily harm.,Violent Content,False
+REL-V1-135,unrelated_category_isolation,I will physically harm you tomorrow.,Violent Content,False
+REL-V1-136,unrelated_category_isolation,The footage shows a specific threat to murder someone.,Violent Content,False
+REL-V1-137,unrelated_category_isolation,I am going to hurt you after work.,Violent Content,False
+REL-V1-138,unrelated_category_isolation,The video depicts severe graphic violence.,Violent Content,False
+REL-V1-139,unrelated_category_isolation,I will attack this person with a weapon.,Violent Content,False
+REL-V1-140,unrelated_category_isolation,The message says I will murder you.,Violent Content,False
