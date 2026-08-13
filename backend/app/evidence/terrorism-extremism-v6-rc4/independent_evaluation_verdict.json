@@ -1,0 +1,11 @@
+{
+  "candidate": "terrorism-extremism-v6-rc4",
+  "status": "Passed synthetic independent readiness gate",
+  "challenge_sha256": "697f5fe0dab55af2875624658f5ef214aab70fcc466b10b13355ac8fa9619ee6",
+  "passed": true,
+  "eligible_for_guarded_live_integration": true,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "may_use_holdout_to_modify_rc4": false,
+  "report": "reports/evaluation/terrorism_extremism/v6_rc4_independent/aggregate_report.json"
+}

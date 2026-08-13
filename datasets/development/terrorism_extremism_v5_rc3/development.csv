@@ -1,0 +1,201 @@
+﻿case_id,group,expected,text
+TERROR-RC3-DEV-001,claimed_designation_any_word_order,Terrorism & Extremism,A designated terrorist organization encourages registration by new members.
+TERROR-RC3-DEV-002,claimed_designation_any_word_order,Terrorism & Extremism,A group banned as extremist collects financial contributions.
+TERROR-RC3-DEV-003,claimed_designation_any_word_order,Terrorism & Extremism,A network has been listed as a terrorist organization and forwards recruitment posts.
+TERROR-RC3-DEV-004,claimed_designation_any_word_order,Terrorism & Extremism,A proscribed extremist movement provides transport and safe houses.
+TERROR-RC3-DEV-005,claimed_designation_any_word_order,Terrorism & Extremism,An outfit sanctioned as terrorist circulates propaganda material.
+TERROR-RC3-DEV-006,claimed_designation_any_word_order,Terrorism & Extremism,A terrorist faction was officially designated and opens an enlistment drive.
+TERROR-RC3-DEV-007,claimed_designation_any_word_order,Terrorism & Extremism,The organization is designated terrorist and solicits payments.
+TERROR-RC3-DEV-008,claimed_designation_any_word_order,Terrorism & Extremism,The movement remains listed as extremist and invites people to register.
+TERROR-RC3-DEV-009,claimed_designation_any_word_order,Terrorism & Extremism,A banned terrorist cell arranges logistical support.
+TERROR-RC3-DEV-010,claimed_designation_any_word_order,Terrorism & Extremism,A network proscribed for extremism praises its fighters and recruits members.
+TERROR-RC3-DEV-011,claimed_designation_any_word_order,Terrorism & Extremism,A designated terrorist organization encourages registration by new members.
+TERROR-RC3-DEV-012,claimed_designation_any_word_order,Terrorism & Extremism,A group banned as extremist collects financial contributions.
+TERROR-RC3-DEV-013,claimed_designation_any_word_order,Terrorism & Extremism,A network has been listed as a terrorist organization and forwards recruitment posts.
+TERROR-RC3-DEV-014,claimed_designation_any_word_order,Terrorism & Extremism,A proscribed extremist movement provides transport and safe houses.
+TERROR-RC3-DEV-015,claimed_designation_any_word_order,Terrorism & Extremism,An outfit sanctioned as terrorist circulates propaganda material.
+TERROR-RC3-DEV-016,claimed_designation_any_word_order,Terrorism & Extremism,A terrorist faction was officially designated and opens an enlistment drive.
+TERROR-RC3-DEV-017,claimed_designation_any_word_order,Terrorism & Extremism,The organization is designated terrorist and solicits payments.
+TERROR-RC3-DEV-018,claimed_designation_any_word_order,Terrorism & Extremism,The movement remains listed as extremist and invites people to register.
+TERROR-RC3-DEV-019,claimed_designation_any_word_order,Terrorism & Extremism,A banned terrorist cell arranges logistical support.
+TERROR-RC3-DEV-020,claimed_designation_any_word_order,Terrorism & Extremism,A network proscribed for extremism praises its fighters and recruits members.
+TERROR-RC3-DEV-021,claimed_designation_any_word_order,Terrorism & Extremism,A designated terrorist organization encourages registration by new members.
+TERROR-RC3-DEV-022,claimed_designation_any_word_order,Terrorism & Extremism,A group banned as extremist collects financial contributions.
+TERROR-RC3-DEV-023,claimed_designation_any_word_order,Terrorism & Extremism,A network has been listed as a terrorist organization and forwards recruitment posts.
+TERROR-RC3-DEV-024,claimed_designation_any_word_order,Terrorism & Extremism,A proscribed extremist movement provides transport and safe houses.
+TERROR-RC3-DEV-025,claimed_designation_any_word_order,Terrorism & Extremism,An outfit sanctioned as terrorist circulates propaganda material.
+TERROR-RC3-DEV-026,claimed_designation_any_word_order,Terrorism & Extremism,A terrorist faction was officially designated and opens an enlistment drive.
+TERROR-RC3-DEV-027,claimed_designation_any_word_order,Terrorism & Extremism,The organization is designated terrorist and solicits payments.
+TERROR-RC3-DEV-028,claimed_designation_any_word_order,Terrorism & Extremism,The movement remains listed as extremist and invites people to register.
+TERROR-RC3-DEV-029,claimed_designation_any_word_order,Terrorism & Extremism,A banned terrorist cell arranges logistical support.
+TERROR-RC3-DEV-030,claimed_designation_any_word_order,Terrorism & Extremism,A network proscribed for extremism praises its fighters and recruits members.
+TERROR-RC3-DEV-031,claimed_designation_any_word_order,Terrorism & Extremism,A designated terrorist organization encourages registration by new members.
+TERROR-RC3-DEV-032,claimed_designation_any_word_order,Terrorism & Extremism,A group banned as extremist collects financial contributions.
+TERROR-RC3-DEV-033,claimed_designation_any_word_order,Terrorism & Extremism,A network has been listed as a terrorist organization and forwards recruitment posts.
+TERROR-RC3-DEV-034,claimed_designation_any_word_order,Terrorism & Extremism,A proscribed extremist movement provides transport and safe houses.
+TERROR-RC3-DEV-035,claimed_designation_any_word_order,Terrorism & Extremism,An outfit sanctioned as terrorist circulates propaganda material.
+TERROR-RC3-DEV-036,claimed_designation_any_word_order,Terrorism & Extremism,A terrorist faction was officially designated and opens an enlistment drive.
+TERROR-RC3-DEV-037,claimed_designation_any_word_order,Terrorism & Extremism,The organization is designated terrorist and solicits payments.
+TERROR-RC3-DEV-038,claimed_designation_any_word_order,Terrorism & Extremism,The movement remains listed as extremist and invites people to register.
+TERROR-RC3-DEV-039,claimed_designation_any_word_order,Terrorism & Extremism,A banned terrorist cell arranges logistical support.
+TERROR-RC3-DEV-040,claimed_designation_any_word_order,Terrorism & Extremism,A network proscribed for extremism praises its fighters and recruits members.
+TERROR-RC3-DEV-041,safe_reporting_education_and_prevention,Normal/Ignore,A journalistic report condemns recruitment by a designated terrorist organization.
+TERROR-RC3-DEV-042,safe_reporting_education_and_prevention,Normal/Ignore,A scholarly analysis critically examines propaganda from a banned extremist group.
+TERROR-RC3-DEV-043,safe_reporting_education_and_prevention,Normal/Ignore,A public-safety advisory warns people not to finance a proscribed terrorist network.
+TERROR-RC3-DEV-044,safe_reporting_education_and_prevention,Normal/Ignore,A museum archive documents a listed extremist movement and opposes its actions.
+TERROR-RC3-DEV-045,safe_reporting_education_and_prevention,Normal/Ignore,An educational lesson denounces enlistment campaigns run by terrorist organizations.
+TERROR-RC3-DEV-046,safe_reporting_education_and_prevention,Normal/Ignore,A police account tells readers not to forward recruitment posts from extremist groups.
+TERROR-RC3-DEV-047,safe_reporting_education_and_prevention,Normal/Ignore,A historical documentary discusses a sanctioned terrorist faction without endorsing it.
+TERROR-RC3-DEV-048,safe_reporting_education_and_prevention,Normal/Ignore,A research study criticizes funding methods used by banned extremist networks.
+TERROR-RC3-DEV-049,safe_reporting_education_and_prevention,Normal/Ignore,A newspaper article rejects propaganda distributed by a designated terrorist movement.
+TERROR-RC3-DEV-050,safe_reporting_education_and_prevention,Normal/Ignore,A classroom textbook describes extremist recruitment and discourages participation.
+TERROR-RC3-DEV-051,safe_reporting_education_and_prevention,Normal/Ignore,A journalistic report condemns recruitment by a designated terrorist organization.
+TERROR-RC3-DEV-052,safe_reporting_education_and_prevention,Normal/Ignore,A scholarly analysis critically examines propaganda from a banned extremist group.
+TERROR-RC3-DEV-053,safe_reporting_education_and_prevention,Normal/Ignore,A public-safety advisory warns people not to finance a proscribed terrorist network.
+TERROR-RC3-DEV-054,safe_reporting_education_and_prevention,Normal/Ignore,A museum archive documents a listed extremist movement and opposes its actions.
+TERROR-RC3-DEV-055,safe_reporting_education_and_prevention,Normal/Ignore,An educational lesson denounces enlistment campaigns run by terrorist organizations.
+TERROR-RC3-DEV-056,safe_reporting_education_and_prevention,Normal/Ignore,A police account tells readers not to forward recruitment posts from extremist groups.
+TERROR-RC3-DEV-057,safe_reporting_education_and_prevention,Normal/Ignore,A historical documentary discusses a sanctioned terrorist faction without endorsing it.
+TERROR-RC3-DEV-058,safe_reporting_education_and_prevention,Normal/Ignore,A research study criticizes funding methods used by banned extremist networks.
+TERROR-RC3-DEV-059,safe_reporting_education_and_prevention,Normal/Ignore,A newspaper article rejects propaganda distributed by a designated terrorist movement.
+TERROR-RC3-DEV-060,safe_reporting_education_and_prevention,Normal/Ignore,A classroom textbook describes extremist recruitment and discourages participation.
+TERROR-RC3-DEV-061,safe_reporting_education_and_prevention,Normal/Ignore,A journalistic report condemns recruitment by a designated terrorist organization.
+TERROR-RC3-DEV-062,safe_reporting_education_and_prevention,Normal/Ignore,A scholarly analysis critically examines propaganda from a banned extremist group.
+TERROR-RC3-DEV-063,safe_reporting_education_and_prevention,Normal/Ignore,A public-safety advisory warns people not to finance a proscribed terrorist network.
+TERROR-RC3-DEV-064,safe_reporting_education_and_prevention,Normal/Ignore,A museum archive documents a listed extremist movement and opposes its actions.
+TERROR-RC3-DEV-065,safe_reporting_education_and_prevention,Normal/Ignore,An educational lesson denounces enlistment campaigns run by terrorist organizations.
+TERROR-RC3-DEV-066,safe_reporting_education_and_prevention,Normal/Ignore,A police account tells readers not to forward recruitment posts from extremist groups.
+TERROR-RC3-DEV-067,safe_reporting_education_and_prevention,Normal/Ignore,A historical documentary discusses a sanctioned terrorist faction without endorsing it.
+TERROR-RC3-DEV-068,safe_reporting_education_and_prevention,Normal/Ignore,A research study criticizes funding methods used by banned extremist networks.
+TERROR-RC3-DEV-069,safe_reporting_education_and_prevention,Normal/Ignore,A newspaper article rejects propaganda distributed by a designated terrorist movement.
+TERROR-RC3-DEV-070,safe_reporting_education_and_prevention,Normal/Ignore,A classroom textbook describes extremist recruitment and discourages participation.
+TERROR-RC3-DEV-071,safe_reporting_education_and_prevention,Normal/Ignore,A journalistic report condemns recruitment by a designated terrorist organization.
+TERROR-RC3-DEV-072,safe_reporting_education_and_prevention,Normal/Ignore,A scholarly analysis critically examines propaganda from a banned extremist group.
+TERROR-RC3-DEV-073,safe_reporting_education_and_prevention,Normal/Ignore,A public-safety advisory warns people not to finance a proscribed terrorist network.
+TERROR-RC3-DEV-074,safe_reporting_education_and_prevention,Normal/Ignore,A museum archive documents a listed extremist movement and opposes its actions.
+TERROR-RC3-DEV-075,safe_reporting_education_and_prevention,Normal/Ignore,An educational lesson denounces enlistment campaigns run by terrorist organizations.
+TERROR-RC3-DEV-076,safe_reporting_education_and_prevention,Normal/Ignore,A police account tells readers not to forward recruitment posts from extremist groups.
+TERROR-RC3-DEV-077,safe_reporting_education_and_prevention,Normal/Ignore,A historical documentary discusses a sanctioned terrorist faction without endorsing it.
+TERROR-RC3-DEV-078,safe_reporting_education_and_prevention,Normal/Ignore,A research study criticizes funding methods used by banned extremist networks.
+TERROR-RC3-DEV-079,safe_reporting_education_and_prevention,Normal/Ignore,A newspaper article rejects propaganda distributed by a designated terrorist movement.
+TERROR-RC3-DEV-080,safe_reporting_education_and_prevention,Normal/Ignore,A classroom textbook describes extremist recruitment and discourages participation.
+TERROR-RC3-DEV-081,unverified_status_review,Uncertain,"The group's designation is uncertain, but it encourages people to enlist."
+TERROR-RC3-DEV-082,unverified_status_review,Uncertain,A possible extremist organization solicits money from users.
+TERROR-RC3-DEV-083,unverified_status_review,Uncertain,The network's identity is not verified and it forwards recruitment posts.
+TERROR-RC3-DEV-084,unverified_status_review,Uncertain,"No reliable source confirms the faction's status, yet it opens membership registration."
+TERROR-RC3-DEV-085,unverified_status_review,Uncertain,A purported terrorist movement provides logistical support.
+TERROR-RC3-DEV-086,unverified_status_review,Uncertain,"The group's designation is uncertain, but it encourages people to enlist."
+TERROR-RC3-DEV-087,unverified_status_review,Uncertain,A possible extremist organization solicits money from users.
+TERROR-RC3-DEV-088,unverified_status_review,Uncertain,The network's identity is not verified and it forwards recruitment posts.
+TERROR-RC3-DEV-089,unverified_status_review,Uncertain,"No reliable source confirms the faction's status, yet it opens membership registration."
+TERROR-RC3-DEV-090,unverified_status_review,Uncertain,A purported terrorist movement provides logistical support.
+TERROR-RC3-DEV-091,unverified_status_review,Uncertain,"The group's designation is uncertain, but it encourages people to enlist."
+TERROR-RC3-DEV-092,unverified_status_review,Uncertain,A possible extremist organization solicits money from users.
+TERROR-RC3-DEV-093,unverified_status_review,Uncertain,The network's identity is not verified and it forwards recruitment posts.
+TERROR-RC3-DEV-094,unverified_status_review,Uncertain,"No reliable source confirms the faction's status, yet it opens membership registration."
+TERROR-RC3-DEV-095,unverified_status_review,Uncertain,A purported terrorist movement provides logistical support.
+TERROR-RC3-DEV-096,unverified_status_review,Uncertain,"The group's designation is uncertain, but it encourages people to enlist."
+TERROR-RC3-DEV-097,unverified_status_review,Uncertain,A possible extremist organization solicits money from users.
+TERROR-RC3-DEV-098,unverified_status_review,Uncertain,The network's identity is not verified and it forwards recruitment posts.
+TERROR-RC3-DEV-099,unverified_status_review,Uncertain,"No reliable source confirms the faction's status, yet it opens membership registration."
+TERROR-RC3-DEV-100,unverified_status_review,Uncertain,A purported terrorist movement provides logistical support.
+TERROR-RC3-DEV-101,community_candidate_behavior,Uncertain,The post asks readers to register with Abu Sayyaf.
+TERROR-RC3-DEV-102,community_candidate_behavior,Uncertain,A private message solicits contributions for Jemaah Islamiyah.
+TERROR-RC3-DEV-103,community_candidate_behavior,Uncertain,The channel forwards recruitment material for Lashkar-e-Taiba.
+TERROR-RC3-DEV-104,community_candidate_behavior,Uncertain,The author provides logistical assistance to Jaish-e-Mohammed.
+TERROR-RC3-DEV-105,community_candidate_behavior,Uncertain,The post asks readers to register with Indian Mujahideen.
+TERROR-RC3-DEV-106,community_candidate_behavior,Uncertain,A private message solicits contributions for Al-Shabaab.
+TERROR-RC3-DEV-107,community_candidate_behavior,Uncertain,The channel forwards recruitment material for Ansar Dine.
+TERROR-RC3-DEV-108,community_candidate_behavior,Uncertain,The author provides logistical assistance to Aum Shinrikyo.
+TERROR-RC3-DEV-109,community_candidate_behavior,Uncertain,The post asks readers to register with Red Army Faction.
+TERROR-RC3-DEV-110,community_candidate_behavior,Uncertain,A private message solicits contributions for Shining Path.
+TERROR-RC3-DEV-111,community_candidate_behavior,Uncertain,The channel forwards recruitment material for Abu Sayyaf.
+TERROR-RC3-DEV-112,community_candidate_behavior,Uncertain,The author provides logistical assistance to Jemaah Islamiyah.
+TERROR-RC3-DEV-113,community_candidate_behavior,Uncertain,The post asks readers to register with Lashkar-e-Taiba.
+TERROR-RC3-DEV-114,community_candidate_behavior,Uncertain,A private message solicits contributions for Jaish-e-Mohammed.
+TERROR-RC3-DEV-115,community_candidate_behavior,Uncertain,The channel forwards recruitment material for Indian Mujahideen.
+TERROR-RC3-DEV-116,community_candidate_behavior,Uncertain,The author provides logistical assistance to Al-Shabaab.
+TERROR-RC3-DEV-117,community_candidate_behavior,Uncertain,The post asks readers to register with Ansar Dine.
+TERROR-RC3-DEV-118,community_candidate_behavior,Uncertain,A private message solicits contributions for Aum Shinrikyo.
+TERROR-RC3-DEV-119,community_candidate_behavior,Uncertain,The channel forwards recruitment material for Red Army Faction.
+TERROR-RC3-DEV-120,community_candidate_behavior,Uncertain,The author provides logistical assistance to Shining Path.
+TERROR-RC3-DEV-121,community_safe_context,Normal/Ignore,A journalistic report about Abu Sayyaf condemns its recruitment.
+TERROR-RC3-DEV-122,community_safe_context,Normal/Ignore,A scholarly study critically examines Jemaah Islamiyah without endorsing it.
+TERROR-RC3-DEV-123,community_safe_context,Normal/Ignore,A public-safety warning tells people not to donate to Lashkar-e-Taiba.
+TERROR-RC3-DEV-124,community_safe_context,Normal/Ignore,A historical archive documents Jaish-e-Mohammed and opposes its actions.
+TERROR-RC3-DEV-125,community_safe_context,Normal/Ignore,A journalistic report about Indian Mujahideen condemns its recruitment.
+TERROR-RC3-DEV-126,community_safe_context,Normal/Ignore,A scholarly study critically examines Al-Shabaab without endorsing it.
+TERROR-RC3-DEV-127,community_safe_context,Normal/Ignore,A public-safety warning tells people not to donate to Ansar Dine.
+TERROR-RC3-DEV-128,community_safe_context,Normal/Ignore,A historical archive documents Aum Shinrikyo and opposes its actions.
+TERROR-RC3-DEV-129,community_safe_context,Normal/Ignore,A journalistic report about Red Army Faction condemns its recruitment.
+TERROR-RC3-DEV-130,community_safe_context,Normal/Ignore,A scholarly study critically examines Shining Path without endorsing it.
+TERROR-RC3-DEV-131,community_safe_context,Normal/Ignore,A public-safety warning tells people not to donate to Abu Sayyaf.
+TERROR-RC3-DEV-132,community_safe_context,Normal/Ignore,A historical archive documents Jemaah Islamiyah and opposes its actions.
+TERROR-RC3-DEV-133,community_safe_context,Normal/Ignore,A journalistic report about Lashkar-e-Taiba condemns its recruitment.
+TERROR-RC3-DEV-134,community_safe_context,Normal/Ignore,A scholarly study critically examines Jaish-e-Mohammed without endorsing it.
+TERROR-RC3-DEV-135,community_safe_context,Normal/Ignore,A public-safety warning tells people not to donate to Indian Mujahideen.
+TERROR-RC3-DEV-136,community_safe_context,Normal/Ignore,A historical archive documents Al-Shabaab and opposes its actions.
+TERROR-RC3-DEV-137,community_safe_context,Normal/Ignore,A journalistic report about Ansar Dine condemns its recruitment.
+TERROR-RC3-DEV-138,community_safe_context,Normal/Ignore,A scholarly study critically examines Aum Shinrikyo without endorsing it.
+TERROR-RC3-DEV-139,community_safe_context,Normal/Ignore,A public-safety warning tells people not to donate to Red Army Faction.
+TERROR-RC3-DEV-140,community_safe_context,Normal/Ignore,A historical archive documents Shining Path and opposes its actions.
+TERROR-RC3-DEV-141,ambiguous_name_safety,NO_OVERRIDE,The phrase join The Base appears in a fictional board game.
+TERROR-RC3-DEV-142,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words Black Star.
+TERROR-RC3-DEV-143,ambiguous_name_safety,NO_OVERRIDE,The phrase join Secret Group appears in a fictional board game.
+TERROR-RC3-DEV-144,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words The Revolt.
+TERROR-RC3-DEV-145,ambiguous_name_safety,NO_OVERRIDE,The phrase join Kingdom of Israel appears in a fictional board game.
+TERROR-RC3-DEV-146,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words Crusaders.
+TERROR-RC3-DEV-147,ambiguous_name_safety,NO_OVERRIDE,The phrase join National Vanguard appears in a fictional board game.
+TERROR-RC3-DEV-148,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words Caliphate State.
+TERROR-RC3-DEV-149,ambiguous_name_safety,NO_OVERRIDE,The phrase join Army of God appears in a fictional board game.
+TERROR-RC3-DEV-150,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words The Black Eagles.
+TERROR-RC3-DEV-151,ambiguous_name_safety,NO_OVERRIDE,The phrase join The Base appears in a fictional board game.
+TERROR-RC3-DEV-152,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words Black Star.
+TERROR-RC3-DEV-153,ambiguous_name_safety,NO_OVERRIDE,The phrase join Secret Group appears in a fictional board game.
+TERROR-RC3-DEV-154,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words The Revolt.
+TERROR-RC3-DEV-155,ambiguous_name_safety,NO_OVERRIDE,The phrase join Kingdom of Israel appears in a fictional board game.
+TERROR-RC3-DEV-156,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words Crusaders.
+TERROR-RC3-DEV-157,ambiguous_name_safety,NO_OVERRIDE,The phrase join National Vanguard appears in a fictional board game.
+TERROR-RC3-DEV-158,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words Caliphate State.
+TERROR-RC3-DEV-159,ambiguous_name_safety,NO_OVERRIDE,The phrase join Army of God appears in a fictional board game.
+TERROR-RC3-DEV-160,ambiguous_name_safety,NO_OVERRIDE,An art poster displays the words The Black Eagles.
+TERROR-RC3-DEV-161,legitimate_jobs_and_operations,NO_OVERRIDE,Microsoft solicits applications for cloud engineering roles.
+TERROR-RC3-DEV-162,legitimate_jobs_and_operations,NO_OVERRIDE,A hospital provides logistical assistance to its emergency clinic.
+TERROR-RC3-DEV-163,legitimate_jobs_and_operations,NO_OVERRIDE,A charity forwards volunteer registration forms for relief work.
+TERROR-RC3-DEV-164,legitimate_jobs_and_operations,NO_OVERRIDE,A university invites students to join a research project.
+TERROR-RC3-DEV-165,legitimate_jobs_and_operations,NO_OVERRIDE,A software company collects subscription payments from customers.
+TERROR-RC3-DEV-166,legitimate_jobs_and_operations,NO_OVERRIDE,Microsoft solicits applications for cloud engineering roles.
+TERROR-RC3-DEV-167,legitimate_jobs_and_operations,NO_OVERRIDE,A hospital provides logistical assistance to its emergency clinic.
+TERROR-RC3-DEV-168,legitimate_jobs_and_operations,NO_OVERRIDE,A charity forwards volunteer registration forms for relief work.
+TERROR-RC3-DEV-169,legitimate_jobs_and_operations,NO_OVERRIDE,A university invites students to join a research project.
+TERROR-RC3-DEV-170,legitimate_jobs_and_operations,NO_OVERRIDE,A software company collects subscription payments from customers.
+TERROR-RC3-DEV-171,legitimate_jobs_and_operations,NO_OVERRIDE,Microsoft solicits applications for cloud engineering roles.
+TERROR-RC3-DEV-172,legitimate_jobs_and_operations,NO_OVERRIDE,A hospital provides logistical assistance to its emergency clinic.
+TERROR-RC3-DEV-173,legitimate_jobs_and_operations,NO_OVERRIDE,A charity forwards volunteer registration forms for relief work.
+TERROR-RC3-DEV-174,legitimate_jobs_and_operations,NO_OVERRIDE,A university invites students to join a research project.
+TERROR-RC3-DEV-175,legitimate_jobs_and_operations,NO_OVERRIDE,A software company collects subscription payments from customers.
+TERROR-RC3-DEV-176,legitimate_jobs_and_operations,NO_OVERRIDE,Microsoft solicits applications for cloud engineering roles.
+TERROR-RC3-DEV-177,legitimate_jobs_and_operations,NO_OVERRIDE,A hospital provides logistical assistance to its emergency clinic.
+TERROR-RC3-DEV-178,legitimate_jobs_and_operations,NO_OVERRIDE,A charity forwards volunteer registration forms for relief work.
+TERROR-RC3-DEV-179,legitimate_jobs_and_operations,NO_OVERRIDE,A university invites students to join a research project.
+TERROR-RC3-DEV-180,legitimate_jobs_and_operations,NO_OVERRIDE,A software company collects subscription payments from customers.
+TERROR-RC3-DEV-181,unrelated_category_isolation,NO_OVERRIDE,A user exposes another person's private email address.
+TERROR-RC3-DEV-182,unrelated_category_isolation,NO_OVERRIDE,A fake prize message asks the recipient to pay a processing fee.
+TERROR-RC3-DEV-183,unrelated_category_isolation,NO_OVERRIDE,Someone repeatedly intimidates a named student online.
+TERROR-RC3-DEV-184,unrelated_category_isolation,NO_OVERRIDE,An attachment attempts to install malicious software.
+TERROR-RC3-DEV-185,unrelated_category_isolation,NO_OVERRIDE,The article makes an unsupported factual claim.
+TERROR-RC3-DEV-186,unrelated_category_isolation,NO_OVERRIDE,A user exposes another person's private email address.
+TERROR-RC3-DEV-187,unrelated_category_isolation,NO_OVERRIDE,A fake prize message asks the recipient to pay a processing fee.
+TERROR-RC3-DEV-188,unrelated_category_isolation,NO_OVERRIDE,Someone repeatedly intimidates a named student online.
+TERROR-RC3-DEV-189,unrelated_category_isolation,NO_OVERRIDE,An attachment attempts to install malicious software.
+TERROR-RC3-DEV-190,unrelated_category_isolation,NO_OVERRIDE,The article makes an unsupported factual claim.
+TERROR-RC3-DEV-191,unrelated_category_isolation,NO_OVERRIDE,A user exposes another person's private email address.
+TERROR-RC3-DEV-192,unrelated_category_isolation,NO_OVERRIDE,A fake prize message asks the recipient to pay a processing fee.
+TERROR-RC3-DEV-193,unrelated_category_isolation,NO_OVERRIDE,Someone repeatedly intimidates a named student online.
+TERROR-RC3-DEV-194,unrelated_category_isolation,NO_OVERRIDE,An attachment attempts to install malicious software.
+TERROR-RC3-DEV-195,unrelated_category_isolation,NO_OVERRIDE,The article makes an unsupported factual claim.
+TERROR-RC3-DEV-196,unrelated_category_isolation,NO_OVERRIDE,A user exposes another person's private email address.
+TERROR-RC3-DEV-197,unrelated_category_isolation,NO_OVERRIDE,A fake prize message asks the recipient to pay a processing fee.
+TERROR-RC3-DEV-198,unrelated_category_isolation,NO_OVERRIDE,Someone repeatedly intimidates a named student online.
+TERROR-RC3-DEV-199,unrelated_category_isolation,NO_OVERRIDE,An attachment attempts to install malicious software.
+TERROR-RC3-DEV-200,unrelated_category_isolation,NO_OVERRIDE,The article makes an unsupported factual claim.

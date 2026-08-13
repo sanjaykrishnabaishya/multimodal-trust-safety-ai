@@ -31,6 +31,10 @@ from app.services.religiously_offensive_v7_rc6_fusion import (
     analyze_religiously_offensive_v7_rc6_for_fusion,
     apply_religiously_offensive_v7_rc6_fusion,
 )
+from app.services.terrorism_extremism_v6_rc4_fusion import (
+    analyze_terrorism_extremism_v6_rc4_for_fusion,
+    apply_terrorism_extremism_v6_rc4_fusion,
+)
 from app.services.violent_content_service import (
     analyze_violent_content,
 )
@@ -721,6 +725,13 @@ def fuse_moderation_decision(
         )
     )
 
+    terrorism_extremism_v6_rc4_analysis = (
+        analyze_terrorism_extremism_v6_rc4_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
     identity_impersonation_analysis = (
         analyze_identity_impersonation(
             text
@@ -1344,6 +1355,33 @@ def fuse_moderation_decision(
         religiously_offensive_v7_rc6_fusion["decision_applied"]
     )
 
+    terrorism_extremism_v6_rc4_fusion = (
+        apply_terrorism_extremism_v6_rc4_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=terrorism_extremism_v6_rc4_analysis,
+        )
+    )
+    category = str(terrorism_extremism_v6_rc4_fusion["category"])
+    severity = str(terrorism_extremism_v6_rc4_fusion["severity"])
+    action = str(terrorism_extremism_v6_rc4_fusion["action"])
+    confidence = float(terrorism_extremism_v6_rc4_fusion["confidence"])
+    human_review_required = bool(
+        terrorism_extremism_v6_rc4_fusion["human_review_required"]
+    )
+    reason = str(terrorism_extremism_v6_rc4_fusion["reason"])
+    matched_signals = list(
+        terrorism_extremism_v6_rc4_fusion["matched_signals"]
+    )
+    terrorism_extremism_v6_rc4_applied = bool(
+        terrorism_extremism_v6_rc4_fusion["decision_applied"]
+    )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
@@ -1538,6 +1576,11 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["terrorism_extremism_v6_rc4"]
+                if terrorism_extremism_v6_rc4_applied
+                else []
+            )
+            + (
                 ["spam_dictionary"]
                 if spam_analysis.get(
                     "dictionary_matches"
@@ -1657,6 +1700,16 @@ def fuse_moderation_decision(
         "religiously_offensive_v7_rc6_fusion_status": (
             religiously_offensive_v7_rc6_fusion["fusion_status"]
         ),
+        "terrorism_extremism_v6_rc4_used": (
+            terrorism_extremism_v6_rc4_applied
+        ),
+        "terrorism_extremism_v6_rc4": (
+            terrorism_extremism_v6_rc4_analysis
+        ),
+        "terrorism_extremism_v6_rc4_fusion_status": (
+            terrorism_extremism_v6_rc4_fusion["fusion_status"]
+        ),
+        "terrorism_extremism_automatic_enforcement_allowed": False,
         "cyberbullying_rc2_used": cyberbullying_rc2_applied,
         "cyberbullying_rc2": cyberbullying_rc2_analysis,
         "cyberbullying_rc2_fusion_status": (

@@ -1,0 +1,41 @@
+{
+  "candidate": "terrorism-extremism-v6-rc4",
+  "frozen_utc": "2026-08-12T16:16:05.042699+00:00",
+  "locked_file_sha256": {
+    "data/candidates.csv": "afe08720700df228669c00e4d621715a469d98de84ac83bf6a07dfee2de90ece",
+    "data/wikidata_manifest.json": "f73efa694295fd6746b8b7cfc31df8abdb08954deaca29ae392a1f20fa641cf3",
+    "development/development.csv": "15175f76d6de894409539db0305be8e89a3c5ca085452795ba8870f173484103",
+    "evidence/development_report.json": "e354f895e7ff3ec33ca8d88ebb64c224663fd86e16ce8df1b2b63be8a8a27655",
+    "source/terrorism_extremism_service.py": "fae7d2f6887be119ecf6ae32ddd0ef219573b644e3693d8ea1da7288b9f96d61",
+    "source/terrorism_extremism_v4_rc2_service.py": "fb006f13d8b42069d90501d2a09177a059c34b722d5b65fb013fbdd925aab8bc",
+    "source/terrorism_extremism_v5_rc3_service.py": "207b94f5f1a9abf81daa0eefea919d9eb4a406d93a7a3506ab5fb3c9d01bf1d4",
+    "source/terrorism_extremism_v6_rc4_service.py": "ae41876e92e1673a7c6febca0d2bdebbd83b39a722ebbd02b6a36e695e10ec99",
+    "source/wikidata_terrorism_candidate_service.py": "542494318208d9e986ee32193e79d41665424a8109f3f3f61b4e24da73891594",
+    "source/wikidata_terrorism_candidate_v4_rc2_service.py": "40854bb3368161cdef6493ed8af8df7f3dd2540e0edef7021ac44134dab6d654",
+    "source/wikidata_terrorism_candidate_v5_rc3_service.py": "fbf490d6afd6fa4efba818054538aa36f1d7c46920f0d1f1f1ab2d9bbe3f6631",
+    "source/wikidata_terrorism_candidate_v6_rc4_service.py": "384339e93598d51268bb5cc606aaec58197f17920cb619c449d0bc914efd44fa"
+  },
+  "evidence_summary": {
+    "development_records": 240,
+    "development_accuracy": 1.0,
+    "minimum_group_accuracy": 1.0,
+    "wikidata_candidate_records": 366,
+    "wikidata_license": "CC0-1.0"
+  },
+  "development_gate_passed": true,
+  "rc3_active_and_frozen_dependencies_verified": true,
+  "rc3_aggregate_used_as_rc4_development_signal": true,
+  "rc3_holdout_cases_or_predictions_used": false,
+  "independent_holdout_created_before_freeze": false,
+  "independent_holdout_used_before_freeze": false,
+  "independent_gate_locked_before_holdout": true,
+  "independently_validated": false,
+  "eligible_for_live_integration": false,
+  "confirmed_legal_designations": 0,
+  "permitted_community_candidate_output": "Uncertain only",
+  "official_registry_used": false,
+  "permission_restricted_source_used": false,
+  "wikipedia_prose_used": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false
+}

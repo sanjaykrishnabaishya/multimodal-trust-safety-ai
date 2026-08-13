@@ -1,0 +1,62 @@
+{
+  "dataset_version": "2026.08-wikidata-candidates-v1",
+  "created_utc": "2026-08-12T15:23:50Z",
+  "revalidate_after_utc": "2026-09-11T15:23:50Z",
+  "source": "Wikidata structured data",
+  "source_classes": {
+    "Q17127659": "terrorist organization",
+    "Q4456236": "terrorist group"
+  },
+  "source_endpoint": "https://query.wikidata.org/sparql",
+  "source_license": "CC0-1.0",
+  "source_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_license_policy": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+  "query_sha256": "4f8d2d627d5ebbd10d397b25681e45dd414b44702a13950b28e1d46c90543d74",
+  "validation": {
+    "passed": true,
+    "failures": [],
+    "records": 366,
+    "class_counts": {
+      "Q17127659": 337,
+      "Q4456236": 30
+    },
+    "matchable_primary_names": 358,
+    "ambiguous_aliases_excluded_from_matching": 128,
+    "quality_exclusions_after_retrieval": {
+      "event_plot_or_participant_like_label": 5
+    }
+  },
+  "source_audit": {
+    "endpoint": "https://query.wikidata.org/sparql",
+    "http_status": 200,
+    "content_type": "application/sparql-results+json;charset=utf-8",
+    "response_bytes": 285700,
+    "response_sha256": "0f3bf702960791a918a99c292e2c6ede68b3310a245b04d23ae8425a629fd02f",
+    "request_count": 1,
+    "concurrent_requests": 1,
+    "access_control_bypassed": false,
+    "retrieved_utc": "2026-08-12T15:23:50Z"
+  },
+  "policy_contract": {
+    "community_edited": true,
+    "confirmed_legal_designation": false,
+    "eligible_for_review_routing": true,
+    "eligible_for_automatic_category": false,
+    "automatic_enforcement_allowed": false,
+    "neutral_mention_is_violation": false,
+    "exact_match_only": true,
+    "behavior_context_required": true,
+    "short_ambiguous_aliases_matchable": false,
+    "wikipedia_prose_downloaded": false,
+    "images_or_logos_downloaded": false,
+    "individual_people_collected": false,
+    "contradictory_entity_types_excluded": {
+      "Q5": "human",
+      "Q1656682": "event",
+      "Q215380": "musical group"
+    },
+    "event_plot_or_participant_like_labels_excluded": true,
+    "extremism_inferred_from_ideology": false,
+    "connected_to_live_moderation": false
+  }
+}

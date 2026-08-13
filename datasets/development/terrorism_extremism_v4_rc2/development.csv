@@ -1,0 +1,201 @@
+﻿case_id,group,expected,text
+TERROR-RC2-DEV-001,claimed_designation_prefix,Terrorism & Extremism,A designated terrorist organization is encouraging readers to enlist.
+TERROR-RC2-DEV-002,claimed_designation_prefix,Terrorism & Extremism,A banned extremist group is collecting money for operational support.
+TERROR-RC2-DEV-003,claimed_designation_prefix,Terrorism & Extremism,A proscribed terrorist network is circulating recruitment posts.
+TERROR-RC2-DEV-004,claimed_designation_prefix,Terrorism & Extremism,A listed extremist movement is inviting new members to sign up.
+TERROR-RC2-DEV-005,claimed_designation_prefix,Terrorism & Extremism,A sanctioned terrorist faction is providing transport and supplies.
+TERROR-RC2-DEV-006,claimed_designation_prefix,Terrorism & Extremism,A designated terrorist organization is encouraging readers to enlist.
+TERROR-RC2-DEV-007,claimed_designation_prefix,Terrorism & Extremism,A banned extremist group is collecting money for operational support.
+TERROR-RC2-DEV-008,claimed_designation_prefix,Terrorism & Extremism,A proscribed terrorist network is circulating recruitment posts.
+TERROR-RC2-DEV-009,claimed_designation_prefix,Terrorism & Extremism,A listed extremist movement is inviting new members to sign up.
+TERROR-RC2-DEV-010,claimed_designation_prefix,Terrorism & Extremism,A sanctioned terrorist faction is providing transport and supplies.
+TERROR-RC2-DEV-011,claimed_designation_prefix,Terrorism & Extremism,A designated terrorist organization is encouraging readers to enlist.
+TERROR-RC2-DEV-012,claimed_designation_prefix,Terrorism & Extremism,A banned extremist group is collecting money for operational support.
+TERROR-RC2-DEV-013,claimed_designation_prefix,Terrorism & Extremism,A proscribed terrorist network is circulating recruitment posts.
+TERROR-RC2-DEV-014,claimed_designation_prefix,Terrorism & Extremism,A listed extremist movement is inviting new members to sign up.
+TERROR-RC2-DEV-015,claimed_designation_prefix,Terrorism & Extremism,A sanctioned terrorist faction is providing transport and supplies.
+TERROR-RC2-DEV-016,claimed_designation_prefix,Terrorism & Extremism,A designated terrorist organization is encouraging readers to enlist.
+TERROR-RC2-DEV-017,claimed_designation_prefix,Terrorism & Extremism,A banned extremist group is collecting money for operational support.
+TERROR-RC2-DEV-018,claimed_designation_prefix,Terrorism & Extremism,A proscribed terrorist network is circulating recruitment posts.
+TERROR-RC2-DEV-019,claimed_designation_prefix,Terrorism & Extremism,A listed extremist movement is inviting new members to sign up.
+TERROR-RC2-DEV-020,claimed_designation_prefix,Terrorism & Extremism,A sanctioned terrorist faction is providing transport and supplies.
+TERROR-RC2-DEV-021,claimed_designation_suffix,Terrorism & Extremism,The group has been listed as an extremist organization and invites people to join.
+TERROR-RC2-DEV-022,claimed_designation_suffix,Terrorism & Extremism,The network was officially proscribed as a terrorist organization and solicits contributions.
+TERROR-RC2-DEV-023,claimed_designation_suffix,Terrorism & Extremism,The movement is designated as extremist and circulates recruitment clips.
+TERROR-RC2-DEV-024,claimed_designation_suffix,Terrorism & Extremism,The organization remains banned as a terrorist group and urges readers to enlist.
+TERROR-RC2-DEV-025,claimed_designation_suffix,Terrorism & Extremism,The faction was sanctioned as extremist and provides logistical support.
+TERROR-RC2-DEV-026,claimed_designation_suffix,Terrorism & Extremism,The group has been listed as an extremist organization and invites people to join.
+TERROR-RC2-DEV-027,claimed_designation_suffix,Terrorism & Extremism,The network was officially proscribed as a terrorist organization and solicits contributions.
+TERROR-RC2-DEV-028,claimed_designation_suffix,Terrorism & Extremism,The movement is designated as extremist and circulates recruitment clips.
+TERROR-RC2-DEV-029,claimed_designation_suffix,Terrorism & Extremism,The organization remains banned as a terrorist group and urges readers to enlist.
+TERROR-RC2-DEV-030,claimed_designation_suffix,Terrorism & Extremism,The faction was sanctioned as extremist and provides logistical support.
+TERROR-RC2-DEV-031,claimed_designation_suffix,Terrorism & Extremism,The group has been listed as an extremist organization and invites people to join.
+TERROR-RC2-DEV-032,claimed_designation_suffix,Terrorism & Extremism,The network was officially proscribed as a terrorist organization and solicits contributions.
+TERROR-RC2-DEV-033,claimed_designation_suffix,Terrorism & Extremism,The movement is designated as extremist and circulates recruitment clips.
+TERROR-RC2-DEV-034,claimed_designation_suffix,Terrorism & Extremism,The organization remains banned as a terrorist group and urges readers to enlist.
+TERROR-RC2-DEV-035,claimed_designation_suffix,Terrorism & Extremism,The faction was sanctioned as extremist and provides logistical support.
+TERROR-RC2-DEV-036,claimed_designation_suffix,Terrorism & Extremism,The group has been listed as an extremist organization and invites people to join.
+TERROR-RC2-DEV-037,claimed_designation_suffix,Terrorism & Extremism,The network was officially proscribed as a terrorist organization and solicits contributions.
+TERROR-RC2-DEV-038,claimed_designation_suffix,Terrorism & Extremism,The movement is designated as extremist and circulates recruitment clips.
+TERROR-RC2-DEV-039,claimed_designation_suffix,Terrorism & Extremism,The organization remains banned as a terrorist group and urges readers to enlist.
+TERROR-RC2-DEV-040,claimed_designation_suffix,Terrorism & Extremism,The faction was sanctioned as extremist and provides logistical support.
+TERROR-RC2-DEV-041,unverified_identity_or_status,Uncertain,"The organization invites enlistment, but its legal status remains unverified."
+TERROR-RC2-DEV-042,unverified_identity_or_status,Uncertain,Membership applications are open although the group's designation is not confirmed.
+TERROR-RC2-DEV-043,unverified_identity_or_status,Uncertain,An alleged terrorist group solicits contributions from readers.
+TERROR-RC2-DEV-044,unverified_identity_or_status,Uncertain,"The network urges people to join, but its identity has not been authenticated."
+TERROR-RC2-DEV-045,unverified_identity_or_status,Uncertain,A possible extremist movement circulates recruitment posts.
+TERROR-RC2-DEV-046,unverified_identity_or_status,Uncertain,"The organization invites enlistment, but its legal status remains unverified."
+TERROR-RC2-DEV-047,unverified_identity_or_status,Uncertain,Membership applications are open although the group's designation is not confirmed.
+TERROR-RC2-DEV-048,unverified_identity_or_status,Uncertain,An alleged terrorist group solicits contributions from readers.
+TERROR-RC2-DEV-049,unverified_identity_or_status,Uncertain,"The network urges people to join, but its identity has not been authenticated."
+TERROR-RC2-DEV-050,unverified_identity_or_status,Uncertain,A possible extremist movement circulates recruitment posts.
+TERROR-RC2-DEV-051,unverified_identity_or_status,Uncertain,"The organization invites enlistment, but its legal status remains unverified."
+TERROR-RC2-DEV-052,unverified_identity_or_status,Uncertain,Membership applications are open although the group's designation is not confirmed.
+TERROR-RC2-DEV-053,unverified_identity_or_status,Uncertain,An alleged terrorist group solicits contributions from readers.
+TERROR-RC2-DEV-054,unverified_identity_or_status,Uncertain,"The network urges people to join, but its identity has not been authenticated."
+TERROR-RC2-DEV-055,unverified_identity_or_status,Uncertain,A possible extremist movement circulates recruitment posts.
+TERROR-RC2-DEV-056,unverified_identity_or_status,Uncertain,"The organization invites enlistment, but its legal status remains unverified."
+TERROR-RC2-DEV-057,unverified_identity_or_status,Uncertain,Membership applications are open although the group's designation is not confirmed.
+TERROR-RC2-DEV-058,unverified_identity_or_status,Uncertain,An alleged terrorist group solicits contributions from readers.
+TERROR-RC2-DEV-059,unverified_identity_or_status,Uncertain,"The network urges people to join, but its identity has not been authenticated."
+TERROR-RC2-DEV-060,unverified_identity_or_status,Uncertain,A possible extremist movement circulates recruitment posts.
+TERROR-RC2-DEV-061,community_name_plus_behavior,Uncertain,The post invites readers to join Abu Sayyaf.
+TERROR-RC2-DEV-062,community_name_plus_behavior,Uncertain,The message collects money as support for Jemaah Islamiyah.
+TERROR-RC2-DEV-063,community_name_plus_behavior,Uncertain,The channel circulates recruitment posts for Lashkar-e-Taiba.
+TERROR-RC2-DEV-064,community_name_plus_behavior,Uncertain,The speaker urges people to enlist with Jaish-e-Mohammed.
+TERROR-RC2-DEV-065,community_name_plus_behavior,Uncertain,The post invites readers to join Indian Mujahideen.
+TERROR-RC2-DEV-066,community_name_plus_behavior,Uncertain,The message collects money as support for Al-Shabaab.
+TERROR-RC2-DEV-067,community_name_plus_behavior,Uncertain,The channel circulates recruitment posts for Ansar Dine.
+TERROR-RC2-DEV-068,community_name_plus_behavior,Uncertain,The speaker urges people to enlist with Aum Shinrikyo.
+TERROR-RC2-DEV-069,community_name_plus_behavior,Uncertain,The post invites readers to join Red Army Faction.
+TERROR-RC2-DEV-070,community_name_plus_behavior,Uncertain,The message collects money as support for Shining Path.
+TERROR-RC2-DEV-071,community_name_plus_behavior,Uncertain,The channel circulates recruitment posts for Abu Sayyaf.
+TERROR-RC2-DEV-072,community_name_plus_behavior,Uncertain,The speaker urges people to enlist with Jemaah Islamiyah.
+TERROR-RC2-DEV-073,community_name_plus_behavior,Uncertain,The post invites readers to join Lashkar-e-Taiba.
+TERROR-RC2-DEV-074,community_name_plus_behavior,Uncertain,The message collects money as support for Jaish-e-Mohammed.
+TERROR-RC2-DEV-075,community_name_plus_behavior,Uncertain,The channel circulates recruitment posts for Indian Mujahideen.
+TERROR-RC2-DEV-076,community_name_plus_behavior,Uncertain,The speaker urges people to enlist with Al-Shabaab.
+TERROR-RC2-DEV-077,community_name_plus_behavior,Uncertain,The post invites readers to join Ansar Dine.
+TERROR-RC2-DEV-078,community_name_plus_behavior,Uncertain,The message collects money as support for Aum Shinrikyo.
+TERROR-RC2-DEV-079,community_name_plus_behavior,Uncertain,The channel circulates recruitment posts for Red Army Faction.
+TERROR-RC2-DEV-080,community_name_plus_behavior,Uncertain,The speaker urges people to enlist with Shining Path.
+TERROR-RC2-DEV-081,ambiguous_name_without_external_context,NO_OVERRIDE,Please join The Base before the neighborhood meeting.
+TERROR-RC2-DEV-082,ambiguous_name_without_external_context,NO_OVERRIDE,The words Black Star appear in a fictional story title.
+TERROR-RC2-DEV-083,ambiguous_name_without_external_context,NO_OVERRIDE,Please join Secret Group before the neighborhood meeting.
+TERROR-RC2-DEV-084,ambiguous_name_without_external_context,NO_OVERRIDE,The words The Revolt appear in a fictional story title.
+TERROR-RC2-DEV-085,ambiguous_name_without_external_context,NO_OVERRIDE,Please join Kingdom of Israel before the neighborhood meeting.
+TERROR-RC2-DEV-086,ambiguous_name_without_external_context,NO_OVERRIDE,The words Crusaders appear in a fictional story title.
+TERROR-RC2-DEV-087,ambiguous_name_without_external_context,NO_OVERRIDE,Please join National Vanguard before the neighborhood meeting.
+TERROR-RC2-DEV-088,ambiguous_name_without_external_context,NO_OVERRIDE,The words Caliphate State appear in a fictional story title.
+TERROR-RC2-DEV-089,ambiguous_name_without_external_context,NO_OVERRIDE,Please join Army of God before the neighborhood meeting.
+TERROR-RC2-DEV-090,ambiguous_name_without_external_context,NO_OVERRIDE,The words The Black Eagles appear in a fictional story title.
+TERROR-RC2-DEV-091,ambiguous_name_without_external_context,NO_OVERRIDE,Please join The Base before the neighborhood meeting.
+TERROR-RC2-DEV-092,ambiguous_name_without_external_context,NO_OVERRIDE,The words Black Star appear in a fictional story title.
+TERROR-RC2-DEV-093,ambiguous_name_without_external_context,NO_OVERRIDE,Please join Secret Group before the neighborhood meeting.
+TERROR-RC2-DEV-094,ambiguous_name_without_external_context,NO_OVERRIDE,The words The Revolt appear in a fictional story title.
+TERROR-RC2-DEV-095,ambiguous_name_without_external_context,NO_OVERRIDE,Please join Kingdom of Israel before the neighborhood meeting.
+TERROR-RC2-DEV-096,ambiguous_name_without_external_context,NO_OVERRIDE,The words Crusaders appear in a fictional story title.
+TERROR-RC2-DEV-097,ambiguous_name_without_external_context,NO_OVERRIDE,Please join National Vanguard before the neighborhood meeting.
+TERROR-RC2-DEV-098,ambiguous_name_without_external_context,NO_OVERRIDE,The words Caliphate State appear in a fictional story title.
+TERROR-RC2-DEV-099,ambiguous_name_without_external_context,NO_OVERRIDE,Please join Army of God before the neighborhood meeting.
+TERROR-RC2-DEV-100,ambiguous_name_without_external_context,NO_OVERRIDE,The words The Black Eagles appear in a fictional story title.
+TERROR-RC2-DEV-101,ambiguous_name_with_external_context,Uncertain,The The Base organization invites people to enlist.
+TERROR-RC2-DEV-102,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called Black Star.
+TERROR-RC2-DEV-103,ambiguous_name_with_external_context,Uncertain,The Secret Group organization invites people to enlist.
+TERROR-RC2-DEV-104,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called The Revolt.
+TERROR-RC2-DEV-105,ambiguous_name_with_external_context,Uncertain,The Kingdom of Israel organization invites people to enlist.
+TERROR-RC2-DEV-106,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called Crusaders.
+TERROR-RC2-DEV-107,ambiguous_name_with_external_context,Uncertain,The National Vanguard organization invites people to enlist.
+TERROR-RC2-DEV-108,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called Caliphate State.
+TERROR-RC2-DEV-109,ambiguous_name_with_external_context,Uncertain,The Army of God organization invites people to enlist.
+TERROR-RC2-DEV-110,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called The Black Eagles.
+TERROR-RC2-DEV-111,ambiguous_name_with_external_context,Uncertain,The The Base organization invites people to enlist.
+TERROR-RC2-DEV-112,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called Black Star.
+TERROR-RC2-DEV-113,ambiguous_name_with_external_context,Uncertain,The Secret Group organization invites people to enlist.
+TERROR-RC2-DEV-114,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called The Revolt.
+TERROR-RC2-DEV-115,ambiguous_name_with_external_context,Uncertain,The Kingdom of Israel organization invites people to enlist.
+TERROR-RC2-DEV-116,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called Crusaders.
+TERROR-RC2-DEV-117,ambiguous_name_with_external_context,Uncertain,The National Vanguard organization invites people to enlist.
+TERROR-RC2-DEV-118,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called Caliphate State.
+TERROR-RC2-DEV-119,ambiguous_name_with_external_context,Uncertain,The Army of God organization invites people to enlist.
+TERROR-RC2-DEV-120,ambiguous_name_with_external_context,Uncertain,Collect money for the organization called The Black Eagles.
+TERROR-RC2-DEV-121,safe_reporting_and_condemnation,Normal/Ignore,A news report describes a listed terrorist group and condemns its recruitment.
+TERROR-RC2-DEV-122,safe_reporting_and_condemnation,Normal/Ignore,An academic study examines an alleged extremist organization without endorsing it.
+TERROR-RC2-DEV-123,safe_reporting_and_condemnation,Normal/Ignore,A museum archive documents a banned network and opposes its propaganda.
+TERROR-RC2-DEV-124,safe_reporting_and_condemnation,Normal/Ignore,A police report warns the public not to provide funds to a proscribed group.
+TERROR-RC2-DEV-125,safe_reporting_and_condemnation,Normal/Ignore,A historical documentary discusses recruitment by an extremist movement and condemns it.
+TERROR-RC2-DEV-126,safe_reporting_and_condemnation,Normal/Ignore,A news report describes a listed terrorist group and condemns its recruitment.
+TERROR-RC2-DEV-127,safe_reporting_and_condemnation,Normal/Ignore,An academic study examines an alleged extremist organization without endorsing it.
+TERROR-RC2-DEV-128,safe_reporting_and_condemnation,Normal/Ignore,A museum archive documents a banned network and opposes its propaganda.
+TERROR-RC2-DEV-129,safe_reporting_and_condemnation,Normal/Ignore,A police report warns the public not to provide funds to a proscribed group.
+TERROR-RC2-DEV-130,safe_reporting_and_condemnation,Normal/Ignore,A historical documentary discusses recruitment by an extremist movement and condemns it.
+TERROR-RC2-DEV-131,safe_reporting_and_condemnation,Normal/Ignore,A news report describes a listed terrorist group and condemns its recruitment.
+TERROR-RC2-DEV-132,safe_reporting_and_condemnation,Normal/Ignore,An academic study examines an alleged extremist organization without endorsing it.
+TERROR-RC2-DEV-133,safe_reporting_and_condemnation,Normal/Ignore,A museum archive documents a banned network and opposes its propaganda.
+TERROR-RC2-DEV-134,safe_reporting_and_condemnation,Normal/Ignore,A police report warns the public not to provide funds to a proscribed group.
+TERROR-RC2-DEV-135,safe_reporting_and_condemnation,Normal/Ignore,A historical documentary discusses recruitment by an extremist movement and condemns it.
+TERROR-RC2-DEV-136,safe_reporting_and_condemnation,Normal/Ignore,A news report describes a listed terrorist group and condemns its recruitment.
+TERROR-RC2-DEV-137,safe_reporting_and_condemnation,Normal/Ignore,An academic study examines an alleged extremist organization without endorsing it.
+TERROR-RC2-DEV-138,safe_reporting_and_condemnation,Normal/Ignore,A museum archive documents a banned network and opposes its propaganda.
+TERROR-RC2-DEV-139,safe_reporting_and_condemnation,Normal/Ignore,A police report warns the public not to provide funds to a proscribed group.
+TERROR-RC2-DEV-140,safe_reporting_and_condemnation,Normal/Ignore,A historical documentary discusses recruitment by an extremist movement and condemns it.
+TERROR-RC2-DEV-141,legitimate_jobs_and_operations,NO_OVERRIDE,Microsoft invites engineers to join its cloud support team.
+TERROR-RC2-DEV-142,legitimate_jobs_and_operations,NO_OVERRIDE,A hospital solicits applications for nursing positions.
+TERROR-RC2-DEV-143,legitimate_jobs_and_operations,NO_OVERRIDE,A charity collects money for flood relief operations.
+TERROR-RC2-DEV-144,legitimate_jobs_and_operations,NO_OVERRIDE,A university circulates internship posts for its research laboratory.
+TERROR-RC2-DEV-145,legitimate_jobs_and_operations,NO_OVERRIDE,A logistics business provides transport and supplies to customers.
+TERROR-RC2-DEV-146,legitimate_jobs_and_operations,NO_OVERRIDE,Microsoft invites engineers to join its cloud support team.
+TERROR-RC2-DEV-147,legitimate_jobs_and_operations,NO_OVERRIDE,A hospital solicits applications for nursing positions.
+TERROR-RC2-DEV-148,legitimate_jobs_and_operations,NO_OVERRIDE,A charity collects money for flood relief operations.
+TERROR-RC2-DEV-149,legitimate_jobs_and_operations,NO_OVERRIDE,A university circulates internship posts for its research laboratory.
+TERROR-RC2-DEV-150,legitimate_jobs_and_operations,NO_OVERRIDE,A logistics business provides transport and supplies to customers.
+TERROR-RC2-DEV-151,legitimate_jobs_and_operations,NO_OVERRIDE,Microsoft invites engineers to join its cloud support team.
+TERROR-RC2-DEV-152,legitimate_jobs_and_operations,NO_OVERRIDE,A hospital solicits applications for nursing positions.
+TERROR-RC2-DEV-153,legitimate_jobs_and_operations,NO_OVERRIDE,A charity collects money for flood relief operations.
+TERROR-RC2-DEV-154,legitimate_jobs_and_operations,NO_OVERRIDE,A university circulates internship posts for its research laboratory.
+TERROR-RC2-DEV-155,legitimate_jobs_and_operations,NO_OVERRIDE,A logistics business provides transport and supplies to customers.
+TERROR-RC2-DEV-156,legitimate_jobs_and_operations,NO_OVERRIDE,Microsoft invites engineers to join its cloud support team.
+TERROR-RC2-DEV-157,legitimate_jobs_and_operations,NO_OVERRIDE,A hospital solicits applications for nursing positions.
+TERROR-RC2-DEV-158,legitimate_jobs_and_operations,NO_OVERRIDE,A charity collects money for flood relief operations.
+TERROR-RC2-DEV-159,legitimate_jobs_and_operations,NO_OVERRIDE,A university circulates internship posts for its research laboratory.
+TERROR-RC2-DEV-160,legitimate_jobs_and_operations,NO_OVERRIDE,A logistics business provides transport and supplies to customers.
+TERROR-RC2-DEV-161,neutral_community_mentions,NO_OVERRIDE,The library index includes a reference to Abu Sayyaf.
+TERROR-RC2-DEV-162,neutral_community_mentions,NO_OVERRIDE,A newspaper archive contains the name Jemaah Islamiyah.
+TERROR-RC2-DEV-163,neutral_community_mentions,NO_OVERRIDE,The document footnote mentions Lashkar-e-Taiba.
+TERROR-RC2-DEV-164,neutral_community_mentions,NO_OVERRIDE,A history-book title refers to Jaish-e-Mohammed.
+TERROR-RC2-DEV-165,neutral_community_mentions,NO_OVERRIDE,The library index includes a reference to Indian Mujahideen.
+TERROR-RC2-DEV-166,neutral_community_mentions,NO_OVERRIDE,A newspaper archive contains the name Al-Shabaab.
+TERROR-RC2-DEV-167,neutral_community_mentions,NO_OVERRIDE,The document footnote mentions Ansar Dine.
+TERROR-RC2-DEV-168,neutral_community_mentions,NO_OVERRIDE,A history-book title refers to Aum Shinrikyo.
+TERROR-RC2-DEV-169,neutral_community_mentions,NO_OVERRIDE,The library index includes a reference to Red Army Faction.
+TERROR-RC2-DEV-170,neutral_community_mentions,NO_OVERRIDE,A newspaper archive contains the name Shining Path.
+TERROR-RC2-DEV-171,neutral_community_mentions,NO_OVERRIDE,The document footnote mentions Abu Sayyaf.
+TERROR-RC2-DEV-172,neutral_community_mentions,NO_OVERRIDE,A history-book title refers to Jemaah Islamiyah.
+TERROR-RC2-DEV-173,neutral_community_mentions,NO_OVERRIDE,The library index includes a reference to Lashkar-e-Taiba.
+TERROR-RC2-DEV-174,neutral_community_mentions,NO_OVERRIDE,A newspaper archive contains the name Jaish-e-Mohammed.
+TERROR-RC2-DEV-175,neutral_community_mentions,NO_OVERRIDE,The document footnote mentions Indian Mujahideen.
+TERROR-RC2-DEV-176,neutral_community_mentions,NO_OVERRIDE,A history-book title refers to Al-Shabaab.
+TERROR-RC2-DEV-177,neutral_community_mentions,NO_OVERRIDE,The library index includes a reference to Ansar Dine.
+TERROR-RC2-DEV-178,neutral_community_mentions,NO_OVERRIDE,A newspaper archive contains the name Aum Shinrikyo.
+TERROR-RC2-DEV-179,neutral_community_mentions,NO_OVERRIDE,The document footnote mentions Red Army Faction.
+TERROR-RC2-DEV-180,neutral_community_mentions,NO_OVERRIDE,A history-book title refers to Shining Path.
+TERROR-RC2-DEV-181,unrelated_category_isolation,NO_OVERRIDE,The message exposes a person's private telephone number.
+TERROR-RC2-DEV-182,unrelated_category_isolation,NO_OVERRIDE,A fake bank account requests a customer's password.
+TERROR-RC2-DEV-183,unrelated_category_isolation,NO_OVERRIDE,The post repeatedly insults and intimidates one named person.
+TERROR-RC2-DEV-184,unrelated_category_isolation,NO_OVERRIDE,The document contains an ordinary weather forecast.
+TERROR-RC2-DEV-185,unrelated_category_isolation,NO_OVERRIDE,The software installs a malicious executable.
+TERROR-RC2-DEV-186,unrelated_category_isolation,NO_OVERRIDE,The message exposes a person's private telephone number.
+TERROR-RC2-DEV-187,unrelated_category_isolation,NO_OVERRIDE,A fake bank account requests a customer's password.
+TERROR-RC2-DEV-188,unrelated_category_isolation,NO_OVERRIDE,The post repeatedly insults and intimidates one named person.
+TERROR-RC2-DEV-189,unrelated_category_isolation,NO_OVERRIDE,The document contains an ordinary weather forecast.
+TERROR-RC2-DEV-190,unrelated_category_isolation,NO_OVERRIDE,The software installs a malicious executable.
+TERROR-RC2-DEV-191,unrelated_category_isolation,NO_OVERRIDE,The message exposes a person's private telephone number.
+TERROR-RC2-DEV-192,unrelated_category_isolation,NO_OVERRIDE,A fake bank account requests a customer's password.
+TERROR-RC2-DEV-193,unrelated_category_isolation,NO_OVERRIDE,The post repeatedly insults and intimidates one named person.
+TERROR-RC2-DEV-194,unrelated_category_isolation,NO_OVERRIDE,The document contains an ordinary weather forecast.
+TERROR-RC2-DEV-195,unrelated_category_isolation,NO_OVERRIDE,The software installs a malicious executable.
+TERROR-RC2-DEV-196,unrelated_category_isolation,NO_OVERRIDE,The message exposes a person's private telephone number.
+TERROR-RC2-DEV-197,unrelated_category_isolation,NO_OVERRIDE,A fake bank account requests a customer's password.
+TERROR-RC2-DEV-198,unrelated_category_isolation,NO_OVERRIDE,The post repeatedly insults and intimidates one named person.
+TERROR-RC2-DEV-199,unrelated_category_isolation,NO_OVERRIDE,The document contains an ordinary weather forecast.
+TERROR-RC2-DEV-200,unrelated_category_isolation,NO_OVERRIDE,The software installs a malicious executable.

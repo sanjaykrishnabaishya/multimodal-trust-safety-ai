@@ -1,0 +1,121 @@
+﻿case_id,group,text,expected_category,terrorism_violation
+TERROR-V1-001,recruitment_and_membership,The account asks users to join a designated terrorist organization. It presents recruitment as a serious call to action.,Terrorism & Extremism,True
+TERROR-V1-002,recruitment_and_membership,The account asks users to join a designated terrorist organization. It asks interested people to respond privately.,Terrorism & Extremism,True
+TERROR-V1-003,recruitment_and_membership,The account asks users to join a designated terrorist organization. It encourages immediate participation.,Terrorism & Extremism,True
+TERROR-V1-004,recruitment_and_membership,The account asks users to join a designated terrorist organization. It is presented as genuine organizational outreach.,Terrorism & Extremism,True
+TERROR-V1-005,recruitment_and_membership,The channel is recruiting volunteers for a banned extremist organization. It presents recruitment as a serious call to action.,Terrorism & Extremism,True
+TERROR-V1-006,recruitment_and_membership,The channel is recruiting volunteers for a banned extremist organization. It asks interested people to respond privately.,Terrorism & Extremism,True
+TERROR-V1-007,recruitment_and_membership,The channel is recruiting volunteers for a banned extremist organization. It encourages immediate participation.,Terrorism & Extremism,True
+TERROR-V1-008,recruitment_and_membership,The channel is recruiting volunteers for a banned extremist organization. It is presented as genuine organizational outreach.,Terrorism & Extremism,True
+TERROR-V1-009,recruitment_and_membership,The post urges followers to become members of a designated terrorist group. It presents recruitment as a serious call to action.,Terrorism & Extremism,True
+TERROR-V1-010,recruitment_and_membership,The post urges followers to become members of a designated terrorist group. It asks interested people to respond privately.,Terrorism & Extremism,True
+TERROR-V1-011,recruitment_and_membership,The post urges followers to become members of a designated terrorist group. It encourages immediate participation.,Terrorism & Extremism,True
+TERROR-V1-012,recruitment_and_membership,The post urges followers to become members of a designated terrorist group. It is presented as genuine organizational outreach.,Terrorism & Extremism,True
+TERROR-V1-013,recruitment_and_membership,The message invites readers to enlist with a banned extremist network. It presents recruitment as a serious call to action.,Terrorism & Extremism,True
+TERROR-V1-014,recruitment_and_membership,The message invites readers to enlist with a banned extremist network. It asks interested people to respond privately.,Terrorism & Extremism,True
+TERROR-V1-015,recruitment_and_membership,The message invites readers to enlist with a banned extremist network. It encourages immediate participation.,Terrorism & Extremism,True
+TERROR-V1-016,recruitment_and_membership,The message invites readers to enlist with a banned extremist network. It is presented as genuine organizational outreach.,Terrorism & Extremism,True
+TERROR-V1-017,recruitment_and_membership,The page directs supporters to register as recruits for a terrorist organization. It presents recruitment as a serious call to action.,Terrorism & Extremism,True
+TERROR-V1-018,recruitment_and_membership,The page directs supporters to register as recruits for a terrorist organization. It asks interested people to respond privately.,Terrorism & Extremism,True
+TERROR-V1-019,recruitment_and_membership,The page directs supporters to register as recruits for a terrorist organization. It encourages immediate participation.,Terrorism & Extremism,True
+TERROR-V1-020,recruitment_and_membership,The page directs supporters to register as recruits for a terrorist organization. It is presented as genuine organizational outreach.,Terrorism & Extremism,True
+TERROR-V1-021,praise_glorification_and_propaganda,The post praises a designated terrorist organization and celebrates its attacks. The praise is direct and approving.,Terrorism & Extremism,True
+TERROR-V1-022,praise_glorification_and_propaganda,The post praises a designated terrorist organization and celebrates its attacks. There is no reporting or condemnation context.,Terrorism & Extremism,True
+TERROR-V1-023,praise_glorification_and_propaganda,The post praises a designated terrorist organization and celebrates its attacks. The message asks others to share the praise.,Terrorism & Extremism,True
+TERROR-V1-024,praise_glorification_and_propaganda,The post praises a designated terrorist organization and celebrates its attacks. The content presents the organization positively.,Terrorism & Extremism,True
+TERROR-V1-025,praise_glorification_and_propaganda,The video caption glorifies a banned extremist organization as heroic. The praise is direct and approving.,Terrorism & Extremism,True
+TERROR-V1-026,praise_glorification_and_propaganda,The video caption glorifies a banned extremist organization as heroic. There is no reporting or condemnation context.,Terrorism & Extremism,True
+TERROR-V1-027,praise_glorification_and_propaganda,The video caption glorifies a banned extremist organization as heroic. The message asks others to share the praise.,Terrorism & Extremism,True
+TERROR-V1-028,praise_glorification_and_propaganda,The video caption glorifies a banned extremist organization as heroic. The content presents the organization positively.,Terrorism & Extremism,True
+TERROR-V1-029,praise_glorification_and_propaganda,The message expresses support for a terrorist group and applauds its violence. The praise is direct and approving.,Terrorism & Extremism,True
+TERROR-V1-030,praise_glorification_and_propaganda,The message expresses support for a terrorist group and applauds its violence. There is no reporting or condemnation context.,Terrorism & Extremism,True
+TERROR-V1-031,praise_glorification_and_propaganda,The message expresses support for a terrorist group and applauds its violence. The message asks others to share the praise.,Terrorism & Extremism,True
+TERROR-V1-032,praise_glorification_and_propaganda,The message expresses support for a terrorist group and applauds its violence. The content presents the organization positively.,Terrorism & Extremism,True
+TERROR-V1-033,praise_glorification_and_propaganda,The account promotes propaganda that celebrates a banned terrorist network. The praise is direct and approving.,Terrorism & Extremism,True
+TERROR-V1-034,praise_glorification_and_propaganda,The account promotes propaganda that celebrates a banned terrorist network. There is no reporting or condemnation context.,Terrorism & Extremism,True
+TERROR-V1-035,praise_glorification_and_propaganda,The account promotes propaganda that celebrates a banned terrorist network. The message asks others to share the praise.,Terrorism & Extremism,True
+TERROR-V1-036,praise_glorification_and_propaganda,The account promotes propaganda that celebrates a banned terrorist network. The content presents the organization positively.,Terrorism & Extremism,True
+TERROR-V1-037,praise_glorification_and_propaganda,The page endorses a designated extremist organization and honors its attackers. The praise is direct and approving.,Terrorism & Extremism,True
+TERROR-V1-038,praise_glorification_and_propaganda,The page endorses a designated extremist organization and honors its attackers. There is no reporting or condemnation context.,Terrorism & Extremism,True
+TERROR-V1-039,praise_glorification_and_propaganda,The page endorses a designated extremist organization and honors its attackers. The message asks others to share the praise.,Terrorism & Extremism,True
+TERROR-V1-040,praise_glorification_and_propaganda,The page endorses a designated extremist organization and honors its attackers. The content presents the organization positively.,Terrorism & Extremism,True
+TERROR-V1-041,funding_resources_and_operational_support,The message requests donations for a designated terrorist organization. It explicitly says the support is for the organization.,Terrorism & Extremism,True
+TERROR-V1-042,funding_resources_and_operational_support,The message requests donations for a designated terrorist organization. The assistance is presented as intentional.,Terrorism & Extremism,True
+TERROR-V1-043,funding_resources_and_operational_support,The message requests donations for a designated terrorist organization. It asks supporters to participate immediately.,Terrorism & Extremism,True
+TERROR-V1-044,funding_resources_and_operational_support,The message requests donations for a designated terrorist organization. There is no educational or journalistic purpose.,Terrorism & Extremism,True
+TERROR-V1-045,funding_resources_and_operational_support,The post distributes recruitment propaganda for a banned extremist group. It explicitly says the support is for the organization.,Terrorism & Extremism,True
+TERROR-V1-046,funding_resources_and_operational_support,The post distributes recruitment propaganda for a banned extremist group. The assistance is presented as intentional.,Terrorism & Extremism,True
+TERROR-V1-047,funding_resources_and_operational_support,The post distributes recruitment propaganda for a banned extremist group. It asks supporters to participate immediately.,Terrorism & Extremism,True
+TERROR-V1-048,funding_resources_and_operational_support,The post distributes recruitment propaganda for a banned extremist group. There is no educational or journalistic purpose.,Terrorism & Extremism,True
+TERROR-V1-049,funding_resources_and_operational_support,The account offers logistical assistance to a designated terrorist network. It explicitly says the support is for the organization.,Terrorism & Extremism,True
+TERROR-V1-050,funding_resources_and_operational_support,The account offers logistical assistance to a designated terrorist network. The assistance is presented as intentional.,Terrorism & Extremism,True
+TERROR-V1-051,funding_resources_and_operational_support,The account offers logistical assistance to a designated terrorist network. It asks supporters to participate immediately.,Terrorism & Extremism,True
+TERROR-V1-052,funding_resources_and_operational_support,The account offers logistical assistance to a designated terrorist network. There is no educational or journalistic purpose.,Terrorism & Extremism,True
+TERROR-V1-053,funding_resources_and_operational_support,The page shares resources intended to support a banned extremist organization. It explicitly says the support is for the organization.,Terrorism & Extremism,True
+TERROR-V1-054,funding_resources_and_operational_support,The page shares resources intended to support a banned extremist organization. The assistance is presented as intentional.,Terrorism & Extremism,True
+TERROR-V1-055,funding_resources_and_operational_support,The page shares resources intended to support a banned extremist organization. It asks supporters to participate immediately.,Terrorism & Extremism,True
+TERROR-V1-056,funding_resources_and_operational_support,The page shares resources intended to support a banned extremist organization. There is no educational or journalistic purpose.,Terrorism & Extremism,True
+TERROR-V1-057,funding_resources_and_operational_support,The channel coordinates material support for a designated terrorist group. It explicitly says the support is for the organization.,Terrorism & Extremism,True
+TERROR-V1-058,funding_resources_and_operational_support,The channel coordinates material support for a designated terrorist group. The assistance is presented as intentional.,Terrorism & Extremism,True
+TERROR-V1-059,funding_resources_and_operational_support,The channel coordinates material support for a designated terrorist group. It asks supporters to participate immediately.,Terrorism & Extremism,True
+TERROR-V1-060,funding_resources_and_operational_support,The channel coordinates material support for a designated terrorist group. There is no educational or journalistic purpose.,Terrorism & Extremism,True
+TERROR-V1-061,unknown_or_unverified_organization,"The post praises an organization, but its identity and legal status are unknown. No official designation source is available.",Uncertain,False
+TERROR-V1-062,unknown_or_unverified_organization,"The post praises an organization, but its identity and legal status are unknown. The evidence is insufficient for automatic classification.",Uncertain,False
+TERROR-V1-063,unknown_or_unverified_organization,"The post praises an organization, but its identity and legal status are unknown. A qualified reviewer must verify the organization.",Uncertain,False
+TERROR-V1-064,unknown_or_unverified_organization,"The post praises an organization, but its identity and legal status are unknown. The name could refer to an unrelated lawful group.",Uncertain,False
+TERROR-V1-065,unknown_or_unverified_organization,The message asks users to join an unnamed group that may be extremist. No official designation source is available.,Uncertain,False
+TERROR-V1-066,unknown_or_unverified_organization,The message asks users to join an unnamed group that may be extremist. The evidence is insufficient for automatic classification.,Uncertain,False
+TERROR-V1-067,unknown_or_unverified_organization,The message asks users to join an unnamed group that may be extremist. A qualified reviewer must verify the organization.,Uncertain,False
+TERROR-V1-068,unknown_or_unverified_organization,The message asks users to join an unnamed group that may be extremist. The name could refer to an unrelated lawful group.,Uncertain,False
+TERROR-V1-069,unknown_or_unverified_organization,The page requests donations for an organization whose designation cannot be verified. No official designation source is available.,Uncertain,False
+TERROR-V1-070,unknown_or_unverified_organization,The page requests donations for an organization whose designation cannot be verified. The evidence is insufficient for automatic classification.,Uncertain,False
+TERROR-V1-071,unknown_or_unverified_organization,The page requests donations for an organization whose designation cannot be verified. A qualified reviewer must verify the organization.,Uncertain,False
+TERROR-V1-072,unknown_or_unverified_organization,The page requests donations for an organization whose designation cannot be verified. The name could refer to an unrelated lawful group.,Uncertain,False
+TERROR-V1-073,unknown_or_unverified_organization,"The account shares a symbol that might belong to a banned organization, but the match is uncertain. No official designation source is available.",Uncertain,False
+TERROR-V1-074,unknown_or_unverified_organization,"The account shares a symbol that might belong to a banned organization, but the match is uncertain. The evidence is insufficient for automatic classification.",Uncertain,False
+TERROR-V1-075,unknown_or_unverified_organization,"The account shares a symbol that might belong to a banned organization, but the match is uncertain. A qualified reviewer must verify the organization.",Uncertain,False
+TERROR-V1-076,unknown_or_unverified_organization,"The account shares a symbol that might belong to a banned organization, but the match is uncertain. The name could refer to an unrelated lawful group.",Uncertain,False
+TERROR-V1-077,unknown_or_unverified_organization,"The content claims to represent an extremist network, but the organization cannot be authenticated. No official designation source is available.",Uncertain,False
+TERROR-V1-078,unknown_or_unverified_organization,"The content claims to represent an extremist network, but the organization cannot be authenticated. The evidence is insufficient for automatic classification.",Uncertain,False
+TERROR-V1-079,unknown_or_unverified_organization,"The content claims to represent an extremist network, but the organization cannot be authenticated. A qualified reviewer must verify the organization.",Uncertain,False
+TERROR-V1-080,unknown_or_unverified_organization,"The content claims to represent an extremist network, but the organization cannot be authenticated. The name could refer to an unrelated lawful group.",Uncertain,False
+TERROR-V1-081,reporting_education_history_and_condemnation,A news report describes recruitment by a banned extremist organization and condemns it. The purpose is reporting or public education.,Normal/Ignore,False
+TERROR-V1-082,reporting_education_history_and_condemnation,"A news report describes recruitment by a banned extremist organization and condemns it. It contains no recruitment, praise, or assistance.",Normal/Ignore,False
+TERROR-V1-083,reporting_education_history_and_condemnation,A news report describes recruitment by a banned extremist organization and condemns it. The organization is discussed critically.,Normal/Ignore,False
+TERROR-V1-084,reporting_education_history_and_condemnation,A news report describes recruitment by a banned extremist organization and condemns it. The content explicitly opposes extremist violence.,Normal/Ignore,False
+TERROR-V1-085,reporting_education_history_and_condemnation,An academic paper studies propaganda produced by a terrorist organization without endorsing it. The purpose is reporting or public education.,Normal/Ignore,False
+TERROR-V1-086,reporting_education_history_and_condemnation,"An academic paper studies propaganda produced by a terrorist organization without endorsing it. It contains no recruitment, praise, or assistance.",Normal/Ignore,False
+TERROR-V1-087,reporting_education_history_and_condemnation,An academic paper studies propaganda produced by a terrorist organization without endorsing it. The organization is discussed critically.,Normal/Ignore,False
+TERROR-V1-088,reporting_education_history_and_condemnation,An academic paper studies propaganda produced by a terrorist organization without endorsing it. The content explicitly opposes extremist violence.,Normal/Ignore,False
+TERROR-V1-089,reporting_education_history_and_condemnation,A documentary explains the history of an extremist movement in a neutral manner. The purpose is reporting or public education.,Normal/Ignore,False
+TERROR-V1-090,reporting_education_history_and_condemnation,"A documentary explains the history of an extremist movement in a neutral manner. It contains no recruitment, praise, or assistance.",Normal/Ignore,False
+TERROR-V1-091,reporting_education_history_and_condemnation,A documentary explains the history of an extremist movement in a neutral manner. The organization is discussed critically.,Normal/Ignore,False
+TERROR-V1-092,reporting_education_history_and_condemnation,A documentary explains the history of an extremist movement in a neutral manner. The content explicitly opposes extremist violence.,Normal/Ignore,False
+TERROR-V1-093,reporting_education_history_and_condemnation,A public-safety message warns people not to donate to terrorist organizations. The purpose is reporting or public education.,Normal/Ignore,False
+TERROR-V1-094,reporting_education_history_and_condemnation,"A public-safety message warns people not to donate to terrorist organizations. It contains no recruitment, praise, or assistance.",Normal/Ignore,False
+TERROR-V1-095,reporting_education_history_and_condemnation,A public-safety message warns people not to donate to terrorist organizations. The organization is discussed critically.,Normal/Ignore,False
+TERROR-V1-096,reporting_education_history_and_condemnation,A public-safety message warns people not to donate to terrorist organizations. The content explicitly opposes extremist violence.,Normal/Ignore,False
+TERROR-V1-097,reporting_education_history_and_condemnation,A court report records allegations of support for a banned organization without praising it. The purpose is reporting or public education.,Normal/Ignore,False
+TERROR-V1-098,reporting_education_history_and_condemnation,"A court report records allegations of support for a banned organization without praising it. It contains no recruitment, praise, or assistance.",Normal/Ignore,False
+TERROR-V1-099,reporting_education_history_and_condemnation,A court report records allegations of support for a banned organization without praising it. The organization is discussed critically.,Normal/Ignore,False
+TERROR-V1-100,reporting_education_history_and_condemnation,A court report records allegations of support for a banned organization without praising it. The content explicitly opposes extremist violence.,Normal/Ignore,False
+TERROR-V1-101,unrelated_category_isolation,People of that protected religion are inferior and should be expelled.,Hate Speech & Discrimination,False
+TERROR-V1-102,unrelated_category_isolation,Every member of that ethnic group should be excluded from public life.,Hate Speech & Discrimination,False
+TERROR-V1-103,unrelated_category_isolation,That protected community is subhuman and should lose its rights.,Hate Speech & Discrimination,False
+TERROR-V1-104,unrelated_category_isolation,Workers of that nationality should be denied employment.,Hate Speech & Discrimination,False
+TERROR-V1-105,unrelated_category_isolation,Followers of that faith are parasites and must be driven away.,Hate Speech & Discrimination,False
+TERROR-V1-106,unrelated_category_isolation,The footage graphically shows a decapitated victim.,Violent Content,False
+TERROR-V1-107,unrelated_category_isolation,The image depicts severe visible blood and bodily injury.,Violent Content,False
+TERROR-V1-108,unrelated_category_isolation,The video shows a person being tortured and mutilated.,Violent Content,False
+TERROR-V1-109,unrelated_category_isolation,The scene contains burned human remains and exposed organs.,Violent Content,False
+TERROR-V1-110,unrelated_category_isolation,The recording shows graphic physical violence against a victim.,Violent Content,False
+TERROR-V1-111,unrelated_category_isolation,"Congratulations, send your OTP now to claim a cash reward.","Spam, Scam & Phishing",False
+TERROR-V1-112,unrelated_category_isolation,Your bank account is blocked; share your password immediately.,"Spam, Scam & Phishing",False
+TERROR-V1-113,unrelated_category_isolation,Transfer a processing fee to unlock your lottery prize.,"Spam, Scam & Phishing",False
+TERROR-V1-114,unrelated_category_isolation,Click this suspicious link and provide your card details.,"Spam, Scam & Phishing",False
+TERROR-V1-115,unrelated_category_isolation,You won a prize; verify the claim by sending your banking credentials.,"Spam, Scam & Phishing",False
+TERROR-V1-116,unrelated_category_isolation,His private email address is john.smith@gmail.com.,Publishing Private Information,False
+TERROR-V1-117,unrelated_category_isolation,The post publishes her personal mobile number without permission.,Publishing Private Information,False
+TERROR-V1-118,unrelated_category_isolation,This message exposes a person's residential address.,Publishing Private Information,False
+TERROR-V1-119,unrelated_category_isolation,The document shares private banking information belonging to another person.,Publishing Private Information,False
+TERROR-V1-120,unrelated_category_isolation,The account posts someone's identity document number publicly.,Publishing Private Information,False

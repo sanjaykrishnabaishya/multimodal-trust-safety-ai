@@ -81,7 +81,7 @@ datasets/public/
 # Generated evaluation outputs and mismatches
 reports/
 backend/evaluation_reports/
-# Private independent holdouts — never publish or use for tuning
+# Private independent holdouts â€” never publish or use for tuning
 datasets/holdout/
 backend/scripts/*holdout*.py
 # Official evidence data requires separate legal review
@@ -103,3 +103,15 @@ backend/scripts/refine_india_evidence_topics.py
 backend/scripts/upgrade_*.py
 backend/scripts/evaluate_india_world_fact_check_challenge.py
 backend/scripts/evaluate_stable_knowledge_benchmark.py
+
+# TrustScopeAI Terrorism RC4 publication boundaries
+# Independent challenges remain private and must never be used for tuning.
+datasets/evaluation/
+backend/scripts/evaluate_*_independent.py
+
+# Wikidata structured community candidates are CC0 and review-routing only.
+# All other downloaded public benchmark datasets remain ignored.
+!datasets/public/
+datasets/public/*
+!datasets/public/wikidata_terrorism_candidates_v1/
+!datasets/public/wikidata_terrorism_candidates_v1/**
