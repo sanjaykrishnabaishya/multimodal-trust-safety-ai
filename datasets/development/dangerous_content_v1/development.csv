@@ -1,0 +1,141 @@
+case_id,group,text,expected_category,dangerous_violation
+DANGER-V1-001,dangerous_stunt_or_challenge_encouragement,The post urges viewers to try this dangerous stunt. It encourages imitation without professional supervision.,Dangerous Content,True
+DANGER-V1-002,dangerous_stunt_or_challenge_encouragement,The post urges viewers to try this dangerous stunt. No protective controls or safety equipment are shown.,Dangerous Content,True
+DANGER-V1-003,dangerous_stunt_or_challenge_encouragement,The post urges viewers to try this dangerous stunt. The call to participate is direct and approving.,Dangerous Content,True
+DANGER-V1-004,dangerous_stunt_or_challenge_encouragement,The post urges viewers to try this dangerous stunt. The creator presents the risk as entertainment.,Dangerous Content,True
+DANGER-V1-005,dangerous_stunt_or_challenge_encouragement,The video tells teenagers to perform this dangerous stunt. It encourages imitation without professional supervision.,Dangerous Content,True
+DANGER-V1-006,dangerous_stunt_or_challenge_encouragement,The video tells teenagers to perform this dangerous stunt. No protective controls or safety equipment are shown.,Dangerous Content,True
+DANGER-V1-007,dangerous_stunt_or_challenge_encouragement,The video tells teenagers to perform this dangerous stunt. The call to participate is direct and approving.,Dangerous Content,True
+DANGER-V1-008,dangerous_stunt_or_challenge_encouragement,The video tells teenagers to perform this dangerous stunt. The creator presents the risk as entertainment.,Dangerous Content,True
+DANGER-V1-009,dangerous_stunt_or_challenge_encouragement,The creator asks followers to do this dangerous challenge. It encourages imitation without professional supervision.,Dangerous Content,True
+DANGER-V1-010,dangerous_stunt_or_challenge_encouragement,The creator asks followers to do this dangerous challenge. No protective controls or safety equipment are shown.,Dangerous Content,True
+DANGER-V1-011,dangerous_stunt_or_challenge_encouragement,The creator asks followers to do this dangerous challenge. The call to participate is direct and approving.,Dangerous Content,True
+DANGER-V1-012,dangerous_stunt_or_challenge_encouragement,The creator asks followers to do this dangerous challenge. The creator presents the risk as entertainment.,Dangerous Content,True
+DANGER-V1-013,dangerous_stunt_or_challenge_encouragement,The caption tells viewers to copy this life threatening stunt. It encourages imitation without professional supervision.,Dangerous Content,True
+DANGER-V1-014,dangerous_stunt_or_challenge_encouragement,The caption tells viewers to copy this life threatening stunt. No protective controls or safety equipment are shown.,Dangerous Content,True
+DANGER-V1-015,dangerous_stunt_or_challenge_encouragement,The caption tells viewers to copy this life threatening stunt. The call to participate is direct and approving.,Dangerous Content,True
+DANGER-V1-016,dangerous_stunt_or_challenge_encouragement,The caption tells viewers to copy this life threatening stunt. The creator presents the risk as entertainment.,Dangerous Content,True
+DANGER-V1-017,dangerous_stunt_or_challenge_encouragement,The stream dares viewers to jump from the roof. It encourages imitation without professional supervision.,Dangerous Content,True
+DANGER-V1-018,dangerous_stunt_or_challenge_encouragement,The stream dares viewers to jump from the roof. No protective controls or safety equipment are shown.,Dangerous Content,True
+DANGER-V1-019,dangerous_stunt_or_challenge_encouragement,The stream dares viewers to jump from the roof. The call to participate is direct and approving.,Dangerous Content,True
+DANGER-V1-020,dangerous_stunt_or_challenge_encouragement,The stream dares viewers to jump from the roof. The creator presents the risk as entertainment.,Dangerous Content,True
+DANGER-V1-021,hazardous_home_experiment_or_explosion,The tutorial encourages a dangerous experiment at home. It targets ordinary viewers rather than trained professionals.,Dangerous Content,True
+DANGER-V1-022,hazardous_home_experiment_or_explosion,The tutorial encourages a dangerous experiment at home. The content gives no warning or controlled setting.,Dangerous Content,True
+DANGER-V1-023,hazardous_home_experiment_or_explosion,The tutorial encourages a dangerous experiment at home. It asks the audience to repeat the action themselves.,Dangerous Content,True
+DANGER-V1-024,hazardous_home_experiment_or_explosion,The tutorial encourages a dangerous experiment at home. The behavior could cause serious injury or property damage.,Dangerous Content,True
+DANGER-V1-025,hazardous_home_experiment_or_explosion,The post advertises instructions to make an explosive. It targets ordinary viewers rather than trained professionals.,Dangerous Content,True
+DANGER-V1-026,hazardous_home_experiment_or_explosion,The post advertises instructions to make an explosive. The content gives no warning or controlled setting.,Dangerous Content,True
+DANGER-V1-027,hazardous_home_experiment_or_explosion,The post advertises instructions to make an explosive. It asks the audience to repeat the action themselves.,Dangerous Content,True
+DANGER-V1-028,hazardous_home_experiment_or_explosion,The post advertises instructions to make an explosive. The behavior could cause serious injury or property damage.,Dangerous Content,True
+DANGER-V1-029,hazardous_home_experiment_or_explosion,The creator tells untrained viewers to cause an explosion. It targets ordinary viewers rather than trained professionals.,Dangerous Content,True
+DANGER-V1-030,hazardous_home_experiment_or_explosion,The creator tells untrained viewers to cause an explosion. The content gives no warning or controlled setting.,Dangerous Content,True
+DANGER-V1-031,hazardous_home_experiment_or_explosion,The creator tells untrained viewers to cause an explosion. It asks the audience to repeat the action themselves.,Dangerous Content,True
+DANGER-V1-032,hazardous_home_experiment_or_explosion,The creator tells untrained viewers to cause an explosion. The behavior could cause serious injury or property damage.,Dangerous Content,True
+DANGER-V1-033,hazardous_home_experiment_or_explosion,The demonstration says do not use safety equipment. It targets ordinary viewers rather than trained professionals.,Dangerous Content,True
+DANGER-V1-034,hazardous_home_experiment_or_explosion,The demonstration says do not use safety equipment. The content gives no warning or controlled setting.,Dangerous Content,True
+DANGER-V1-035,hazardous_home_experiment_or_explosion,The demonstration says do not use safety equipment. It asks the audience to repeat the action themselves.,Dangerous Content,True
+DANGER-V1-036,hazardous_home_experiment_or_explosion,The demonstration says do not use safety equipment. The behavior could cause serious injury or property damage.,Dangerous Content,True
+DANGER-V1-037,hazardous_home_experiment_or_explosion,The post offers instructions to cause bodily harm. It targets ordinary viewers rather than trained professionals.,Dangerous Content,True
+DANGER-V1-038,hazardous_home_experiment_or_explosion,The post offers instructions to cause bodily harm. The content gives no warning or controlled setting.,Dangerous Content,True
+DANGER-V1-039,hazardous_home_experiment_or_explosion,The post offers instructions to cause bodily harm. It asks the audience to repeat the action themselves.,Dangerous Content,True
+DANGER-V1-040,hazardous_home_experiment_or_explosion,The post offers instructions to cause bodily harm. The behavior could cause serious injury or property damage.,Dangerous Content,True
+DANGER-V1-041,dangerous_self_other_or_property_action,The challenge tells a participant to set yourself on fire. The instruction is direct rather than educational.,Dangerous Content,True
+DANGER-V1-042,dangerous_self_other_or_property_action,"The challenge tells a participant to set yourself on fire. There is no prevention, reporting, or condemnation context.",Dangerous Content,True
+DANGER-V1-043,dangerous_self_other_or_property_action,The challenge tells a participant to set yourself on fire. The audience is encouraged to imitate the behavior.,Dangerous Content,True
+DANGER-V1-044,dangerous_self_other_or_property_action,"The challenge tells a participant to set yourself on fire. The foreseeable result is injury, death, or destruction.",Dangerous Content,True
+DANGER-V1-045,dangerous_self_other_or_property_action,The post orders a participant to harm yourself for views. The instruction is direct rather than educational.,Dangerous Content,True
+DANGER-V1-046,dangerous_self_other_or_property_action,"The post orders a participant to harm yourself for views. There is no prevention, reporting, or condemnation context.",Dangerous Content,True
+DANGER-V1-047,dangerous_self_other_or_property_action,The post orders a participant to harm yourself for views. The audience is encouraged to imitate the behavior.,Dangerous Content,True
+DANGER-V1-048,dangerous_self_other_or_property_action,"The post orders a participant to harm yourself for views. The foreseeable result is injury, death, or destruction.",Dangerous Content,True
+DANGER-V1-049,dangerous_self_other_or_property_action,The message tells a participant to hurt yourself on camera. The instruction is direct rather than educational.,Dangerous Content,True
+DANGER-V1-050,dangerous_self_other_or_property_action,"The message tells a participant to hurt yourself on camera. There is no prevention, reporting, or condemnation context.",Dangerous Content,True
+DANGER-V1-051,dangerous_self_other_or_property_action,The message tells a participant to hurt yourself on camera. The audience is encouraged to imitate the behavior.,Dangerous Content,True
+DANGER-V1-052,dangerous_self_other_or_property_action,"The message tells a participant to hurt yourself on camera. The foreseeable result is injury, death, or destruction.",Dangerous Content,True
+DANGER-V1-053,dangerous_self_other_or_property_action,The video encourages viewers to destroy their property dangerously. The instruction is direct rather than educational.,Dangerous Content,True
+DANGER-V1-054,dangerous_self_other_or_property_action,"The video encourages viewers to destroy their property dangerously. There is no prevention, reporting, or condemnation context.",Dangerous Content,True
+DANGER-V1-055,dangerous_self_other_or_property_action,The video encourages viewers to destroy their property dangerously. The audience is encouraged to imitate the behavior.,Dangerous Content,True
+DANGER-V1-056,dangerous_self_other_or_property_action,"The video encourages viewers to destroy their property dangerously. The foreseeable result is injury, death, or destruction.",Dangerous Content,True
+DANGER-V1-057,dangerous_self_other_or_property_action,The creator admits the challenge can kill you but promotes it anyway. The instruction is direct rather than educational.,Dangerous Content,True
+DANGER-V1-058,dangerous_self_other_or_property_action,"The creator admits the challenge can kill you but promotes it anyway. There is no prevention, reporting, or condemnation context.",Dangerous Content,True
+DANGER-V1-059,dangerous_self_other_or_property_action,The creator admits the challenge can kill you but promotes it anyway. The audience is encouraged to imitate the behavior.,Dangerous Content,True
+DANGER-V1-060,dangerous_self_other_or_property_action,"The creator admits the challenge can kill you but promotes it anyway. The foreseeable result is injury, death, or destruction.",Dangerous Content,True
+DANGER-V1-061,safe_reporting_warning_and_prevention,A safety video warns people not to try this dangerous stunt. The purpose is prevention and public education.,Normal/Ignore,False
+DANGER-V1-062,safe_reporting_warning_and_prevention,A safety video warns people not to try this dangerous stunt. It contains no encouragement to imitate the behavior.,Normal/Ignore,False
+DANGER-V1-063,safe_reporting_warning_and_prevention,A safety video warns people not to try this dangerous stunt. Clear safety advice is provided to the audience.,Normal/Ignore,False
+DANGER-V1-064,safe_reporting_warning_and_prevention,A safety video warns people not to try this dangerous stunt. The dangerous behavior is explicitly discouraged.,Normal/Ignore,False
+DANGER-V1-065,safe_reporting_warning_and_prevention,A news report describes a dangerous challenge that caused injuries. The purpose is prevention and public education.,Normal/Ignore,False
+DANGER-V1-066,safe_reporting_warning_and_prevention,A news report describes a dangerous challenge that caused injuries. It contains no encouragement to imitate the behavior.,Normal/Ignore,False
+DANGER-V1-067,safe_reporting_warning_and_prevention,A news report describes a dangerous challenge that caused injuries. Clear safety advice is provided to the audience.,Normal/Ignore,False
+DANGER-V1-068,safe_reporting_warning_and_prevention,A news report describes a dangerous challenge that caused injuries. The dangerous behavior is explicitly discouraged.,Normal/Ignore,False
+DANGER-V1-069,safe_reporting_warning_and_prevention,A school lesson explains why students must not perform this dangerous stunt. The purpose is prevention and public education.,Normal/Ignore,False
+DANGER-V1-070,safe_reporting_warning_and_prevention,A school lesson explains why students must not perform this dangerous stunt. It contains no encouragement to imitate the behavior.,Normal/Ignore,False
+DANGER-V1-071,safe_reporting_warning_and_prevention,A school lesson explains why students must not perform this dangerous stunt. Clear safety advice is provided to the audience.,Normal/Ignore,False
+DANGER-V1-072,safe_reporting_warning_and_prevention,A school lesson explains why students must not perform this dangerous stunt. The dangerous behavior is explicitly discouraged.,Normal/Ignore,False
+DANGER-V1-073,safe_reporting_warning_and_prevention,A public notice says never jump from the roof. The purpose is prevention and public education.,Normal/Ignore,False
+DANGER-V1-074,safe_reporting_warning_and_prevention,A public notice says never jump from the roof. It contains no encouragement to imitate the behavior.,Normal/Ignore,False
+DANGER-V1-075,safe_reporting_warning_and_prevention,A public notice says never jump from the roof. Clear safety advice is provided to the audience.,Normal/Ignore,False
+DANGER-V1-076,safe_reporting_warning_and_prevention,A public notice says never jump from the roof. The dangerous behavior is explicitly discouraged.,Normal/Ignore,False
+DANGER-V1-077,safe_reporting_warning_and_prevention,An article condemns creators who promote setting oneself on fire. The purpose is prevention and public education.,Normal/Ignore,False
+DANGER-V1-078,safe_reporting_warning_and_prevention,An article condemns creators who promote setting oneself on fire. It contains no encouragement to imitate the behavior.,Normal/Ignore,False
+DANGER-V1-079,safe_reporting_warning_and_prevention,An article condemns creators who promote setting oneself on fire. Clear safety advice is provided to the audience.,Normal/Ignore,False
+DANGER-V1-080,safe_reporting_warning_and_prevention,An article condemns creators who promote setting oneself on fire. The dangerous behavior is explicitly discouraged.,Normal/Ignore,False
+DANGER-V1-081,professional_controlled_or_educational_context,A licensed stunt team performs a controlled demonstration with protective equipment. Qualified professionals supervise the activity.,Normal/Ignore,False
+DANGER-V1-082,professional_controlled_or_educational_context,A licensed stunt team performs a controlled demonstration with protective equipment. The audience is told not to imitate the demonstration.,Normal/Ignore,False
+DANGER-V1-083,professional_controlled_or_educational_context,A licensed stunt team performs a controlled demonstration with protective equipment. Protective controls and emergency procedures are clearly described.,Normal/Ignore,False
+DANGER-V1-084,professional_controlled_or_educational_context,A licensed stunt team performs a controlled demonstration with protective equipment. The purpose is safety training rather than entertainment.,Normal/Ignore,False
+DANGER-V1-085,professional_controlled_or_educational_context,A chemistry instructor conducts a supervised experiment in a certified laboratory. Qualified professionals supervise the activity.,Normal/Ignore,False
+DANGER-V1-086,professional_controlled_or_educational_context,A chemistry instructor conducts a supervised experiment in a certified laboratory. The audience is told not to imitate the demonstration.,Normal/Ignore,False
+DANGER-V1-087,professional_controlled_or_educational_context,A chemistry instructor conducts a supervised experiment in a certified laboratory. Protective controls and emergency procedures are clearly described.,Normal/Ignore,False
+DANGER-V1-088,professional_controlled_or_educational_context,A chemistry instructor conducts a supervised experiment in a certified laboratory. The purpose is safety training rather than entertainment.,Normal/Ignore,False
+DANGER-V1-089,professional_controlled_or_educational_context,Firefighters demonstrate fire safety inside a secured training area. Qualified professionals supervise the activity.,Normal/Ignore,False
+DANGER-V1-090,professional_controlled_or_educational_context,Firefighters demonstrate fire safety inside a secured training area. The audience is told not to imitate the demonstration.,Normal/Ignore,False
+DANGER-V1-091,professional_controlled_or_educational_context,Firefighters demonstrate fire safety inside a secured training area. Protective controls and emergency procedures are clearly described.,Normal/Ignore,False
+DANGER-V1-092,professional_controlled_or_educational_context,Firefighters demonstrate fire safety inside a secured training area. The purpose is safety training rather than entertainment.,Normal/Ignore,False
+DANGER-V1-093,professional_controlled_or_educational_context,An engineering class discusses explosion prevention without harmful instructions. Qualified professionals supervise the activity.,Normal/Ignore,False
+DANGER-V1-094,professional_controlled_or_educational_context,An engineering class discusses explosion prevention without harmful instructions. The audience is told not to imitate the demonstration.,Normal/Ignore,False
+DANGER-V1-095,professional_controlled_or_educational_context,An engineering class discusses explosion prevention without harmful instructions. Protective controls and emergency procedures are clearly described.,Normal/Ignore,False
+DANGER-V1-096,professional_controlled_or_educational_context,An engineering class discusses explosion prevention without harmful instructions. The purpose is safety training rather than entertainment.,Normal/Ignore,False
+DANGER-V1-097,professional_controlled_or_educational_context,A workplace trainer explains why safety equipment must always be used. Qualified professionals supervise the activity.,Normal/Ignore,False
+DANGER-V1-098,professional_controlled_or_educational_context,A workplace trainer explains why safety equipment must always be used. The audience is told not to imitate the demonstration.,Normal/Ignore,False
+DANGER-V1-099,professional_controlled_or_educational_context,A workplace trainer explains why safety equipment must always be used. Protective controls and emergency procedures are clearly described.,Normal/Ignore,False
+DANGER-V1-100,professional_controlled_or_educational_context,A workplace trainer explains why safety equipment must always be used. The purpose is safety training rather than entertainment.,Normal/Ignore,False
+DANGER-V1-101,violent_depiction_boundary,The footage contains graphic violence against a victim. It depicts the aftermath rather than instructing viewers to copy an action.,Violent Content,False
+DANGER-V1-102,violent_depiction_boundary,The footage contains graphic violence against a victim. The primary policy issue is the graphic depiction.,Violent Content,False
+DANGER-V1-103,violent_depiction_boundary,"The footage contains graphic violence against a victim. No stunt, experiment, or challenge is promoted.",Violent Content,False
+DANGER-V1-104,violent_depiction_boundary,The footage contains graphic violence against a victim. The visible bodily harm requires the Violence category.,Violent Content,False
+DANGER-V1-105,violent_depiction_boundary,The scene shows a decapitated body. It depicts the aftermath rather than instructing viewers to copy an action.,Violent Content,False
+DANGER-V1-106,violent_depiction_boundary,The scene shows a decapitated body. The primary policy issue is the graphic depiction.,Violent Content,False
+DANGER-V1-107,violent_depiction_boundary,"The scene shows a decapitated body. No stunt, experiment, or challenge is promoted.",Violent Content,False
+DANGER-V1-108,violent_depiction_boundary,The scene shows a decapitated body. The visible bodily harm requires the Violence category.,Violent Content,False
+DANGER-V1-109,violent_depiction_boundary,The image displays visible internal organs after an attack. It depicts the aftermath rather than instructing viewers to copy an action.,Violent Content,False
+DANGER-V1-110,violent_depiction_boundary,The image displays visible internal organs after an attack. The primary policy issue is the graphic depiction.,Violent Content,False
+DANGER-V1-111,violent_depiction_boundary,"The image displays visible internal organs after an attack. No stunt, experiment, or challenge is promoted.",Violent Content,False
+DANGER-V1-112,violent_depiction_boundary,The image displays visible internal organs after an attack. The visible bodily harm requires the Violence category.,Violent Content,False
+DANGER-V1-113,violent_depiction_boundary,The recording shows a person being tortured. It depicts the aftermath rather than instructing viewers to copy an action.,Violent Content,False
+DANGER-V1-114,violent_depiction_boundary,The recording shows a person being tortured. The primary policy issue is the graphic depiction.,Violent Content,False
+DANGER-V1-115,violent_depiction_boundary,"The recording shows a person being tortured. No stunt, experiment, or challenge is promoted.",Violent Content,False
+DANGER-V1-116,violent_depiction_boundary,The recording shows a person being tortured. The visible bodily harm requires the Violence category.,Violent Content,False
+DANGER-V1-117,violent_depiction_boundary,The photograph shows a burned body. It depicts the aftermath rather than instructing viewers to copy an action.,Violent Content,False
+DANGER-V1-118,violent_depiction_boundary,The photograph shows a burned body. The primary policy issue is the graphic depiction.,Violent Content,False
+DANGER-V1-119,violent_depiction_boundary,"The photograph shows a burned body. No stunt, experiment, or challenge is promoted.",Violent Content,False
+DANGER-V1-120,violent_depiction_boundary,The photograph shows a burned body. The visible bodily harm requires the Violence category.,Violent Content,False
+DANGER-V1-121,unrelated_category_isolation,Congratulations! You won a cash prize. Call now to claim it.,"Spam, Scam & Phishing",False
+DANGER-V1-122,unrelated_category_isolation,Share your OTP now to unlock the promised lottery reward.,"Spam, Scam & Phishing",False
+DANGER-V1-123,unrelated_category_isolation,Click this suspicious link to verify your bank password.,"Spam, Scam & Phishing",False
+DANGER-V1-124,unrelated_category_isolation,Transfer a processing fee to receive the fake prize.,"Spam, Scam & Phishing",False
+DANGER-V1-125,unrelated_category_isolation,His private email address is john.smith@gmail.com.,Publishing Private Information,False
+DANGER-V1-126,unrelated_category_isolation,The post publishes her personal phone number 9876543210.,Publishing Private Information,False
+DANGER-V1-127,unrelated_category_isolation,The message exposes PAN ABCDE1234F without consent.,Publishing Private Information,False
+DANGER-V1-128,unrelated_category_isolation,Someone posted Aadhaar number 1234 5678 9012 publicly.,Publishing Private Information,False
+DANGER-V1-129,unrelated_category_isolation,People of this protected religion are inferior and should be expelled.,Hate Speech & Discrimination,False
+DANGER-V1-130,unrelated_category_isolation,That protected ethnic group is not human.,Hate Speech & Discrimination,False
+DANGER-V1-131,unrelated_category_isolation,Deny jobs to them because of their nationality.,Hate Speech & Discrimination,False
+DANGER-V1-132,unrelated_category_isolation,All members of that protected group are criminals.,Hate Speech & Discrimination,False
+DANGER-V1-133,unrelated_category_isolation,Deliberately desecrate their sacred religious symbol.,Religiously Offensive Content,False
+DANGER-V1-134,unrelated_category_isolation,Destroy the holy scripture specifically to insult the faith.,Religiously Offensive Content,False
+DANGER-V1-135,unrelated_category_isolation,Deface the place of worship to mock the religion.,Religiously Offensive Content,False
+DANGER-V1-136,unrelated_category_isolation,Use obscene insults against the community's prophet.,Religiously Offensive Content,False
+DANGER-V1-137,unrelated_category_isolation,I will keep contacting you after you told me to stop.,Cyberbullying & Harassment,False
+DANGER-V1-138,unrelated_category_isolation,Everyone should repeatedly message and humiliate this person.,Cyberbullying & Harassment,False
+DANGER-V1-139,unrelated_category_isolation,I will post insults about you every day.,Cyberbullying & Harassment,False
+DANGER-V1-140,unrelated_category_isolation,The group coordinates repeated harassment of one target.,Cyberbullying & Harassment,False

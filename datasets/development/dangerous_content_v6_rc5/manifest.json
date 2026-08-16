@@ -1,0 +1,23 @@
+{
+  "candidate": "dangerous-content-v6-rc5-development",
+  "records": 320,
+  "source": "synthetic high-level policy concepts",
+  "prior_development_text_overlap": 0,
+  "rc4_independent_aggregate_used_as_development_signal": true,
+  "rc4_independent_aggregate_signal": {
+    "dangerous_precision": 0.993,
+    "dangerous_recall": 0.8875,
+    "minimum_group_accuracy": 0.8125,
+    "weak_aggregate_families": [
+      "novel_mixed_order_promotion",
+      "novel_passive_dangerous_advocacy",
+      "novel_direct_dangerous_advocacy"
+    ]
+  },
+  "rc4_holdout_cases_read": false,
+  "rc4_holdout_predictions_or_mismatches_read": false,
+  "external_or_restricted_data_used": false,
+  "actionable_harm_instructions_stored": false,
+  "connected_to_live_moderation": false,
+  "automatic_enforcement_allowed": false
+}

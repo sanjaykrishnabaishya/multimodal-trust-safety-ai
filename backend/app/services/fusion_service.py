@@ -23,6 +23,10 @@ from app.services.cyberbullying_rc2_service import (
     analyze_cyberbullying_rc2,
     apply_cyberbullying_rc2_fusion,
 )
+from app.services.cyberbullying_depiction_boundary_service import (
+    analyze_cyberbullying_depiction_boundary,
+    apply_graphic_depiction_review_boundary,
+)
 from app.services.hate_speech_v7_service import (
     analyze_hate_speech_v7,
     apply_hate_speech_v7_fusion,
@@ -34,6 +38,10 @@ from app.services.religiously_offensive_v7_rc6_fusion import (
 from app.services.terrorism_extremism_v6_rc4_fusion import (
     analyze_terrorism_extremism_v6_rc4_for_fusion,
     apply_terrorism_extremism_v6_rc4_fusion,
+)
+from app.services.dangerous_content_v6_rc5_fusion import (
+    analyze_dangerous_content_v6_rc5_for_fusion,
+    apply_dangerous_content_v6_rc5_fusion,
 )
 from app.services.violent_content_service import (
     analyze_violent_content,
@@ -714,6 +722,9 @@ def fuse_moderation_decision(
         text,
         input_sources,
     )
+    cyberbullying_depiction_boundary_analysis = (
+        analyze_cyberbullying_depiction_boundary(text)
+    )
     hate_speech_v7_analysis = analyze_hate_speech_v7(
         text,
         input_sources,
@@ -727,6 +738,13 @@ def fuse_moderation_decision(
 
     terrorism_extremism_v6_rc4_analysis = (
         analyze_terrorism_extremism_v6_rc4_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
+    dangerous_content_v6_rc5_analysis = (
+        analyze_dangerous_content_v6_rc5_for_fusion(
             text,
             input_sources,
         )
@@ -1282,6 +1300,16 @@ def fuse_moderation_decision(
                     [],
                 )
             )
+            or (
+                cyberbullying_rc2_analysis.get("predicted_label")
+                == "targeted_threat"
+                and bool(
+                    cyberbullying_depiction_boundary_analysis.get(
+                        "confirmed_third_person_depiction",
+                        False,
+                    )
+                )
+            )
         ),
     )
     category = str(cyberbullying_rc2_fusion["category"])
@@ -1295,6 +1323,33 @@ def fuse_moderation_decision(
     matched_signals = list(cyberbullying_rc2_fusion["matched_signals"])
     cyberbullying_rc2_applied = bool(
         cyberbullying_rc2_fusion["decision_applied"]
+    )
+
+    graphic_depiction_review_boundary = (
+        apply_graphic_depiction_review_boundary(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=cyberbullying_depiction_boundary_analysis,
+        )
+    )
+    category = str(graphic_depiction_review_boundary["category"])
+    severity = str(graphic_depiction_review_boundary["severity"])
+    action = str(graphic_depiction_review_boundary["action"])
+    confidence = float(graphic_depiction_review_boundary["confidence"])
+    human_review_required = bool(
+        graphic_depiction_review_boundary["human_review_required"]
+    )
+    reason = str(graphic_depiction_review_boundary["reason"])
+    matched_signals = list(
+        graphic_depiction_review_boundary["matched_signals"]
+    )
+    graphic_depiction_review_applied = bool(
+        graphic_depiction_review_boundary["decision_applied"]
     )
 
     hate_speech_v7_fusion = apply_hate_speech_v7_fusion(
@@ -1380,6 +1435,33 @@ def fuse_moderation_decision(
     )
     terrorism_extremism_v6_rc4_applied = bool(
         terrorism_extremism_v6_rc4_fusion["decision_applied"]
+    )
+
+    dangerous_content_v6_rc5_fusion = (
+        apply_dangerous_content_v6_rc5_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=dangerous_content_v6_rc5_analysis,
+        )
+    )
+    category = str(dangerous_content_v6_rc5_fusion["category"])
+    severity = str(dangerous_content_v6_rc5_fusion["severity"])
+    action = str(dangerous_content_v6_rc5_fusion["action"])
+    confidence = float(dangerous_content_v6_rc5_fusion["confidence"])
+    human_review_required = bool(
+        dangerous_content_v6_rc5_fusion["human_review_required"]
+    )
+    reason = str(dangerous_content_v6_rc5_fusion["reason"])
+    matched_signals = list(
+        dangerous_content_v6_rc5_fusion["matched_signals"]
+    )
+    dangerous_content_v6_rc5_applied = bool(
+        dangerous_content_v6_rc5_fusion["decision_applied"]
     )
 
     fact_check_result: dict[str, Any]
@@ -1566,6 +1648,11 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["graphic_depiction_review_boundary"]
+                if graphic_depiction_review_applied
+                else []
+            )
+            + (
                 ["hate_speech_v7_rc1"]
                 if hate_speech_v7_applied
                 else []
@@ -1578,6 +1665,11 @@ def fuse_moderation_decision(
             + (
                 ["terrorism_extremism_v6_rc4"]
                 if terrorism_extremism_v6_rc4_applied
+                else []
+            )
+            + (
+                ["dangerous_content_v6_rc5"]
+                if dangerous_content_v6_rc5_applied
                 else []
             )
             + (
@@ -1710,10 +1802,27 @@ def fuse_moderation_decision(
             terrorism_extremism_v6_rc4_fusion["fusion_status"]
         ),
         "terrorism_extremism_automatic_enforcement_allowed": False,
+        "dangerous_content_v6_rc5_used": (
+            dangerous_content_v6_rc5_applied
+        ),
+        "dangerous_content_v6_rc5": dangerous_content_v6_rc5_analysis,
+        "dangerous_content_v6_rc5_fusion_status": (
+            dangerous_content_v6_rc5_fusion["fusion_status"]
+        ),
+        "dangerous_content_automatic_enforcement_allowed": False,
         "cyberbullying_rc2_used": cyberbullying_rc2_applied,
         "cyberbullying_rc2": cyberbullying_rc2_analysis,
         "cyberbullying_rc2_fusion_status": (
             cyberbullying_rc2_fusion["fusion_status"]
+        ),
+        "cyberbullying_depiction_boundary": (
+            cyberbullying_depiction_boundary_analysis
+        ),
+        "graphic_depiction_review_boundary_used": (
+            graphic_depiction_review_applied
+        ),
+        "graphic_depiction_review_boundary_status": (
+            graphic_depiction_review_boundary["boundary_status"]
         ),
         "violent_content_specialist_used": (
             violent_content_decision_applied

@@ -1,0 +1,128 @@
+{
+  "candidate": "dangerous-content-v6-rc5",
+  "component": "Dangerous Content",
+  "candidate_type": "frozen RC4 policy plus guarded broader-grammar recovery",
+  "frozen_at_utc": "2026-08-16T14:47:41.031099+00:00",
+  "development_gate_passed": true,
+  "development_metrics": {
+    "records": 320,
+    "accuracy": 0.953125,
+    "dangerous_precision": 1.0,
+    "dangerous_recall": 0.90625,
+    "safe_specificity": 1.0,
+    "f1": 0.9508196721311475,
+    "minimum_group_accuracy": 0.85,
+    "frozen_rc4_accepts": 128,
+    "rc5_policy_recoveries": 17,
+    "action_contract_failures": 0,
+    "category_mix_failures": 0,
+    "processing_errors": 0
+  },
+  "base_dependency": {
+    "candidate": "dangerous-content-v5-rc4",
+    "source_and_dependency_hashes_verified": true,
+    "independent_gate_passed": false,
+    "used_only_inside_rc5_guards": true
+  },
+  "rc4_aggregate_used_as_development_signal": true,
+  "rc4_holdout_cases_or_predictions_used": false,
+  "permitted_active_output": "Dangerous Content only",
+  "all_other_decisions": "No Dangerous Content override",
+  "safe_reporting_and_professional_veto_locked": true,
+  "benign_activity_without_hazard_veto_locked": true,
+  "established_category_owner_guard_locked": true,
+  "recovery_requires_advocacy_participation_audience_and_hazard": true,
+  "external_data_used": false,
+  "restricted_data_used": false,
+  "actionable_harm_instructions_stored": false,
+  "artifacts": [
+    {
+      "relative_path": "source_snapshot/dangerous_content_v6_rc5_service.py",
+      "size_bytes": 9220,
+      "sha256": "1c2cd7d2bc76d62c057d4f5282d9322f98fddf6cb1110d79d2810e46eeb9c094"
+    },
+    {
+      "relative_path": "source_snapshot/evaluate_dangerous_content_v6_rc5_development.py",
+      "size_bytes": 18861,
+      "sha256": "57a5b547af3576f283831123e5e967ad73a11a58aac9ccc253157320db41de9f"
+    },
+    {
+      "relative_path": "source_snapshot/freeze_dangerous_content_v6_rc5.py",
+      "size_bytes": 15347,
+      "sha256": "6c8edbde66b61b714ef0f143ae3aacf99c4f7cf34cf6caaef36cef9a2c0632aa"
+    },
+    {
+      "relative_path": "development/development.csv",
+      "size_bytes": 83959,
+      "sha256": "31b8af4c3c42357e1a4b8a4387d5aaaf7c2251369b082f169db4e1d79c9bdc44"
+    },
+    {
+      "relative_path": "development/manifest.json",
+      "size_bytes": 827,
+      "sha256": "4ad9f4bce2f9ace714da44a963efaef23f7eaedd618c4b24c9203621446683d9"
+    },
+    {
+      "relative_path": "development_evidence/report.json",
+      "size_bytes": 2302,
+      "sha256": "6101d6fada311939e8ca76ac14dd22750e6e6ffc2d1d63b1976ab760d64f02f2"
+    },
+    {
+      "relative_path": "dependency_snapshot/rc4_manifest.json",
+      "size_bytes": 4993,
+      "sha256": "d733389a81ce29ae0e5e963642470c1d6016df84d24e6baf6405aa43aeca9ee1"
+    },
+    {
+      "relative_path": "dependency_snapshot/rc4_verdict.json",
+      "size_bytes": 841,
+      "sha256": "30ecaa7274eacd17461dc54a4de406f98e85fdaad4c90812cce6951194e29c8c"
+    },
+    {
+      "relative_path": "dependency_snapshot/dangerous_content_v5_rc4_service.py",
+      "size_bytes": 10580,
+      "sha256": "f0e5763707fffd60b890d6cbe99b840095fef92023940b6d89ab80c8de400a5b"
+    },
+    {
+      "relative_path": "dependency_snapshot/dangerous_content_v4_rc3_service.py",
+      "size_bytes": 8190,
+      "sha256": "b5cee6394e39a52e85a762ce3e8dc26d78d2608ed79731cfe4d2142cf9f171e5"
+    },
+    {
+      "relative_path": "dependency_snapshot/classifier_bundle.joblib",
+      "size_bytes": 9805,
+      "sha256": "96264005483e76bbdd0b58574e7164b3e86913bc7e4c5e75e5d5a66a93a2099e"
+    },
+    {
+      "relative_path": "dependency_snapshot/rc3_config.json",
+      "size_bytes": 2823,
+      "sha256": "de138240811d02810fd4983e4be94545cf91df54571543a0c67ec6125a40e59d"
+    }
+  ],
+  "independent_gate_frozen_before_holdout": {
+    "minimum_accuracy": 0.9,
+    "minimum_dangerous_precision": 0.92,
+    "minimum_dangerous_recall": 0.9,
+    "minimum_safe_specificity": 0.97,
+    "minimum_f1": 0.9,
+    "minimum_group_accuracy": 0.85,
+    "maximum_action_contract_failures": 0,
+    "maximum_category_mix_failures": 0,
+    "maximum_processing_errors": 0,
+    "require_zero_development_overlap": true,
+    "require_frozen_source_hashes": true,
+    "require_no_raw_holdout_storage": true
+  },
+  "independent_holdout_created_before_freeze": false,
+  "independent_holdout_used_before_freeze": false,
+  "independent_holdout_may_modify_rc5": false,
+  "independently_validated": false,
+  "eligible_for_guarded_live_integration": false,
+  "connected_to_live_moderation": false,
+  "automatic_enforcement_allowed": false,
+  "required_action_if_later_integrated": "Remove and send for human review",
+  "evaluation_reporting_contract": {
+    "store_raw_holdout_text": false,
+    "store_individual_predictions": false,
+    "print_individual_predictions": false,
+    "report_aggregate_metrics_only": true
+  }
+}

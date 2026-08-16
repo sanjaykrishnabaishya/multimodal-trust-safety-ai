@@ -1,0 +1,18 @@
+{
+  "candidate": "dangerous-content-v5-rc4-development",
+  "records": 280,
+  "source": "synthetic published-policy concepts",
+  "rc3_development_text_overlap": 0,
+  "rc3_independent_aggregate_used_as_development_signal": true,
+  "rc3_independent_aggregate_signal": {
+    "dangerous_precision": 0.9804,
+    "dangerous_recall": 0.8333,
+    "minimum_group_accuracy": 0.8
+  },
+  "rc3_holdout_cases_read": false,
+  "rc3_holdout_predictions_or_mismatches_read": false,
+  "external_or_restricted_data_used": false,
+  "actionable_harm_instructions_stored": false,
+  "connected_to_live_moderation": false,
+  "automatic_enforcement_allowed": false
+}

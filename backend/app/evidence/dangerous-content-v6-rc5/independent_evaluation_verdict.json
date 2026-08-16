@@ -1,0 +1,15 @@
+{
+  "candidate": "dangerous-content-v6-rc5",
+  "status": "Passed synthetic independent readiness gate",
+  "challenge_version": "2026.08-dangerous-content-v6-rc5-independent",
+  "challenge_sha256": "46dff895485ab4267ecc463e36d5ccc774952c65acd05ca3900f8fcff3a2bcd3",
+  "passed_synthetic_independent_readiness_gate": true,
+  "eligible_for_guarded_live_integration": true,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "candidate_may_be_modified_using_this_holdout": false,
+  "raw_challenge_text_stored": false,
+  "individual_predictions_stored": false,
+  "report_path": "C:\\Users\\Asus\\OneDrive\\Desktop\\trust-safety-ai\\reports\\evaluation\\dangerous_content\\v6_rc5_independent\\aggregate_report.json",
+  "evidence_scope": "synthetic evidence, not external or real-world accuracy"
+}

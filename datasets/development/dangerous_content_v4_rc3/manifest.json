@@ -1,0 +1,32 @@
+{
+  "candidate": "dangerous-content-v4-rc3-development",
+  "training_records": 456,
+  "validation_records": 264,
+  "training_label_counts": {
+    "dangerous_advocacy": 120,
+    "safe_warning": 120,
+    "professional_controlled": 120,
+    "safe_or_other": 96
+  },
+  "validation_label_counts": {
+    "dangerous_advocacy": 72,
+    "safe_warning": 72,
+    "professional_controlled": 72,
+    "safe_or_other": 48
+  },
+  "train_validation_text_overlap": 0,
+  "train_validation_family_overlap": 0,
+  "paired_contrastive_hazard_contexts": true,
+  "existing_category_owner_guard": true,
+  "semantic_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "semantic_model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "source": "paired synthetic policy concepts",
+  "external_or_restricted_data_used": false,
+  "actionable_harm_instructions_stored": false,
+  "rc1_holdout_cases_read": false,
+  "rc1_predictions_or_mismatches_read": false,
+  "v3_rc2_aggregate_result_used_as_development_signal": true,
+  "v3_rc2_validation_cases_reused": false,
+  "connected_to_live_moderation": false,
+  "automatic_enforcement_allowed": false
+}
