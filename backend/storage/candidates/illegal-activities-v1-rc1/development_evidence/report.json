@@ -1,0 +1,75 @@
+{
+  "accuracy": 1.0,
+  "action_contract_failures": 0,
+  "actionable_harm_instructions_stored": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": true,
+  "dataset_sha256": "bc4513b3df479371e6f11e72f39eec90cf8a241a81bb5b5961c8c9e33c58b56a",
+  "external_or_restricted_data_used": false,
+  "gates": {
+    "accuracy": true,
+    "action_contract": true,
+    "illegal_precision": true,
+    "illegal_recall": true,
+    "minimum_group_accuracy": true,
+    "processing_contract": true,
+    "safe_specificity": true
+  },
+  "group_results": {
+    "commercial_services_and_protected_symbols": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "records": 40
+    },
+    "controlled_goods_and_medicines": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "records": 40
+    },
+    "fiction_history_and_research_boundary": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "records": 40
+    },
+    "gambling_and_financial_facilitation": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "records": 40
+    },
+    "jurisdiction_licensing_and_facilitation_uncertain": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "records": 40
+    },
+    "legitimate_jobs_commerce_and_professional_context": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "records": 40
+    },
+    "safe_reporting_education_and_prevention": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "records": 40
+    },
+    "weapons_documents_and_counterfeit": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "records": 40
+    }
+  },
+  "illegal_precision": 1.0,
+  "illegal_recall": 1.0,
+  "label_counts": {
+    "Illegal Activities": 160,
+    "Normal/Ignore": 120,
+    "Uncertain": 40
+  },
+  "minimum_group_accuracy": 1.0,
+  "openrouter_used": false,
+  "passed_development_gate": true,
+  "processing_errors": 0,
+  "records": 320,
+  "safe_specificity": 1.0,
+  "unique_texts": 320,
+  "version": "2026.08-illegal-activities-v1-ai-advisory-development"
+}

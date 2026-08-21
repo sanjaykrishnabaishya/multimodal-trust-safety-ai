@@ -1,0 +1,47 @@
+{
+  "version": "2026.08-illegal-activities-v1",
+  "jurisdiction_scope": "India-first product policy with jurisdiction review",
+  "automatic_enforcement_allowed": false,
+  "policy_evidence": [
+    {
+      "policy_id": "ILLEGAL-CONTROLLED-GOODS",
+      "family": "controlled_substances",
+      "rule": "A sale, purchase, delivery, or promotion signal involving illegal drugs, controlled substances, or an unapproved medicine is a review-only Illegal Activities candidate."
+    },
+    {
+      "policy_id": "ILLEGAL-WEAPONS",
+      "family": "weapons",
+      "rule": "A transaction or distribution signal involving an unlicensed firearm or prohibited weapon is a review-only Illegal Activities candidate."
+    },
+    {
+      "policy_id": "ILLEGAL-GAMBLING",
+      "family": "gambling",
+      "rule": "Promotion or facilitation of explicitly illegal or unlicensed gambling is a review-only candidate; ordinary gaming and licensed activity are not inferred to be illegal."
+    },
+    {
+      "policy_id": "ILLEGAL-SEXUAL-SERVICES",
+      "family": "sexual_services",
+      "rule": "A commercial facilitation signal for prohibited sexual services is a review-only candidate. Child-risk or coercion indicators belong to a higher-priority safety process."
+    },
+    {
+      "policy_id": "ILLEGAL-FORGERY-FINANCIAL",
+      "family": "forgery_financial",
+      "rule": "Offers to provide forged identity documents, counterfeit currency, or money-laundering services are review-only Illegal Activities candidates."
+    },
+    {
+      "policy_id": "ILLEGAL-PROTECTED-SYMBOLS",
+      "family": "protected_symbols",
+      "rule": "Possible misuse of a protected national emblem, flag, or government name requires jurisdiction-aware human review and is never a final legal determination."
+    },
+    {
+      "policy_id": "ILLEGAL-SAFE-CONTEXT",
+      "family": "safe_context",
+      "rule": "News, documentary, education, research, warning, prevention, condemnation, and clearly fictional discussion do not become Illegal Activities without a current facilitation or transaction signal."
+    },
+    {
+      "policy_id": "ILLEGAL-JURISDICTION",
+      "family": "jurisdiction_uncertain",
+      "rule": "When legality, licensing, location, or facilitation is uncertain, return an Uncertain review state rather than declaring conduct legal or illegal."
+    }
+  ]
+}

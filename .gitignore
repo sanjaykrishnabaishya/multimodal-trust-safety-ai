@@ -111,6 +111,18 @@ backend/scripts/evaluate_stable_knowledge_benchmark.py
 datasets/evaluation/
 backend/scripts/evaluate_*_independent.py
 
+# Illegal Activities V1 RC1 publication boundary
+# The synthetic aggregate evaluator and frozen candidate are publishable.
+# Raw challenge text, individual predictions, and general evaluation outputs
+# remain excluded by the rules above.
+!backend/scripts/evaluate_illegal_activities_v1_rc1_independent.py
+!backend/storage/
+backend/storage/*
+!backend/storage/candidates/
+backend/storage/candidates/*
+!backend/storage/candidates/illegal-activities-v1-rc1/
+!backend/storage/candidates/illegal-activities-v1-rc1/**
+
 # Wikidata structured community candidates are CC0 and review-routing only.
 # All other downloaded public benchmark datasets remain ignored.
 !datasets/public/

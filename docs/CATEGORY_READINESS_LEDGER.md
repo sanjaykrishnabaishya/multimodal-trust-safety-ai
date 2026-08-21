@@ -41,7 +41,7 @@ The frontend production build and static checks also passed.
 | Sexual Harassment | 100.00% precision, 93.33% recall | 60 positive-support records within the 240-record challenge | Passed the shared synthetic category gate; ownership must take precedence over generic sexual content. |
 | Cyberbullying & Harassment | 89.59% selective accuracy at 89.67% coverage | 300 external | Passed independent selective gate; uncertain results go to review. |
 | Invasion of Privacy | No dedicated independent evaluation | 0 | Not ready; next new category planned. |
-| Illegal Activities | 100.00% synthetic development policy accuracy | 320 unique | Development gate passed; OpenRouter is schema-constrained advisory evidence only. Independent readiness remains untested. |
+| Illegal Activities | 96.00% synthetic independent binary accuracy; 90.00% recall | 500 unique | RC1 failed the locked action/category contracts; it is not independently ready and may not be modified using the holdout. |
 | Publishing Private Information | 91.45% recall on a positive-only external synthetic set | 2,000 | Useful detector evidence, but no negative-set specificity gate; consent/ownership still requires review. |
 | Identity Theft & Impersonation | 58.33% synthetic independent accuracy, 20.83% recall | 192 | Failed readiness gate. |
 | Misinformation | 41.67% exact accuracy; 75.00% selective accuracy at 11.11% coverage | 36 | Failed readiness gate; insufficient evidence must remain Uncertain. |
@@ -82,7 +82,7 @@ The frontend production build and static checks also passed.
   validated visual evidence, no explicit sexual activity, and no child-risk
   conflict. Film or television identity never creates Allow.
 
-## Current development category: Illegal Activities
+## Latest completed category phase: Illegal Activities RC1
 
 The V1 policy and AI-advisory development contract covers controlled goods and
 unapproved medicines, weapons/documents/counterfeit material,
@@ -101,8 +101,30 @@ and a child-risk case were stopped locally before provider use. No raw provider
 output was stored and the model retained no enforcement authority. This smoke
 contract tests execution and safety boundaries, not accuracy.
 
-The next Illegal Activities phase is candidate freeze followed by a new hidden
-independent challenge. Automatic enforcement remains disabled.
+RC1 was frozen before its independent challenge. The freeze locked the local
+service, policy, development evaluator, dataset, OpenRouter adapter, and a gate
+requiring more than 85% accuracy, precision, recall, specificity, and minimum
+group accuracy. The external model identifier is recorded, but remote model
+weights are not claimed as frozen and the external advisory has no category or
+enforcement authority.
+
+The new aggregate-only challenge contained 500 unique synthetic records with
+zero development overlap. Binary accuracy was 96.00%, Illegal Activities
+precision was 100.00%, recall was 90.00%, safe specificity was 100.00%, F1 was
+94.74%, and minimum group accuracy was 90.00%. Exact category agreement derived
+from the aggregate group totals was 95.00%.
+
+RC1 nevertheless failed its independent readiness gate because 25 cases broke
+the exact category and action contracts. The candidate remains frozen, cannot
+be tuned using holdout cases or predictions, is ineligible for a new guarded
+integration claim, and retains no automatic-enforcement authority.
+
+The next Illegal Activities phase is V2/RC2 development using only the
+aggregate failure signals: transaction-family recall and safe fiction/research
+boundary generalization. Individual RC1 cases, predictions, and mismatches will
+not be inspected or reused. A new candidate will require a fresh locked gate
+and a new non-overlapping independent challenge. Child Exploitation remains the
+priority category after Illegal Activities passes independent readiness.
 
 ## Priority category after Illegal Activities: Child Exploitation
 

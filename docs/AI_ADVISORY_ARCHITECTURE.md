@@ -44,11 +44,15 @@ contract. Changing the model requires rerunning that contract.
 ## Evaluation boundary
 
 The V1 development contract uses 320 unique, safe synthetic records across
-eight policy families. It is development evidence only. It does not establish
-external or real-world accuracy. A frozen candidate and a new independent
-holdout are required before Illegal Activities can be called independently
-ready.
+eight policy families. RC1 was then frozen before a new 500-record aggregate-
+only challenge with zero development overlap was created.
 
-The planned independent gate requires at least 90% accuracy, 90% precision,
-85% recall, 95% safe specificity, 85% minimum family accuracy, and zero action,
-category-owner, privacy, or processing contract failures.
+RC1 achieved 96.00% binary accuracy, 100.00% Illegal Activities precision,
+90.00% recall, 100.00% safe specificity, 94.74% F1, and 90.00% minimum group
+accuracy. It failed readiness because 25 exact-category/action contract errors
+exceeded the locked zero-failure limit. RC1 remains frozen and may not be tuned
+from holdout cases or predictions.
+
+These results are synthetic evidence only, not external or real-world
+accuracy. OpenRouter was not used in the independent accuracy challenge and
+retains no category or enforcement authority.

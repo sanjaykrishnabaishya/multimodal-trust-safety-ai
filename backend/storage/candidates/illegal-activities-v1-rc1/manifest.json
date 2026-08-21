@@ -1,0 +1,98 @@
+{
+  "candidate": "illegal-activities-v1-rc1",
+  "component": "Illegal Activities",
+  "candidate_type": "review-only local policy plus non-authoritative AI advisory",
+  "frozen_at_utc": "2026-08-21T13:27:56.427502+00:00",
+  "development_gate_passed": true,
+  "development_metrics": {
+    "records": 320,
+    "unique_texts": 320,
+    "accuracy": 1.0,
+    "illegal_precision": 1.0,
+    "illegal_recall": 1.0,
+    "safe_specificity": 1.0,
+    "minimum_group_accuracy": 1.0,
+    "action_contract_failures": 0,
+    "processing_errors": 0
+  },
+  "artifacts": [
+    {
+      "relative_path": "source_snapshot/illegal_activities_v1_service.py",
+      "size_bytes": 10754,
+      "sha256": "05177f1bf1f332034ee54452507307de580f136ce9c34b02d1c1f57ca1b09c3c"
+    },
+    {
+      "relative_path": "source_snapshot/openrouter_advisory_service.py",
+      "size_bytes": 13987,
+      "sha256": "1900f784a523d2694a7896ca04ce64e26973730bd239cf6afd4a13bc6539cf26"
+    },
+    {
+      "relative_path": "policy_snapshot/illegal_activities_v1_policy.json",
+      "size_bytes": 2346,
+      "sha256": "f23611be2e47260310df140f3b5cdfef33d5f99da6afa8c2636bd746affe9d9f"
+    },
+    {
+      "relative_path": "source_snapshot/evaluate_illegal_activities_v1_development.py",
+      "size_bytes": 14988,
+      "sha256": "e9b5f2e5eae2f52c44a37eaafa348032fb88d6672b425582757d946c34dab4fc"
+    },
+    {
+      "relative_path": "source_snapshot/freeze_illegal_activities_v1_rc1.py",
+      "size_bytes": 10833,
+      "sha256": "99f1d711069b61bf7668fc4decf2c35dbf9f7d047bd363ccf0f6a004bfa53b20"
+    },
+    {
+      "relative_path": "development/development.csv",
+      "size_bytes": 59764,
+      "sha256": "bc4513b3df479371e6f11e72f39eec90cf8a241a81bb5b5961c8c9e33c58b56a"
+    },
+    {
+      "relative_path": "development_evidence/report.json",
+      "size_bytes": 2020,
+      "sha256": "912e59337288b5ac460479c69cad957edc8667c148414ac25ec6d64416158ee7"
+    }
+  ],
+  "independent_gate_frozen_before_holdout": {
+    "minimum_accuracy": 0.9,
+    "minimum_illegal_precision": 0.92,
+    "minimum_illegal_recall": 0.9,
+    "minimum_safe_specificity": 0.95,
+    "minimum_f1": 0.9,
+    "minimum_group_accuracy": 0.86,
+    "maximum_action_contract_failures": 0,
+    "maximum_category_mix_failures": 0,
+    "maximum_authority_contract_failures": 0,
+    "maximum_processing_errors": 0,
+    "require_zero_development_overlap": true,
+    "require_frozen_source_hashes": true,
+    "require_no_raw_holdout_storage": true
+  },
+  "independent_holdout_created_before_freeze": false,
+  "independent_holdout_used_before_freeze": false,
+  "independent_holdout_may_modify_rc1": false,
+  "openrouter_bulk_evaluation_used": false,
+  "openrouter_model_identifier": "openai/gpt-oss-20b",
+  "external_model_weights_frozen": false,
+  "external_advisory_has_category_authority": false,
+  "external_advisory_has_enforcement_authority": false,
+  "private_identifiers_sent_to_external_provider": false,
+  "child_risk_sent_to_external_provider": false,
+  "external_or_restricted_data_used": false,
+  "actionable_harm_instructions_stored": false,
+  "permitted_active_outputs": [
+    "Illegal Activities",
+    "Uncertain"
+  ],
+  "required_action": "Restrict and send for human review",
+  "established_category_ownership_preserved": true,
+  "independently_validated": false,
+  "eligible_for_guarded_live_integration": false,
+  "connected_to_live_moderation": true,
+  "automatic_enforcement_allowed": false,
+  "evaluation_reporting_contract": {
+    "store_raw_holdout_text": false,
+    "store_individual_predictions": false,
+    "print_individual_predictions": false,
+    "report_aggregate_metrics_only": true
+  }
+}
