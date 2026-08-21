@@ -123,6 +123,12 @@ backend/storage/candidates/*
 !backend/storage/candidates/illegal-activities-v1-rc1/
 !backend/storage/candidates/illegal-activities-v1-rc1/**
 
+# Illegal Activities V2 RC2 publication boundary
+# Publish only the aggregate synthetic evaluator and frozen candidate evidence.
+!backend/scripts/evaluate_illegal_activities_v2_rc2_independent.py
+!backend/storage/candidates/illegal-activities-v2-rc2/
+!backend/storage/candidates/illegal-activities-v2-rc2/**
+
 # Wikidata structured community candidates are CC0 and review-routing only.
 # All other downloaded public benchmark datasets remain ignored.
 !datasets/public/

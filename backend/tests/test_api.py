@@ -96,6 +96,9 @@ def test_moderation_health_endpoint(
         ]
         is False
     )
+    assert result["illegal_activities_v2_rc2"]["version"] == "illegal-activities-v2-rc2"
+    assert result["illegal_activities_v2_rc2"]["readiness"]["ready"] is True
+    assert result["illegal_activities_v2_rc2"]["automatic_enforcement_allowed"] is False
 
 
 def test_moderation_policy_registry_exposes_all_19_categories(

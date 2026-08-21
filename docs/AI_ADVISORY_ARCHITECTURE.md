@@ -12,7 +12,7 @@ human reviewer.
 1. The key is loaded only from the backend process environment or
    `backend/.env`. It is never returned by an endpoint or included in a report.
 2. Only direct text that already contains a local Illegal Activities policy
-   family can be routed in V1. Visual descriptions, raw images, audio, and video
+   family can be routed. Visual descriptions, raw images, audio, and video
    are not sent by this component.
 3. Text containing detected private identifiers or combined child/exploitation
    indicators is rejected before any provider request.
@@ -24,7 +24,7 @@ human reviewer.
    retry is permitted only after schema rejection; provider and authority errors
    are not retried.
 
-V1 pins `openai/gpt-oss-20b`. The pin was selected from OpenRouter's current
+The advisory adapter pins `openai/gpt-oss-20b`. The pin was selected from OpenRouter's current
 ZDR and structured-output-compatible catalog and passed the bounded live schema
 contract. Changing the model requires rerunning that contract.
 
@@ -56,3 +56,15 @@ from holdout cases or predictions.
 These results are synthetic evidence only, not external or real-world
 accuracy. OpenRouter was not used in the independent accuracy challenge and
 retains no category or enforcement authority.
+
+RC2 was developed from aggregate-only RC1 failure signals. Its fresh 480-record
+development set had zero overlap with V1 development data and passed every
+locked development contract. After freeze, a new 600-record aggregate-only
+challenge also had zero development overlap and achieved 100.00% accuracy,
+Illegal Activities precision, recall, safe specificity, F1, and minimum group
+accuracy, with zero action, category-mix, authority, or processing failures.
+
+The RC2 guarded live-fusion contract passed 8/8 cases. The local RC2 policy is
+the active Illegal Activities decision layer; the OpenRouter result remains
+advisory and cannot activate a category or enforcement action by itself. These
+results remain synthetic policy evidence, not external or real-world accuracy.

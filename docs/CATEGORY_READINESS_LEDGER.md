@@ -41,7 +41,7 @@ The frontend production build and static checks also passed.
 | Sexual Harassment | 100.00% precision, 93.33% recall | 60 positive-support records within the 240-record challenge | Passed the shared synthetic category gate; ownership must take precedence over generic sexual content. |
 | Cyberbullying & Harassment | 89.59% selective accuracy at 89.67% coverage | 300 external | Passed independent selective gate; uncertain results go to review. |
 | Invasion of Privacy | No dedicated independent evaluation | 0 | Not ready; next new category planned. |
-| Illegal Activities | 96.00% synthetic independent binary accuracy; 90.00% recall | 500 unique | RC1 failed the locked action/category contracts; it is not independently ready and may not be modified using the holdout. |
+| Illegal Activities | 100.00% synthetic independent accuracy, precision, recall, specificity, and F1 | 600 unique | RC2 passed its locked independent gate and guarded live-fusion contract; review-only and no automatic enforcement. |
 | Publishing Private Information | 91.45% recall on a positive-only external synthetic set | 2,000 | Useful detector evidence, but no negative-set specificity gate; consent/ownership still requires review. |
 | Identity Theft & Impersonation | 58.33% synthetic independent accuracy, 20.83% recall | 192 | Failed readiness gate. |
 | Misinformation | 41.67% exact accuracy; 75.00% selective accuracy at 11.11% coverage | 36 | Failed readiness gate; insufficient evidence must remain Uncertain. |
@@ -82,7 +82,7 @@ The frontend production build and static checks also passed.
   validated visual evidence, no explicit sexual activity, and no child-risk
   conflict. Film or television identity never creates Allow.
 
-## Latest completed category phase: Illegal Activities RC1
+## Prior category phase: Illegal Activities RC1
 
 The V1 policy and AI-advisory development contract covers controlled goods and
 unapproved medicines, weapons/documents/counterfeit material,
@@ -119,12 +119,45 @@ the exact category and action contracts. The candidate remains frozen, cannot
 be tuned using holdout cases or predictions, is ineligible for a new guarded
 integration claim, and retains no automatic-enforcement authority.
 
-The next Illegal Activities phase is V2/RC2 development using only the
-aggregate failure signals: transaction-family recall and safe fiction/research
-boundary generalization. Individual RC1 cases, predictions, and mismatches will
-not be inspected or reused. A new candidate will require a fresh locked gate
-and a new non-overlapping independent challenge. Child Exploitation remains the
-priority category after Illegal Activities passes independent readiness.
+RC2 development used only the aggregate failure signals: transaction-family
+recall, safe fiction/research boundary generalization, and exact action/category
+routing. Individual RC1 cases, predictions, and mismatches were not inspected
+or reused.
+
+## Latest completed category phase: Illegal Activities V2 RC2
+
+RC2 adds a two-signal transaction policy: a covered subject must be paired with
+a current sale, supply, delivery, payment, access, promotion, or marketplace
+signal. Reporting, prevention, education, research, history, fiction, quotation,
+museum, and legitimate professional context are explicit no-override boundaries.
+Unknown licensing, jurisdiction, location, purpose, or transaction status routes
+to `Uncertain` and qualified human review. Existing category owners and the child
+safety boundary retain precedence.
+
+The fresh development set contained 480 unique synthetic records across twelve
+groups, with zero V1 development overlap. It achieved 100.00% accuracy,
+precision, recall, safe specificity, F1, and minimum group accuracy, with zero
+action, category-mix, or processing failures. RC2 was frozen only after those
+gates passed.
+
+The post-freeze independent challenge contained 600 new unique synthetic
+records: 250 Illegal Activities positives and 350 negative, safe, Uncertain,
+child-owner, and established-owner boundaries. Development overlap was zero.
+Accuracy, Illegal Activities precision, recall, safe specificity, F1, and
+minimum group accuracy were all 100.00%, with zero action, category-mix,
+authority, or processing failures. OpenRouter was not used for accuracy.
+
+The guarded live-fusion contract passed 8/8 cases. RC2 is connected to live
+moderation as a review-only component. It can propose `Illegal Activities` or
+`Uncertain`; it cannot create an automatic Allow, legal determination, or
+automatic enforcement action. The candidate and holdout remain immutable.
+
+Phase 3 regression validation: 151 backend tests passed. Three third-party
+deprecation warnings remain non-blocking; no phase secret or private holdout
+path was published.
+
+These are synthetic policy and integration results, not external or real-world
+accuracy. The next category phase is Child Exploitation.
 
 ## Priority category after Illegal Activities: Child Exploitation
 

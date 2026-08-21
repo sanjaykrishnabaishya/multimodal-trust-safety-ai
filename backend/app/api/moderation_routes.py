@@ -33,6 +33,12 @@ from app.services.image_processor import (
 from app.services.illegal_activities_v1_service import (
     get_illegal_activities_v1_status,
 )
+from app.services.illegal_activities_v2_rc2_service import (
+    get_illegal_activities_v2_rc2_status,
+)
+from app.services.illegal_activities_v2_rc2_fusion import (
+    get_illegal_activities_v2_rc2_readiness,
+)
 from app.services.moderation_service import (
     combine_extracted_signals,
 )
@@ -185,6 +191,10 @@ def moderation_health() -> dict:
         "review_storage_enabled": True,
         "openrouter_advisory": get_openrouter_advisory_status(),
         "illegal_activities_v1": get_illegal_activities_v1_status(),
+        "illegal_activities_v2_rc2": {
+            **get_illegal_activities_v2_rc2_status(),
+            "readiness": get_illegal_activities_v2_rc2_readiness(),
+        },
     }
 
 

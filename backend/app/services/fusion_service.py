@@ -43,9 +43,9 @@ from app.services.dangerous_content_v6_rc5_fusion import (
     analyze_dangerous_content_v6_rc5_for_fusion,
     apply_dangerous_content_v6_rc5_fusion,
 )
-from app.services.illegal_activities_v1_service import (
-    analyze_illegal_activities_v1,
-    apply_illegal_activities_v1_fusion,
+from app.services.illegal_activities_v2_rc2_fusion import (
+    analyze_illegal_activities_v2_rc2_for_fusion,
+    apply_illegal_activities_v2_rc2_guarded_fusion,
 )
 from app.services.violent_content_service import (
     analyze_violent_content,
@@ -755,7 +755,7 @@ def fuse_moderation_decision(
     )
 
     illegal_activities_v1_analysis = (
-        analyze_illegal_activities_v1(
+        analyze_illegal_activities_v2_rc2_for_fusion(
             text,
             input_sources,
         )
@@ -1476,7 +1476,7 @@ def fuse_moderation_decision(
     )
 
     illegal_activities_v1_fusion = (
-        apply_illegal_activities_v1_fusion(
+        apply_illegal_activities_v2_rc2_guarded_fusion(
             category=category,
             severity=severity,
             action=action,
@@ -1711,7 +1711,7 @@ def fuse_moderation_decision(
                 else []
             )
             + (
-                ["illegal_activities_v1"]
+                ["illegal_activities_v2_rc2"]
                 if illegal_activities_v1_applied
                 else []
             )
@@ -1869,6 +1869,11 @@ def fuse_moderation_decision(
         "illegal_activities_v1_used": illegal_activities_v1_applied,
         "illegal_activities_v1": illegal_activities_v1_analysis,
         "illegal_activities_v1_fusion_status": (
+            illegal_activities_v1_fusion["fusion_status"]
+        ),
+        "illegal_activities_v2_rc2_used": illegal_activities_v1_applied,
+        "illegal_activities_v2_rc2": illegal_activities_v1_analysis,
+        "illegal_activities_v2_rc2_fusion_status": (
             illegal_activities_v1_fusion["fusion_status"]
         ),
         "illegal_activities_automatic_enforcement_allowed": False,
