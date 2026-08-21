@@ -26,8 +26,9 @@ Completed on 2026-08-21:
   LLM decision support remains opt-in and cannot create an automatic Allow,
   Block, age, consent, identity, or provenance finding.
 
-Phase validation: 100 backend tests passed, four focused private-LAN runtime
-tests passed, and the frontend production build and static checks passed.
+Phase validation: 122 backend tests passed, including the focused private-LAN,
+Illegal Activities, OpenRouter-contract, privacy-fallback, and API-policy tests.
+The frontend production build and static checks also passed.
 
 | Category | Latest evidence | Evaluated examples | Readiness boundary |
 | --- | --- | ---: | --- |
