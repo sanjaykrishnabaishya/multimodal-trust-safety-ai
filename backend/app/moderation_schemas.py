@@ -95,6 +95,19 @@ class ModerationResponse(
         default_factory=dict,
     )
 
+    illegal_activities_v1_used: bool = False
+
+    illegal_activities_v1: dict[
+        str,
+        Any,
+    ] = Field(
+        default_factory=dict,
+    )
+
+    illegal_activities_v1_fusion_status: str = "not_evaluated"
+
+    illegal_activities_automatic_enforcement_allowed: bool = False
+
     retrieved_evidence: list[
         dict[str, Any]
     ] = Field(

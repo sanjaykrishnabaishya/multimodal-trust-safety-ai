@@ -1,3 +1,42 @@
+.workspace-navigation {
+  align-items: center;
+  background: #f3f7f4;
+  border: 1px solid #dce4df;
+  border-radius: 12px;
+  display: flex;
+  gap: 4px;
+  left: 50%;
+  padding: 4px;
+  position: fixed;
+  top: 14px;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.workspace-navigation button {
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: #65746d;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  min-height: 38px;
+  padding: 8px 15px;
+  white-space: nowrap;
+}
+
+.workspace-navigation button.active {
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(25, 47, 38, 0.1);
+  color: #0e684b;
+}
+
+.workspace-navigation button:focus-visible {
+  outline: 3px solid rgba(14, 104, 75, 0.25);
+  outline-offset: 2px;
+}
+
 .review-page {
   margin: 0 auto;
   max-width: 1480px;
@@ -579,6 +618,21 @@
 }
 
 @media (max-width: 680px) {
+  .workspace-navigation {
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    box-shadow: 0 10px 34px rgba(24, 45, 36, 0.2);
+    top: auto;
+  }
+
+  .workspace-navigation button {
+    min-height: 44px;
+    padding-inline: 20px;
+  }
+
+  .app-shell {
+    padding-bottom: calc(74px + env(safe-area-inset-bottom));
+  }
+
   .review-filter-row {
     display: grid;
     grid-template-columns:

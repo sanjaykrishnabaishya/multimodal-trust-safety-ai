@@ -45,6 +45,8 @@ desktop.ini
 *.temp
 temp/
 tmp/
+.trustscope-local/
+.pnpm-store/
 
 # Uploaded user media
 sample_uploads/documents/*

@@ -1,4 +1,5 @@
 import {
+  useCallback,
   useEffect,
   useState,
 } from "react";
@@ -285,7 +286,7 @@ function ReviewQueue({
   ] = useState("");
 
 
-  async function loadCases() {
+  const loadCases = useCallback(async () => {
     setLoading(true);
     setError("");
 
@@ -349,12 +350,12 @@ function ReviewQueue({
     } finally {
       setLoading(false);
     }
-  }
+  }, [apiBaseUrl, statusFilter]);
 
 
-  async function loadAudit(
+  const loadAudit = useCallback(async (
     caseId
-  ) {
+  ) => {
     if (!caseId) {
       setAuditEvents([]);
       return;
@@ -387,12 +388,12 @@ function ReviewQueue({
     } finally {
       setAuditLoading(false);
     }
-  }
+  }, [apiBaseUrl]);
 
 
   useEffect(() => {
     loadCases();
-  }, [statusFilter]);
+  }, [loadCases]);
 
 
   useEffect(() => {
@@ -436,7 +437,7 @@ function ReviewQueue({
     loadAudit(
       selectedCase.case_id
     );
-  }, [selectedCase?.case_id]);
+  }, [loadAudit, selectedCase]);
 
 
   async function submitReview(

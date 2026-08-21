@@ -26,6 +26,10 @@ from app.moderation_schemas import (
     ModerationResponse,
     ModerationTextRequest,
 )
+from app.runtime_config import (
+    get_allowed_origins,
+    get_private_lan_origin_regex,
+)
 from app.services.fusion_service import (
     fuse_moderation_decision,
 )
@@ -55,14 +59,17 @@ app = FastAPI(
     lifespan=application_lifespan,
 )
 
-ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-]
+ALLOWED_ORIGINS = get_allowed_origins()
+ALLOWED_ORIGIN_REGEX = (
+    get_private_lan_origin_regex()
+)
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=(
+        ALLOWED_ORIGIN_REGEX
+    ),
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],

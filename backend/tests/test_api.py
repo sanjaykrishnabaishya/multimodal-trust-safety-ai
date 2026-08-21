@@ -86,6 +86,51 @@ def test_moderation_health_endpoint(
         is True
     )
 
+    assert (
+        result["openrouter_advisory"]["strict_schema_required"]
+        is True
+    )
+    assert (
+        result["illegal_activities_v1"][
+            "automatic_enforcement_allowed"
+        ]
+        is False
+    )
+
+
+def test_moderation_policy_registry_exposes_all_19_categories(
+    client,
+):
+    response = client.get(
+        "/moderation/policies"
+    )
+
+    assert response.status_code == 200
+    result = response.json()
+
+    assert result["category_count"] == 19
+    assert len(result["policies"]) == 19
+    assert (
+        result["automatic_enforcement_allowed"]
+        is False
+    )
+
+    categories = {
+        item["category"]
+        for item in result["policies"]
+    }
+    assert "Illegal Activities" in categories
+    assert "Child Exploitation" in categories
+
+    illegal = next(
+        item
+        for item in result["policies"]
+        if item["category"]
+        == "Illegal Activities"
+    )
+    assert illegal["human_review_required"] is True
+    assert illegal["moderation_conditions"]
+
 
 def test_deep_analysis_health_endpoint(
     client,

@@ -13,6 +13,10 @@ from app.moderation_schemas import (
     ModerationResponse,
     ModerationTextRequest,
 )
+from app.policy_config import (
+    CATEGORY_POLICIES,
+    POLICY_VERSION,
+)
 from app.services.document_processor import (
     SUPPORTED_DOCUMENT_EXTENSIONS,
     DocumentProcessingError,
@@ -26,6 +30,9 @@ from app.services.image_processor import (
     ImageProcessingError,
     process_image,
 )
+from app.services.illegal_activities_v1_service import (
+    get_illegal_activities_v1_status,
+)
 from app.services.moderation_service import (
     combine_extracted_signals,
 )
@@ -36,6 +43,9 @@ from app.services.multimodal_capability_gate_service import (
 )
 from app.services.rag_service import (
     get_rag_status,
+)
+from app.services.openrouter_advisory_service import (
+    get_openrouter_advisory_status,
 )
 from app.services.review_database_service import (
     ReviewDatabaseError,
@@ -173,6 +183,35 @@ def moderation_health() -> dict:
         "ocr_connected": True,
         "transcription_connected": True,
         "review_storage_enabled": True,
+        "openrouter_advisory": get_openrouter_advisory_status(),
+        "illegal_activities_v1": get_illegal_activities_v1_status(),
+    }
+
+
+@router.get("/policies")
+def moderation_policies() -> dict:
+    """Return the canonical 19-category moderation rule registry."""
+
+    policies = []
+    for policy in CATEGORY_POLICIES.values():
+        policies.append(
+            {
+                "category": policy.category.value,
+                "severity": policy.default_severity,
+                "default_action": policy.default_action,
+                "human_review_required": policy.human_review_required,
+                "moderation_conditions": list(policy.moderation_conditions),
+                "allow_conditions": list(policy.allow_conditions),
+                "review_conditions": list(policy.review_conditions),
+                "notes": list(policy.notes),
+            }
+        )
+
+    return {
+        "policy_version": POLICY_VERSION,
+        "category_count": len(policies),
+        "automatic_enforcement_allowed": False,
+        "policies": policies,
     }
 
 

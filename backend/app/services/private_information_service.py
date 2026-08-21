@@ -21,6 +21,11 @@ INDIAN_PHONE_PATTERN = re.compile(
     r"(?<!\d)(?:\+91[\s.-]?|0?)[6-9]\d{4}[\s.-]?\d{5}(?!\d)"
 )
 
+EMAIL_PATTERN = re.compile(
+    r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,63}\b",
+    re.IGNORECASE,
+)
+
 PAN_PATTERN = re.compile(
     r"\b[A-Z]{5}[0-9]{4}[A-Z]\b",
     re.IGNORECASE,
@@ -112,6 +117,7 @@ BANK_ACCOUNT_PATTERN = re.compile(
 
 
 CUSTOM_ACTIONABLE_PATTERNS = (
+    ("email_address", EMAIL_PATTERN),
     ("indian_phone_number", INDIAN_PHONE_PATTERN),
     ("pan_like_identifier", PAN_PATTERN),
     ("aadhaar_like_identifier", AADHAAR_PATTERN),
