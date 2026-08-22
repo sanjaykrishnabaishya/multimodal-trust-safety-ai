@@ -1,6 +1,6 @@
 # TrustScope category-readiness ledger
 
-Updated: 2026-08-21
+Updated: 2026-08-22
 
 This ledger separates independent component evidence from development contracts
 and product readiness. A component score is never presented as overall product
@@ -49,7 +49,7 @@ The frontend production build and static checks also passed.
 | Intellectual Property Violations | No dedicated independent evaluation | 0 | Not ready; legal provenance must be reviewed by a qualified human. |
 | Malicious Programs | No dedicated independent evaluation | 0 | Not ready; defensive context and operational capability must be separated. |
 | Abusive Words | 95.00% accepted precision, 76.00% selective recall | 100 label-support records within the 300-record challenge | Passed as a selective RC2 output; quotation and non-targeted contexts must not be overridden. |
-| Child Exploitation | No dedicated prohibited-media benchmark | 0 | High-risk owner boundary only; suspected child sexual abuse material must never be stored. |
+| Child Exploitation | 100.00% synthetic independent accuracy, precision, recall, specificity, and F1 | 720 unique | Passed guarded-integration gate; local-only critical review routing; no real exploitative media, external provider, automatic enforcement, or appearance-based age inference. |
 | Normal/Ignore | Tested as safe/boundary examples inside component suites | No standalone independent set | May be returned only when no stronger category owns the case and safe evidence is sufficient. |
 
 ## Shared decision rules
@@ -157,37 +157,53 @@ deprecation warnings remain non-blocking; no phase secret or private holdout
 path was published.
 
 These are synthetic policy and integration results, not external or real-world
-accuracy. The next category phase is Child Exploitation.
+accuracy. The next completed category phase is Child Exploitation.
 
-## Priority category after Illegal Activities: Child Exploitation
+## Latest completed category phase: Child Exploitation V1 RC1
 
-This category will be developed as a high-risk safety router, not as a system
-for collecting or learning from exploitative media. Development and evaluation
-will use high-level synthetic text, non-sensitive metadata, and lawful safety
-fixtures only. Suspected child sexual abuse material must never be uploaded to
-an external LLM, added to RAG, retained as a test fixture, or printed in a
-report.
+This category was developed as a high-risk safety router, not as a system for
+collecting or learning from exploitative media. Development and evaluation used
+only high-level synthetic text and safe metadata. No real exploitative media,
+graphic descriptions, or external AI provider was used.
 
-Initial policy contract:
+Implemented policy contract:
 
-- Any credible child-exploitation signal fails closed to the Child
-  Exploitation owner and specialist human escalation.
-- Adult/child status is never inferred from appearance alone; ambiguous age is
-  treated as child-risk and reviewed.
-- Reporting, prevention, medical, educational, and law-enforcement context does
-  not create automatic enforcement, but it also cannot bypass the safety
-  router when media risk is unresolved.
-- No external AI provider receives suspected child-risk text, images, video,
-  identifiers, or hashes.
-- No automatic Allow or automatic enforcement is authorized.
+- A child/minor signal plus high-level exploitation, grooming, coercion,
+  unsafe-contact, trafficking, intimate-image, or physical-abuse evidence routes
+  to `Child Exploitation`, `Critical`, `Block and immediately escalate`.
+- Age is never inferred from appearance alone. Ambiguous age with sexual or
+  intimate risk routes to `Uncertain` and human review.
+- Clear reporting, prevention, medical, educational, research, and support
+  context is a no-override boundary when there is no live-case or facilitation
+  signal. Incomplete media evidence still fails closed to review.
+- Verified adult-only sexual content remains owned by Graphic, Obscene & Sexual
+  Content. Unrelated established category owners remain unchanged.
+- No external AI provider receives child-risk text, images, video, identifiers,
+  hashes, or derived evidence.
+- The specialist can propose only Child Exploitation or Uncertain. It cannot
+  create automatic Allow or automatic enforcement.
 
-The development gate will require at least 90% accuracy, 95% precision, 90%
-recall, 99% safe specificity, 85% minimum family accuracy, and zero safety,
-privacy, storage, action, category-mix, or processing-contract failures. A new
-hidden independent challenge must still exceed the user's 85% readiness floor
-before guarded integration can be considered.
+The development set contained 600 unique synthetic fixtures across twelve
+families. Accuracy, child precision, child recall, safe specificity, F1, and
+minimum family accuracy were all 100.00%, with zero action, category, privacy,
+external-transmission, age-inference, or processing failures. RC1 was frozen
+only after this gate passed.
 
-## Later new category: Invasion of Privacy
+The post-freeze independent challenge contained 720 new unique synthetic
+fixtures: 240 Child Exploitation positives and 480 safe, Uncertain, adult-only,
+lexical, and category-owner boundaries. Development overlap was zero. Accuracy,
+precision, recall, specificity, F1, and minimum group accuracy were all 100.00%,
+with zero contract failures. The guarded live-fusion contract passed 10/10.
+
+Phase 4 regression validation: 165 backend tests passed. Three third-party
+deprecation warnings remain non-blocking; no API key, real exploitative media,
+private holdout path, raw challenge text, or individual prediction was
+published.
+
+These are synthetic policy and integration results, not external or real-world
+accuracy. The frozen candidate and challenge may not be used for tuning.
+
+## Next category: Invasion of Privacy
 
 The first development candidate will distinguish non-consensual capture,
 voyeurism, stalking/tracking, private-space intrusion, and non-consensual

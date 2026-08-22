@@ -119,6 +119,19 @@ class ModerationResponse(
 
     illegal_activities_automatic_enforcement_allowed: bool = False
 
+    child_exploitation_v1_rc1_used: bool = False
+
+    child_exploitation_v1_rc1: dict[
+        str,
+        Any,
+    ] = Field(
+        default_factory=dict,
+    )
+
+    child_exploitation_v1_rc1_fusion_status: str = "not_evaluated"
+
+    child_exploitation_automatic_enforcement_allowed: bool = False
+
     retrieved_evidence: list[
         dict[str, Any]
     ] = Field(

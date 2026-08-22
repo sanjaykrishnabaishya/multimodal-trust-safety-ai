@@ -29,6 +29,8 @@ The application currently supports:
 - Private-LAN development access without wildcard CORS
 - Human-review queue with audit history
 - Server-side OpenRouter advisory evidence with strict schema and privacy gates
+- Independently gated, local-only Child Exploitation safety routing with no
+  external-provider transmission or appearance-based age inference
 
 ## Planned capabilities
 
@@ -76,6 +78,9 @@ Programs; Abusive Words; Child Exploitation; and Normal/Ignore.
 The presence of a category in the registry does not mean its specialist has
 passed independent readiness. See
 [docs/CATEGORY_READINESS_LEDGER.md](docs/CATEGORY_READINESS_LEDGER.md).
+
+The current action and boundary rules for all categories are summarized in
+[docs/MODERATION_RULES.md](docs/MODERATION_RULES.md).
 
 OpenRouter is used only as a server-side, review-only evidence source. See
 [docs/AI_ADVISORY_ARCHITECTURE.md](docs/AI_ADVISORY_ARCHITECTURE.md).

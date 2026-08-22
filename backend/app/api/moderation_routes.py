@@ -39,6 +39,12 @@ from app.services.illegal_activities_v2_rc2_service import (
 from app.services.illegal_activities_v2_rc2_fusion import (
     get_illegal_activities_v2_rc2_readiness,
 )
+from app.services.child_exploitation_v1_rc1_service import (
+    get_child_exploitation_v1_rc1_status,
+)
+from app.services.child_exploitation_v1_rc1_fusion import (
+    get_child_exploitation_v1_rc1_readiness,
+)
 from app.services.moderation_service import (
     combine_extracted_signals,
 )
@@ -194,6 +200,10 @@ def moderation_health() -> dict:
         "illegal_activities_v2_rc2": {
             **get_illegal_activities_v2_rc2_status(),
             "readiness": get_illegal_activities_v2_rc2_readiness(),
+        },
+        "child_exploitation_v1_rc1": {
+            **get_child_exploitation_v1_rc1_status(),
+            "readiness": get_child_exploitation_v1_rc1_readiness(),
         },
     }
 

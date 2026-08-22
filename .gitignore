@@ -129,6 +129,11 @@ backend/storage/candidates/*
 !backend/storage/candidates/illegal-activities-v2-rc2/
 !backend/storage/candidates/illegal-activities-v2-rc2/**
 
+# Publish only the safe aggregate Child Exploitation RC1 evaluator and freeze.
+!backend/scripts/evaluate_child_exploitation_v1_rc1_independent.py
+!backend/storage/candidates/child-exploitation-v1-rc1/
+!backend/storage/candidates/child-exploitation-v1-rc1/**
+
 # Wikidata structured community candidates are CC0 and review-routing only.
 # All other downloaded public benchmark datasets remain ignored.
 !datasets/public/

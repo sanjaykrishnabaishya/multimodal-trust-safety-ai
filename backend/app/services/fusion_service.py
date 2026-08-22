@@ -47,6 +47,10 @@ from app.services.illegal_activities_v2_rc2_fusion import (
     analyze_illegal_activities_v2_rc2_for_fusion,
     apply_illegal_activities_v2_rc2_guarded_fusion,
 )
+from app.services.child_exploitation_v1_rc1_fusion import (
+    analyze_child_exploitation_v1_rc1_for_fusion,
+    apply_child_exploitation_v1_rc1_guarded_fusion,
+)
 from app.services.violent_content_service import (
     analyze_violent_content,
 )
@@ -756,6 +760,13 @@ def fuse_moderation_decision(
 
     illegal_activities_v1_analysis = (
         analyze_illegal_activities_v2_rc2_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
+    child_exploitation_v1_rc1_analysis = (
+        analyze_child_exploitation_v1_rc1_for_fusion(
             text,
             input_sources,
         )
@@ -1502,6 +1513,31 @@ def fuse_moderation_decision(
         illegal_activities_v1_fusion["decision_applied"]
     )
 
+    child_exploitation_v1_rc1_fusion = (
+        apply_child_exploitation_v1_rc1_guarded_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=child_exploitation_v1_rc1_analysis,
+        )
+    )
+    category = str(child_exploitation_v1_rc1_fusion["category"])
+    severity = str(child_exploitation_v1_rc1_fusion["severity"])
+    action = str(child_exploitation_v1_rc1_fusion["action"])
+    confidence = float(child_exploitation_v1_rc1_fusion["confidence"])
+    human_review_required = bool(
+        child_exploitation_v1_rc1_fusion["human_review_required"]
+    )
+    reason = str(child_exploitation_v1_rc1_fusion["reason"])
+    matched_signals = list(child_exploitation_v1_rc1_fusion["matched_signals"])
+    child_exploitation_v1_rc1_applied = bool(
+        child_exploitation_v1_rc1_fusion["decision_applied"]
+    )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
@@ -1716,6 +1752,11 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["child_exploitation_v1_rc1"]
+                if child_exploitation_v1_rc1_applied
+                else []
+            )
+            + (
                 ["openrouter_advisory"]
                 if illegal_activities_v1_analysis.get(
                     "openrouter", {}
@@ -1877,6 +1918,12 @@ def fuse_moderation_decision(
             illegal_activities_v1_fusion["fusion_status"]
         ),
         "illegal_activities_automatic_enforcement_allowed": False,
+        "child_exploitation_v1_rc1_used": child_exploitation_v1_rc1_applied,
+        "child_exploitation_v1_rc1": child_exploitation_v1_rc1_analysis,
+        "child_exploitation_v1_rc1_fusion_status": (
+            child_exploitation_v1_rc1_fusion["fusion_status"]
+        ),
+        "child_exploitation_automatic_enforcement_allowed": False,
         "cyberbullying_rc2_used": cyberbullying_rc2_applied,
         "cyberbullying_rc2": cyberbullying_rc2_analysis,
         "cyberbullying_rc2_fusion_status": (

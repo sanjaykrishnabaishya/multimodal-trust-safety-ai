@@ -99,6 +99,10 @@ def test_moderation_health_endpoint(
     assert result["illegal_activities_v2_rc2"]["version"] == "illegal-activities-v2-rc2"
     assert result["illegal_activities_v2_rc2"]["readiness"]["ready"] is True
     assert result["illegal_activities_v2_rc2"]["automatic_enforcement_allowed"] is False
+    assert result["child_exploitation_v1_rc1"]["version"] == "child-exploitation-v1-rc1"
+    assert result["child_exploitation_v1_rc1"]["readiness"]["ready"] is True
+    assert result["child_exploitation_v1_rc1"]["external_provider_used"] is False
+    assert result["child_exploitation_v1_rc1"]["automatic_enforcement_allowed"] is False
 
 
 def test_moderation_policy_registry_exposes_all_19_categories(
