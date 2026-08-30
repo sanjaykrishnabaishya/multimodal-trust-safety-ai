@@ -34,6 +34,8 @@ The application currently supports:
 - Independently gated Invasion of Privacy review routing with no victim-media
   storage, external-provider transmission, or appearance-based identity,
   consent, or private-location inference
+- Independently gated, non-executing Malicious Programs security routing with
+  no payload, credential, live-infrastructure, or external-provider storage
 
 ## Planned capabilities
 

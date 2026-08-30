@@ -1,6 +1,6 @@
 # TrustScopeAI moderation rules
 
-Updated: 2026-08-30
+Updated: 2026-08-31
 
 This is the concise product rulebook for the 19-category registry. Category
 presence does not imply that its specialist passed independent readiness; see
@@ -25,7 +25,7 @@ disabled.
 | Misinformation & Fake News | A materially false or manipulated factual claim is presented as true. | Flag and human review. | Satire, opinion, fiction, correction, and unresolved truth must not be automatically blocked. |
 | Spam, Scam & Phishing | Unsolicited or deceptive content requests money, credentials, OTPs, passwords, clicks, or promotes suspicious schemes. | Block, warn, or limit distribution. | Expected transactions and legitimate commercial/service messages remain safe; dictionary terms alone are insufficient. |
 | Intellectual Property Infringement | Protected works or marks appear distributed or reproduced without authorization. | Flag and qualified human review. | Licence, public-domain status, authorization, quotation, and fair dealing require evidence and legal review. |
-| Malicious Programs | Content distributes or facilitates malware, ransomware, credential theft, or operational compromise. | Block and security review. | Defensive education without harmful payloads or facilitation remains safe. |
+| Malicious Programs | A malicious-software object or suspicious payload is paired with operational distribution, delivery, installation, deployment, execution, hosting, or harmful-capability evidence. | Block and send for specialist security review. | Never execute or unpack content; uncertain artifacts are reviewed; defensive analysis, sandboxing, detection, reporting, authorized research, and benign administration do not override without live facilitation evidence. |
 | Abusive Words | Targeted swear words, insults, or obfuscated abusive terms attack a person. | Remove/limit distribution and, when needed, review. | Non-targeted quotation, education, reporting, and self-reference remain safe. |
 | Child Exploitation | A child/minor signal co-occurs with sexual exploitation, grooming, coercion, unsafe contact, trafficking, intimate-image, or physical-abuse evidence. | Block and immediately escalate to specialist human review. | No real suspected material is stored or sent externally; age is never inferred from appearance; uncertain age/risk is Uncertain; clear prevention/education is protected. |
 | Normal/Ignore | No other category has sufficient ownership and the content is ordinary or safely contextualized. | Allow. | Weak evidence alone cannot justify restriction, but unresolved high-risk evidence must become Uncertain rather than Allow. |

@@ -1,0 +1,20 @@
+{
+  "component": "Malicious Programs",
+  "version": "malicious-programs-v1-rc1",
+  "candidate_type": "local deterministic non-executing safety router",
+  "permitted_outputs": [
+    "Malicious Programs",
+    "Uncertain"
+  ],
+  "required_malicious_action": "Block and send for security review",
+  "human_review_required": true,
+  "two_signal_policy": "A malicious-software or suspicious-payload signal must be paired with operational distribution, deployment, execution intent, or harmful capability evidence.",
+  "code_execution_allowed": false,
+  "archive_unpacking_allowed": false,
+  "payload_storage_allowed": false,
+  "credential_storage_allowed": false,
+  "live_infrastructure_storage_allowed": false,
+  "external_provider_used": false,
+  "external_transmission_allowed": false,
+  "automatic_enforcement_allowed": false
+}

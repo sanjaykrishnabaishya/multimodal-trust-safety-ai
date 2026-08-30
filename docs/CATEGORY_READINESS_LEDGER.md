@@ -1,6 +1,6 @@
 # TrustScope category-readiness ledger
 
-Updated: 2026-08-30
+Updated: 2026-08-31
 
 This ledger separates independent component evidence from development contracts
 and product readiness. A component score is never presented as overall product
@@ -47,7 +47,7 @@ The frontend production build and static checks also passed.
 | Misinformation | 41.67% exact accuracy; 75.00% selective accuracy at 11.11% coverage | 36 | Failed readiness gate; insufficient evidence must remain Uncertain. |
 | Spam, Scam & Phishing | 99.22% external human-labelled accuracy | 774 | Strong message-level component evidence; broader multimodal/product validation remains separate. |
 | Intellectual Property Violations | No dedicated independent evaluation | 0 | Not ready; legal provenance must be reviewed by a qualified human. |
-| Malicious Programs | No dedicated independent evaluation | 0 | Not ready; defensive context and operational capability must be separated. |
+| Malicious Programs | 100.00% synthetic independent accuracy, precision, recall, specificity, F1, and minimum-group accuracy | 800 unique RC2 challenge records | RC2 passed its locked independent and guarded live-fusion gates; non-executing, security-review-only, and no payload storage or automatic enforcement. |
 | Abusive Words | 95.00% accepted precision, 76.00% selective recall | 100 label-support records within the 300-record challenge | Passed as a selective RC2 output; quotation and non-targeted contexts must not be overridden. |
 | Child Exploitation | 100.00% synthetic independent accuracy, precision, recall, specificity, and F1 | 720 unique | Passed guarded-integration gate; local-only critical review routing; no real exploitative media, external provider, automatic enforcement, or appearance-based age inference. |
 | Normal/Ignore | Tested as safe/boundary examples inside component suites | No standalone independent set | May be returned only when no stronger category owns the case and safe evidence is sufficient. |
@@ -249,30 +249,88 @@ provider payload was published.
 These are synthetic policy and integration results, not external or real-world
 accuracy. The frozen candidate and challenge may not be used for tuning.
 
-## Next category: Malicious Programs
+## Latest completed category phase: Malicious Programs V2 RC2
 
-The first candidate will separate operational malware distribution or
-facilitation from defensive cybersecurity work. It will use safe synthetic
-text and metadata only; executable malware, credentials, live command-and-
-control addresses, and functional payloads will not be collected or stored.
+This category was built as an inert evidence router. It never executes code,
+opens or unpacks archives, stores a payload or credential, retains live
+infrastructure, or sends security evidence to an external provider.
+
+Implemented policy contract:
+
+- A malware, ransomware, trojan, spyware, credential-stealer, botnet, rootkit,
+  backdoor, or destructive-program signal must be paired with distribution,
+  delivery, installation, deployment, execution, hosting, upload, or harmful
+  capability evidence.
+- RC2 recognizes bounded action/object evidence in either word order, including
+  passive and inflected action forms. An isolated security term cannot create a
+  Malicious Programs finding.
+- Confirmed evidence routes to `Malicious Programs`, `Critical`, `Block and send
+  for security review`. Human review is always required and automatic
+  enforcement remains disabled.
+- Unknown executables, encrypted or password-protected archives, unsupported
+  attachments, uncertain intent, or unclear capability route to `Uncertain`
+  without opening or executing the artifact.
+- Defensive analysis, incident response, sandbox reports, threat intelligence,
+  detection, prevention, authorized research, ordinary administration,
+  reporting, history, and fiction are no-override boundaries when they contain
+  no live payload or facilitation evidence.
+- Child Exploitation, Illegal Activities, Spam/Phishing, Identity Theft,
+  Publishing Private Information, Invasion of Privacy, Terrorism, and all other
+  established owners retain precedence.
+
+RC1 development used 600 unique synthetic fixtures and passed at 100.00%. RC1
+was frozen before its 720-record independent challenge. That challenge achieved
+97.92% accuracy, 100.00% precision, 93.75% recall, 100.00% specificity, and
+96.77% F1, but minimum group accuracy was 75.00% with 15 action/category
+failures. RC1 therefore failed readiness and remains frozen and ineligible.
+
+RC2 development used only the aggregate RC1 signal that ransomware/destructive
+action-object word order required broader generalization. It did not read RC1
+holdout cases, individual predictions, or mismatches. The new 480-record,
+zero-prior-development-overlap set passed every metric at 100.00%, with zero
+execution, storage, authority, action, category, or processing failures. RC2
+was then frozen before its new challenge.
+
+The post-freeze RC2 independent challenge contained 800 new unique synthetic
+fixtures: 320 malicious positives and 480 safe, Uncertain, defensive, benign,
+lexical, and established-owner boundaries. Development overlap was zero.
+Accuracy, precision, recall, specificity, F1, and minimum group accuracy were
+all 100.00%, with zero contract failures. The guarded live-fusion contract
+passed 10/10.
+
+Phase 6 regression validation: 199 backend tests passed. Three third-party
+deprecation warnings remain non-blocking; no API key, executable payload,
+credential, live infrastructure, raw challenge text, individual prediction,
+or external-provider security evidence was published.
+
+These are synthetic policy and integration results, not external or real-world
+accuracy. Both frozen candidates and both challenges remain immutable and may
+not be used for tuning.
+
+## Next category: Intellectual Property Infringement
+
+The first candidate will distinguish credible unauthorized distribution,
+reproduction, sale, or access from licensed use, public-domain material,
+original work, quotation, commentary, parody, and unresolved legal exceptions.
+It will be an evidence-and-review router, not an automated legal decision-maker.
 
 Initial policy contract:
 
-- Distribution, installation, deployment, credential theft, persistence,
-  evasion, ransomware, destructive action, or command-and-control intent must
-  be paired with a malware/tool/payload signal before the category can apply.
-- Defensive analysis, incident response, sandbox reports, detection rules,
-  patched demonstrations, academic discussion, and benign administration are
-  protected contexts when no live facilitation signal exists.
-- Dual-use or incomplete intent, unsupported attachments, encrypted archives,
-  and uncertain payload capability route to `Uncertain` and security review.
-- Code is never executed during moderation. The specialist stores no executable
-  payload and cannot generate or improve malicious capability.
-- Illegal Activities, Spam/Phishing, Identity Theft, Child Exploitation, and
-  other established owners retain precedence according to the primary harm.
-- Automatic enforcement remains disabled; confirmed candidates route to block
-  plus specialist security review.
+- A protected-work, mark, software, media, or publication signal must be paired
+  with current unauthorized distribution, copying, sale, access, or counterfeit
+  representation evidence before the category can apply.
+- A title, logo, style, similarity, or self-reported infringement claim alone
+  cannot prove ownership, licence, authorization, jurisdiction, or infringement.
+- Verified licence, authorization, public-domain/CC0 status, and original-work
+  provenance are protected boundaries; quotation, criticism, parody, fair use,
+  and fair dealing require qualified legal review rather than automatic Allow.
+- Missing rights metadata, disputed ownership, uncertain jurisdiction, or
+  unclear legal exception routes to `Uncertain` and qualified human review.
+- Raw copyrighted works, pirated media, permission-restricted datasets, and
+  takedown complainant identifiers will not be collected for development.
+- Established safety owners retain precedence and automatic enforcement remains
+  disabled.
 
-The first gate will require at least 90% precision and safe specificity, at
-least 85% recall and minimum family accuracy, and zero execution, payload-
-storage, action, category-mix, authority, or processing-contract failures.
+The first gate will require at least 95% precision, 95% safe specificity, 90%
+recall, 90% minimum-family accuracy, and zero ownership-inference, licence-
+inference, action, category-mix, external-transmission, or processing failures.

@@ -1,0 +1,99 @@
+{
+  "candidate": "malicious-programs-v1-rc1",
+  "component": "Malicious Programs",
+  "candidate_type": "local deterministic non-executing safety router",
+  "frozen_at_utc": "2026-08-30T18:35:56.471794+00:00",
+  "development_gate_passed": true,
+  "development_metrics": {
+    "records": 600,
+    "unique_texts": 600,
+    "accuracy": 1.0,
+    "malicious_precision": 1.0,
+    "malicious_recall": 1.0,
+    "safe_specificity": 1.0,
+    "f1": 1.0,
+    "minimum_group_accuracy": 1.0,
+    "action_contract_failures": 0,
+    "category_mix_failures": 0,
+    "non_execution_failures": 0,
+    "payload_storage_failures": 0,
+    "authority_contract_failures": 0,
+    "processing_errors": 0
+  },
+  "artifacts": [
+    {
+      "relative_path": "source_snapshot/malicious_programs_v1_rc1_service.py",
+      "size_bytes": 13251,
+      "sha256": "6773ff506a1480afe6f2d2faff2d2de6e2ad6d5a4d7bc6402b7d43897e21fa7e"
+    },
+    {
+      "relative_path": "policy_snapshot/malicious_programs_v1_rc1_policy.json",
+      "size_bytes": 826,
+      "sha256": "940a1a25c0cae4b103a3710466068708f55d2a65a01d9d213ac6196a087e2018"
+    },
+    {
+      "relative_path": "source_snapshot/evaluate_malicious_programs_v1_rc1_development.py",
+      "size_bytes": 20777,
+      "sha256": "69b37a6dd67a0f334b8cd2e3e83043e3715e089d81004b5b9733f15d52f9882b"
+    },
+    {
+      "relative_path": "source_snapshot/freeze_malicious_programs_v1_rc1.py",
+      "size_bytes": 8524,
+      "sha256": "23b987bb1d77ae1e5be7812142f39f7a12e78615f746e63d208eb93164e99699"
+    },
+    {
+      "relative_path": "development/development.csv",
+      "size_bytes": 139060,
+      "sha256": "14c26f84253ba2d13d3dd859909032af5a56f4db9ed5288f2fe3921c1d69d433"
+    },
+    {
+      "relative_path": "development_evidence/report.json",
+      "size_bytes": 3257,
+      "sha256": "e5da44fa4c68189d9d3a65b3442ae38a514bc0066243f2eb860553b4d0ef066f"
+    }
+  ],
+  "independent_gate_frozen_before_holdout": {
+    "minimum_accuracy": 0.95,
+    "minimum_malicious_precision": 0.97,
+    "minimum_malicious_recall": 0.95,
+    "minimum_safe_specificity": 0.99,
+    "minimum_f1": 0.96,
+    "minimum_group_accuracy": 0.92,
+    "maximum_action_contract_failures": 0,
+    "maximum_category_mix_failures": 0,
+    "maximum_non_execution_failures": 0,
+    "maximum_payload_storage_failures": 0,
+    "maximum_authority_contract_failures": 0,
+    "maximum_processing_errors": 0,
+    "require_zero_development_overlap": true,
+    "require_frozen_source_hashes": true,
+    "require_no_raw_holdout_storage": true
+  },
+  "independent_holdout_created_before_freeze": false,
+  "independent_holdout_used_before_freeze": false,
+  "independent_holdout_may_modify_rc1": false,
+  "executable_payloads_used": false,
+  "code_execution_allowed": false,
+  "archive_unpacking_allowed": false,
+  "payload_storage_allowed": false,
+  "credentials_storage_allowed": false,
+  "live_infrastructure_storage_allowed": false,
+  "external_provider_used": false,
+  "external_transmission_allowed": false,
+  "permitted_active_outputs": [
+    "Malicious Programs",
+    "Uncertain"
+  ],
+  "required_malicious_action": "Block and send for security review",
+  "human_review_required": true,
+  "independently_validated": false,
+  "eligible_for_guarded_live_integration": false,
+  "connected_to_live_moderation": false,
+  "automatic_enforcement_allowed": false,
+  "evaluation_reporting_contract": {
+    "store_raw_holdout_text": false,
+    "store_individual_predictions": false,
+    "print_individual_predictions": false,
+    "report_aggregate_metrics_only": true
+  }
+}

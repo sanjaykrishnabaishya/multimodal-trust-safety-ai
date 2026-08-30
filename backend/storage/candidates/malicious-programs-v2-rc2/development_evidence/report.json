@@ -1,0 +1,91 @@
+{
+  "version": "2026.08-malicious-programs-v2-rc2-development",
+  "records": 480,
+  "unique_texts": 480,
+  "prior_development_overlap": 0,
+  "accuracy": 1.0,
+  "malicious_precision": 1.0,
+  "malicious_recall": 1.0,
+  "safe_specificity": 1.0,
+  "f1": 1.0,
+  "minimum_group_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "action_contract_failures": 0,
+  "category_mix_failures": 0,
+  "non_execution_failures": 0,
+  "payload_storage_failures": 0,
+  "authority_contract_failures": 0,
+  "processing_errors": 0,
+  "group_results": {
+    "benign_deployment_and_encryption": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "established_owner_isolation": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "lexical_and_nonoperational_boundaries": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "passive_and_object_first_delivery": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "reordered_ransomware_and_wiper_actions": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "safe_defensive_action_word_context": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "separated_action_and_capability_evidence": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "uncertain_uninspected_artifacts": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    }
+  },
+  "gates": {
+    "accuracy": true,
+    "malicious_precision": true,
+    "malicious_recall": true,
+    "safe_specificity": true,
+    "f1": true,
+    "minimum_group_accuracy": true,
+    "action_contract": true,
+    "category_mix_contract": true,
+    "non_execution_contract": true,
+    "payload_storage_contract": true,
+    "authority_contract": true,
+    "processing_contract": true
+  },
+  "passed_development_gate": true,
+  "rc1_aggregate_result_used": true,
+  "rc1_holdout_cases_read": false,
+  "rc1_individual_predictions_read": false,
+  "rc1_mismatches_read": false,
+  "executable_payloads_used": false,
+  "code_executed": false,
+  "archives_unpacked": false,
+  "payloads_stored": false,
+  "credentials_used": false,
+  "live_infrastructure_used": false,
+  "external_provider_used": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "dataset_sha256": "6d27a45eca9d229e47c8fabdc68947045ea3c7f6aba9de320b039709ebab7293"
+}

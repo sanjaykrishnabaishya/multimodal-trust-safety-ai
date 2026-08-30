@@ -107,6 +107,11 @@ def test_moderation_health_endpoint(
     assert result["invasion_of_privacy_v1_rc1"]["readiness"]["ready"] is True
     assert result["invasion_of_privacy_v1_rc1"]["external_provider_used"] is False
     assert result["invasion_of_privacy_v1_rc1"]["automatic_enforcement_allowed"] is False
+    assert result["malicious_programs_v2_rc2"]["version"] == "malicious-programs-v2-rc2"
+    assert result["malicious_programs_v2_rc2"]["readiness"]["ready"] is True
+    assert result["malicious_programs_v2_rc2"]["code_execution_allowed"] is False
+    assert result["malicious_programs_v2_rc2"]["payload_storage_allowed"] is False
+    assert result["malicious_programs_v2_rc2"]["automatic_enforcement_allowed"] is False
 
 
 def test_moderation_policy_registry_exposes_all_19_categories(
