@@ -45,6 +45,12 @@ from app.services.child_exploitation_v1_rc1_service import (
 from app.services.child_exploitation_v1_rc1_fusion import (
     get_child_exploitation_v1_rc1_readiness,
 )
+from app.services.invasion_of_privacy_v1_rc1_service import (
+    get_invasion_of_privacy_v1_rc1_status,
+)
+from app.services.invasion_of_privacy_v1_rc1_fusion import (
+    get_invasion_of_privacy_v1_rc1_readiness,
+)
 from app.services.moderation_service import (
     combine_extracted_signals,
 )
@@ -204,6 +210,10 @@ def moderation_health() -> dict:
         "child_exploitation_v1_rc1": {
             **get_child_exploitation_v1_rc1_status(),
             "readiness": get_child_exploitation_v1_rc1_readiness(),
+        },
+        "invasion_of_privacy_v1_rc1": {
+            **get_invasion_of_privacy_v1_rc1_status(),
+            "readiness": get_invasion_of_privacy_v1_rc1_readiness(),
         },
     }
 

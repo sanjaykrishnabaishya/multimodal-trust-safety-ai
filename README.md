@@ -31,6 +31,9 @@ The application currently supports:
 - Server-side OpenRouter advisory evidence with strict schema and privacy gates
 - Independently gated, local-only Child Exploitation safety routing with no
   external-provider transmission or appearance-based age inference
+- Independently gated Invasion of Privacy review routing with no victim-media
+  storage, external-provider transmission, or appearance-based identity,
+  consent, or private-location inference
 
 ## Planned capabilities
 

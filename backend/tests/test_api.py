@@ -103,6 +103,10 @@ def test_moderation_health_endpoint(
     assert result["child_exploitation_v1_rc1"]["readiness"]["ready"] is True
     assert result["child_exploitation_v1_rc1"]["external_provider_used"] is False
     assert result["child_exploitation_v1_rc1"]["automatic_enforcement_allowed"] is False
+    assert result["invasion_of_privacy_v1_rc1"]["version"] == "invasion-of-privacy-v1-rc1"
+    assert result["invasion_of_privacy_v1_rc1"]["readiness"]["ready"] is True
+    assert result["invasion_of_privacy_v1_rc1"]["external_provider_used"] is False
+    assert result["invasion_of_privacy_v1_rc1"]["automatic_enforcement_allowed"] is False
 
 
 def test_moderation_policy_registry_exposes_all_19_categories(

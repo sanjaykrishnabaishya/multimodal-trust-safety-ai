@@ -1,6 +1,6 @@
 # TrustScope category-readiness ledger
 
-Updated: 2026-08-22
+Updated: 2026-08-30
 
 This ledger separates independent component evidence from development contracts
 and product readiness. A component score is never presented as overall product
@@ -40,7 +40,7 @@ The frontend production build and static checks also passed.
 | Graphic, Obscene & Sexual Content | 97.08% synthetic independent accuracy | 240 | Text/policy candidate passed; captionless visual dependency remains independently unvalidated. |
 | Sexual Harassment | 100.00% precision, 93.33% recall | 60 positive-support records within the 240-record challenge | Passed the shared synthetic category gate; ownership must take precedence over generic sexual content. |
 | Cyberbullying & Harassment | 89.59% selective accuracy at 89.67% coverage | 300 external | Passed independent selective gate; uncertain results go to review. |
-| Invasion of Privacy | No dedicated independent evaluation | 0 | Not ready; next new category planned. |
+| Invasion of Privacy | 100.00% synthetic independent accuracy, precision, recall, specificity, and F1 | 720 unique | RC1 passed its locked independent and guarded live-fusion gates; review-only, local-only, and no victim-media storage or automatic enforcement. |
 | Illegal Activities | 100.00% synthetic independent accuracy, precision, recall, specificity, and F1 | 600 unique | RC2 passed its locked independent gate and guarded live-fusion contract; review-only and no automatic enforcement. |
 | Publishing Private Information | 91.45% recall on a positive-only external synthetic set | 2,000 | Useful detector evidence, but no negative-set specificity gate; consent/ownership still requires review. |
 | Identity Theft & Impersonation | 58.33% synthetic independent accuracy, 20.83% recall | 192 | Failed readiness gate. |
@@ -203,30 +203,76 @@ published.
 These are synthetic policy and integration results, not external or real-world
 accuracy. The frozen candidate and challenge may not be used for tuning.
 
-## Next category: Invasion of Privacy
+## Latest completed category phase: Invasion of Privacy V1 RC1
 
-The first development candidate will distinguish non-consensual capture,
-voyeurism, stalking/tracking, private-space intrusion, and non-consensual
-intimate sharing from ordinary public scenes, consented personal media,
-journalism, safety reporting, and fictional examples.
+This category was built as a local evidence-and-review router. It does not
+identify people, infer consent or private location from appearance, collect
+victim media, or ask an external provider to make privacy findings.
+
+Implemented policy contract:
+
+- Credible non-consensual capture, hidden-camera or eavesdropping behavior,
+  stalking/location tracking, private-space intrusion, or non-consensual
+  intimate-media sharing routes to `Invasion of Privacy`, `High`, `Restrict and
+  send for human review`.
+- A privacy-sensitive context must be paired with capture, surveillance,
+  tracking, sharing, or an active-case signal. Isolated words such as “private”
+  or “tracking” do not create a violation.
+- Unclear consent, location, relationship, provenance, or incomplete evidence
+  routes to `Uncertain` and human review; it never creates automatic Allow.
+- Documented consent, user-owned recording, disclosed public monitoring, safe
+  reporting, education, prevention, and fiction are no-override boundaries when
+  there is no active non-consensual case.
+- Child Exploitation, Publishing Private Information, Sexual Harassment, and all
+  other established category owners retain precedence.
+- The specialist can propose only Invasion of Privacy or Uncertain. Automatic
+  enforcement and external-provider use are disabled.
+
+The development set contained 600 unique synthetic fixtures across twelve
+families. Accuracy, privacy precision, recall, safe specificity, F1, and minimum
+family accuracy were all 100.00%, with zero action, category-mix,
+privacy-storage, authority, or processing failures. RC1 was frozen only after
+this gate passed.
+
+The post-freeze independent challenge contained 720 new unique synthetic
+fixtures: 240 privacy positives and 480 safe, Uncertain, consented, public,
+reporting, lexical, and category-owner boundaries. Development overlap was
+zero. Accuracy, precision, recall, specificity, F1, and minimum group accuracy
+were all 100.00%, with zero contract failures. The guarded live-fusion contract
+passed 10/10.
+
+Phase 5 regression validation: 179 backend tests passed. Three third-party
+deprecation warnings remain non-blocking; no API key, real victim media,
+private identifier, raw challenge text, individual prediction, or external
+provider payload was published.
+
+These are synthetic policy and integration results, not external or real-world
+accuracy. The frozen candidate and challenge may not be used for tuning.
+
+## Next category: Malicious Programs
+
+The first candidate will separate operational malware distribution or
+facilitation from defensive cybersecurity work. It will use safe synthetic
+text and metadata only; executable malware, credentials, live command-and-
+control addresses, and functional payloads will not be collected or stored.
 
 Initial policy contract:
 
-- No face recognition, identity inference, age inference, or consent inference
-  from appearance alone.
-- Captionless visual evidence alone may raise review priority, but cannot prove
-  ownership or consent.
-- Credible voyeurism, private-space surveillance, stalking, or non-consensual
-  intimate-media evidence routes to remove/restrict and human escalation.
-- Ordinary public photography and consented or user-owned media remain allowed
-  when no private-information or other safety owner is triggered.
-- Unclear consent, jurisdiction, relationship, provenance, or location routes to
-  Uncertain and human review.
-- Publishing Private Information, Sexual Harassment, Child Exploitation, and
-  other established owners retain precedence.
+- Distribution, installation, deployment, credential theft, persistence,
+  evasion, ransomware, destructive action, or command-and-control intent must
+  be paired with a malware/tool/payload signal before the category can apply.
+- Defensive analysis, incident response, sandbox reports, detection rules,
+  patched demonstrations, academic discussion, and benign administration are
+  protected contexts when no live facilitation signal exists.
+- Dual-use or incomplete intent, unsupported attachments, encrypted archives,
+  and uncertain payload capability route to `Uncertain` and security review.
+- Code is never executed during moderation. The specialist stores no executable
+  payload and cannot generate or improve malicious capability.
+- Illegal Activities, Spam/Phishing, Identity Theft, Child Exploitation, and
+  other established owners retain precedence according to the primary harm.
+- Automatic enforcement remains disabled; confirmed candidates route to block
+  plus specialist security review.
 
-The development data will use safe synthetic text/metadata and lawful
-CC0/public-domain contextual media. Real victim media and permission-restricted
-sources will not be collected. The first gate will require at least 90% policy
-precision, 90% safe specificity, 85% minimum family accuracy, and zero action,
-category-mix, privacy-storage, or processing-contract failures.
+The first gate will require at least 90% precision and safe specificity, at
+least 85% recall and minimum family accuracy, and zero execution, payload-
+storage, action, category-mix, authority, or processing-contract failures.

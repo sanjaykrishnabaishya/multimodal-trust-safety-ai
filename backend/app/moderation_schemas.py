@@ -132,6 +132,17 @@ class ModerationResponse(
 
     child_exploitation_automatic_enforcement_allowed: bool = False
 
+    invasion_of_privacy_v1_rc1_used: bool = False
+
+    invasion_of_privacy_v1_rc1: dict[
+        str,
+        Any,
+    ] = Field(default_factory=dict)
+
+    invasion_of_privacy_v1_rc1_fusion_status: str = "not_evaluated"
+
+    invasion_of_privacy_automatic_enforcement_allowed: bool = False
+
     retrieved_evidence: list[
         dict[str, Any]
     ] = Field(

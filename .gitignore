@@ -134,6 +134,12 @@ backend/storage/candidates/*
 !backend/storage/candidates/child-exploitation-v1-rc1/
 !backend/storage/candidates/child-exploitation-v1-rc1/**
 
+# Publish only the safe aggregate Invasion of Privacy RC1 evaluator and freeze.
+# No victim media, private identifiers, or record-level predictions are stored.
+!backend/scripts/evaluate_invasion_of_privacy_v1_rc1_independent.py
+!backend/storage/candidates/invasion-of-privacy-v1-rc1/
+!backend/storage/candidates/invasion-of-privacy-v1-rc1/**
+
 # Wikidata structured community candidates are CC0 and review-routing only.
 # All other downloaded public benchmark datasets remain ignored.
 !datasets/public/

@@ -1,0 +1,95 @@
+{
+  "candidate": "invasion-of-privacy-v1-rc1",
+  "component": "Invasion of Privacy",
+  "candidate_type": "local deterministic consent-aware review router",
+  "frozen_at_utc": "2026-08-30T17:52:49.345554+00:00",
+  "development_gate_passed": true,
+  "development_metrics": {
+    "records": 600,
+    "unique_texts": 600,
+    "accuracy": 1.0,
+    "privacy_precision": 1.0,
+    "privacy_recall": 1.0,
+    "safe_specificity": 1.0,
+    "f1": 1.0,
+    "minimum_group_accuracy": 1.0,
+    "action_contract_failures": 0,
+    "category_mix_failures": 0,
+    "privacy_storage_failures": 0,
+    "authority_contract_failures": 0,
+    "processing_errors": 0
+  },
+  "artifacts": [
+    {
+      "relative_path": "source_snapshot/invasion_of_privacy_v1_rc1_service.py",
+      "size_bytes": 12339,
+      "sha256": "4eed0d46ab6a497312b0612c5a137dc1840d9462897e4136cb7e9bb32f0b1877"
+    },
+    {
+      "relative_path": "policy_snapshot/invasion_of_privacy_v1_rc1_policy.json",
+      "size_bytes": 1452,
+      "sha256": "07341ab7f26cd3a8bd01a16a6fdf5e3c739a9f5d41319d66df8a63041767ae19"
+    },
+    {
+      "relative_path": "source_snapshot/evaluate_invasion_of_privacy_v1_rc1_development.py",
+      "size_bytes": 15223,
+      "sha256": "4aad0d68fe6b81df45d2ed0dd35baf5df5ea9e6aea3212363c97fcf282e74563"
+    },
+    {
+      "relative_path": "source_snapshot/freeze_invasion_of_privacy_v1_rc1.py",
+      "size_bytes": 5084,
+      "sha256": "af8d80118980c91cf0588e392c81c813b2cd516545c110a42c9ea70a39f614f7"
+    },
+    {
+      "relative_path": "development/development.csv",
+      "size_bytes": 122290,
+      "sha256": "d98925b20067bd93110005dbf79dab2910a59aa3150e19f3684080ca62c6cbc3"
+    },
+    {
+      "relative_path": "development_evidence/report.json",
+      "size_bytes": 2907,
+      "sha256": "5152d4161585ff8cee20e1c99c43b8b9181b683ace7f7a4066ea614d8abb49cf"
+    }
+  ],
+  "independent_gate_frozen_before_holdout": {
+    "minimum_accuracy": 0.95,
+    "minimum_privacy_precision": 0.97,
+    "minimum_privacy_recall": 0.95,
+    "minimum_safe_specificity": 0.99,
+    "minimum_f1": 0.96,
+    "minimum_group_accuracy": 0.92,
+    "maximum_action_contract_failures": 0,
+    "maximum_category_mix_failures": 0,
+    "maximum_privacy_storage_failures": 0,
+    "maximum_authority_contract_failures": 0,
+    "maximum_processing_errors": 0,
+    "require_zero_development_overlap": true,
+    "require_frozen_source_hashes": true,
+    "require_no_raw_holdout_storage": true
+  },
+  "independent_holdout_created_before_freeze": false,
+  "independent_holdout_used_before_freeze": false,
+  "independent_holdout_may_modify_rc1": false,
+  "real_victim_media_used": false,
+  "private_identifiers_used": false,
+  "face_recognition_used": false,
+  "appearance_based_identity_consent_or_location_inference_allowed": false,
+  "external_provider_used": false,
+  "external_transmission_allowed": false,
+  "permitted_active_outputs": [
+    "Invasion of Privacy",
+    "Uncertain"
+  ],
+  "required_privacy_action": "Restrict and send for human review",
+  "human_review_required": true,
+  "independently_validated": false,
+  "eligible_for_guarded_live_integration": false,
+  "connected_to_live_moderation": false,
+  "automatic_enforcement_allowed": false,
+  "evaluation_reporting_contract": {
+    "store_raw_holdout_text": false,
+    "store_individual_predictions": false,
+    "print_individual_predictions": false,
+    "report_aggregate_metrics_only": true
+  }
+}

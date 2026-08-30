@@ -1,6 +1,6 @@
 # TrustScopeAI moderation rules
 
-Updated: 2026-08-22
+Updated: 2026-08-30
 
 This is the concise product rulebook for the 19-category registry. Category
 presence does not imply that its specialist passed independent readiness; see
@@ -18,7 +18,7 @@ disabled.
 | Graphic, Obscene & Sexual Content | Explicit adult nudity, sexual activity, sexual objects, commercial explicit material, or sexual violence is present. | Block, age-restrict, or limit distribution. | Verified art, monuments, health, and education have narrow safe routes; film/TV identity never creates Allow; uncertain age fails closed. |
 | Sexual Harassment | Unwanted sexual messages, remarks, pornography, conduct, or demands for sexual favors target a person. | Remove and escalate. | Unclear consent or relationship requires review. |
 | Cyberbullying & Harassment | Repeated targeting, direct threats, humiliation, or abusive conduct targets a person. | Limit or remove and human review. | Reporting, third-person depiction, quotation, and non-targeted language must not be misclassified. |
-| Invasion of Privacy | Voyeurism, stalking, tracking, private-space intrusion, or non-consensual intimate capture/sharing is credibly indicated. | Restrict/remove and human review. | Consent, ownership, private location, and identity cannot be inferred from appearance; uncertainty is reviewed. |
+| Invasion of Privacy | A privacy-sensitive context is paired with credible non-consensual capture, surveillance/eavesdropping, stalking/tracking, private-space intrusion, or intimate-media sharing. | Restrict and send for human review. | Isolated keywords are insufficient; consent, ownership, private location, relationship, and identity cannot be inferred from appearance; documented consent and safe reporting do not override; uncertainty is reviewed. |
 | Illegal Activities | A covered illegal/prohibited subject is paired with a current sale, supply, payment, delivery, access, or facilitation signal. | Restrict and human review. | Reporting, research, fiction, history, quotation, and legitimate commerce are vetoes; unresolved jurisdiction/licensing is Uncertain. |
 | Publishing Private Information | Sensitive personal, contact, financial, government, location, or credential data is exposed without established authorization. | Remove exposed information and human review. | Public business details, fictional/redacted examples, ownership, and consent require verification. |
 | Identity Theft & Impersonation | Another person or organization is fraudulently impersonated or their credentials/likeness are used deceptively. | Flag and human review. | Parody and identity ownership require verification. |
