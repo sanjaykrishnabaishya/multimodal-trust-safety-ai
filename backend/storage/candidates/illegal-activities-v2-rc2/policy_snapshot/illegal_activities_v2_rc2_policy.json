@@ -1,0 +1,48 @@
+{
+  "version": "2026.08-illegal-activities-v2-rc2",
+  "jurisdiction_scope": "India-first product policy with jurisdiction review",
+  "automatic_enforcement_allowed": false,
+  "legal_determination_authority": false,
+  "policy_evidence": [
+    {
+      "policy_id": "ILLEGAL-CONTROLLED-GOODS",
+      "family": "controlled_substances",
+      "rule": "Require a covered controlled-goods subject plus a current sale, supply, delivery, payment, or access signal before creating a review-only Illegal Activities candidate."
+    },
+    {
+      "policy_id": "ILLEGAL-WEAPONS",
+      "family": "weapons",
+      "rule": "Require explicit unlicensed or prohibited weapon context plus a current transaction or distribution signal; neutral discussion and licensed activity are not illegal findings."
+    },
+    {
+      "policy_id": "ILLEGAL-GAMBLING",
+      "family": "gambling",
+      "rule": "Explicitly illegal or unlicensed betting requires current promotion, signup, payment, or access evidence; legality is not inferred from ordinary gaming language."
+    },
+    {
+      "policy_id": "ILLEGAL-SEXUAL-SERVICES",
+      "family": "sexual_services",
+      "rule": "Commercial facilitation of prohibited sexual services is review-only. Child-risk, coercion, harassment, and trafficking signals remain owned by higher-priority safety processes."
+    },
+    {
+      "policy_id": "ILLEGAL-FORGERY-FINANCIAL",
+      "family": "forgery_financial",
+      "rule": "A current offer to supply forged identity material, counterfeit currency, or money-laundering services is a review-only candidate."
+    },
+    {
+      "policy_id": "ILLEGAL-PROTECTED-SYMBOLS",
+      "family": "protected_symbols",
+      "rule": "Potential commercial misuse of protected official symbols requires jurisdiction-aware human review and is never a final legal determination."
+    },
+    {
+      "policy_id": "ILLEGAL-SAFE-CONTEXT",
+      "family": "safe_context",
+      "rule": "Reporting, prevention, research, history, criticism, education, fiction, quoted material, and museum or professional context do not become Illegal Activities without a current real-world transaction signal."
+    },
+    {
+      "policy_id": "ILLEGAL-JURISDICTION",
+      "family": "jurisdiction_uncertain",
+      "rule": "Unknown licensing, location, legality, purpose, or transaction status routes to Uncertain and human review rather than an Illegal or Allow determination."
+    }
+  ]
+}

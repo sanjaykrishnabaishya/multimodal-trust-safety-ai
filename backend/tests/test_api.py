@@ -86,6 +86,62 @@ def test_moderation_health_endpoint(
         is True
     )
 
+    assert (
+        result["openrouter_advisory"]["strict_schema_required"]
+        is True
+    )
+    assert (
+        result["illegal_activities_v1"][
+            "automatic_enforcement_allowed"
+        ]
+        is False
+    )
+    assert result["illegal_activities_v2_rc2"]["version"] == "illegal-activities-v2-rc2"
+    assert result["illegal_activities_v2_rc2"]["readiness"]["ready"] is True
+    assert result["illegal_activities_v2_rc2"]["automatic_enforcement_allowed"] is False
+    assert result["child_exploitation_v1_rc1"]["version"] == "child-exploitation-v1-rc1"
+    assert result["child_exploitation_v1_rc1"]["readiness"]["ready"] is True
+    assert result["child_exploitation_v1_rc1"]["external_provider_used"] is False
+    assert result["child_exploitation_v1_rc1"]["automatic_enforcement_allowed"] is False
+    assert result["invasion_of_privacy_v1_rc1"]["version"] == "invasion-of-privacy-v1-rc1"
+    assert result["invasion_of_privacy_v1_rc1"]["readiness"]["ready"] is True
+    assert result["invasion_of_privacy_v1_rc1"]["external_provider_used"] is False
+    assert result["invasion_of_privacy_v1_rc1"]["automatic_enforcement_allowed"] is False
+
+
+def test_moderation_policy_registry_exposes_all_19_categories(
+    client,
+):
+    response = client.get(
+        "/moderation/policies"
+    )
+
+    assert response.status_code == 200
+    result = response.json()
+
+    assert result["category_count"] == 19
+    assert len(result["policies"]) == 19
+    assert (
+        result["automatic_enforcement_allowed"]
+        is False
+    )
+
+    categories = {
+        item["category"]
+        for item in result["policies"]
+    }
+    assert "Illegal Activities" in categories
+    assert "Child Exploitation" in categories
+
+    illegal = next(
+        item
+        for item in result["policies"]
+        if item["category"]
+        == "Illegal Activities"
+    )
+    assert illegal["human_review_required"] is True
+    assert illegal["moderation_conditions"]
+
 
 def test_deep_analysis_health_endpoint(
     client,

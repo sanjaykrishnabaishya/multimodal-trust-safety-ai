@@ -1,0 +1,321 @@
+record_id,group,text,expected_category
+CONTROLLED_GOODS_AND_MEDICINES-001,controlled_goods_and_medicines,illegal drugs are for sale. Contact me to order now. Reference 1.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-002,controlled_goods_and_medicines,controlled pills are for sale. Contact me to order now. Reference 2.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-003,controlled_goods_and_medicines,unapproved medicine are for sale. Contact me to order now. Reference 3.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-004,controlled_goods_and_medicines,psychotropic substances are for sale. Contact me to order now. Reference 4.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-005,controlled_goods_and_medicines,illegal narcotics are for sale. Contact me to order now. Reference 5.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-006,controlled_goods_and_medicines,This listing offers illegal drugs. Delivery available; buy now. Reference 6.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-007,controlled_goods_and_medicines,This listing offers controlled pills. Delivery available; buy now. Reference 7.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-008,controlled_goods_and_medicines,This listing offers unapproved medicine. Delivery available; buy now. Reference 8.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-009,controlled_goods_and_medicines,This listing offers psychotropic substances. Delivery available; buy now. Reference 9.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-010,controlled_goods_and_medicines,This listing offers illegal narcotics. Delivery available; buy now. Reference 10.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-011,controlled_goods_and_medicines,The seller advertises illegal drugs. Message me to order. Reference 11.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-012,controlled_goods_and_medicines,The seller advertises controlled pills. Message me to order. Reference 12.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-013,controlled_goods_and_medicines,The seller advertises unapproved medicine. Message me to order. Reference 13.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-014,controlled_goods_and_medicines,The seller advertises psychotropic substances. Message me to order. Reference 14.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-015,controlled_goods_and_medicines,The seller advertises illegal narcotics. Message me to order. Reference 15.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-016,controlled_goods_and_medicines,A commercial post says illegal drugs are for sale and asks buyers to contact me. Reference 16.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-017,controlled_goods_and_medicines,A commercial post says controlled pills are for sale and asks buyers to contact me. Reference 17.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-018,controlled_goods_and_medicines,A commercial post says unapproved medicine are for sale and asks buyers to contact me. Reference 18.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-019,controlled_goods_and_medicines,A commercial post says psychotropic substances are for sale and asks buyers to contact me. Reference 19.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-020,controlled_goods_and_medicines,A commercial post says illegal narcotics are for sale and asks buyers to contact me. Reference 20.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-021,controlled_goods_and_medicines,illegal drugs are for sale. Contact me to order now. Reference 21.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-022,controlled_goods_and_medicines,controlled pills are for sale. Contact me to order now. Reference 22.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-023,controlled_goods_and_medicines,unapproved medicine are for sale. Contact me to order now. Reference 23.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-024,controlled_goods_and_medicines,psychotropic substances are for sale. Contact me to order now. Reference 24.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-025,controlled_goods_and_medicines,illegal narcotics are for sale. Contact me to order now. Reference 25.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-026,controlled_goods_and_medicines,This listing offers illegal drugs. Delivery available; buy now. Reference 26.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-027,controlled_goods_and_medicines,This listing offers controlled pills. Delivery available; buy now. Reference 27.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-028,controlled_goods_and_medicines,This listing offers unapproved medicine. Delivery available; buy now. Reference 28.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-029,controlled_goods_and_medicines,This listing offers psychotropic substances. Delivery available; buy now. Reference 29.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-030,controlled_goods_and_medicines,This listing offers illegal narcotics. Delivery available; buy now. Reference 30.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-031,controlled_goods_and_medicines,The seller advertises illegal drugs. Message me to order. Reference 31.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-032,controlled_goods_and_medicines,The seller advertises controlled pills. Message me to order. Reference 32.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-033,controlled_goods_and_medicines,The seller advertises unapproved medicine. Message me to order. Reference 33.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-034,controlled_goods_and_medicines,The seller advertises psychotropic substances. Message me to order. Reference 34.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-035,controlled_goods_and_medicines,The seller advertises illegal narcotics. Message me to order. Reference 35.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-036,controlled_goods_and_medicines,A commercial post says illegal drugs are for sale and asks buyers to contact me. Reference 36.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-037,controlled_goods_and_medicines,A commercial post says controlled pills are for sale and asks buyers to contact me. Reference 37.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-038,controlled_goods_and_medicines,A commercial post says unapproved medicine are for sale and asks buyers to contact me. Reference 38.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-039,controlled_goods_and_medicines,A commercial post says psychotropic substances are for sale and asks buyers to contact me. Reference 39.,Illegal Activities
+CONTROLLED_GOODS_AND_MEDICINES-040,controlled_goods_and_medicines,A commercial post says illegal narcotics are for sale and asks buyers to contact me. Reference 40.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-001,weapons_documents_and_counterfeit,A unlicensed gun is for sale. Contact me to order now. Reference 1.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-002,weapons_documents_and_counterfeit,A gun without a license is for sale. Contact me to order now. Reference 2.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-003,weapons_documents_and_counterfeit,A prohibited weapon is for sale. Contact me to order now. Reference 3.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-004,weapons_documents_and_counterfeit,A fake identity document is for sale. Contact me to order now. Reference 4.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-005,weapons_documents_and_counterfeit,A forged certificate is for sale. Contact me to order now. Reference 5.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-006,weapons_documents_and_counterfeit,A counterfeit currency is for sale. Contact me to order now. Reference 6.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-007,weapons_documents_and_counterfeit,This post offers a unlicensed gun; delivery available. Reference 7.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-008,weapons_documents_and_counterfeit,This post offers a gun without a license; delivery available. Reference 8.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-009,weapons_documents_and_counterfeit,This post offers a prohibited weapon; delivery available. Reference 9.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-010,weapons_documents_and_counterfeit,This post offers a fake identity document; delivery available. Reference 10.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-011,weapons_documents_and_counterfeit,This post offers a forged certificate; delivery available. Reference 11.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-012,weapons_documents_and_counterfeit,This post offers a counterfeit currency; delivery available. Reference 12.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-013,weapons_documents_and_counterfeit,The account advertises a unlicensed gun. Buy now. Reference 13.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-014,weapons_documents_and_counterfeit,The account advertises a gun without a license. Buy now. Reference 14.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-015,weapons_documents_and_counterfeit,The account advertises a prohibited weapon. Buy now. Reference 15.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-016,weapons_documents_and_counterfeit,The account advertises a fake identity document. Buy now. Reference 16.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-017,weapons_documents_and_counterfeit,The account advertises a forged certificate. Buy now. Reference 17.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-018,weapons_documents_and_counterfeit,The account advertises a counterfeit currency. Buy now. Reference 18.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-019,weapons_documents_and_counterfeit,A listing provides a unlicensed gun. Message me to order. Reference 19.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-020,weapons_documents_and_counterfeit,A listing provides a gun without a license. Message me to order. Reference 20.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-021,weapons_documents_and_counterfeit,A listing provides a prohibited weapon. Message me to order. Reference 21.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-022,weapons_documents_and_counterfeit,A listing provides a fake identity document. Message me to order. Reference 22.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-023,weapons_documents_and_counterfeit,A listing provides a forged certificate. Message me to order. Reference 23.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-024,weapons_documents_and_counterfeit,A listing provides a counterfeit currency. Message me to order. Reference 24.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-025,weapons_documents_and_counterfeit,A unlicensed gun is for sale. Contact me to order now. Reference 25.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-026,weapons_documents_and_counterfeit,A gun without a license is for sale. Contact me to order now. Reference 26.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-027,weapons_documents_and_counterfeit,A prohibited weapon is for sale. Contact me to order now. Reference 27.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-028,weapons_documents_and_counterfeit,A fake identity document is for sale. Contact me to order now. Reference 28.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-029,weapons_documents_and_counterfeit,A forged certificate is for sale. Contact me to order now. Reference 29.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-030,weapons_documents_and_counterfeit,A counterfeit currency is for sale. Contact me to order now. Reference 30.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-031,weapons_documents_and_counterfeit,This post offers a unlicensed gun; delivery available. Reference 31.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-032,weapons_documents_and_counterfeit,This post offers a gun without a license; delivery available. Reference 32.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-033,weapons_documents_and_counterfeit,This post offers a prohibited weapon; delivery available. Reference 33.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-034,weapons_documents_and_counterfeit,This post offers a fake identity document; delivery available. Reference 34.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-035,weapons_documents_and_counterfeit,This post offers a forged certificate; delivery available. Reference 35.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-036,weapons_documents_and_counterfeit,This post offers a counterfeit currency; delivery available. Reference 36.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-037,weapons_documents_and_counterfeit,The account advertises a unlicensed gun. Buy now. Reference 37.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-038,weapons_documents_and_counterfeit,The account advertises a gun without a license. Buy now. Reference 38.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-039,weapons_documents_and_counterfeit,The account advertises a prohibited weapon. Buy now. Reference 39.,Illegal Activities
+WEAPONS_DOCUMENTS_AND_COUNTERFEIT-040,weapons_documents_and_counterfeit,The account advertises a fake identity document. Buy now. Reference 40.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-001,gambling_and_financial_facilitation,Join this betting offer for illegal gambling; contact me. Reference 1.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-002,gambling_and_financial_facilitation,Join this betting offer for illegal betting; contact me. Reference 2.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-003,gambling_and_financial_facilitation,Join this betting offer for unlicensed betting; contact me. Reference 3.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-004,gambling_and_financial_facilitation,Join this betting offer for unlicensed gambling; contact me. Reference 4.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-005,gambling_and_financial_facilitation,Join this betting offer for money laundering service; contact me. Reference 5.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-006,gambling_and_financial_facilitation,The account promotes illegal gambling. Pay to receive access. Reference 6.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-007,gambling_and_financial_facilitation,The account promotes illegal betting. Pay to receive access. Reference 7.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-008,gambling_and_financial_facilitation,The account promotes unlicensed betting. Pay to receive access. Reference 8.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-009,gambling_and_financial_facilitation,The account promotes unlicensed gambling. Pay to receive access. Reference 9.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-010,gambling_and_financial_facilitation,The account promotes money laundering service. Pay to receive access. Reference 10.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-011,gambling_and_financial_facilitation,A commercial listing offers a illegal gambling. Contact me to order now. Reference 11.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-012,gambling_and_financial_facilitation,A commercial listing offers a illegal betting. Contact me to order now. Reference 12.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-013,gambling_and_financial_facilitation,A commercial listing offers a unlicensed betting. Contact me to order now. Reference 13.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-014,gambling_and_financial_facilitation,A commercial listing offers a unlicensed gambling. Contact me to order now. Reference 14.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-015,gambling_and_financial_facilitation,A commercial listing offers a money laundering service. Contact me to order now. Reference 15.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-016,gambling_and_financial_facilitation,This post advertises illegal gambling; buy now. Reference 16.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-017,gambling_and_financial_facilitation,This post advertises illegal betting; buy now. Reference 17.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-018,gambling_and_financial_facilitation,This post advertises unlicensed betting; buy now. Reference 18.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-019,gambling_and_financial_facilitation,This post advertises unlicensed gambling; buy now. Reference 19.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-020,gambling_and_financial_facilitation,This post advertises money laundering service; buy now. Reference 20.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-021,gambling_and_financial_facilitation,Join this betting offer for illegal gambling; contact me. Reference 21.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-022,gambling_and_financial_facilitation,Join this betting offer for illegal betting; contact me. Reference 22.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-023,gambling_and_financial_facilitation,Join this betting offer for unlicensed betting; contact me. Reference 23.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-024,gambling_and_financial_facilitation,Join this betting offer for unlicensed gambling; contact me. Reference 24.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-025,gambling_and_financial_facilitation,Join this betting offer for money laundering service; contact me. Reference 25.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-026,gambling_and_financial_facilitation,The account promotes illegal gambling. Pay to receive access. Reference 26.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-027,gambling_and_financial_facilitation,The account promotes illegal betting. Pay to receive access. Reference 27.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-028,gambling_and_financial_facilitation,The account promotes unlicensed betting. Pay to receive access. Reference 28.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-029,gambling_and_financial_facilitation,The account promotes unlicensed gambling. Pay to receive access. Reference 29.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-030,gambling_and_financial_facilitation,The account promotes money laundering service. Pay to receive access. Reference 30.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-031,gambling_and_financial_facilitation,A commercial listing offers a illegal gambling. Contact me to order now. Reference 31.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-032,gambling_and_financial_facilitation,A commercial listing offers a illegal betting. Contact me to order now. Reference 32.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-033,gambling_and_financial_facilitation,A commercial listing offers a unlicensed betting. Contact me to order now. Reference 33.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-034,gambling_and_financial_facilitation,A commercial listing offers a unlicensed gambling. Contact me to order now. Reference 34.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-035,gambling_and_financial_facilitation,A commercial listing offers a money laundering service. Contact me to order now. Reference 35.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-036,gambling_and_financial_facilitation,This post advertises illegal gambling; buy now. Reference 36.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-037,gambling_and_financial_facilitation,This post advertises illegal betting; buy now. Reference 37.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-038,gambling_and_financial_facilitation,This post advertises unlicensed betting; buy now. Reference 38.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-039,gambling_and_financial_facilitation,This post advertises unlicensed gambling; buy now. Reference 39.,Illegal Activities
+GAMBLING_AND_FINANCIAL_FACILITATION-040,gambling_and_financial_facilitation,This post advertises money laundering service; buy now. Reference 40.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-001,commercial_services_and_protected_symbols,This post advertises prostitution services. Contact me to order now. Reference 1.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-002,commercial_services_and_protected_symbols,This post advertises sexual services for money. Contact me to order now. Reference 2.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-003,commercial_services_and_protected_symbols,This post advertises paid sexual service. Contact me to order now. Reference 3.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-004,commercial_services_and_protected_symbols,This post advertises commercial sexual service. Contact me to order now. Reference 4.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-005,commercial_services_and_protected_symbols,This post advertises fake government emblem. Contact me to order now. Reference 5.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-006,commercial_services_and_protected_symbols,This post advertises misuse national emblem. Contact me to order now. Reference 6.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-007,commercial_services_and_protected_symbols,This post advertises misuse the national flag. Contact me to order now. Reference 7.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-008,commercial_services_and_protected_symbols,A listing offers prostitution services; book now. Reference 8.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-009,commercial_services_and_protected_symbols,A listing offers sexual services for money; book now. Reference 9.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-010,commercial_services_and_protected_symbols,A listing offers paid sexual service; book now. Reference 10.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-011,commercial_services_and_protected_symbols,A listing offers commercial sexual service; book now. Reference 11.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-012,commercial_services_and_protected_symbols,A listing offers fake government emblem; book now. Reference 12.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-013,commercial_services_and_protected_symbols,A listing offers misuse national emblem; book now. Reference 13.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-014,commercial_services_and_protected_symbols,A listing offers misuse the national flag; book now. Reference 14.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-015,commercial_services_and_protected_symbols,The account promotes prostitution services. Available tonight. Reference 15.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-016,commercial_services_and_protected_symbols,The account promotes sexual services for money. Available tonight. Reference 16.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-017,commercial_services_and_protected_symbols,The account promotes paid sexual service. Available tonight. Reference 17.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-018,commercial_services_and_protected_symbols,The account promotes commercial sexual service. Available tonight. Reference 18.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-019,commercial_services_and_protected_symbols,The account promotes fake government emblem. Available tonight. Reference 19.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-020,commercial_services_and_protected_symbols,The account promotes misuse national emblem. Available tonight. Reference 20.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-021,commercial_services_and_protected_symbols,The account promotes misuse the national flag. Available tonight. Reference 21.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-022,commercial_services_and_protected_symbols,Contact me to use this in your advertisement: prostitution services. Reference 22.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-023,commercial_services_and_protected_symbols,Contact me to use this in your advertisement: sexual services for money. Reference 23.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-024,commercial_services_and_protected_symbols,Contact me to use this in your advertisement: paid sexual service. Reference 24.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-025,commercial_services_and_protected_symbols,Contact me to use this in your advertisement: commercial sexual service. Reference 25.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-026,commercial_services_and_protected_symbols,Contact me to use this in your advertisement: fake government emblem. Reference 26.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-027,commercial_services_and_protected_symbols,Contact me to use this in your advertisement: misuse national emblem. Reference 27.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-028,commercial_services_and_protected_symbols,Contact me to use this in your advertisement: misuse the national flag. Reference 28.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-029,commercial_services_and_protected_symbols,This post advertises prostitution services. Contact me to order now. Reference 29.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-030,commercial_services_and_protected_symbols,This post advertises sexual services for money. Contact me to order now. Reference 30.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-031,commercial_services_and_protected_symbols,This post advertises paid sexual service. Contact me to order now. Reference 31.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-032,commercial_services_and_protected_symbols,This post advertises commercial sexual service. Contact me to order now. Reference 32.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-033,commercial_services_and_protected_symbols,This post advertises fake government emblem. Contact me to order now. Reference 33.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-034,commercial_services_and_protected_symbols,This post advertises misuse national emblem. Contact me to order now. Reference 34.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-035,commercial_services_and_protected_symbols,This post advertises misuse the national flag. Contact me to order now. Reference 35.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-036,commercial_services_and_protected_symbols,A listing offers prostitution services; book now. Reference 36.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-037,commercial_services_and_protected_symbols,A listing offers sexual services for money; book now. Reference 37.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-038,commercial_services_and_protected_symbols,A listing offers paid sexual service; book now. Reference 38.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-039,commercial_services_and_protected_symbols,A listing offers commercial sexual service; book now. Reference 39.,Illegal Activities
+COMMERCIAL_SERVICES_AND_PROTECTED_SYMBOLS-040,commercial_services_and_protected_symbols,A listing offers fake government emblem; book now. Reference 40.,Illegal Activities
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-001,safe_reporting_education_and_prevention,A news report about illegal drugs warns viewers and condemns the conduct. Reference 1.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-002,safe_reporting_education_and_prevention,A news report about unlicensed gun warns viewers and condemns the conduct. Reference 2.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-003,safe_reporting_education_and_prevention,A news report about illegal gambling warns viewers and condemns the conduct. Reference 3.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-004,safe_reporting_education_and_prevention,A news report about fake identity document warns viewers and condemns the conduct. Reference 4.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-005,safe_reporting_education_and_prevention,A news report about counterfeit currency warns viewers and condemns the conduct. Reference 5.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-006,safe_reporting_education_and_prevention,An educational prevention lesson discusses illegal drugs without facilitating a transaction. Reference 6.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-007,safe_reporting_education_and_prevention,An educational prevention lesson discusses unlicensed gun without facilitating a transaction. Reference 7.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-008,safe_reporting_education_and_prevention,An educational prevention lesson discusses illegal gambling without facilitating a transaction. Reference 8.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-009,safe_reporting_education_and_prevention,An educational prevention lesson discusses fake identity document without facilitating a transaction. Reference 9.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-010,safe_reporting_education_and_prevention,An educational prevention lesson discusses counterfeit currency without facilitating a transaction. Reference 10.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-011,safe_reporting_education_and_prevention,A documentary reports on illegal drugs and says the matter was reported to authorities. Reference 11.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-012,safe_reporting_education_and_prevention,A documentary reports on unlicensed gun and says the matter was reported to authorities. Reference 12.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-013,safe_reporting_education_and_prevention,A documentary reports on illegal gambling and says the matter was reported to authorities. Reference 13.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-014,safe_reporting_education_and_prevention,A documentary reports on fake identity document and says the matter was reported to authorities. Reference 14.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-015,safe_reporting_education_and_prevention,A documentary reports on counterfeit currency and says the matter was reported to authorities. Reference 15.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-016,safe_reporting_education_and_prevention,A safety warning says to avoid illegal drugs. Reference 16.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-017,safe_reporting_education_and_prevention,A safety warning says to avoid unlicensed gun. Reference 17.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-018,safe_reporting_education_and_prevention,A safety warning says to avoid illegal gambling. Reference 18.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-019,safe_reporting_education_and_prevention,A safety warning says to avoid fake identity document. Reference 19.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-020,safe_reporting_education_and_prevention,A safety warning says to avoid counterfeit currency. Reference 20.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-021,safe_reporting_education_and_prevention,A news report about illegal drugs warns viewers and condemns the conduct. Reference 21.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-022,safe_reporting_education_and_prevention,A news report about unlicensed gun warns viewers and condemns the conduct. Reference 22.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-023,safe_reporting_education_and_prevention,A news report about illegal gambling warns viewers and condemns the conduct. Reference 23.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-024,safe_reporting_education_and_prevention,A news report about fake identity document warns viewers and condemns the conduct. Reference 24.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-025,safe_reporting_education_and_prevention,A news report about counterfeit currency warns viewers and condemns the conduct. Reference 25.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-026,safe_reporting_education_and_prevention,An educational prevention lesson discusses illegal drugs without facilitating a transaction. Reference 26.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-027,safe_reporting_education_and_prevention,An educational prevention lesson discusses unlicensed gun without facilitating a transaction. Reference 27.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-028,safe_reporting_education_and_prevention,An educational prevention lesson discusses illegal gambling without facilitating a transaction. Reference 28.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-029,safe_reporting_education_and_prevention,An educational prevention lesson discusses fake identity document without facilitating a transaction. Reference 29.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-030,safe_reporting_education_and_prevention,An educational prevention lesson discusses counterfeit currency without facilitating a transaction. Reference 30.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-031,safe_reporting_education_and_prevention,A documentary reports on illegal drugs and says the matter was reported to authorities. Reference 31.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-032,safe_reporting_education_and_prevention,A documentary reports on unlicensed gun and says the matter was reported to authorities. Reference 32.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-033,safe_reporting_education_and_prevention,A documentary reports on illegal gambling and says the matter was reported to authorities. Reference 33.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-034,safe_reporting_education_and_prevention,A documentary reports on fake identity document and says the matter was reported to authorities. Reference 34.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-035,safe_reporting_education_and_prevention,A documentary reports on counterfeit currency and says the matter was reported to authorities. Reference 35.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-036,safe_reporting_education_and_prevention,A safety warning says to avoid illegal drugs. Reference 36.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-037,safe_reporting_education_and_prevention,A safety warning says to avoid unlicensed gun. Reference 37.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-038,safe_reporting_education_and_prevention,A safety warning says to avoid illegal gambling. Reference 38.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-039,safe_reporting_education_and_prevention,A safety warning says to avoid fake identity document. Reference 39.,Normal/Ignore
+SAFE_REPORTING_EDUCATION_AND_PREVENTION-040,safe_reporting_education_and_prevention,A safety warning says to avoid counterfeit currency. Reference 40.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-001,legitimate_jobs_commerce_and_professional_context,Microsoft job recruitment is described in an ordinary lawful announcement. Reference 1.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-002,legitimate_jobs_commerce_and_professional_context,licensed pharmacy selling approved medicine is described in an ordinary lawful announcement. Reference 2.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-003,legitimate_jobs_commerce_and_professional_context,licensed sporting event is described in an ordinary lawful announcement. Reference 3.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-004,legitimate_jobs_commerce_and_professional_context,museum exhibition is described in an ordinary lawful announcement. Reference 4.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-005,legitimate_jobs_commerce_and_professional_context,film prop is described in an ordinary lawful announcement. Reference 5.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-006,legitimate_jobs_commerce_and_professional_context,lawful training range is described in an ordinary lawful announcement. Reference 6.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-007,legitimate_jobs_commerce_and_professional_context,ordinary ecommerce listing is described in an ordinary lawful announcement. Reference 7.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-008,legitimate_jobs_commerce_and_professional_context,The page provides information about Microsoft job recruitment. Reference 8.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-009,legitimate_jobs_commerce_and_professional_context,The page provides information about licensed pharmacy selling approved medicine. Reference 9.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-010,legitimate_jobs_commerce_and_professional_context,The page provides information about licensed sporting event. Reference 10.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-011,legitimate_jobs_commerce_and_professional_context,The page provides information about museum exhibition. Reference 11.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-012,legitimate_jobs_commerce_and_professional_context,The page provides information about film prop. Reference 12.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-013,legitimate_jobs_commerce_and_professional_context,The page provides information about lawful training range. Reference 13.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-014,legitimate_jobs_commerce_and_professional_context,The page provides information about ordinary ecommerce listing. Reference 14.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-015,legitimate_jobs_commerce_and_professional_context,A verified organization publishes details about Microsoft job recruitment. Reference 15.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-016,legitimate_jobs_commerce_and_professional_context,A verified organization publishes details about licensed pharmacy selling approved medicine. Reference 16.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-017,legitimate_jobs_commerce_and_professional_context,A verified organization publishes details about licensed sporting event. Reference 17.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-018,legitimate_jobs_commerce_and_professional_context,A verified organization publishes details about museum exhibition. Reference 18.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-019,legitimate_jobs_commerce_and_professional_context,A verified organization publishes details about film prop. Reference 19.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-020,legitimate_jobs_commerce_and_professional_context,A verified organization publishes details about lawful training range. Reference 20.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-021,legitimate_jobs_commerce_and_professional_context,A verified organization publishes details about ordinary ecommerce listing. Reference 21.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-022,legitimate_jobs_commerce_and_professional_context,This is a neutral description of Microsoft job recruitment. Reference 22.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-023,legitimate_jobs_commerce_and_professional_context,This is a neutral description of licensed pharmacy selling approved medicine. Reference 23.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-024,legitimate_jobs_commerce_and_professional_context,This is a neutral description of licensed sporting event. Reference 24.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-025,legitimate_jobs_commerce_and_professional_context,This is a neutral description of museum exhibition. Reference 25.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-026,legitimate_jobs_commerce_and_professional_context,This is a neutral description of film prop. Reference 26.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-027,legitimate_jobs_commerce_and_professional_context,This is a neutral description of lawful training range. Reference 27.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-028,legitimate_jobs_commerce_and_professional_context,This is a neutral description of ordinary ecommerce listing. Reference 28.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-029,legitimate_jobs_commerce_and_professional_context,Microsoft job recruitment is described in an ordinary lawful announcement. Reference 29.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-030,legitimate_jobs_commerce_and_professional_context,licensed pharmacy selling approved medicine is described in an ordinary lawful announcement. Reference 30.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-031,legitimate_jobs_commerce_and_professional_context,licensed sporting event is described in an ordinary lawful announcement. Reference 31.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-032,legitimate_jobs_commerce_and_professional_context,museum exhibition is described in an ordinary lawful announcement. Reference 32.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-033,legitimate_jobs_commerce_and_professional_context,film prop is described in an ordinary lawful announcement. Reference 33.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-034,legitimate_jobs_commerce_and_professional_context,lawful training range is described in an ordinary lawful announcement. Reference 34.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-035,legitimate_jobs_commerce_and_professional_context,ordinary ecommerce listing is described in an ordinary lawful announcement. Reference 35.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-036,legitimate_jobs_commerce_and_professional_context,The page provides information about Microsoft job recruitment. Reference 36.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-037,legitimate_jobs_commerce_and_professional_context,The page provides information about licensed pharmacy selling approved medicine. Reference 37.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-038,legitimate_jobs_commerce_and_professional_context,The page provides information about licensed sporting event. Reference 38.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-039,legitimate_jobs_commerce_and_professional_context,The page provides information about museum exhibition. Reference 39.,Normal/Ignore
+LEGITIMATE_JOBS_COMMERCE_AND_PROFESSIONAL_CONTEXT-040,legitimate_jobs_commerce_and_professional_context,The page provides information about film prop. Reference 40.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-001,fiction_history_and_research_boundary,A fictional example mentions illegal drugs but contains no transaction or instructions. Reference 1.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-002,fiction_history_and_research_boundary,A fictional example mentions prohibited weapon but contains no transaction or instructions. Reference 2.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-003,fiction_history_and_research_boundary,A fictional example mentions illegal betting but contains no transaction or instructions. Reference 3.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-004,fiction_history_and_research_boundary,A fictional example mentions forged certificate but contains no transaction or instructions. Reference 4.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-005,fiction_history_and_research_boundary,A fictional example mentions fake government emblem but contains no transaction or instructions. Reference 5.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-006,fiction_history_and_research_boundary,Historical research discusses illegal drugs in an educational archive. Reference 6.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-007,fiction_history_and_research_boundary,Historical research discusses prohibited weapon in an educational archive. Reference 7.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-008,fiction_history_and_research_boundary,Historical research discusses illegal betting in an educational archive. Reference 8.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-009,fiction_history_and_research_boundary,Historical research discusses forged certificate in an educational archive. Reference 9.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-010,fiction_history_and_research_boundary,Historical research discusses fake government emblem in an educational archive. Reference 10.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-011,fiction_history_and_research_boundary,A documentary condemns illegal drugs and provides prevention information. Reference 11.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-012,fiction_history_and_research_boundary,A documentary condemns prohibited weapon and provides prevention information. Reference 12.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-013,fiction_history_and_research_boundary,A documentary condemns illegal betting and provides prevention information. Reference 13.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-014,fiction_history_and_research_boundary,A documentary condemns forged certificate and provides prevention information. Reference 14.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-015,fiction_history_and_research_boundary,A documentary condemns fake government emblem and provides prevention information. Reference 15.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-016,fiction_history_and_research_boundary,An academic discussion examines illegal drugs without facilitating it. Reference 16.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-017,fiction_history_and_research_boundary,An academic discussion examines prohibited weapon without facilitating it. Reference 17.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-018,fiction_history_and_research_boundary,An academic discussion examines illegal betting without facilitating it. Reference 18.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-019,fiction_history_and_research_boundary,An academic discussion examines forged certificate without facilitating it. Reference 19.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-020,fiction_history_and_research_boundary,An academic discussion examines fake government emblem without facilitating it. Reference 20.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-021,fiction_history_and_research_boundary,A fictional example mentions illegal drugs but contains no transaction or instructions. Reference 21.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-022,fiction_history_and_research_boundary,A fictional example mentions prohibited weapon but contains no transaction or instructions. Reference 22.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-023,fiction_history_and_research_boundary,A fictional example mentions illegal betting but contains no transaction or instructions. Reference 23.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-024,fiction_history_and_research_boundary,A fictional example mentions forged certificate but contains no transaction or instructions. Reference 24.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-025,fiction_history_and_research_boundary,A fictional example mentions fake government emblem but contains no transaction or instructions. Reference 25.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-026,fiction_history_and_research_boundary,Historical research discusses illegal drugs in an educational archive. Reference 26.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-027,fiction_history_and_research_boundary,Historical research discusses prohibited weapon in an educational archive. Reference 27.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-028,fiction_history_and_research_boundary,Historical research discusses illegal betting in an educational archive. Reference 28.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-029,fiction_history_and_research_boundary,Historical research discusses forged certificate in an educational archive. Reference 29.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-030,fiction_history_and_research_boundary,Historical research discusses fake government emblem in an educational archive. Reference 30.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-031,fiction_history_and_research_boundary,A documentary condemns illegal drugs and provides prevention information. Reference 31.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-032,fiction_history_and_research_boundary,A documentary condemns prohibited weapon and provides prevention information. Reference 32.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-033,fiction_history_and_research_boundary,A documentary condemns illegal betting and provides prevention information. Reference 33.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-034,fiction_history_and_research_boundary,A documentary condemns forged certificate and provides prevention information. Reference 34.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-035,fiction_history_and_research_boundary,A documentary condemns fake government emblem and provides prevention information. Reference 35.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-036,fiction_history_and_research_boundary,An academic discussion examines illegal drugs without facilitating it. Reference 36.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-037,fiction_history_and_research_boundary,An academic discussion examines prohibited weapon without facilitating it. Reference 37.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-038,fiction_history_and_research_boundary,An academic discussion examines illegal betting without facilitating it. Reference 38.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-039,fiction_history_and_research_boundary,An academic discussion examines forged certificate without facilitating it. Reference 39.,Normal/Ignore
+FICTION_HISTORY_AND_RESEARCH_BOUNDARY-040,fiction_history_and_research_boundary,An academic discussion examines fake government emblem without facilitating it. Reference 40.,Normal/Ignore
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-001,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an online betting service; licensing and jurisdiction are unknown. Reference 1.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-002,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an unlicensed betting; licensing and jurisdiction are unknown. Reference 2.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-003,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an protected government name; licensing and jurisdiction are unknown. Reference 3.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-004,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an unapproved medicine; licensing and jurisdiction are unknown. Reference 4.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-005,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an commercial sexual service; licensing and jurisdiction are unknown. Reference 5.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-006,jurisdiction_licensing_and_facilitation_uncertain,"The text names an online betting service, but does not establish a transaction or location. Reference 6.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-007,jurisdiction_licensing_and_facilitation_uncertain,"The text names an unlicensed betting, but does not establish a transaction or location. Reference 7.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-008,jurisdiction_licensing_and_facilitation_uncertain,"The text names an protected government name, but does not establish a transaction or location. Reference 8.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-009,jurisdiction_licensing_and_facilitation_uncertain,"The text names an unapproved medicine, but does not establish a transaction or location. Reference 9.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-010,jurisdiction_licensing_and_facilitation_uncertain,"The text names an commercial sexual service, but does not establish a transaction or location. Reference 10.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-011,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an online betting service; its legal status and purpose are unclear. Reference 11.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-012,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an unlicensed betting; its legal status and purpose are unclear. Reference 12.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-013,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an protected government name; its legal status and purpose are unclear. Reference 13.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-014,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an unapproved medicine; its legal status and purpose are unclear. Reference 14.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-015,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an commercial sexual service; its legal status and purpose are unclear. Reference 15.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-016,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an online betting service without enough context to determine facilitation. Reference 16.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-017,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an unlicensed betting without enough context to determine facilitation. Reference 17.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-018,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an protected government name without enough context to determine facilitation. Reference 18.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-019,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an unapproved medicine without enough context to determine facilitation. Reference 19.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-020,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an commercial sexual service without enough context to determine facilitation. Reference 20.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-021,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an online betting service; licensing and jurisdiction are unknown. Reference 21.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-022,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an unlicensed betting; licensing and jurisdiction are unknown. Reference 22.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-023,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an protected government name; licensing and jurisdiction are unknown. Reference 23.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-024,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an unapproved medicine; licensing and jurisdiction are unknown. Reference 24.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-025,jurisdiction_licensing_and_facilitation_uncertain,A post merely mentions an commercial sexual service; licensing and jurisdiction are unknown. Reference 25.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-026,jurisdiction_licensing_and_facilitation_uncertain,"The text names an online betting service, but does not establish a transaction or location. Reference 26.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-027,jurisdiction_licensing_and_facilitation_uncertain,"The text names an unlicensed betting, but does not establish a transaction or location. Reference 27.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-028,jurisdiction_licensing_and_facilitation_uncertain,"The text names an protected government name, but does not establish a transaction or location. Reference 28.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-029,jurisdiction_licensing_and_facilitation_uncertain,"The text names an unapproved medicine, but does not establish a transaction or location. Reference 29.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-030,jurisdiction_licensing_and_facilitation_uncertain,"The text names an commercial sexual service, but does not establish a transaction or location. Reference 30.",Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-031,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an online betting service; its legal status and purpose are unclear. Reference 31.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-032,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an unlicensed betting; its legal status and purpose are unclear. Reference 32.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-033,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an protected government name; its legal status and purpose are unclear. Reference 33.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-034,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an unapproved medicine; its legal status and purpose are unclear. Reference 34.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-035,jurisdiction_licensing_and_facilitation_uncertain,A message refers to an commercial sexual service; its legal status and purpose are unclear. Reference 35.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-036,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an online betting service without enough context to determine facilitation. Reference 36.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-037,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an unlicensed betting without enough context to determine facilitation. Reference 37.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-038,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an protected government name without enough context to determine facilitation. Reference 38.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-039,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an unapproved medicine without enough context to determine facilitation. Reference 39.,Uncertain
+JURISDICTION_LICENSING_AND_FACILITATION_UNCERTAIN-040,jurisdiction_licensing_and_facilitation_uncertain,The content discusses an commercial sexual service without enough context to determine facilitation. Reference 40.,Uncertain

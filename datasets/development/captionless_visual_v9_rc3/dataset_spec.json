@@ -1,0 +1,139 @@
+{
+  "candidate": "captionless-visual-evidence-v9-rc3",
+  "specification_version": "2026.08-rc3-generalization",
+  "purpose": "Representative image and video evidence for captionless visual moderation boundaries.",
+  "frozen_rc1_or_rc2_modified": false,
+  "raw_user_examples_imported": false,
+  "policy_boundaries": [
+    {
+      "boundary": "verified_art_culture_or_education",
+      "target_category": "Normal/Ignore",
+      "target_action": "Allow",
+      "automatic_route_requires": [
+        "trusted provenance",
+        "independently validated visual evidence",
+        "no child-safety conflict",
+        "no explicit sexual activity conflict",
+        "complete image or video coverage"
+      ]
+    },
+    {
+      "boundary": "ordinary_affection",
+      "examples": [
+        "ordinary kissing",
+        "hugging",
+        "nonsexual closeness"
+      ],
+      "target_category": "Normal/Ignore",
+      "target_action": "Allow",
+      "warning_required": false,
+      "screen_title_required": false
+    },
+    {
+      "boundary": "sexually_suggestive_non_explicit",
+      "examples": [
+        "sexualized posing",
+        "deliberate breast, buttock or crotch framing with private parts covered",
+        "minimal clothing in a sexualized presentation"
+      ],
+      "target_category": "Graphic, Obscene & Sexual Content",
+      "target_action": "Allow with sensitive-content warning and refer to human review",
+      "distribution_action": "Age-restrict and limit distribution",
+      "automatic_block": false
+    },
+    {
+      "boundary": "explicit_adult_sexual_content",
+      "target_category": "Graphic, Obscene & Sexual Content",
+      "target_action": "Age-restrict/block distribution",
+      "adult_status_may_be_inferred_from_pixels": false
+    },
+    {
+      "boundary": "uncertain_or_age_ambiguous",
+      "target_category": "Uncertain",
+      "target_action": "Refer to human review"
+    },
+    {
+      "boundary": "established_category_owner",
+      "target_action": "Preserve the existing specialist category and action"
+    }
+  ],
+  "required_image_families": [
+    "verified nude and non-nude paintings",
+    "verified sculpture and monuments",
+    "verified graphic or body-horror artwork",
+    "verified anatomy, medical and educational material",
+    "ordinary kissing and affection",
+    "fashion, fitness, swimwear and ordinary revealing clothing",
+    "sexually suggestive posing with private parts covered",
+    "implied sexual context without explicit activity",
+    "adult nudity without activity",
+    "explicit adult sexual activity",
+    "commercial, synthetic or morphed sexual imagery",
+    "fully blurred, partially blurred and cropped imagery",
+    "animation, illustration and game imagery",
+    "safe everyday negatives",
+    "child-safety boundary labels without automatic child-age inference",
+    "sexual-harassment ownership boundaries",
+    "graphic-violence ownership boundaries"
+  ],
+  "required_video_families": [
+    "ordinary affection",
+    "safe public-domain screen-media scenes",
+    "suggestive but non-explicit sequences",
+    "explicit segments surrounded by safe frames",
+    "short scene transitions",
+    "full and partial obscuration",
+    "animation",
+    "decoder failure and incomplete coverage"
+  ],
+  "minimum_development_records": 2000,
+  "minimum_validation_records": 600,
+  "minimum_independent_records": 800,
+  "minimum_records_per_image_family_per_split": 30,
+  "minimum_video_records_per_video_family_per_split": 20,
+  "maximum_exact_or_perceptual_overlap": 0,
+  "maximum_source_work_overlap_between_splits": 0,
+  "maximum_creator_or_series_family_overlap_between_splits": 0,
+  "evaluation_gates": {
+    "minimum_overall_macro_f1": 0.90,
+    "minimum_group_accuracy": 0.85,
+    "minimum_verified_art_allow_precision": 0.99,
+    "minimum_ordinary_affection_allow_precision": 0.98,
+    "minimum_suggestive_precision": 0.92,
+    "minimum_suggestive_recall": 0.90,
+    "minimum_explicit_precision": 0.97,
+    "minimum_explicit_recall": 0.95,
+    "minimum_safe_specificity": 0.97,
+    "minimum_video_segment_recall": 0.95,
+    "maximum_child_or_age_authority_failures": 0,
+    "maximum_llm_allow_authority_failures": 0,
+    "maximum_category_mix_failures": 0,
+    "maximum_processing_errors": 0
+  },
+  "data_contract": {
+    "allowed_source_status": [
+      "cc0",
+      "worldwide_public_domain",
+      "user_owned_with_explicit_training_and_evaluation_authorization"
+    ],
+    "record_level_provenance_required": true,
+    "media_sha256_required": true,
+    "source_url_required": true,
+    "rights_statement_url_required": true,
+    "adult_status_evidence_required_for_adult_automatic_actions": true,
+    "raw_explicit_media_inside_git": false,
+    "captions_or_filenames_may_define_ground_truth": false,
+    "search_query_may_define_ground_truth": false,
+    "llm_output_may_define_ground_truth": false,
+    "holdout_visible_before_freeze": false
+  },
+  "current_readiness": {
+    "art_sources_available": true,
+    "selected_public_domain_safe_video_available": true,
+    "suggestive_real_person_source_approved": false,
+    "explicit_real_person_source_approved": false,
+    "ready_for_training": false,
+    "ready_for_independent_evaluation": false,
+    "ready_for_live_integration": false
+  }
+}

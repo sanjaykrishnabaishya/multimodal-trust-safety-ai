@@ -5,6 +5,9 @@ import "./index.css";
 import "./ReviewQueue.css";
 
 import WorkspaceApp from "./WorkspaceApp.jsx";
+import {
+  registerServiceWorker,
+} from "./registerServiceWorker.js";
 
 
 createRoot(
@@ -14,3 +17,5 @@ createRoot(
     <WorkspaceApp />
   </StrictMode>
 );
+
+registerServiceWorker();

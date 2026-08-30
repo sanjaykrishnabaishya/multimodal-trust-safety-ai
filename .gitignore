@@ -45,6 +45,8 @@ desktop.ini
 *.temp
 temp/
 tmp/
+.trustscope-local/
+.pnpm-store/
 
 # Uploaded user media
 sample_uploads/documents/*
@@ -108,6 +110,35 @@ backend/scripts/evaluate_stable_knowledge_benchmark.py
 # Independent challenges remain private and must never be used for tuning.
 datasets/evaluation/
 backend/scripts/evaluate_*_independent.py
+
+# Illegal Activities V1 RC1 publication boundary
+# The synthetic aggregate evaluator and frozen candidate are publishable.
+# Raw challenge text, individual predictions, and general evaluation outputs
+# remain excluded by the rules above.
+!backend/scripts/evaluate_illegal_activities_v1_rc1_independent.py
+!backend/storage/
+backend/storage/*
+!backend/storage/candidates/
+backend/storage/candidates/*
+!backend/storage/candidates/illegal-activities-v1-rc1/
+!backend/storage/candidates/illegal-activities-v1-rc1/**
+
+# Illegal Activities V2 RC2 publication boundary
+# Publish only the aggregate synthetic evaluator and frozen candidate evidence.
+!backend/scripts/evaluate_illegal_activities_v2_rc2_independent.py
+!backend/storage/candidates/illegal-activities-v2-rc2/
+!backend/storage/candidates/illegal-activities-v2-rc2/**
+
+# Publish only the safe aggregate Child Exploitation RC1 evaluator and freeze.
+!backend/scripts/evaluate_child_exploitation_v1_rc1_independent.py
+!backend/storage/candidates/child-exploitation-v1-rc1/
+!backend/storage/candidates/child-exploitation-v1-rc1/**
+
+# Publish only the safe aggregate Invasion of Privacy RC1 evaluator and freeze.
+# No victim media, private identifiers, or record-level predictions are stored.
+!backend/scripts/evaluate_invasion_of_privacy_v1_rc1_independent.py
+!backend/storage/candidates/invasion-of-privacy-v1-rc1/
+!backend/storage/candidates/invasion-of-privacy-v1-rc1/**
 
 # Wikidata structured community candidates are CC0 and review-routing only.
 # All other downloaded public benchmark datasets remain ignored.

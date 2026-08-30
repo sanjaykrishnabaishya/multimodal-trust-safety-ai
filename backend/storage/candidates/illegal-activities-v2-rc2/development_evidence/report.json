@@ -1,0 +1,117 @@
+{
+  "version": "2026.08-illegal-activities-v2-rc2-development",
+  "records": 480,
+  "unique_texts": 480,
+  "prior_development_overlap": 0,
+  "label_counts": {
+    "Illegal Activities": 200,
+    "Normal/Ignore": 160,
+    "Uncertain": 40,
+    "Spam, Scam & Phishing": 5,
+    "Publishing Private Information": 5,
+    "Terrorism & Extremism": 5,
+    "Hate Speech & Discrimination": 5,
+    "Cyberbullying & Harassment": 5,
+    "Child Exploitation": 45,
+    "Dangerous Content": 5,
+    "Graphic, Obscene & Sexual Content": 5
+  },
+  "accuracy": 1.0,
+  "illegal_precision": 1.0,
+  "illegal_recall": 1.0,
+  "safe_specificity": 1.0,
+  "f1": 1.0,
+  "minimum_group_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "action_contract_failures": 0,
+  "category_mix_failures": 0,
+  "processing_errors": 0,
+  "group_results": {
+    "child_safety_owner_boundary": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "controlled_goods_current_transactions": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "established_category_owner_isolation": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "fiction_history_research_and_quotation": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "gambling_and_financial_facilitation": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "jurisdiction_licensing_and_status_uncertainty": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "legitimate_jobs_commerce_and_professional_context": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "ordinary_unrelated_safe_context": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "passive_and_mixed_order_transaction_evidence": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "prohibited_services_and_symbol_facilitation": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "reporting_warning_and_prevention": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "weapons_documents_and_counterfeit_transactions": {
+      "records": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    }
+  },
+  "gates": {
+    "zero_prior_development_overlap": true,
+    "accuracy": true,
+    "illegal_precision": true,
+    "illegal_recall": true,
+    "safe_specificity": true,
+    "f1": true,
+    "minimum_group_accuracy": true,
+    "action_contract": true,
+    "category_mix_contract": true,
+    "processing_contract": true
+  },
+  "passed_development_gate": true,
+  "rc1_aggregate_failure_signals_used": [
+    "transaction_family_recall",
+    "safe_fiction_and_research_boundary_generalization",
+    "exact_action_and_category_routing"
+  ],
+  "rc1_holdout_cases_predictions_or_mismatches_read": false,
+  "openrouter_used": false,
+  "external_or_restricted_data_used": false,
+  "actionable_harm_instructions_stored": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "dataset_sha256": "21ecaccf2b62fd4e14064a9455ab4587d0692bdcaed09b77226416a2f0f638be"
+}

@@ -1,0 +1,141 @@
+case_id,group,text,expected_category,sexual_violation
+GSC-V1-001,adult_explicit_content,The post contains uncensored adult sexual activity. It is presented for sexual viewing rather than education.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-002,adult_explicit_content,"The post contains uncensored adult sexual activity. No medical, artistic, or documentary context is provided.","Graphic, Obscene & Sexual Content",True
+GSC-V1-003,adult_explicit_content,The post contains uncensored adult sexual activity. The description identifies the material as adult explicit content.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-004,adult_explicit_content,The post contains uncensored adult sexual activity. The primary policy issue is explicit sexual presentation.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-005,adult_explicit_content,The upload is described as explicit pornography involving adults. It is presented for sexual viewing rather than education.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-006,adult_explicit_content,"The upload is described as explicit pornography involving adults. No medical, artistic, or documentary context is provided.","Graphic, Obscene & Sexual Content",True
+GSC-V1-007,adult_explicit_content,The upload is described as explicit pornography involving adults. The description identifies the material as adult explicit content.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-008,adult_explicit_content,The upload is described as explicit pornography involving adults. The primary policy issue is explicit sexual presentation.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-009,adult_explicit_content,The clip presents clearly explicit adult-only sexual material. It is presented for sexual viewing rather than education.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-010,adult_explicit_content,"The clip presents clearly explicit adult-only sexual material. No medical, artistic, or documentary context is provided.","Graphic, Obscene & Sexual Content",True
+GSC-V1-011,adult_explicit_content,The clip presents clearly explicit adult-only sexual material. The description identifies the material as adult explicit content.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-012,adult_explicit_content,The clip presents clearly explicit adult-only sexual material. The primary policy issue is explicit sexual presentation.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-013,adult_explicit_content,The animation depicts explicit sexual activity between adults. It is presented for sexual viewing rather than education.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-014,adult_explicit_content,"The animation depicts explicit sexual activity between adults. No medical, artistic, or documentary context is provided.","Graphic, Obscene & Sexual Content",True
+GSC-V1-015,adult_explicit_content,The animation depicts explicit sexual activity between adults. The description identifies the material as adult explicit content.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-016,adult_explicit_content,The animation depicts explicit sexual activity between adults. The primary policy issue is explicit sexual presentation.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-017,adult_explicit_content,The image set contains visible adult nudity presented sexually. It is presented for sexual viewing rather than education.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-018,adult_explicit_content,"The image set contains visible adult nudity presented sexually. No medical, artistic, or documentary context is provided.","Graphic, Obscene & Sexual Content",True
+GSC-V1-019,adult_explicit_content,The image set contains visible adult nudity presented sexually. The description identifies the material as adult explicit content.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-020,adult_explicit_content,The image set contains visible adult nudity presented sexually. The primary policy issue is explicit sexual presentation.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-021,commercial_morphed_and_synthetic_explicit_content,The account promotes paid access to explicit adult material. The purpose is commercial or sexual rather than educational.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-022,commercial_morphed_and_synthetic_explicit_content,"The account promotes paid access to explicit adult material. It contains no health, news, or recognized artistic context.","Graphic, Obscene & Sexual Content",True
+GSC-V1-023,commercial_morphed_and_synthetic_explicit_content,The account promotes paid access to explicit adult material. The sexual nature of the material is stated directly.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-024,commercial_morphed_and_synthetic_explicit_content,The account promotes paid access to explicit adult material. The content is promoted as explicit viewing material.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-025,commercial_morphed_and_synthetic_explicit_content,The message advertises the sale of uncensored pornography. The purpose is commercial or sexual rather than educational.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-026,commercial_morphed_and_synthetic_explicit_content,"The message advertises the sale of uncensored pornography. It contains no health, news, or recognized artistic context.","Graphic, Obscene & Sexual Content",True
+GSC-V1-027,commercial_morphed_and_synthetic_explicit_content,The message advertises the sale of uncensored pornography. The sexual nature of the material is stated directly.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-028,commercial_morphed_and_synthetic_explicit_content,The message advertises the sale of uncensored pornography. The content is promoted as explicit viewing material.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-029,commercial_morphed_and_synthetic_explicit_content,The post distributes morphed explicit sexual imagery of an adult. The purpose is commercial or sexual rather than educational.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-030,commercial_morphed_and_synthetic_explicit_content,"The post distributes morphed explicit sexual imagery of an adult. It contains no health, news, or recognized artistic context.","Graphic, Obscene & Sexual Content",True
+GSC-V1-031,commercial_morphed_and_synthetic_explicit_content,The post distributes morphed explicit sexual imagery of an adult. The sexual nature of the material is stated directly.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-032,commercial_morphed_and_synthetic_explicit_content,The post distributes morphed explicit sexual imagery of an adult. The content is promoted as explicit viewing material.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-033,commercial_morphed_and_synthetic_explicit_content,The upload contains synthetic adult sexual imagery made for arousal. The purpose is commercial or sexual rather than educational.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-034,commercial_morphed_and_synthetic_explicit_content,"The upload contains synthetic adult sexual imagery made for arousal. It contains no health, news, or recognized artistic context.","Graphic, Obscene & Sexual Content",True
+GSC-V1-035,commercial_morphed_and_synthetic_explicit_content,The upload contains synthetic adult sexual imagery made for arousal. The sexual nature of the material is stated directly.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-036,commercial_morphed_and_synthetic_explicit_content,The upload contains synthetic adult sexual imagery made for arousal. The content is promoted as explicit viewing material.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-037,commercial_morphed_and_synthetic_explicit_content,The page invites users to view an explicit adult-content collection. The purpose is commercial or sexual rather than educational.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-038,commercial_morphed_and_synthetic_explicit_content,"The page invites users to view an explicit adult-content collection. It contains no health, news, or recognized artistic context.","Graphic, Obscene & Sexual Content",True
+GSC-V1-039,commercial_morphed_and_synthetic_explicit_content,The page invites users to view an explicit adult-content collection. The sexual nature of the material is stated directly.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-040,commercial_morphed_and_synthetic_explicit_content,The page invites users to view an explicit adult-content collection. The content is promoted as explicit viewing material.,"Graphic, Obscene & Sexual Content",True
+GSC-V1-041,medical_health_and_education_context,A hospital publishes a clinical sexual-health lesson for adults. The legitimate educational purpose is clear.,Normal/Ignore,False
+GSC-V1-042,medical_health_and_education_context,A hospital publishes a clinical sexual-health lesson for adults. The responsible medical or educational organization is identified.,Normal/Ignore,False
+GSC-V1-043,medical_health_and_education_context,A hospital publishes a clinical sexual-health lesson for adults. The material is clinical and is not presented for arousal.,Normal/Ignore,False
+GSC-V1-044,medical_health_and_education_context,A hospital publishes a clinical sexual-health lesson for adults. The context is health education rather than explicit entertainment.,Normal/Ignore,False
+GSC-V1-045,medical_health_and_education_context,A medical textbook discusses human reproductive anatomy. The legitimate educational purpose is clear.,Normal/Ignore,False
+GSC-V1-046,medical_health_and_education_context,A medical textbook discusses human reproductive anatomy. The responsible medical or educational organization is identified.,Normal/Ignore,False
+GSC-V1-047,medical_health_and_education_context,A medical textbook discusses human reproductive anatomy. The material is clinical and is not presented for arousal.,Normal/Ignore,False
+GSC-V1-048,medical_health_and_education_context,A medical textbook discusses human reproductive anatomy. The context is health education rather than explicit entertainment.,Normal/Ignore,False
+GSC-V1-049,medical_health_and_education_context,A public-health organization explains adult sexual wellbeing. The legitimate educational purpose is clear.,Normal/Ignore,False
+GSC-V1-050,medical_health_and_education_context,A public-health organization explains adult sexual wellbeing. The responsible medical or educational organization is identified.,Normal/Ignore,False
+GSC-V1-051,medical_health_and_education_context,A public-health organization explains adult sexual wellbeing. The material is clinical and is not presented for arousal.,Normal/Ignore,False
+GSC-V1-052,medical_health_and_education_context,A public-health organization explains adult sexual wellbeing. The context is health education rather than explicit entertainment.,Normal/Ignore,False
+GSC-V1-053,medical_health_and_education_context,A licensed clinician presents a non-erotic anatomy diagram. The legitimate educational purpose is clear.,Normal/Ignore,False
+GSC-V1-054,medical_health_and_education_context,A licensed clinician presents a non-erotic anatomy diagram. The responsible medical or educational organization is identified.,Normal/Ignore,False
+GSC-V1-055,medical_health_and_education_context,A licensed clinician presents a non-erotic anatomy diagram. The material is clinical and is not presented for arousal.,Normal/Ignore,False
+GSC-V1-056,medical_health_and_education_context,A licensed clinician presents a non-erotic anatomy diagram. The context is health education rather than explicit entertainment.,Normal/Ignore,False
+GSC-V1-057,medical_health_and_education_context,A university course covers consent and sexual health. The legitimate educational purpose is clear.,Normal/Ignore,False
+GSC-V1-058,medical_health_and_education_context,A university course covers consent and sexual health. The responsible medical or educational organization is identified.,Normal/Ignore,False
+GSC-V1-059,medical_health_and_education_context,A university course covers consent and sexual health. The material is clinical and is not presented for arousal.,Normal/Ignore,False
+GSC-V1-060,medical_health_and_education_context,A university course covers consent and sexual health. The context is health education rather than explicit entertainment.,Normal/Ignore,False
+GSC-V1-061,recognized_art_and_nonexplicit_media_context,A museum catalog discusses a recognized classical nude sculpture. No explicit sexual detail is presented.,Normal/Ignore,False
+GSC-V1-062,recognized_art_and_nonexplicit_media_context,A museum catalog discusses a recognized classical nude sculpture. The context is clearly artistic or historical.,Normal/Ignore,False
+GSC-V1-063,recognized_art_and_nonexplicit_media_context,A museum catalog discusses a recognized classical nude sculpture. The material is not promoted for sexual viewing.,Normal/Ignore,False
+GSC-V1-064,recognized_art_and_nonexplicit_media_context,A museum catalog discusses a recognized classical nude sculpture. The recognized work is discussed for cultural education.,Normal/Ignore,False
+GSC-V1-065,recognized_art_and_nonexplicit_media_context,An art-history class studies a well-known Renaissance painting. No explicit sexual detail is presented.,Normal/Ignore,False
+GSC-V1-066,recognized_art_and_nonexplicit_media_context,An art-history class studies a well-known Renaissance painting. The context is clearly artistic or historical.,Normal/Ignore,False
+GSC-V1-067,recognized_art_and_nonexplicit_media_context,An art-history class studies a well-known Renaissance painting. The material is not promoted for sexual viewing.,Normal/Ignore,False
+GSC-V1-068,recognized_art_and_nonexplicit_media_context,An art-history class studies a well-known Renaissance painting. The recognized work is discussed for cultural education.,Normal/Ignore,False
+GSC-V1-069,recognized_art_and_nonexplicit_media_context,A film review shows a non-explicit adult-rated poster. No explicit sexual detail is presented.,Normal/Ignore,False
+GSC-V1-070,recognized_art_and_nonexplicit_media_context,A film review shows a non-explicit adult-rated poster. The context is clearly artistic or historical.,Normal/Ignore,False
+GSC-V1-071,recognized_art_and_nonexplicit_media_context,A film review shows a non-explicit adult-rated poster. The material is not promoted for sexual viewing.,Normal/Ignore,False
+GSC-V1-072,recognized_art_and_nonexplicit_media_context,A film review shows a non-explicit adult-rated poster. The recognized work is discussed for cultural education.,Normal/Ignore,False
+GSC-V1-073,recognized_art_and_nonexplicit_media_context,A gallery notice describes established figurative artwork. No explicit sexual detail is presented.,Normal/Ignore,False
+GSC-V1-074,recognized_art_and_nonexplicit_media_context,A gallery notice describes established figurative artwork. The context is clearly artistic or historical.,Normal/Ignore,False
+GSC-V1-075,recognized_art_and_nonexplicit_media_context,A gallery notice describes established figurative artwork. The material is not promoted for sexual viewing.,Normal/Ignore,False
+GSC-V1-076,recognized_art_and_nonexplicit_media_context,A gallery notice describes established figurative artwork. The recognized work is discussed for cultural education.,Normal/Ignore,False
+GSC-V1-077,recognized_art_and_nonexplicit_media_context,A documentary discusses changing standards in historical art. No explicit sexual detail is presented.,Normal/Ignore,False
+GSC-V1-078,recognized_art_and_nonexplicit_media_context,A documentary discusses changing standards in historical art. The context is clearly artistic or historical.,Normal/Ignore,False
+GSC-V1-079,recognized_art_and_nonexplicit_media_context,A documentary discusses changing standards in historical art. The material is not promoted for sexual viewing.,Normal/Ignore,False
+GSC-V1-080,recognized_art_and_nonexplicit_media_context,A documentary discusses changing standards in historical art. The recognized work is discussed for cultural education.,Normal/Ignore,False
+GSC-V1-081,nonsexual_romance_clothing_and_body_boundary,Two adults hold hands during a romantic dinner. The presentation is nonsexual.,Normal/Ignore,False
+GSC-V1-082,nonsexual_romance_clothing_and_body_boundary,Two adults hold hands during a romantic dinner. There is no explicit activity or sexualized framing.,Normal/Ignore,False
+GSC-V1-083,nonsexual_romance_clothing_and_body_boundary,Two adults hold hands during a romantic dinner. The ordinary context is clear from the description.,Normal/Ignore,False
+GSC-V1-084,nonsexual_romance_clothing_and_body_boundary,Two adults hold hands during a romantic dinner. Nothing is promoted for arousal or explicit viewing.,Normal/Ignore,False
+GSC-V1-085,nonsexual_romance_clothing_and_body_boundary,A fashion catalog shows adults wearing ordinary swimwear. The presentation is nonsexual.,Normal/Ignore,False
+GSC-V1-086,nonsexual_romance_clothing_and_body_boundary,A fashion catalog shows adults wearing ordinary swimwear. There is no explicit activity or sexualized framing.,Normal/Ignore,False
+GSC-V1-087,nonsexual_romance_clothing_and_body_boundary,A fashion catalog shows adults wearing ordinary swimwear. The ordinary context is clear from the description.,Normal/Ignore,False
+GSC-V1-088,nonsexual_romance_clothing_and_body_boundary,A fashion catalog shows adults wearing ordinary swimwear. Nothing is promoted for arousal or explicit viewing.,Normal/Ignore,False
+GSC-V1-089,nonsexual_romance_clothing_and_body_boundary,A fitness lesson demonstrates a standard exercise pose. The presentation is nonsexual.,Normal/Ignore,False
+GSC-V1-090,nonsexual_romance_clothing_and_body_boundary,A fitness lesson demonstrates a standard exercise pose. There is no explicit activity or sexualized framing.,Normal/Ignore,False
+GSC-V1-091,nonsexual_romance_clothing_and_body_boundary,A fitness lesson demonstrates a standard exercise pose. The ordinary context is clear from the description.,Normal/Ignore,False
+GSC-V1-092,nonsexual_romance_clothing_and_body_boundary,A fitness lesson demonstrates a standard exercise pose. Nothing is promoted for arousal or explicit viewing.,Normal/Ignore,False
+GSC-V1-093,nonsexual_romance_clothing_and_body_boundary,A family photograph shows a parent feeding an infant. The presentation is nonsexual.,Normal/Ignore,False
+GSC-V1-094,nonsexual_romance_clothing_and_body_boundary,A family photograph shows a parent feeding an infant. There is no explicit activity or sexualized framing.,Normal/Ignore,False
+GSC-V1-095,nonsexual_romance_clothing_and_body_boundary,A family photograph shows a parent feeding an infant. The ordinary context is clear from the description.,Normal/Ignore,False
+GSC-V1-096,nonsexual_romance_clothing_and_body_boundary,A family photograph shows a parent feeding an infant. Nothing is promoted for arousal or explicit viewing.,Normal/Ignore,False
+GSC-V1-097,nonsexual_romance_clothing_and_body_boundary,A relationship article discusses affection without sexual detail. The presentation is nonsexual.,Normal/Ignore,False
+GSC-V1-098,nonsexual_romance_clothing_and_body_boundary,A relationship article discusses affection without sexual detail. There is no explicit activity or sexualized framing.,Normal/Ignore,False
+GSC-V1-099,nonsexual_romance_clothing_and_body_boundary,A relationship article discusses affection without sexual detail. The ordinary context is clear from the description.,Normal/Ignore,False
+GSC-V1-100,nonsexual_romance_clothing_and_body_boundary,A relationship article discusses affection without sexual detail. Nothing is promoted for arousal or explicit viewing.,Normal/Ignore,False
+GSC-V1-101,sexual_harassment_category_boundary,A coworker repeatedly sends unwanted sexual remarks to one person. The conduct is directed at a person and is clearly unwelcome.,Sexual Harassment,False
+GSC-V1-102,sexual_harassment_category_boundary,A coworker repeatedly sends unwanted sexual remarks to one person. The primary issue is targeted sexual harassment.,Sexual Harassment,False
+GSC-V1-103,sexual_harassment_category_boundary,A coworker repeatedly sends unwanted sexual remarks to one person. The recipient has stated that the contact must stop.,Sexual Harassment,False
+GSC-V1-104,sexual_harassment_category_boundary,A coworker repeatedly sends unwanted sexual remarks to one person. This is interpersonal misconduct rather than general explicit media.,Sexual Harassment,False
+GSC-V1-105,sexual_harassment_category_boundary,The sender continues requesting sexual favors after being refused. The conduct is directed at a person and is clearly unwelcome.,Sexual Harassment,False
+GSC-V1-106,sexual_harassment_category_boundary,The sender continues requesting sexual favors after being refused. The primary issue is targeted sexual harassment.,Sexual Harassment,False
+GSC-V1-107,sexual_harassment_category_boundary,The sender continues requesting sexual favors after being refused. The recipient has stated that the contact must stop.,Sexual Harassment,False
+GSC-V1-108,sexual_harassment_category_boundary,The sender continues requesting sexual favors after being refused. This is interpersonal misconduct rather than general explicit media.,Sexual Harassment,False
+GSC-V1-109,sexual_harassment_category_boundary,A user sends unwanted explicit messages to a named recipient. The conduct is directed at a person and is clearly unwelcome.,Sexual Harassment,False
+GSC-V1-110,sexual_harassment_category_boundary,A user sends unwanted explicit messages to a named recipient. The primary issue is targeted sexual harassment.,Sexual Harassment,False
+GSC-V1-111,sexual_harassment_category_boundary,A user sends unwanted explicit messages to a named recipient. The recipient has stated that the contact must stop.,Sexual Harassment,False
+GSC-V1-112,sexual_harassment_category_boundary,A user sends unwanted explicit messages to a named recipient. This is interpersonal misconduct rather than general explicit media.,Sexual Harassment,False
+GSC-V1-113,sexual_harassment_category_boundary,The supervisor makes persistent unwelcome sexual comments. The conduct is directed at a person and is clearly unwelcome.,Sexual Harassment,False
+GSC-V1-114,sexual_harassment_category_boundary,The supervisor makes persistent unwelcome sexual comments. The primary issue is targeted sexual harassment.,Sexual Harassment,False
+GSC-V1-115,sexual_harassment_category_boundary,The supervisor makes persistent unwelcome sexual comments. The recipient has stated that the contact must stop.,Sexual Harassment,False
+GSC-V1-116,sexual_harassment_category_boundary,The supervisor makes persistent unwelcome sexual comments. This is interpersonal misconduct rather than general explicit media.,Sexual Harassment,False
+GSC-V1-117,sexual_harassment_category_boundary,Someone repeatedly pressures a target to discuss sexual activity. The conduct is directed at a person and is clearly unwelcome.,Sexual Harassment,False
+GSC-V1-118,sexual_harassment_category_boundary,Someone repeatedly pressures a target to discuss sexual activity. The primary issue is targeted sexual harassment.,Sexual Harassment,False
+GSC-V1-119,sexual_harassment_category_boundary,Someone repeatedly pressures a target to discuss sexual activity. The recipient has stated that the contact must stop.,Sexual Harassment,False
+GSC-V1-120,sexual_harassment_category_boundary,Someone repeatedly pressures a target to discuss sexual activity. This is interpersonal misconduct rather than general explicit media.,Sexual Harassment,False
+GSC-V1-121,unrelated_category_isolation,A fake prize message asks the recipient to pay a processing fee.,"Spam, Scam & Phishing",False
+GSC-V1-122,unrelated_category_isolation,A phishing page impersonates a bank and requests a password.,"Spam, Scam & Phishing",False
+GSC-V1-123,unrelated_category_isolation,An unsolicited promotion promises guaranteed investment returns.,"Spam, Scam & Phishing",False
+GSC-V1-124,unrelated_category_isolation,A scammer asks for an OTP to release a fictional reward.,"Spam, Scam & Phishing",False
+GSC-V1-125,unrelated_category_isolation,The post exposes the synthetic address test.user@example.com.,Publishing Private Information,False
+GSC-V1-126,unrelated_category_isolation,A message publishes a person's private account identifier.,Publishing Private Information,False
+GSC-V1-127,unrelated_category_isolation,The upload reveals a private residential location without consent.,Publishing Private Information,False
+GSC-V1-128,unrelated_category_isolation,A user shares another person's confidential contact details.,Publishing Private Information,False
+GSC-V1-129,unrelated_category_isolation,A group coordinates repeated humiliation of one identified target.,Cyberbullying & Harassment,False
+GSC-V1-130,unrelated_category_isolation,The sender keeps contacting a person after being told to stop.,Cyberbullying & Harassment,False
+GSC-V1-131,unrelated_category_isolation,A user posts intimidating messages about the same target every day.,Cyberbullying & Harassment,False
+GSC-V1-132,unrelated_category_isolation,Several accounts organize persistent harassment of one individual.,Cyberbullying & Harassment,False
+GSC-V1-133,unrelated_category_isolation,A safety report flags suspected child sexual exploitation for immediate review.,Child Exploitation,False
+GSC-V1-134,unrelated_category_isolation,The moderation notice reports possible sexual exploitation of a minor.,Child Exploitation,False
+GSC-V1-135,unrelated_category_isolation,A child-safety team escalates suspected grooming of a minor.,Child Exploitation,False
+GSC-V1-136,unrelated_category_isolation,The report identifies possible child sexual abuse material without describing it.,Child Exploitation,False
+GSC-V1-137,unrelated_category_isolation,The footage graphically depicts severe physical violence against a person.,Violent Content,False
+GSC-V1-138,unrelated_category_isolation,The image shows the bloody aftermath of an assault.,Violent Content,False
+GSC-V1-139,unrelated_category_isolation,The post encourages viewers to attempt a hazardous stunt without safeguards.,Dangerous Content,False
+GSC-V1-140,unrelated_category_isolation,A creator promotes a reckless act around energized equipment.,Dangerous Content,False

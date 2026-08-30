@@ -5,11 +5,9 @@ import {
 
 import App from "./App";
 import ReviewQueue from "./ReviewQueue";
-
-
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL ||
-  "http://127.0.0.1:8010";
+import {
+  API_BASE_URL,
+} from "./apiConfig";
 
 
 function getViewFromHash() {
@@ -75,61 +73,17 @@ function WorkspaceApp() {
   }
 
 
-  const navigationStyle = {
-    alignItems: "center",
-    background: "#f3f7f4",
-    border: "1px solid #dce4df",
-    borderRadius: "12px",
-    display: "flex",
-    gap: "4px",
-    left: "50%",
-    padding: "4px",
-    position: "fixed",
-    top: "14px",
-    transform: "translateX(-50%)",
-    zIndex: 100,
-  };
-
-
-  function navigationButtonStyle(
-    buttonView
-  ) {
-    const active =
-      view === buttonView;
-
-    return {
-      background: active
-        ? "#ffffff"
-        : "transparent",
-      border: "0",
-      borderRadius: "8px",
-      boxShadow: active
-        ? "0 3px 12px rgba(25, 47, 38, 0.1)"
-        : "none",
-      color: active
-        ? "#0e684b"
-        : "#65746d",
-      cursor: "pointer",
-      fontSize: "12px",
-      fontWeight: 800,
-      minHeight: "38px",
-      padding: "8px 15px",
-      whiteSpace: "nowrap",
-    };
-  }
-
-
   return (
     <>
       <nav
-        style={navigationStyle}
+        className="workspace-navigation"
         aria-label="Application views"
       >
         <button
-          style={
-            navigationButtonStyle(
-              "analyze"
-            )
+          className={
+            view === "analyze"
+              ? "active"
+              : ""
           }
           type="button"
           onClick={() =>
@@ -140,10 +94,10 @@ function WorkspaceApp() {
         </button>
 
         <button
-          style={
-            navigationButtonStyle(
-              "review"
-            )
+          className={
+            view === "review"
+              ? "active"
+              : ""
           }
           type="button"
           onClick={() =>

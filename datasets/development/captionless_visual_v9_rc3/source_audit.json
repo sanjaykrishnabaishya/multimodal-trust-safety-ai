@@ -1,0 +1,182 @@
+{
+  "audit_version": "2026.08-captionless-visual-v9-rc3",
+  "audited_on": "2026-08-17",
+  "purpose": "Identify media sources that may be used without an individual permission request for RC3 development candidates.",
+  "legal_approval_claimed": false,
+  "sources": [
+    {
+      "name": "The Metropolitan Museum of Art Open Access",
+      "status": "eligible_with_record_level_checks",
+      "media_scope": [
+        "public-domain paintings",
+        "public-domain drawings",
+        "public-domain sculpture",
+        "public-domain cultural objects"
+      ],
+      "license_requirement": "Object must expose an Open Access public-domain image; API metadata is CC0.",
+      "permission_request_required": false,
+      "api_key_required": false,
+      "official_documentation": "https://metmuseum.github.io/",
+      "allowed_boundaries": [
+        "verified_artwork",
+        "verified_cultural_object",
+        "verified_monument_or_sculpture"
+      ],
+      "limitations": [
+        "Art provenance does not prove that every depicted subject is an adult.",
+        "Metadata cannot by itself exclude explicit activity or child-safety conflicts.",
+        "Every downloaded object must retain its object ID, source URL, media URL, public-domain flag and hashes."
+      ]
+    },
+    {
+      "name": "Art Institute of Chicago Open Access",
+      "status": "eligible_with_record_level_checks",
+      "media_scope": [
+        "public-domain artwork images exposed through IIIF"
+      ],
+      "license_requirement": "The artwork record must set is_public_domain=true and provide an image_id.",
+      "permission_request_required": false,
+      "api_key_required": false,
+      "official_documentation": "https://api.artic.edu/docs/",
+      "allowed_boundaries": [
+        "verified_artwork",
+        "verified_cultural_object"
+      ],
+      "limitations": [
+        "The IIIF service also contains non-public-domain images, so the public-domain record flag is mandatory.",
+        "Descriptions are not uniformly CC0 and must not be imported as training text.",
+        "Requests must be throttled and performed sequentially."
+      ]
+    },
+    {
+      "name": "National Gallery of Art Open Access",
+      "status": "eligible_with_record_level_checks",
+      "media_scope": [
+        "public-domain collection artwork images"
+      ],
+      "license_requirement": "The image and collection record must be released through the NGA Open Access program.",
+      "permission_request_required": false,
+      "api_key_required": false,
+      "official_documentation": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "allowed_boundaries": [
+        "verified_artwork",
+        "verified_cultural_object"
+      ],
+      "limitations": [
+        "Only records explicitly covered by Open Access are eligible.",
+        "Art provenance is not an age, consent or activity determination."
+      ]
+    },
+    {
+      "name": "Smithsonian Open Access",
+      "status": "eligible_if_cc0_record_is_exported_without_restricted_access",
+      "media_scope": [
+        "CC0 artwork",
+        "CC0 cultural objects",
+        "CC0 educational collection media"
+      ],
+      "license_requirement": "The individual media record must carry the CC0 designation.",
+      "permission_request_required": false,
+      "api_key_required": "public API normally uses an api.data.gov key; keyless official exports may be used instead",
+      "official_documentation": "https://www.si.edu/openaccess/faq",
+      "allowed_boundaries": [
+        "verified_artwork",
+        "verified_cultural_object",
+        "verified_educational_material"
+      ],
+      "limitations": [
+        "CC0 covers copyright, but third-party privacy, publicity or other rights may remain.",
+        "Items described only as no-known-copyright are excluded from automatic import.",
+        "Any API-key workflow is disabled by default for this project."
+      ]
+    },
+    {
+      "name": "Library of Congress Public Domain Films from the National Film Registry",
+      "status": "eligible_with_item_level_rights_checks",
+      "media_scope": [
+        "selected public-domain films",
+        "ordinary affection and kissing",
+        "historical safe screen-media scenes",
+        "difficult safe video negatives"
+      ],
+      "license_requirement": "The exact film item must be in the Library's public-domain Free to Use and Reuse selection and its item rights statement must permit reuse.",
+      "permission_request_required": false,
+      "api_key_required": false,
+      "official_documentation": "https://www.loc.gov/free-to-use/public-domain-films-from-the-national-film-registry",
+      "allowed_boundaries": [
+        "ordinary_affection",
+        "safe_screen_media",
+        "nonsexual_everyday_video"
+      ],
+      "limitations": [
+        "Film Registry membership alone does not mean public domain.",
+        "Privacy, publicity, donation and international rights may still require assessment.",
+        "Only the specifically curated public-domain selection is eligible for automatic collection."
+      ]
+    },
+    {
+      "name": "Wikimedia Commons general catalog",
+      "status": "not_eligible_for_automatic_bulk_import",
+      "media_scope": [],
+      "permission_request_required": "varies",
+      "official_documentation": "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia",
+      "reasons": [
+        "Licenses and attribution/share-alike requirements vary per file.",
+        "Wikimedia does not warrant the copyright status of each upload.",
+        "Privacy, personality, moral and publicity rights can remain.",
+        "Individual files may be considered only after manual rights verification."
+      ]
+    },
+    {
+      "name": "Openverse general search results",
+      "status": "not_eligible_for_automatic_bulk_import",
+      "media_scope": [],
+      "reasons": [
+        "Search metadata is not sufficient proof of copyright, model releases, adulthood or consent.",
+        "Earlier unauthenticated collection attempts were incomplete and source availability was unstable."
+      ]
+    },
+    {
+      "name": "Public web pornography, celebrity-scene sites, movie screenshots and adult-site watermarked media",
+      "status": "prohibited",
+      "media_scope": [],
+      "permission_request_required": true,
+      "reasons": [
+        "Copyright and redistribution rights are absent or unclear.",
+        "Adult status, consent, model releases and privacy rights cannot be established from pixels or filenames.",
+        "These materials must not enter training, calibration, RAG or independent evaluation."
+      ]
+    },
+    {
+      "name": "User-supplied examples in this development conversation",
+      "status": "private_diagnostic_only",
+      "media_scope": [],
+      "reasons": [
+        "Ownership and redistribution rights were not established.",
+        "They may define abstract policy boundaries and aggregate diagnostics only.",
+        "They must not be copied into the repository, trained on, calibrated on or placed in an independent holdout."
+      ]
+    }
+  ],
+  "unresolved_data_gaps": [
+    {
+      "boundary": "sexually_suggestive_non_explicit_photography",
+      "status": "blocked",
+      "reason": "No sufficiently diverse source with both reusable media rights and reliable adult/model-release evidence has been approved."
+    },
+    {
+      "boundary": "explicit_adult_photography_and_video",
+      "status": "blocked",
+      "reason": "No permission-free source with adequate copyright, adulthood, consent, privacy and redistribution evidence has been approved."
+    },
+    {
+      "boundary": "modern_film_and_television_scenes",
+      "status": "blocked",
+      "reason": "Modern screen-media frames are normally copyrighted; title metadata does not grant reuse rights."
+    }
+  ],
+  "automatic_collection_allowed": false,
+  "training_allowed": false,
+  "independent_evaluation_allowed": false,
+  "next_required_action": "Collect only eligible candidates with full provenance, then complete human rights and boundary review before assigning dataset roles."
+}

@@ -1,0 +1,15 @@
+{
+  "candidate": "illegal-activities-v1-rc1",
+  "status": "Failed synthetic independent readiness gate",
+  "challenge_version": "2026.08-illegal-activities-v1-rc1-independent",
+  "challenge_sha256": "d4042ec9110764d620355fd58e6ac900f4f7997c4cdf0259d62e6f8125f0dad9",
+  "passed_synthetic_independent_readiness_gate": false,
+  "eligible_for_guarded_live_integration": false,
+  "connected_to_live_moderation": true,
+  "automatic_enforcement_allowed": false,
+  "candidate_may_be_modified_using_this_holdout": false,
+  "raw_challenge_text_stored": false,
+  "individual_predictions_stored": false,
+  "report_path": "reports/evaluation/illegal_activities/v1_rc1_independent/aggregate_report.json",
+  "evidence_scope": "synthetic evidence, not external or real-world accuracy"
+}

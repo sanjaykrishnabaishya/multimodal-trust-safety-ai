@@ -1,0 +1,111 @@
+{
+  "version": "2026.08-invasion-of-privacy-v1-rc1-development",
+  "records": 600,
+  "unique_texts": 600,
+  "label_counts": {
+    "Invasion of Privacy": 200,
+    "Uncertain": 100,
+    "Normal/Ignore": 250,
+    "Child Exploitation": 9,
+    "Sexual Harassment": 9,
+    "Publishing Private Information": 8,
+    "Cyberbullying & Harassment": 8,
+    "Terrorism & Extremism": 8,
+    "Spam, Scam & Phishing": 8
+  },
+  "accuracy": 1.0,
+  "privacy_precision": 1.0,
+  "privacy_recall": 1.0,
+  "safe_specificity": 1.0,
+  "f1": 1.0,
+  "minimum_group_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "action_contract_failures": 0,
+  "category_mix_failures": 0,
+  "privacy_storage_failures": 0,
+  "authority_contract_failures": 0,
+  "processing_errors": 0,
+  "group_results": {
+    "documented_consent_and_user_owned": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "established_category_owner_isolation": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "hidden_camera_private_space": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "incomplete_media_evidence": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "lexical_and_figurative_boundaries": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "nonconsensual_private_media_sharing": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "ordinary_tracking_and_technology": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "private_audio_and_eavesdropping": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "public_and_disclosed_monitoring": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "safe_reporting_education_and_fiction": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "stalking_and_location_tracking": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "uncertain_consent_or_location": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    }
+  },
+  "gates": {
+    "accuracy": true,
+    "privacy_precision": true,
+    "privacy_recall": true,
+    "safe_specificity": true,
+    "f1": true,
+    "minimum_group_accuracy": true,
+    "action_contract": true,
+    "category_mix_contract": true,
+    "privacy_storage_contract": true,
+    "authority_contract": true,
+    "processing_contract": true
+  },
+  "passed_development_gate": true,
+  "real_victim_media_used": false,
+  "private_identifiers_used": false,
+  "external_provider_used": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "dataset_sha256": "d98925b20067bd93110005dbf79dab2910a59aa3150e19f3684080ca62c6cbc3"
+}

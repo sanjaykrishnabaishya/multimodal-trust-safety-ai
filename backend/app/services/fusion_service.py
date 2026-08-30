@@ -43,6 +43,18 @@ from app.services.dangerous_content_v6_rc5_fusion import (
     analyze_dangerous_content_v6_rc5_for_fusion,
     apply_dangerous_content_v6_rc5_fusion,
 )
+from app.services.illegal_activities_v2_rc2_fusion import (
+    analyze_illegal_activities_v2_rc2_for_fusion,
+    apply_illegal_activities_v2_rc2_guarded_fusion,
+)
+from app.services.child_exploitation_v1_rc1_fusion import (
+    analyze_child_exploitation_v1_rc1_for_fusion,
+    apply_child_exploitation_v1_rc1_guarded_fusion,
+)
+from app.services.invasion_of_privacy_v1_rc1_fusion import (
+    analyze_invasion_of_privacy_v1_rc1_for_fusion,
+    apply_invasion_of_privacy_v1_rc1_guarded_fusion,
+)
 from app.services.violent_content_service import (
     analyze_violent_content,
 )
@@ -745,6 +757,27 @@ def fuse_moderation_decision(
 
     dangerous_content_v6_rc5_analysis = (
         analyze_dangerous_content_v6_rc5_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
+    illegal_activities_v1_analysis = (
+        analyze_illegal_activities_v2_rc2_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
+    child_exploitation_v1_rc1_analysis = (
+        analyze_child_exploitation_v1_rc1_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
+    invasion_of_privacy_v1_rc1_analysis = (
+        analyze_invasion_of_privacy_v1_rc1_for_fusion(
             text,
             input_sources,
         )
@@ -1464,6 +1497,83 @@ def fuse_moderation_decision(
         dangerous_content_v6_rc5_fusion["decision_applied"]
     )
 
+    illegal_activities_v1_fusion = (
+        apply_illegal_activities_v2_rc2_guarded_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=illegal_activities_v1_analysis,
+        )
+    )
+    category = str(illegal_activities_v1_fusion["category"])
+    severity = str(illegal_activities_v1_fusion["severity"])
+    action = str(illegal_activities_v1_fusion["action"])
+    confidence = float(illegal_activities_v1_fusion["confidence"])
+    human_review_required = bool(
+        illegal_activities_v1_fusion["human_review_required"]
+    )
+    reason = str(illegal_activities_v1_fusion["reason"])
+    matched_signals = list(
+        illegal_activities_v1_fusion["matched_signals"]
+    )
+    illegal_activities_v1_applied = bool(
+        illegal_activities_v1_fusion["decision_applied"]
+    )
+
+    child_exploitation_v1_rc1_fusion = (
+        apply_child_exploitation_v1_rc1_guarded_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=child_exploitation_v1_rc1_analysis,
+        )
+    )
+    category = str(child_exploitation_v1_rc1_fusion["category"])
+    severity = str(child_exploitation_v1_rc1_fusion["severity"])
+    action = str(child_exploitation_v1_rc1_fusion["action"])
+    confidence = float(child_exploitation_v1_rc1_fusion["confidence"])
+    human_review_required = bool(
+        child_exploitation_v1_rc1_fusion["human_review_required"]
+    )
+    reason = str(child_exploitation_v1_rc1_fusion["reason"])
+    matched_signals = list(child_exploitation_v1_rc1_fusion["matched_signals"])
+    child_exploitation_v1_rc1_applied = bool(
+        child_exploitation_v1_rc1_fusion["decision_applied"]
+    )
+
+    invasion_of_privacy_v1_rc1_fusion = (
+        apply_invasion_of_privacy_v1_rc1_guarded_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=invasion_of_privacy_v1_rc1_analysis,
+        )
+    )
+    category = str(invasion_of_privacy_v1_rc1_fusion["category"])
+    severity = str(invasion_of_privacy_v1_rc1_fusion["severity"])
+    action = str(invasion_of_privacy_v1_rc1_fusion["action"])
+    confidence = float(invasion_of_privacy_v1_rc1_fusion["confidence"])
+    human_review_required = bool(
+        invasion_of_privacy_v1_rc1_fusion["human_review_required"]
+    )
+    reason = str(invasion_of_privacy_v1_rc1_fusion["reason"])
+    matched_signals = list(invasion_of_privacy_v1_rc1_fusion["matched_signals"])
+    invasion_of_privacy_v1_rc1_applied = bool(
+        invasion_of_privacy_v1_rc1_fusion["decision_applied"]
+    )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
@@ -1673,6 +1783,28 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["illegal_activities_v2_rc2"]
+                if illegal_activities_v1_applied
+                else []
+            )
+            + (
+                ["child_exploitation_v1_rc1"]
+                if child_exploitation_v1_rc1_applied
+                else []
+            )
+            + (
+                ["invasion_of_privacy_v1_rc1"]
+                if invasion_of_privacy_v1_rc1_applied
+                else []
+            )
+            + (
+                ["openrouter_advisory"]
+                if illegal_activities_v1_analysis.get(
+                    "openrouter", {}
+                ).get("used", False)
+                else []
+            )
+            + (
                 ["spam_dictionary"]
                 if spam_analysis.get(
                     "dictionary_matches"
@@ -1715,6 +1847,12 @@ def fuse_moderation_decision(
         warnings.append(
             f"RAG warning: {rag_error}"
         )
+
+    warnings.extend(
+        str(item)
+        for item in illegal_activities_v1_analysis.get("warnings", [])
+        if str(item).strip()
+    )
 
     if (
         spam_analysis.get(
@@ -1810,6 +1948,29 @@ def fuse_moderation_decision(
             dangerous_content_v6_rc5_fusion["fusion_status"]
         ),
         "dangerous_content_automatic_enforcement_allowed": False,
+        "illegal_activities_v1_used": illegal_activities_v1_applied,
+        "illegal_activities_v1": illegal_activities_v1_analysis,
+        "illegal_activities_v1_fusion_status": (
+            illegal_activities_v1_fusion["fusion_status"]
+        ),
+        "illegal_activities_v2_rc2_used": illegal_activities_v1_applied,
+        "illegal_activities_v2_rc2": illegal_activities_v1_analysis,
+        "illegal_activities_v2_rc2_fusion_status": (
+            illegal_activities_v1_fusion["fusion_status"]
+        ),
+        "illegal_activities_automatic_enforcement_allowed": False,
+        "child_exploitation_v1_rc1_used": child_exploitation_v1_rc1_applied,
+        "child_exploitation_v1_rc1": child_exploitation_v1_rc1_analysis,
+        "child_exploitation_v1_rc1_fusion_status": (
+            child_exploitation_v1_rc1_fusion["fusion_status"]
+        ),
+        "child_exploitation_automatic_enforcement_allowed": False,
+        "invasion_of_privacy_v1_rc1_used": invasion_of_privacy_v1_rc1_applied,
+        "invasion_of_privacy_v1_rc1": invasion_of_privacy_v1_rc1_analysis,
+        "invasion_of_privacy_v1_rc1_fusion_status": (
+            invasion_of_privacy_v1_rc1_fusion["fusion_status"]
+        ),
+        "invasion_of_privacy_automatic_enforcement_allowed": False,
         "cyberbullying_rc2_used": cyberbullying_rc2_applied,
         "cyberbullying_rc2": cyberbullying_rc2_analysis,
         "cyberbullying_rc2_fusion_status": (

@@ -95,6 +95,54 @@ class ModerationResponse(
         default_factory=dict,
     )
 
+    illegal_activities_v1_used: bool = False
+
+    illegal_activities_v1: dict[
+        str,
+        Any,
+    ] = Field(
+        default_factory=dict,
+    )
+
+    illegal_activities_v1_fusion_status: str = "not_evaluated"
+
+    illegal_activities_v2_rc2_used: bool = False
+
+    illegal_activities_v2_rc2: dict[
+        str,
+        Any,
+    ] = Field(
+        default_factory=dict,
+    )
+
+    illegal_activities_v2_rc2_fusion_status: str = "not_evaluated"
+
+    illegal_activities_automatic_enforcement_allowed: bool = False
+
+    child_exploitation_v1_rc1_used: bool = False
+
+    child_exploitation_v1_rc1: dict[
+        str,
+        Any,
+    ] = Field(
+        default_factory=dict,
+    )
+
+    child_exploitation_v1_rc1_fusion_status: str = "not_evaluated"
+
+    child_exploitation_automatic_enforcement_allowed: bool = False
+
+    invasion_of_privacy_v1_rc1_used: bool = False
+
+    invasion_of_privacy_v1_rc1: dict[
+        str,
+        Any,
+    ] = Field(default_factory=dict)
+
+    invasion_of_privacy_v1_rc1_fusion_status: str = "not_evaluated"
+
+    invasion_of_privacy_automatic_enforcement_allowed: bool = False
+
     retrieved_evidence: list[
         dict[str, Any]
     ] = Field(

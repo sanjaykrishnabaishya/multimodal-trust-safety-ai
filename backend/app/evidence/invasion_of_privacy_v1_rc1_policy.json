@@ -1,0 +1,20 @@
+{
+  "version": "2026.08-invasion-of-privacy-v1-rc1",
+  "component": "Invasion of Privacy",
+  "purpose": "Consent-aware, review-only privacy-intrusion routing",
+  "rules": [
+    {"id": "IP-001", "decision": "Invasion of Privacy", "condition": "Credible non-consensual recording, private-space surveillance, stalking/tracking, eavesdropping, or private/intimate-media sharing is present."},
+    {"id": "IP-002", "decision": "Uncertain", "condition": "Consent, ownership, private location, provenance, relationship, or recording purpose is unresolved while privacy-risk conduct is present."},
+    {"id": "IP-003", "decision": "No override", "condition": "Explicit consent, owner authorization, disclosed security monitoring, or ordinary public context is established and no other violation is present."},
+    {"id": "IP-004", "decision": "No override", "condition": "Generic prevention, education, research, reporting, or fiction contains no live victim material or facilitation."},
+    {"id": "IP-005", "decision": "Fail closed", "condition": "Identity, consent, age, ownership, and private location cannot be inferred from appearance or an LLM."}
+  ],
+  "data_contract": {
+    "real_victim_media_allowed": false,
+    "private_identifiers_allowed": false,
+    "face_recognition_allowed": false,
+    "appearance_based_consent_inference_allowed": false,
+    "external_provider_transmission_allowed": false,
+    "automatic_enforcement_allowed": false
+  }
+}
