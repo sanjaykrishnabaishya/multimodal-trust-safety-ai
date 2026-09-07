@@ -140,6 +140,15 @@ backend/storage/candidates/*
 !backend/storage/candidates/invasion-of-privacy-v1-rc1/
 !backend/storage/candidates/invasion-of-privacy-v1-rc1/**
 
+# Publish only aggregate, inert Malicious Programs evaluators and candidates.
+# No executable payload, credential, live infrastructure, or raw holdout is stored.
+!backend/scripts/evaluate_malicious_programs_v1_rc1_independent.py
+!backend/scripts/evaluate_malicious_programs_v2_rc2_independent.py
+!backend/storage/candidates/malicious-programs-v1-rc1/
+!backend/storage/candidates/malicious-programs-v1-rc1/**
+!backend/storage/candidates/malicious-programs-v2-rc2/
+!backend/storage/candidates/malicious-programs-v2-rc2/**
+
 # Wikidata structured community candidates are CC0 and review-routing only.
 # All other downloaded public benchmark datasets remain ignored.
 !datasets/public/

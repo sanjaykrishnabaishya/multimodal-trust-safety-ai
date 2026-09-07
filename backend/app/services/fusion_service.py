@@ -55,6 +55,10 @@ from app.services.invasion_of_privacy_v1_rc1_fusion import (
     analyze_invasion_of_privacy_v1_rc1_for_fusion,
     apply_invasion_of_privacy_v1_rc1_guarded_fusion,
 )
+from app.services.malicious_programs_v2_rc2_fusion import (
+    analyze_malicious_programs_v2_rc2_for_fusion,
+    apply_malicious_programs_v2_rc2_guarded_fusion,
+)
 from app.services.violent_content_service import (
     analyze_violent_content,
 )
@@ -778,6 +782,13 @@ def fuse_moderation_decision(
 
     invasion_of_privacy_v1_rc1_analysis = (
         analyze_invasion_of_privacy_v1_rc1_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
+    malicious_programs_v2_rc2_analysis = (
+        analyze_malicious_programs_v2_rc2_for_fusion(
             text,
             input_sources,
         )
@@ -1574,6 +1585,33 @@ def fuse_moderation_decision(
         invasion_of_privacy_v1_rc1_fusion["decision_applied"]
     )
 
+    malicious_programs_v2_rc2_fusion = (
+        apply_malicious_programs_v2_rc2_guarded_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=malicious_programs_v2_rc2_analysis,
+        )
+    )
+    category = str(malicious_programs_v2_rc2_fusion["category"])
+    severity = str(malicious_programs_v2_rc2_fusion["severity"])
+    action = str(malicious_programs_v2_rc2_fusion["action"])
+    confidence = float(malicious_programs_v2_rc2_fusion["confidence"])
+    human_review_required = bool(
+        malicious_programs_v2_rc2_fusion["human_review_required"]
+    )
+    reason = str(malicious_programs_v2_rc2_fusion["reason"])
+    matched_signals = list(
+        malicious_programs_v2_rc2_fusion["matched_signals"]
+    )
+    malicious_programs_v2_rc2_applied = bool(
+        malicious_programs_v2_rc2_fusion["decision_applied"]
+    )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
@@ -1798,6 +1836,11 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["malicious_programs_v2_rc2"]
+                if malicious_programs_v2_rc2_applied
+                else []
+            )
+            + (
                 ["openrouter_advisory"]
                 if illegal_activities_v1_analysis.get(
                     "openrouter", {}
@@ -1971,6 +2014,14 @@ def fuse_moderation_decision(
             invasion_of_privacy_v1_rc1_fusion["fusion_status"]
         ),
         "invasion_of_privacy_automatic_enforcement_allowed": False,
+        "malicious_programs_v2_rc2_used": (
+            malicious_programs_v2_rc2_applied
+        ),
+        "malicious_programs_v2_rc2": malicious_programs_v2_rc2_analysis,
+        "malicious_programs_v2_rc2_fusion_status": (
+            malicious_programs_v2_rc2_fusion["fusion_status"]
+        ),
+        "malicious_programs_automatic_enforcement_allowed": False,
         "cyberbullying_rc2_used": cyberbullying_rc2_applied,
         "cyberbullying_rc2": cyberbullying_rc2_analysis,
         "cyberbullying_rc2_fusion_status": (

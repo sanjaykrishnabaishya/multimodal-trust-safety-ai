@@ -143,6 +143,17 @@ class ModerationResponse(
 
     invasion_of_privacy_automatic_enforcement_allowed: bool = False
 
+    malicious_programs_v2_rc2_used: bool = False
+
+    malicious_programs_v2_rc2: dict[
+        str,
+        Any,
+    ] = Field(default_factory=dict)
+
+    malicious_programs_v2_rc2_fusion_status: str = "not_evaluated"
+
+    malicious_programs_automatic_enforcement_allowed: bool = False
+
     retrieved_evidence: list[
         dict[str, Any]
     ] = Field(

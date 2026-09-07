@@ -1,0 +1,120 @@
+{
+  "version": "2026.08-malicious-programs-v1-rc1-development",
+  "records": 600,
+  "unique_texts": 600,
+  "label_counts": {
+    "Malicious Programs": 200,
+    "Uncertain": 50,
+    "Normal/Ignore": 300,
+    "Child Exploitation": 5,
+    "Illegal Activities": 5,
+    "Spam, Scam & Phishing": 5,
+    "Identity Theft & Impersonation": 5,
+    "Publishing Private Information": 5,
+    "Invasion of Privacy": 5,
+    "Terrorism & Extremism": 5,
+    "Dangerous Content": 5,
+    "Cyberbullying & Harassment": 5,
+    "Misinformation & Fake News": 5
+  },
+  "accuracy": 1.0,
+  "malicious_precision": 1.0,
+  "malicious_recall": 1.0,
+  "safe_specificity": 1.0,
+  "f1": 1.0,
+  "minimum_group_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "action_contract_failures": 0,
+  "category_mix_failures": 0,
+  "non_execution_failures": 0,
+  "payload_storage_failures": 0,
+  "authority_contract_failures": 0,
+  "processing_errors": 0,
+  "group_results": {
+    "authorized_research_and_training": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "benign_software_and_administration": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "credential_theft_and_spyware": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "defensive_analysis_and_incident_response": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "detection_prevention_and_sandbox_reports": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "established_category_owner_isolation": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "lexical_and_capability_boundaries": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "malware_distribution_and_installation": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "persistence_evasion_and_remote_control": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "ransomware_and_destructive_deployment": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "safe_reporting_history_and_fiction": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "uncertain_attachments_and_archives": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    }
+  },
+  "gates": {
+    "accuracy": true,
+    "malicious_precision": true,
+    "malicious_recall": true,
+    "safe_specificity": true,
+    "f1": true,
+    "minimum_group_accuracy": true,
+    "action_contract": true,
+    "category_mix_contract": true,
+    "non_execution_contract": true,
+    "payload_storage_contract": true,
+    "authority_contract": true,
+    "processing_contract": true
+  },
+  "passed_development_gate": true,
+  "executable_payloads_used": false,
+  "code_executed": false,
+  "archives_unpacked": false,
+  "credentials_used": false,
+  "live_infrastructure_used": false,
+  "external_provider_used": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "dataset_sha256": "14c26f84253ba2d13d3dd859909032af5a56f4db9ed5288f2fe3921c1d69d433"
+}

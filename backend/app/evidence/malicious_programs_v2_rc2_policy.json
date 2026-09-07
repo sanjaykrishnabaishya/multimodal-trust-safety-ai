@@ -1,0 +1,21 @@
+{
+  "component": "Malicious Programs",
+  "version": "malicious-programs-v2-rc2",
+  "candidate_type": "local deterministic non-executing word-order recovery router",
+  "permitted_outputs": [
+    "Malicious Programs",
+    "Uncertain"
+  ],
+  "required_malicious_action": "Block and send for security review",
+  "human_review_required": true,
+  "rc1_aggregate_signal_used": "Ransomware and destructive-program action/object word order required broader generalization.",
+  "rc1_holdout_cases_or_predictions_used": false,
+  "code_execution_allowed": false,
+  "archive_unpacking_allowed": false,
+  "payload_storage_allowed": false,
+  "credential_storage_allowed": false,
+  "live_infrastructure_storage_allowed": false,
+  "external_provider_used": false,
+  "external_transmission_allowed": false,
+  "automatic_enforcement_allowed": false
+}

@@ -1,0 +1,111 @@
+{
+  "candidate": "malicious-programs-v2-rc2",
+  "component": "Malicious Programs",
+  "candidate_type": "local deterministic non-executing word-order recovery router",
+  "frozen_at_utc": "2026-08-30T18:49:47.266725+00:00",
+  "development_gate_passed": true,
+  "development_metrics": {
+    "records": 480,
+    "unique_texts": 480,
+    "prior_development_overlap": 0,
+    "accuracy": 1.0,
+    "malicious_precision": 1.0,
+    "malicious_recall": 1.0,
+    "safe_specificity": 1.0,
+    "f1": 1.0,
+    "minimum_group_accuracy": 1.0,
+    "action_contract_failures": 0,
+    "category_mix_failures": 0,
+    "non_execution_failures": 0,
+    "payload_storage_failures": 0,
+    "authority_contract_failures": 0,
+    "processing_errors": 0
+  },
+  "artifacts": [
+    {
+      "relative_path": "source_snapshot/malicious_programs_v2_rc2_service.py",
+      "size_bytes": 5896,
+      "sha256": "c099ec21bb6e298df67c59a5ca0adb4c60660aff7a6ca33b29f9ea1a1ee7a3f1"
+    },
+    {
+      "relative_path": "policy_snapshot/malicious_programs_v2_rc2_policy.json",
+      "size_bytes": 832,
+      "sha256": "6547d54ad6c1291d82f711729d0da0be194f8e21765ad241e1556901a12c229a"
+    },
+    {
+      "relative_path": "source_snapshot/evaluate_malicious_programs_v2_rc2_development.py",
+      "size_bytes": 17017,
+      "sha256": "7b0f4acd9d24adda1b8e7c4928532781e61e20be1a4721b987938d3dce67d24f"
+    },
+    {
+      "relative_path": "source_snapshot/freeze_malicious_programs_v2_rc2.py",
+      "size_bytes": 10514,
+      "sha256": "36647df50eabb5391d14687a93942d96c28eb9730982c20dd9b7b219c17eaf9f"
+    },
+    {
+      "relative_path": "development/development.csv",
+      "size_bytes": 103258,
+      "sha256": "6d27a45eca9d229e47c8fabdc68947045ea3c7f6aba9de320b039709ebab7293"
+    },
+    {
+      "relative_path": "development_evidence/report.json",
+      "size_bytes": 2525,
+      "sha256": "8f7c80f4cdd8d05cc0fcb16f7baee6247232f7fa5dbc68a1113c3e3fdab43eba"
+    }
+  ],
+  "dependencies": {
+    "malicious-programs-v1-rc1": {
+      "manifest_sha256": "551b880f57c1c77a9c4958f9d01a2422493bf521ca6258f0f4045ff7b7fb6717",
+      "verdict_sha256": "32e5ea03021ad8ad01613f6e9a4274a47211389995ed31a0744262b61259885b",
+      "service_snapshot_sha256": "6773ff506a1480afe6f2d2faff2d2de6e2ad6d5a4d7bc6402b7d43897e21fa7e",
+      "independent_gate_passed": false,
+      "used_as_frozen_base_only": true
+    }
+  },
+  "rc1_aggregate_result_used": true,
+  "rc1_holdout_cases_or_predictions_used": false,
+  "independent_gate_frozen_before_holdout": {
+    "minimum_accuracy": 0.95,
+    "minimum_malicious_precision": 0.97,
+    "minimum_malicious_recall": 0.95,
+    "minimum_safe_specificity": 0.99,
+    "minimum_f1": 0.96,
+    "minimum_group_accuracy": 0.92,
+    "maximum_action_contract_failures": 0,
+    "maximum_category_mix_failures": 0,
+    "maximum_non_execution_failures": 0,
+    "maximum_payload_storage_failures": 0,
+    "maximum_authority_contract_failures": 0,
+    "maximum_processing_errors": 0,
+    "require_zero_development_overlap": true,
+    "require_frozen_source_hashes": true,
+    "require_no_raw_holdout_storage": true
+  },
+  "independent_holdout_created_before_freeze": false,
+  "independent_holdout_used_before_freeze": false,
+  "independent_holdout_may_modify_rc2": false,
+  "executable_payloads_used": false,
+  "code_execution_allowed": false,
+  "archive_unpacking_allowed": false,
+  "payload_storage_allowed": false,
+  "credentials_storage_allowed": false,
+  "live_infrastructure_storage_allowed": false,
+  "external_provider_used": false,
+  "external_transmission_allowed": false,
+  "permitted_active_outputs": [
+    "Malicious Programs",
+    "Uncertain"
+  ],
+  "required_malicious_action": "Block and send for security review",
+  "human_review_required": true,
+  "independently_validated": false,
+  "eligible_for_guarded_live_integration": false,
+  "connected_to_live_moderation": false,
+  "automatic_enforcement_allowed": false,
+  "evaluation_reporting_contract": {
+    "store_raw_holdout_text": false,
+    "store_individual_predictions": false,
+    "print_individual_predictions": false,
+    "report_aggregate_metrics_only": true
+  }
+}
