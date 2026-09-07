@@ -1,0 +1,51 @@
+{
+  "measured_at_utc": "2026-09-07T09:38:44.509574+00:00",
+  "scope": "In-process text moderation API benchmark after warming each of the six representative text paths.",
+  "warning": "This is a small local development measurement, not a production capacity promise. File, OCR, image, video, network, and external-AI time are not included.",
+  "external_ai_enabled": false,
+  "machine": {
+    "operating_system": "Windows",
+    "python_version": "3.12.14",
+    "logical_cpu_count": 12
+  },
+  "maximum_simulated_users": 10,
+  "six_path_cold_start_and_warm_up_seconds": 17.18,
+  "total_requests": 95,
+  "successful_requests": 95,
+  "overall_success_rate_percent": 100.0,
+  "results": [
+    {
+      "simulated_users": 1,
+      "requests": 20,
+      "successful_requests": 20,
+      "success_rate_percent": 100.0,
+      "median_response_ms": 210.35,
+      "p95_response_ms": 10969.91,
+      "average_response_ms": 1820.11,
+      "throughput_requests_per_second": 0.55,
+      "errors": {}
+    },
+    {
+      "simulated_users": 5,
+      "requests": 25,
+      "successful_requests": 25,
+      "success_rate_percent": 100.0,
+      "median_response_ms": 677.0,
+      "p95_response_ms": 25626.92,
+      "average_response_ms": 4530.58,
+      "throughput_requests_per_second": 0.84,
+      "errors": {}
+    },
+    {
+      "simulated_users": 10,
+      "requests": 50,
+      "successful_requests": 50,
+      "success_rate_percent": 100.0,
+      "median_response_ms": 1449.74,
+      "p95_response_ms": 51394.93,
+      "average_response_ms": 9402.15,
+      "throughput_requests_per_second": 0.82,
+      "errors": {}
+    }
+  ]
+}
