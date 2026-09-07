@@ -112,6 +112,11 @@ def test_moderation_health_endpoint(
     assert result["malicious_programs_v2_rc2"]["code_execution_allowed"] is False
     assert result["malicious_programs_v2_rc2"]["payload_storage_allowed"] is False
     assert result["malicious_programs_v2_rc2"]["automatic_enforcement_allowed"] is False
+    assert result["intellectual_property_v1_rc1"]["version"] == "intellectual-property-v1-rc1"
+    assert result["intellectual_property_v1_rc1"]["readiness"]["ready"] is True
+    assert result["intellectual_property_v1_rc1"]["external_provider_used"] is False
+    assert result["intellectual_property_v1_rc1"]["automatic_takedown_allowed"] is False
+    assert result["intellectual_property_v1_rc1"]["automatic_enforcement_allowed"] is False
 
 
 def test_moderation_policy_registry_exposes_all_19_categories(

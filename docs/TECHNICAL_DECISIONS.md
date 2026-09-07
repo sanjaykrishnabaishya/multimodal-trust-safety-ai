@@ -83,6 +83,10 @@ the local result and may send the case to a human.
   exploitative media.
 - Malicious Programs never executes code, opens archives, or stores payloads,
   credentials, or live infrastructure.
+- Intellectual Property stores only synthetic descriptions and aggregate
+  scores. It does not store copied works or claimant documents, decide licence
+  validity or legal exceptions, use an external provider, or issue automatic
+  takedowns.
 - Automatic enforcement is disabled. High-risk and uncertain cases require a
   qualified human.
 

@@ -57,6 +57,12 @@ from app.services.malicious_programs_v2_rc2_service import (
 from app.services.malicious_programs_v2_rc2_fusion import (
     get_malicious_programs_v2_rc2_readiness,
 )
+from app.services.intellectual_property_v1_rc1_service import (
+    get_intellectual_property_v1_rc1_status,
+)
+from app.services.intellectual_property_v1_rc1_fusion import (
+    get_intellectual_property_v1_rc1_readiness,
+)
 from app.services.moderation_service import (
     combine_extracted_signals,
 )
@@ -224,6 +230,10 @@ def moderation_health() -> dict:
         "malicious_programs_v2_rc2": {
             **get_malicious_programs_v2_rc2_status(),
             "readiness": get_malicious_programs_v2_rc2_readiness(),
+        },
+        "intellectual_property_v1_rc1": {
+            **get_intellectual_property_v1_rc1_status(),
+            "readiness": get_intellectual_property_v1_rc1_readiness(),
         },
     }
 

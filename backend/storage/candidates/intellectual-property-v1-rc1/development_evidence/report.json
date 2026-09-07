@@ -1,0 +1,111 @@
+{
+  "version": "2026.09-intellectual-property-v1-rc1-development",
+  "records": 600,
+  "unique_texts": 600,
+  "label_counts": {
+    "Intellectual Property Infringement": 200,
+    "Uncertain": 100,
+    "Normal/Ignore": 250,
+    "Child Exploitation": 10,
+    "Malicious Programs": 10,
+    "Illegal Activities": 10,
+    "Spam, Scam & Phishing": 10,
+    "Publishing Private Information": 10
+  },
+  "accuracy": 1.0,
+  "ip_precision": 1.0,
+  "ip_recall": 1.0,
+  "safe_specificity": 1.0,
+  "f1": 1.0,
+  "minimum_group_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "action_contract_failures": 0,
+  "category_mix_failures": 0,
+  "data_contract_failures": 0,
+  "authority_contract_failures": 0,
+  "processing_errors": 0,
+  "group_results": {
+    "authorized_original_and_official": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "bounded_reporting_criticism_and_access": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "counterfeit_trademark_sales": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "established_category_owner_isolation": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "legal_exception_scope_uncertain": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "ordinary_ip_information": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "public_domain_and_open_licence": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "unauthorized_audiovisual_distribution": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "unauthorized_publication_distribution": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "unauthorized_software_and_assets": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "uncertain_rights_licence_or_evidence": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "weak_similarity_claim_and_metadata": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    }
+  },
+  "gates": {
+    "accuracy": true,
+    "ip_precision": true,
+    "ip_recall": true,
+    "safe_specificity": true,
+    "f1": true,
+    "minimum_group_accuracy": true,
+    "action_contract": true,
+    "category_mix_contract": true,
+    "data_contract": true,
+    "authority_contract": true,
+    "processing_contract": true
+  },
+  "passed_development_gate": true,
+  "raw_copyrighted_works_used": false,
+  "pirated_material_used": false,
+  "private_claimant_data_used": false,
+  "external_provider_used": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "dataset_sha256": "2117c52d09863ea1783cf31ec733e6fd90f1ec443a2f965cabca144f10406997"
+}

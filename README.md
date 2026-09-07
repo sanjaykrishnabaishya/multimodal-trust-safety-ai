@@ -57,8 +57,8 @@ An outside AI is only an adviser. It is never the boss.
 
 | What we measured | Actual result | What it means |
 | --- | ---: | --- |
-| Backend automated tests | **199/199 passed** | Every automated regression check passed in the last full run. |
-| Test success rate | **100%** | 199 divided by 199. This is test success, not total real-world accuracy. |
+| Backend automated tests | **214/214 passed** | Every automated regression check passed in the last full run. |
+| Test success rate | **100%** | 214 divided by 214. This is test success, not total real-world accuracy. |
 | Local API requests | **95/95 succeeded** | Every request in the small performance check returned a valid moderation result. |
 | Local request success rate | **100%** | No request failed in that 95-request check. |
 | Simulated users | **1, 5, and 10** | Ten is the largest local group tested. It is not a production capacity promise. |
@@ -113,7 +113,7 @@ messy real world.
 | Identity Theft & Impersonation | 58.33% synthetic accuracy; 20.83% recall | 192 | **Not ready.** |
 | Misinformation & Fake News | 41.67% exact accuracy | 36 | **Not ready.** |
 | Spam, Scam & Phishing | 99.22% external accuracy | 774 | Strong message-level evidence; full product proof is separate. |
-| Intellectual Property Infringement | No dedicated result | 0 | **Not ready; this is the next category.** |
+| Intellectual Property Infringement | 100% synthetic accuracy | 720 | Passed guarded, qualified-review-only routing; it is not a legal judgment or automatic takedown. |
 | Malicious Programs | 100% synthetic accuracy | 800 | Passed guarded, non-executing security review routing. |
 | Abusive Words | 95% selective precision; 76% recall | 100 label-support examples | Passed selective review routing. |
 | Child Exploitation | 100% synthetic accuracy | 720 | Passed a safe, high-level synthetic gate; no real exploitative media was used. |
@@ -145,6 +145,9 @@ plain-language rules in [the moderation rulebook](docs/MODERATION_RULES.md).
 - Category-owner guards stop unrelated specialists from changing a decision.
 - Unknown age, consent, identity, licence, legal status, or provenance cannot
   be guessed by a model.
+- Intellectual-property routing now requires a protected item plus a current
+  unauthorized rights-impacting act. A logo, title, style, watermark, or claim
+  alone is not treated as proof, and legal exceptions go to qualified review.
 - Graphic violence that lacks a ready violence specialist fails safely to
   human review instead of being mislabeled as bullying or dangerous content.
 - Legitimate jobs, research, reporting, warnings, art, and education received
@@ -210,9 +213,8 @@ instructions.
 
 ## Next category
 
-The next planned category is **Intellectual Property Infringement**. It will
-look for a protected work plus credible evidence of unauthorized copying,
-distribution, sale, access, or counterfeiting. A title, logo, style, or user
-claim alone will not be treated as proof. Licences, original work, public-domain
-material, quotation, parody, criticism, fair use, and unclear ownership will be
-handled carefully and sent to qualified human review when needed.
+The next planned category is **Identity Theft & Impersonation**. It will look
+for deceptive impersonation or misuse of identity and credentials, while
+protecting clearly authorized representation, parody, fan content, reporting,
+and ordinary identity discussion. Unclear identity or authorization will go to
+human review; the tool will not identify a person from appearance alone.

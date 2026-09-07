@@ -1,0 +1,102 @@
+{
+  "candidate": "intellectual-property-v1-rc1",
+  "component": "Intellectual Property Infringement",
+  "candidate_type": "local deterministic evidence-aware review router",
+  "frozen_at_utc": "2026-09-07T10:13:08.616567+00:00",
+  "development_gate_passed": true,
+  "development_metrics": {
+    "records": 600,
+    "unique_texts": 600,
+    "accuracy": 1.0,
+    "ip_precision": 1.0,
+    "ip_recall": 1.0,
+    "safe_specificity": 1.0,
+    "f1": 1.0,
+    "minimum_group_accuracy": 1.0,
+    "action_contract_failures": 0,
+    "category_mix_failures": 0,
+    "data_contract_failures": 0,
+    "authority_contract_failures": 0,
+    "processing_errors": 0
+  },
+  "artifacts": [
+    {
+      "relative_path": "source_snapshot/intellectual_property_v1_rc1_service.py",
+      "size_bytes": 13043,
+      "sha256": "4a16ae28e9036c3f2b326da7984395bfb9151f6abaa5336fef0fa17dae819b51"
+    },
+    {
+      "relative_path": "policy_snapshot/intellectual_property_v1_rc1_policy.json",
+      "size_bytes": 2565,
+      "sha256": "fff92ca7b691fa3e5f8b467371d3c9de4643048c933208b67a9260a27d6ccbef"
+    },
+    {
+      "relative_path": "source_snapshot/evaluate_intellectual_property_v1_rc1_development.py",
+      "size_bytes": 17351,
+      "sha256": "6f03c2933c1a7a4009b701bbf4358dc9f6e755f4f5965cf991b8603a5a048053"
+    },
+    {
+      "relative_path": "source_snapshot/freeze_intellectual_property_v1_rc1.py",
+      "size_bytes": 6539,
+      "sha256": "433c552aa736934a07a60b4b43cbd3f6ce11f50783ca6671f353dfed244017fc"
+    },
+    {
+      "relative_path": "source_boundary/INTELLECTUAL_PROPERTY_SOURCE_BOUNDARY.md",
+      "size_bytes": 1427,
+      "sha256": "033234f16bed3c887f548c290cfe7c35484b2179ae89e1e5367340fa193ecb25"
+    },
+    {
+      "relative_path": "development/development.csv",
+      "size_bytes": 140346,
+      "sha256": "2117c52d09863ea1783cf31ec733e6fd90f1ec443a2f965cabca144f10406997"
+    },
+    {
+      "relative_path": "development_evidence/report.json",
+      "size_bytes": 2912,
+      "sha256": "fdcfabaa48610446336e033bb015ca1f3a2a77b016f9f5d43f4dff6402d8b657"
+    }
+  ],
+  "independent_gate_frozen_before_holdout": {
+    "minimum_accuracy": 0.95,
+    "minimum_ip_precision": 0.97,
+    "minimum_ip_recall": 0.95,
+    "minimum_safe_specificity": 0.99,
+    "minimum_f1": 0.96,
+    "minimum_group_accuracy": 0.92,
+    "maximum_action_contract_failures": 0,
+    "maximum_category_mix_failures": 0,
+    "maximum_data_contract_failures": 0,
+    "maximum_authority_contract_failures": 0,
+    "maximum_processing_errors": 0,
+    "require_zero_development_overlap": true,
+    "require_frozen_source_hashes": true,
+    "require_no_raw_holdout_storage": true
+  },
+  "independent_holdout_created_before_freeze": false,
+  "independent_holdout_used_before_freeze": false,
+  "independent_holdout_may_modify_rc1": false,
+  "raw_copyrighted_works_used": false,
+  "pirated_material_used": false,
+  "private_claimant_data_used": false,
+  "ownership_or_licence_inference_allowed": false,
+  "legal_determination_allowed": false,
+  "external_provider_used": false,
+  "external_transmission_allowed": false,
+  "permitted_active_outputs": [
+    "Intellectual Property Infringement",
+    "Uncertain"
+  ],
+  "required_ip_action": "Restrict distribution and send for qualified human review",
+  "human_review_required": true,
+  "independently_validated": false,
+  "eligible_for_guarded_live_integration": false,
+  "connected_to_live_moderation": false,
+  "automatic_takedown_allowed": false,
+  "automatic_enforcement_allowed": false,
+  "evaluation_reporting_contract": {
+    "store_raw_holdout_text": false,
+    "store_individual_predictions": false,
+    "print_individual_predictions": false,
+    "report_aggregate_metrics_only": true
+  }
+}

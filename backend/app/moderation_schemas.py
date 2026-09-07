@@ -154,6 +154,19 @@ class ModerationResponse(
 
     malicious_programs_automatic_enforcement_allowed: bool = False
 
+    intellectual_property_v1_rc1_used: bool = False
+
+    intellectual_property_v1_rc1: dict[
+        str,
+        Any,
+    ] = Field(default_factory=dict)
+
+    intellectual_property_v1_rc1_fusion_status: str = "not_evaluated"
+
+    intellectual_property_automatic_takedown_allowed: bool = False
+
+    intellectual_property_automatic_enforcement_allowed: bool = False
+
     retrieved_evidence: list[
         dict[str, Any]
     ] = Field(

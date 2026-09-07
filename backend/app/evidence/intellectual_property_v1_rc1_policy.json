@@ -1,0 +1,52 @@
+{
+  "version": "2026.09-intellectual-property-v1-rc1",
+  "component": "Intellectual Property Infringement",
+  "purpose": "Evidence-aware, jurisdiction-conscious, review-only intellectual-property routing",
+  "rules": [
+    {
+      "id": "IPR-001",
+      "decision": "Intellectual Property Infringement",
+      "condition": "A protected work, mark, product, or software item is paired with current unauthorized copying, distribution, public performance, access, or counterfeit sale evidence."
+    },
+    {
+      "id": "IPR-002",
+      "decision": "Uncertain",
+      "condition": "Ownership, authorization, licence scope, jurisdiction, provenance, or a legal limitation or exception is unresolved while plausible rights-impacting conduct is present."
+    },
+    {
+      "id": "IPR-003",
+      "decision": "No override",
+      "condition": "Authorization, ownership, compatible licence, public-domain status, or official distribution is established and no contrary evidence is present."
+    },
+    {
+      "id": "IPR-004",
+      "decision": "No override or Uncertain",
+      "condition": "Criticism, comment, news reporting, teaching, scholarship, research, quotation, parody, preservation, and accessibility are protected from automatic infringement conclusions; unresolved legal scope is reviewed."
+    },
+    {
+      "id": "IPR-005",
+      "decision": "No override",
+      "condition": "A title, logo, visual style, similarity, watermark, allegation, or self-reported ownership claim alone is not enough to establish infringement."
+    },
+    {
+      "id": "IPR-006",
+      "decision": "Fail closed",
+      "condition": "The component cannot determine ownership, licence validity, legal exceptions, jurisdiction, or infringement from appearance or an LLM, and it cannot issue an automatic takedown."
+    }
+  ],
+  "data_contract": {
+    "raw_copyrighted_works_allowed": false,
+    "pirated_media_or_source_code_allowed": false,
+    "complainant_private_identifiers_allowed": false,
+    "external_provider_transmission_allowed": false,
+    "legal_determination_allowed": false,
+    "automatic_takedown_allowed": false,
+    "automatic_enforcement_allowed": false
+  },
+  "source_boundary": {
+    "wipo_copyright_faq": "https://www.wipo.int/en/web/copyright/faq-copyright",
+    "wipo_limitations_and_exceptions": "https://www.wipo.int/en/web/copyright/limitations/index",
+    "us_copyright_office_fair_use": "https://www.copyright.gov/fair-use/",
+    "note": "Sources define routing guardrails, not machine-verifiable legal outcomes. Local law and facts control."
+  }
+}

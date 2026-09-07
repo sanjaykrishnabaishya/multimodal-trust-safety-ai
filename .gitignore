@@ -149,6 +149,12 @@ backend/storage/candidates/*
 !backend/storage/candidates/malicious-programs-v2-rc2/
 !backend/storage/candidates/malicious-programs-v2-rc2/**
 
+# Publish only the aggregate, synthetic Intellectual Property evaluator and
+# frozen candidate. No raw copyrighted works or individual predictions exist.
+!backend/scripts/evaluate_intellectual_property_v1_rc1_independent.py
+!backend/storage/candidates/intellectual-property-v1-rc1/
+!backend/storage/candidates/intellectual-property-v1-rc1/**
+
 # Wikidata structured community candidates are CC0 and review-routing only.
 # All other downloaded public benchmark datasets remain ignored.
 !datasets/public/
