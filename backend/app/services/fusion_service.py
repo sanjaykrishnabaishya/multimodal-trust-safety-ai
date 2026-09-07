@@ -59,6 +59,10 @@ from app.services.malicious_programs_v2_rc2_fusion import (
     analyze_malicious_programs_v2_rc2_for_fusion,
     apply_malicious_programs_v2_rc2_guarded_fusion,
 )
+from app.services.intellectual_property_v1_rc1_fusion import (
+    analyze_intellectual_property_v1_rc1_for_fusion,
+    apply_intellectual_property_v1_rc1_guarded_fusion,
+)
 from app.services.violent_content_service import (
     analyze_violent_content,
 )
@@ -789,6 +793,13 @@ def fuse_moderation_decision(
 
     malicious_programs_v2_rc2_analysis = (
         analyze_malicious_programs_v2_rc2_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
+    intellectual_property_v1_rc1_analysis = (
+        analyze_intellectual_property_v1_rc1_for_fusion(
             text,
             input_sources,
         )
@@ -1612,6 +1623,31 @@ def fuse_moderation_decision(
         malicious_programs_v2_rc2_fusion["decision_applied"]
     )
 
+    intellectual_property_v1_rc1_fusion = (
+        apply_intellectual_property_v1_rc1_guarded_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=intellectual_property_v1_rc1_analysis,
+        )
+    )
+    category = str(intellectual_property_v1_rc1_fusion["category"])
+    severity = str(intellectual_property_v1_rc1_fusion["severity"])
+    action = str(intellectual_property_v1_rc1_fusion["action"])
+    confidence = float(intellectual_property_v1_rc1_fusion["confidence"])
+    human_review_required = bool(
+        intellectual_property_v1_rc1_fusion["human_review_required"]
+    )
+    reason = str(intellectual_property_v1_rc1_fusion["reason"])
+    matched_signals = list(intellectual_property_v1_rc1_fusion["matched_signals"])
+    intellectual_property_v1_rc1_applied = bool(
+        intellectual_property_v1_rc1_fusion["decision_applied"]
+    )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
@@ -1841,6 +1877,11 @@ def fuse_moderation_decision(
                 else []
             )
             + (
+                ["intellectual_property_v1_rc1"]
+                if intellectual_property_v1_rc1_applied
+                else []
+            )
+            + (
                 ["openrouter_advisory"]
                 if illegal_activities_v1_analysis.get(
                     "openrouter", {}
@@ -2022,6 +2063,15 @@ def fuse_moderation_decision(
             malicious_programs_v2_rc2_fusion["fusion_status"]
         ),
         "malicious_programs_automatic_enforcement_allowed": False,
+        "intellectual_property_v1_rc1_used": (
+            intellectual_property_v1_rc1_applied
+        ),
+        "intellectual_property_v1_rc1": intellectual_property_v1_rc1_analysis,
+        "intellectual_property_v1_rc1_fusion_status": (
+            intellectual_property_v1_rc1_fusion["fusion_status"]
+        ),
+        "intellectual_property_automatic_takedown_allowed": False,
+        "intellectual_property_automatic_enforcement_allowed": False,
         "cyberbullying_rc2_used": cyberbullying_rc2_applied,
         "cyberbullying_rc2": cyberbullying_rc2_analysis,
         "cyberbullying_rc2_fusion_status": (

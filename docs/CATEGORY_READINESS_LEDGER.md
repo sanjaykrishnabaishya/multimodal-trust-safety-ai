@@ -1,6 +1,6 @@
 # TrustScope category-readiness ledger
 
-Updated: 2026-08-31
+Updated: 2026-09-07
 
 This ledger separates independent component evidence from development contracts
 and product readiness. A component score is never presented as overall product
@@ -46,7 +46,7 @@ The frontend production build and static checks also passed.
 | Identity Theft & Impersonation | 58.33% synthetic independent accuracy, 20.83% recall | 192 | Failed readiness gate. |
 | Misinformation | 41.67% exact accuracy; 75.00% selective accuracy at 11.11% coverage | 36 | Failed readiness gate; insufficient evidence must remain Uncertain. |
 | Spam, Scam & Phishing | 99.22% external human-labelled accuracy | 774 | Strong message-level component evidence; broader multimodal/product validation remains separate. |
-| Intellectual Property Violations | No dedicated independent evaluation | 0 | Not ready; legal provenance must be reviewed by a qualified human. |
+| Intellectual Property Infringement | 100.00% synthetic independent accuracy, precision, recall, specificity, F1, and minimum-group accuracy | 720 unique | RC1 passed its locked independent and guarded live-fusion gates; qualified-review-only, no raw works or external provider, and no automatic legal decision or takedown. |
 | Malicious Programs | 100.00% synthetic independent accuracy, precision, recall, specificity, F1, and minimum-group accuracy | 800 unique RC2 challenge records | RC2 passed its locked independent and guarded live-fusion gates; non-executing, security-review-only, and no payload storage or automatic enforcement. |
 | Abusive Words | 95.00% accepted precision, 76.00% selective recall | 100 label-support records within the 300-record challenge | Passed as a selective RC2 output; quotation and non-targeted contexts must not be overridden. |
 | Child Exploitation | 100.00% synthetic independent accuracy, precision, recall, specificity, and F1 | 720 unique | Passed guarded-integration gate; local-only critical review routing; no real exploitative media, external provider, automatic enforcement, or appearance-based age inference. |
@@ -307,30 +307,70 @@ These are synthetic policy and integration results, not external or real-world
 accuracy. Both frozen candidates and both challenges remain immutable and may
 not be used for tuning.
 
-## Next category: Intellectual Property Infringement
+## Latest completed category phase: Intellectual Property V1 RC1
 
-The first candidate will distinguish credible unauthorized distribution,
-reproduction, sale, or access from licensed use, public-domain material,
-original work, quotation, commentary, parody, and unresolved legal exceptions.
-It will be an evidence-and-review router, not an automated legal decision-maker.
+This category is an evidence-and-review router, not an automated legal judge.
+Its boundary follows official WIPO and U.S. Copyright Office guidance that
+licences and legal exceptions matter, vary by jurisdiction, and can require a
+fact-specific decision.
+
+Implemented policy contract:
+
+- A protected work, mark, product, software item, media item, or publication
+  must be paired with current unauthorized copying, distribution, public
+  performance, access, or counterfeit-sale evidence.
+- A title, logo, style, similarity, watermark, allegation, or self-reported
+  ownership claim alone cannot establish infringement.
+- Documented authorization, original ownership, a compatible licence, public-
+  domain status, CC0, and official distribution prevent this specialist from
+  overriding another result when no contrary evidence exists.
+- Bounded criticism, comment, news, teaching, scholarship, research, quotation,
+  parody, preservation, and accessibility are not automatically called
+  infringement. Unclear scope, law, or facts route to `Uncertain` review.
+- Ownership, authorization, licence validity, jurisdiction, provenance, and
+  legal exceptions are never inferred from appearance or declared solved by an
+  LLM.
+- Established safety owners retain precedence. Every active IP result requires
+  a qualified human; automatic takedown and enforcement remain disabled.
+
+Development used 600 unique synthetic descriptions across 12 equal groups.
+Accuracy, precision, recall, specificity, F1, and minimum-group accuracy were
+all 100.00%, with zero category, action, data, authority, or processing
+failures. RC1 was then frozen with its source, policy, development evidence,
+gate thresholds, and hashes before the independent challenge was created.
+
+The post-freeze independent challenge used 720 new unique synthetic examples:
+240 positive and 480 safe, uncertain, legal-exception, weak-evidence, benign,
+and established-owner boundaries. Development overlap was zero. Accuracy,
+precision, recall, specificity, F1, and minimum-group accuracy were all
+100.00%, with zero contract failures. The guarded live-fusion contract passed
+10/10, and the complete backend regression suite passed 214/214.
+
+No film, music, book, image, software package, pirated material, claimant
+identifier, raw challenge text, individual prediction, or external provider was
+used or stored. These are synthetic policy and integration results, not legal
+advice, external validation, or real-world accuracy. RC1 and its one challenge
+are immutable and may not be used for tuning.
+
+See the [official-source boundary](INTELLECTUAL_PROPERTY_SOURCE_BOUNDARY.md).
+
+## Next category: Identity Theft & Impersonation
+
+The next phase will replace the current weak identity detector with a frozen,
+review-only candidate. It will require deceptive representation or identity/
+credential misuse plus an active account, transaction, access, or victim-impact
+signal. A name, face, logo, resemblance, or account claim alone will not prove
+identity or impersonation.
 
 Initial policy contract:
 
-- A protected-work, mark, software, media, or publication signal must be paired
-  with current unauthorized distribution, copying, sale, access, or counterfeit
-  representation evidence before the category can apply.
-- A title, logo, style, similarity, or self-reported infringement claim alone
-  cannot prove ownership, licence, authorization, jurisdiction, or infringement.
-- Verified licence, authorization, public-domain/CC0 status, and original-work
-  provenance are protected boundaries; quotation, criticism, parody, fair use,
-  and fair dealing require qualified legal review rather than automatic Allow.
-- Missing rights metadata, disputed ownership, uncertain jurisdiction, or
-  unclear legal exception routes to `Uncertain` and qualified human review.
-- Raw copyrighted works, pirated media, permission-restricted datasets, and
-  takedown complainant identifiers will not be collected for development.
-- Established safety owners retain precedence and automatic enforcement remains
-  disabled.
-
-The first gate will require at least 95% precision, 95% safe specificity, 90%
-recall, 90% minimum-family accuracy, and zero ownership-inference, licence-
-inference, action, category-mix, external-transmission, or processing failures.
+- Confirmed deceptive impersonation or identity/credential misuse routes to
+  `Identity Theft & Impersonation` and mandatory human review.
+- Clearly authorized agents, official accounts, parody, fan content, reporting,
+  education, fiction, and ordinary identity discussion are protected boundaries.
+- Unknown identity, consent, authorization, account provenance, or deceptive
+  intent routes to `Uncertain` and review.
+- Face recognition and identity inference from appearance remain disabled.
+- Publishing Private Information, Spam/Phishing, Child Exploitation, Illegal
+  Activities, Malicious Programs, and every other established owner retain
+  precedence. Automatic enforcement remains disabled.

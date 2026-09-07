@@ -1,0 +1,13 @@
+# Frozen IP candidate hashes are byte-sensitive. Keep these text artifacts LF
+# on every operating system so a Windows checkout does not invalidate RC1.
+backend/app/evidence/intellectual_property_v1_rc1_policy.json text eol=lf
+backend/app/services/intellectual_property_v1_rc1_service.py text eol=lf
+backend/scripts/evaluate_intellectual_property_v1_rc1_development.py text eol=lf
+backend/scripts/freeze_intellectual_property_v1_rc1.py text eol=lf
+backend/storage/candidates/intellectual-property-v1-rc1/** text eol=lf
+# Python's Windows CSV/JSON writers produced these two frozen artifacts with
+# CRLF bytes, so preserve that byte contract on every checkout.
+backend/storage/candidates/intellectual-property-v1-rc1/development/development.csv text eol=crlf
+backend/storage/candidates/intellectual-property-v1-rc1/development_evidence/report.json text eol=crlf
+datasets/development/intellectual_property_v1_rc1/development.csv text eol=crlf
+docs/INTELLECTUAL_PROPERTY_SOURCE_BOUNDARY.md text eol=lf

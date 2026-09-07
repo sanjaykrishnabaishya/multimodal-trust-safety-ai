@@ -1,6 +1,6 @@
 # TrustScopeAI moderation rules
 
-Updated: 2026-08-31
+Updated: 2026-09-07
 
 This is the concise product rulebook for the 19-category registry. Category
 presence does not imply that its specialist passed independent readiness; see
@@ -24,7 +24,7 @@ disabled.
 | Identity Theft & Impersonation | Another person or organization is fraudulently impersonated or their credentials/likeness are used deceptively. | Flag and human review. | Parody and identity ownership require verification. |
 | Misinformation & Fake News | A materially false or manipulated factual claim is presented as true. | Flag and human review. | Satire, opinion, fiction, correction, and unresolved truth must not be automatically blocked. |
 | Spam, Scam & Phishing | Unsolicited or deceptive content requests money, credentials, OTPs, passwords, clicks, or promotes suspicious schemes. | Block, warn, or limit distribution. | Expected transactions and legitimate commercial/service messages remain safe; dictionary terms alone are insufficient. |
-| Intellectual Property Infringement | Protected works or marks appear distributed or reproduced without authorization. | Flag and qualified human review. | Licence, public-domain status, authorization, quotation, and fair dealing require evidence and legal review. |
+| Intellectual Property Infringement | A protected work, mark, product, software item, media item, or publication is paired with current unauthorized copying, distribution, public performance, access, or counterfeit sale evidence. | Restrict distribution and send for qualified human review. | No automatic takedown. A title, logo, style, similarity, watermark, or claim alone is not proof. Documented authorization, original work, compatible licences, public domain, CC0, and official distribution are protected. Criticism, news, teaching, research, quotation, parody, preservation, accessibility, unclear ownership/licence/jurisdiction, and legal exceptions require careful review. |
 | Malicious Programs | A malicious-software object or suspicious payload is paired with operational distribution, delivery, installation, deployment, execution, hosting, or harmful-capability evidence. | Block and send for specialist security review. | Never execute or unpack content; uncertain artifacts are reviewed; defensive analysis, sandboxing, detection, reporting, authorized research, and benign administration do not override without live facilitation evidence. |
 | Abusive Words | Targeted swear words, insults, or obfuscated abusive terms attack a person. | Remove/limit distribution and, when needed, review. | Non-targeted quotation, education, reporting, and self-reference remain safe. |
 | Child Exploitation | A child/minor signal co-occurs with sexual exploitation, grooming, coercion, unsafe contact, trafficking, intimate-image, or physical-abuse evidence. | Block and immediately escalate to specialist human review. | No real suspected material is stored or sent externally; age is never inferred from appearance; uncertain age/risk is Uncertain; clear prevention/education is protected. |
