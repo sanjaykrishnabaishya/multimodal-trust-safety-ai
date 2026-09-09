@@ -1,0 +1,14 @@
+{
+  "candidate": "identity-theft-impersonation-v2-rc1",
+  "contract": "post-freeze-public-live-regression",
+  "records": 5,
+  "passed": 4,
+  "failed": 1,
+  "passed_live_regression_gate": false,
+  "eligible_for_guarded_live_integration": false,
+  "aggregate_failure_boundary": "natural first-person impersonation using a cloned account",
+  "frozen_candidate_modified": false,
+  "independent_examples_used": false,
+  "individual_independent_predictions_used": false,
+  "automatic_enforcement_allowed": false
+}

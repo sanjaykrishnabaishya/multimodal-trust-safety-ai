@@ -1,0 +1,111 @@
+{
+  "version": "2026.09-identity-theft-impersonation-v2-rc1-development",
+  "records": 600,
+  "unique_texts": 600,
+  "label_counts": {
+    "Identity Theft & Impersonation": 200,
+    "Uncertain": 100,
+    "Normal/Ignore": 250,
+    "Child Exploitation": 10,
+    "Publishing Private Information": 10,
+    "Spam, Scam & Phishing": 10,
+    "Illegal Activities": 10,
+    "Malicious Programs": 10
+  },
+  "accuracy": 1.0,
+  "identity_precision": 1.0,
+  "identity_recall": 1.0,
+  "safe_specificity": 1.0,
+  "f1": 1.0,
+  "minimum_group_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "action_contract_failures": 0,
+  "category_mix_failures": 0,
+  "data_contract_failures": 0,
+  "authority_contract_failures": 0,
+  "processing_errors": 0,
+  "group_results": {
+    "active_profile_and_account_impersonation": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "credential_and_account_takeover_misuse": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "declared_parody_fan_fiction_and_roleplay": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "documented_authorized_representation": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "established_category_owner_isolation": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "government_and_business_impersonation": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "identity_misuse_for_transactions_and_benefits": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "incomplete_or_appearance_only_evidence": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "ordinary_identity_and_authentication_context": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "reporting_education_prevention_and_recovery": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "uncertain_identity_authorization_or_intent": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    },
+    "weak_name_face_voice_logo_or_claim": {
+      "records": 50,
+      "correct": 50,
+      "accuracy": 1.0
+    }
+  },
+  "gates": {
+    "accuracy": true,
+    "identity_precision": true,
+    "identity_recall": true,
+    "safe_specificity": true,
+    "f1": true,
+    "minimum_group_accuracy": true,
+    "action_contract": true,
+    "category_mix_contract": true,
+    "data_contract": true,
+    "authority_contract": true,
+    "processing_contract": true
+  },
+  "passed_development_gate": true,
+  "real_identity_documents_used": false,
+  "raw_credentials_used": false,
+  "complete_personal_identifiers_used": false,
+  "external_provider_used": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "dataset_sha256": "cca2b8e53ac79fdab7cde076ff5ba10ee553d8747bbdd2e3ca2c468b520df4bf"
+}

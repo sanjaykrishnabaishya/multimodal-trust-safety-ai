@@ -11,3 +11,14 @@ backend/storage/candidates/intellectual-property-v1-rc1/development/development.
 backend/storage/candidates/intellectual-property-v1-rc1/development_evidence/report.json text eol=crlf
 datasets/development/intellectual_property_v1_rc1/development.csv text eol=crlf
 docs/INTELLECTUAL_PROPERTY_SOURCE_BOUNDARY.md text eol=lf
+
+# Frozen Identity V2 candidate hashes are byte-sensitive. Source and policy
+# snapshots stay LF; generated development CSV/report artifacts stay CRLF.
+backend/app/evidence/identity_theft_impersonation_v2_rc*.json text eol=lf
+backend/app/services/identity_theft_impersonation_v2_rc*.py text eol=lf
+backend/scripts/*identity_theft_impersonation_v2_rc*.py text eol=lf
+backend/storage/candidates/identity-theft-impersonation-v2-rc*/** text eol=lf
+backend/storage/candidates/identity-theft-impersonation-v2-rc*/development/development.csv text eol=crlf
+backend/storage/candidates/identity-theft-impersonation-v2-rc*/development_evidence/report.json text eol=crlf
+datasets/development/identity_theft_impersonation_v2_rc*/development.csv text eol=crlf
+docs/IDENTITY_THEFT_IMPERSONATION_SOURCE_BOUNDARY.md text eol=lf

@@ -1,6 +1,6 @@
 # TrustScope category-readiness ledger
 
-Updated: 2026-09-07
+Updated: 2026-09-09
 
 This ledger separates independent component evidence from development contracts
 and product readiness. A component score is never presented as overall product
@@ -43,7 +43,7 @@ The frontend production build and static checks also passed.
 | Invasion of Privacy | 100.00% synthetic independent accuracy, precision, recall, specificity, and F1 | 720 unique | RC1 passed its locked independent and guarded live-fusion gates; review-only, local-only, and no victim-media storage or automatic enforcement. |
 | Illegal Activities | 100.00% synthetic independent accuracy, precision, recall, specificity, and F1 | 600 unique | RC2 passed its locked independent gate and guarded live-fusion contract; review-only and no automatic enforcement. |
 | Publishing Private Information | 91.45% recall on a positive-only external synthetic set | 2,000 | Useful detector evidence, but no negative-set specificity gate; consent/ownership still requires review. |
-| Identity Theft & Impersonation | 58.33% synthetic independent accuracy, 20.83% recall | 192 | Failed readiness gate. |
+| Identity Theft & Impersonation | 100.00% synthetic independent accuracy, precision, recall, specificity, F1, and minimum-group accuracy | 1,320 unique RC5 challenge records | RC5 passed its locked independent and guarded live-fusion gates; human-review-only, no biometrics, no real identity documents or credentials, and no automatic suspension or enforcement. |
 | Misinformation | 41.67% exact accuracy; 75.00% selective accuracy at 11.11% coverage | 36 | Failed readiness gate; insufficient evidence must remain Uncertain. |
 | Spam, Scam & Phishing | 99.22% external human-labelled accuracy | 774 | Strong message-level component evidence; broader multimodal/product validation remains separate. |
 | Intellectual Property Infringement | 100.00% synthetic independent accuracy, precision, recall, specificity, F1, and minimum-group accuracy | 720 unique | RC1 passed its locked independent and guarded live-fusion gates; qualified-review-only, no raw works or external provider, and no automatic legal decision or takedown. |
@@ -354,23 +354,87 @@ are immutable and may not be used for tuning.
 
 See the [official-source boundary](INTELLECTUAL_PROPERTY_SOURCE_BOUNDARY.md).
 
-## Next category: Identity Theft & Impersonation
+## Latest completed category phase: Identity Theft & Impersonation V2 RC5
 
-The next phase will replace the current weak identity detector with a frozen,
-review-only candidate. It will require deceptive representation or identity/
-credential misuse plus an active account, transaction, access, or victim-impact
-signal. A name, face, logo, resemblance, or account claim alone will not prove
-identity or impersonation.
+The old identity detector had only 58.33% accuracy and 20.83% recall on its
+historical 192-record test. It is now supporting evidence only. Frozen V2 RC5
+is the only identity specialist allowed to change live routing, and only after
+its manifest, policy, service, dependency, and independent-verdict hashes pass.
 
-Initial policy contract:
+Implemented policy contract:
 
-- Confirmed deceptive impersonation or identity/credential misuse routes to
-  `Identity Theft & Impersonation` and mandatory human review.
-- Clearly authorized agents, official accounts, parody, fan content, reporting,
-  education, fiction, and ordinary identity discussion are protected boundaries.
-- Unknown identity, consent, authorization, account provenance, or deceptive
-  intent routes to `Uncertain` and review.
-- Face recognition and identity inference from appearance remain disabled.
-- Publishing Private Information, Spam/Phishing, Child Exploitation, Illegal
-  Activities, Malicious Programs, and every other established owner retain
-  precedence. Automatic enforcement remains disabled.
+- Deceptive impersonation must be paired with a concrete current misuse act,
+  such as contact, payment collection, credential request, account access, or
+  victim impact.
+- Unauthorized identity use must contain identity, personal, financial,
+  medical, login, or account material; lack of permission; and a concrete
+  account, access, purchase, loan, benefit, communication, or care impact.
+- Identity, authorization, consent, provenance, authenticity, deceptive intent,
+  source availability, or evidence completeness that is unresolved routes to
+  `Uncertain` and human review.
+- Documented agents, platform-verified official accounts, parody, fan content,
+  fiction, reporting, education, prevention, research, recovery, and routine
+  identity administration are protected when no active misuse is established.
+- A face, voice, name, photograph, logo, resemblance, self-claim, or model score
+  alone cannot prove identity, account ownership, authorization, or deception.
+- Established categories keep ownership. Every active identity result requires
+  human review. Face/voice recognition, biometric embeddings, appearance-based
+  identity inference, external-provider identity decisions, automatic account
+  suspension, and automatic enforcement are disabled.
+
+The phase used a strict freeze-and-challenge sequence. RC1 passed a 600-record
+development set and a 720-record synthetic challenge, but failed an ordinary
+live regression phrase, so it remained frozen and ineligible. RC2 development
+passed 480/480; its 800-record challenge failed an incomplete-evidence group at
+50.00% with 40 category/action failures. RC3 development passed 400/400; its
+900-record challenge found an entity/official impersonation group at 51.11%,
+with 83.70% recall and 44 failures. RC4 development passed 480/480; its
+1,000-record challenge found an account-access group at 75.00%, with 93.75%
+recall and 25 failures. Each failed candidate stayed immutable and ineligible.
+Only aggregate group lessons—not challenge examples or individual predictions—
+were used to build the next candidate.
+
+RC5 development then used 500 new unique synthetic records across five groups.
+Accuracy, precision, recall, specificity, F1, and minimum-group accuracy were
+all 100.00%, with zero action, category, data, authority, or processing
+failures. RC5 was frozen before its final challenge was created.
+
+The post-freeze RC5 independent challenge contained 1,320 new unique synthetic
+records: 480 confirmed identity records and 840 safe, Uncertain, weak-evidence,
+authorized, contextual, and established-owner boundaries. Development overlap
+was zero. Accuracy, precision, recall, specificity, F1, and minimum-group
+accuracy were all 100.00%, with zero failures. The guarded live-fusion contract
+passed 10/10, the complete backend regression suite passed 228/228, and the
+frontend production build and lint passed.
+
+Across RC1-RC5, the phase executed 2,460 unique development records and 4,740
+post-freeze challenge records. Only the final RC5 challenge is current readiness
+evidence. No real identity document, raw credential, complete personal
+identifier, biometric embedding, raw private complaint, individual challenge
+prediction, or external-provider identity decision was stored or published.
+
+These results are synthetic policy and integration evidence, not external or
+real-world accuracy. RC1-RC5 and their challenges remain immutable and may not
+be used for tuning.
+
+See the [official-source boundary](IDENTITY_THEFT_IMPERSONATION_SOURCE_BOUNDARY.md).
+
+## Next category: Misinformation & Fake News
+
+The next phase will replace the current 41.67%-accuracy component with a frozen,
+human-review-only evidence router. It will first decide whether the content
+makes a checkable factual claim, then compare that claim with dated, attributable
+evidence. The planned boundaries are:
+
+- opinion, satire, parody, fiction, questions, predictions, and clearly marked
+  uncertainty do not become misinformation merely because they are controversial;
+- corrections, counterspeech, quotation, reporting, and educational discussion
+  keep their context;
+- a factual claim may be labelled contradicted only when reliable evidence is
+  relevant, attributable, current enough, and actually addresses the same claim;
+- missing, stale, conflicting, weak, or unrelated evidence routes to `Uncertain`
+  and qualified fact-check review;
+- manipulated-media or source-provenance uncertainty cannot be guessed from
+  appearance alone; and
+- an LLM or retrieval result may supply bounded evidence, but cannot decide
+  truth, create automatic Allow/Block, or replace an established category owner.

@@ -1,0 +1,85 @@
+{
+  "version": "2026.09-identity-theft-impersonation-v2-rc2-development",
+  "records": 480,
+  "unique_texts": 480,
+  "prior_development_overlap": 0,
+  "accuracy": 1.0,
+  "identity_precision": 1.0,
+  "identity_recall": 1.0,
+  "safe_specificity": 1.0,
+  "f1": 1.0,
+  "minimum_group_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "action_contract_failures": 0,
+  "category_mix_failures": 0,
+  "data_contract_failures": 0,
+  "authority_contract_failures": 0,
+  "processing_errors": 0,
+  "group_results": {
+    "established_owner_isolation": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "natural_first_person_impersonation": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "natural_identity_theft_transactions": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "natural_safe_reporting_parody_and_training": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "natural_third_person_and_company_impersonation": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "natural_uncertain_impersonation": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "natural_weak_claims_without_misuse": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "rc1_core_contract_regression": {
+      "records": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    }
+  },
+  "gates": {
+    "accuracy": true,
+    "identity_precision": true,
+    "identity_recall": true,
+    "safe_specificity": true,
+    "f1": true,
+    "minimum_group_accuracy": true,
+    "action_contract": true,
+    "category_mix_contract": true,
+    "data_contract": true,
+    "authority_contract": true,
+    "processing_contract": true,
+    "zero_prior_development_overlap": true
+  },
+  "passed_development_gate": true,
+  "rc1_independent_examples_used": false,
+  "rc1_individual_predictions_used": false,
+  "real_identity_documents_used": false,
+  "raw_credentials_used": false,
+  "complete_personal_identifiers_used": false,
+  "external_provider_used": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "dataset_sha256": "bdd970858fd3ed0d31d9d7c4b000c8af74c4d37880a972811c70d09867c5b930"
+}

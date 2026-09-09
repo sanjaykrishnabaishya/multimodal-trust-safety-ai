@@ -1,0 +1,31 @@
+{
+  "version": "2026.09-identity-theft-impersonation-v2-rc3",
+  "component": "Identity Theft & Impersonation",
+  "base_policy": "2026.09-identity-theft-impersonation-v2-rc2",
+  "purpose": "RC3 review-only routing that fails closed when plausible identity misuse has incomplete identity, authorization, provenance, or authenticity evidence",
+  "rules": [
+    {"id": "ITI-001", "decision": "Identity Theft & Impersonation", "condition": "A current account, transaction, access, benefit, communication, or victim-impact act is paired with unauthorized use of another person's identity, information, credentials, or account."},
+    {"id": "ITI-002", "decision": "Identity Theft & Impersonation", "condition": "A current profile, message, listing, caller, or account deceptively poses as a person, government entity, business, or representative and includes an account-use, contact, access, transaction, or victim-impact act."},
+    {"id": "ITI-003", "decision": "Identity Theft & Impersonation", "condition": "Natural first-person and reordered forms satisfy the same two-part evidence contract only when deceptive identity and active misuse are both present."},
+    {"id": "ITI-004", "decision": "Uncertain", "condition": "Plausible identity misuse fails closed when identity, authorization, consent, provenance, authenticity, deceptive intent, source availability, or evidence completeness is unresolved."},
+    {"id": "ITI-005", "decision": "No override", "condition": "Documented authorization, an owner-approved representative, or a platform-verified official account is established without contradictory evidence."},
+    {"id": "ITI-006", "decision": "No override", "condition": "Clearly labelled parody, satire, fan content, role-play, fiction, reporting, education, prevention, research, or victim-recovery guidance has no active deception or identity misuse."},
+    {"id": "ITI-007", "decision": "Fail closed", "condition": "A name, face, photograph, voice, logo, resemblance, self-claim, or model prediction alone cannot establish identity, authorization, account ownership, deception, or impersonation."}
+  ],
+  "data_contract": {
+    "real_identity_documents_allowed": false,
+    "raw_credentials_allowed": false,
+    "complete_personal_identifiers_allowed": false,
+    "face_recognition_allowed": false,
+    "voice_identity_matching_allowed": false,
+    "biometric_embeddings_allowed": false,
+    "external_provider_transmission_allowed": false,
+    "automatic_account_suspension_allowed": false,
+    "automatic_enforcement_allowed": false
+  },
+  "source_boundary": {
+    "ftc_identity_theft": "https://consumer.ftc.gov/articles/what-know-about-identity-theft",
+    "ftc_impersonation_rule": "https://www.ftc.gov/legal-library/browse/rules/impersonation-government-businesses-rule",
+    "nist_digital_identity_guidelines": "https://pages.nist.gov/800-63-4/"
+  }
+}

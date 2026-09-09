@@ -57,8 +57,8 @@ An outside AI is only an adviser. It is never the boss.
 
 | What we measured | Actual result | What it means |
 | --- | ---: | --- |
-| Backend automated tests | **214/214 passed** | Every automated regression check passed in the last full run. |
-| Test success rate | **100%** | 214 divided by 214. This is test success, not total real-world accuracy. |
+| Backend automated tests | **228/228 passed** | Every automated regression check passed in the last full run. |
+| Test success rate | **100%** | 228 divided by 228. This is test success, not total real-world accuracy. |
 | Local API requests | **95/95 succeeded** | Every request in the small performance check returned a valid moderation result. |
 | Local request success rate | **100%** | No request failed in that 95-request check. |
 | Simulated users | **1, 5, and 10** | Ten is the largest local group tested. It is not a production capacity promise. |
@@ -110,7 +110,7 @@ messy real world.
 | Invasion of Privacy | 100% synthetic accuracy | 720 | Passed guarded local review routing. |
 | Illegal Activities | 100% synthetic accuracy | 600 | Passed guarded review routing; not an automatic legal judgment. |
 | Publishing Private Information | 91.45% recall | 2,000 positive-only | No negative-set accuracy proof yet. |
-| Identity Theft & Impersonation | 58.33% synthetic accuracy; 20.83% recall | 192 | **Not ready.** |
+| Identity Theft & Impersonation | 100% synthetic accuracy, precision, recall, specificity, F1, and minimum-group accuracy | 1,320 unique | RC5 passed guarded, human-review-only routing; no biometric identity decision or automatic suspension. |
 | Misinformation & Fake News | 41.67% exact accuracy | 36 | **Not ready.** |
 | Spam, Scam & Phishing | 99.22% external accuracy | 774 | Strong message-level evidence; full product proof is separate. |
 | Intellectual Property Infringement | 100% synthetic accuracy | 720 | Passed guarded, qualified-review-only routing; it is not a legal judgment or automatic takedown. |
@@ -145,6 +145,11 @@ plain-language rules in [the moderation rulebook](docs/MODERATION_RULES.md).
 - Category-owner guards stop unrelated specialists from changing a decision.
 - Unknown age, consent, identity, licence, legal status, or provenance cannot
   be guessed by a model.
+- Identity routing now requires deceptive representation plus active misuse, or
+  unauthorized identity/credential material plus concrete account, financial,
+  access, communication, benefit, or care impact. Incomplete authority or
+  identity evidence goes to review; a face, voice, name, logo, or resemblance
+  alone is not proof.
 - Intellectual-property routing now requires a protected item plus a current
   unauthorized rights-impacting act. A logo, title, style, watermark, or claim
   alone is not treated as proof, and legal exceptions go to qualified review.
@@ -213,8 +218,9 @@ instructions.
 
 ## Next category
 
-The next planned category is **Identity Theft & Impersonation**. It will look
-for deceptive impersonation or misuse of identity and credentials, while
-protecting clearly authorized representation, parody, fan content, reporting,
-and ordinary identity discussion. Unclear identity or authorization will go to
-human review; the tool will not identify a person from appearance alone.
+The next planned category is **Misinformation & Fake News**. It will require a
+checkable factual claim plus reliable supporting or contradicting evidence.
+Opinion, satire, fiction, questions, predictions, and corrections will not be
+treated as false claims merely because they contain strong words. Missing,
+stale, conflicting, or low-quality evidence will route to `Uncertain` and
+human fact-check review; an LLM will not decide truth by itself.
