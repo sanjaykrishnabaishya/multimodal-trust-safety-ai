@@ -63,6 +63,12 @@ from app.services.intellectual_property_v1_rc1_service import (
 from app.services.intellectual_property_v1_rc1_fusion import (
     get_intellectual_property_v1_rc1_readiness,
 )
+from app.services.identity_theft_impersonation_v2_rc5_service import (
+    get_identity_theft_impersonation_v2_rc5_status,
+)
+from app.services.identity_theft_impersonation_v2_rc5_fusion import (
+    get_identity_theft_impersonation_v2_rc5_readiness,
+)
 from app.services.moderation_service import (
     combine_extracted_signals,
 )
@@ -234,6 +240,10 @@ def moderation_health() -> dict:
         "intellectual_property_v1_rc1": {
             **get_intellectual_property_v1_rc1_status(),
             "readiness": get_intellectual_property_v1_rc1_readiness(),
+        },
+        "identity_theft_impersonation_v2_rc5": {
+            **get_identity_theft_impersonation_v2_rc5_status(),
+            "readiness": get_identity_theft_impersonation_v2_rc5_readiness(),
         },
     }
 

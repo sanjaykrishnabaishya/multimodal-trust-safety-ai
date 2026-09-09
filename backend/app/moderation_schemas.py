@@ -167,6 +167,19 @@ class ModerationResponse(
 
     intellectual_property_automatic_enforcement_allowed: bool = False
 
+    identity_theft_impersonation_v2_rc5_used: bool = False
+
+    identity_theft_impersonation_v2_rc5: dict[
+        str,
+        Any,
+    ] = Field(default_factory=dict)
+
+    identity_theft_impersonation_v2_rc5_fusion_status: str = "not_evaluated"
+
+    identity_automatic_account_suspension_allowed: bool = False
+
+    identity_automatic_enforcement_allowed: bool = False
+
     retrieved_evidence: list[
         dict[str, Any]
     ] = Field(

@@ -117,6 +117,11 @@ def test_moderation_health_endpoint(
     assert result["intellectual_property_v1_rc1"]["external_provider_used"] is False
     assert result["intellectual_property_v1_rc1"]["automatic_takedown_allowed"] is False
     assert result["intellectual_property_v1_rc1"]["automatic_enforcement_allowed"] is False
+    assert result["identity_theft_impersonation_v2_rc5"]["version"] == "identity-theft-impersonation-v2-rc5"
+    assert result["identity_theft_impersonation_v2_rc5"]["readiness"]["ready"] is True
+    assert result["identity_theft_impersonation_v2_rc5"]["external_provider_used"] is False
+    assert result["identity_theft_impersonation_v2_rc5"]["automatic_account_suspension_allowed"] is False
+    assert result["identity_theft_impersonation_v2_rc5"]["automatic_enforcement_allowed"] is False
 
 
 def test_moderation_policy_registry_exposes_all_19_categories(

@@ -1,6 +1,6 @@
 # TrustScopeAI technical decisions
 
-Updated: 2026-09-07
+Updated: 2026-09-09
 
 This file explains why the project uses its current tools. The words are kept
 simple so a new learner can understand the main idea.
@@ -83,6 +83,12 @@ the local result and may send the case to a human.
   exploitative media.
 - Malicious Programs never executes code, opens archives, or stores payloads,
   credentials, or live infrastructure.
+- Identity Theft & Impersonation stores no real identity document, raw
+  credential, complete personal identifier, face/voice embedding, or private
+  complaint. Face and voice recognition, appearance-based identity inference,
+  external-provider identity decisions, automatic suspension, and automatic
+  enforcement are disabled. The older low-recall detector is visible only as
+  supporting evidence; frozen RC5 owns identity routing.
 - Intellectual Property stores only synthetic descriptions and aggregate
   scores. It does not store copied works or claimant documents, decide licence
   validity or legal exceptions, use an external provider, or issue automatic

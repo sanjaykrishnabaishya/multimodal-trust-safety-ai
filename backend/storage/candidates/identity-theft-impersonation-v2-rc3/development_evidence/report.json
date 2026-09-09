@@ -1,0 +1,70 @@
+{
+  "version": "2026.09-identity-theft-impersonation-v2-rc3-development",
+  "records": 400,
+  "unique_texts": 400,
+  "prior_development_overlap": 0,
+  "accuracy": 1.0,
+  "identity_precision": 1.0,
+  "identity_recall": 1.0,
+  "safe_specificity": 1.0,
+  "f1": 1.0,
+  "minimum_group_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "action_contract_failures": 0,
+  "category_mix_failures": 0,
+  "data_contract_failures": 0,
+  "authority_contract_failures": 0,
+  "processing_errors": 0,
+  "group_results": {
+    "aggregate_incomplete_evidence_boundary": {
+      "records": 80,
+      "correct": 80,
+      "accuracy": 1.0
+    },
+    "authorized_reporting_and_parody_boundary": {
+      "records": 80,
+      "correct": 80,
+      "accuracy": 1.0
+    },
+    "established_owner_isolation": {
+      "records": 80,
+      "correct": 80,
+      "accuracy": 1.0
+    },
+    "natural_and_canonical_positive_regression": {
+      "records": 80,
+      "correct": 80,
+      "accuracy": 1.0
+    },
+    "weak_and_ordinary_identity_boundary": {
+      "records": 80,
+      "correct": 80,
+      "accuracy": 1.0
+    }
+  },
+  "gates": {
+    "accuracy": true,
+    "identity_precision": true,
+    "identity_recall": true,
+    "safe_specificity": true,
+    "f1": true,
+    "minimum_group_accuracy": true,
+    "action_contract": true,
+    "category_mix_contract": true,
+    "data_contract": true,
+    "authority_contract": true,
+    "processing_contract": true,
+    "zero_prior_development_overlap": true
+  },
+  "passed_development_gate": true,
+  "rc2_independent_examples_used": false,
+  "rc2_individual_predictions_used": false,
+  "real_identity_documents_used": false,
+  "raw_credentials_used": false,
+  "complete_personal_identifiers_used": false,
+  "external_provider_used": false,
+  "automatic_enforcement_allowed": false,
+  "connected_to_live_moderation": false,
+  "dataset_sha256": "00f6ce331216b1789d602f75b483d13b17db4cb1cde51b645d76c43402659cf2"
+}

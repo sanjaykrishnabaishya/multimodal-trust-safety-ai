@@ -16,6 +16,10 @@ from app.services.private_information_service import (
 from app.services.identity_impersonation_service import (
     analyze_identity_impersonation,
 )
+from app.services.identity_theft_impersonation_v2_rc5_fusion import (
+    analyze_identity_theft_impersonation_v2_rc5_for_fusion,
+    apply_identity_theft_impersonation_v2_rc5_guarded_fusion,
+)
 from app.services.targeted_threat_service import (
     analyze_targeted_threat,
 )
@@ -811,6 +815,13 @@ def fuse_moderation_decision(
         )
     )
 
+    identity_theft_impersonation_v2_rc5_analysis = (
+        analyze_identity_theft_impersonation_v2_rc5_for_fusion(
+            text,
+            input_sources,
+        )
+    )
+
 
     private_information_analysis = (
         analyze_private_information(
@@ -1201,22 +1212,9 @@ def fuse_moderation_decision(
         )
 
         if category == NORMAL_CATEGORY:
-            category = identity_category
-            severity = "High"
-            action = "Refer to human review"
-            confidence = identity_confidence
-            human_review_required = True
-
-            reason = (
-                "Text signals suggest possible "
-                "identity theft or impersonation. "
-                "The text-only specialist failed "
-                "its independent recall target, so "
-                "this is supporting evidence only. "
-                "Human review must verify identity "
-                "ownership, authorization, deception, "
-                "and parody status."
-            )
+            # The legacy detector failed its recall gate. It remains visible
+            # as supporting evidence, but frozen V2 RC5 owns identity routing.
+            pass
 
         elif (
             category == SPAM_CATEGORY
@@ -1648,6 +1646,31 @@ def fuse_moderation_decision(
         intellectual_property_v1_rc1_fusion["decision_applied"]
     )
 
+    identity_theft_impersonation_v2_rc5_fusion = (
+        apply_identity_theft_impersonation_v2_rc5_guarded_fusion(
+            category=category,
+            severity=severity,
+            action=action,
+            confidence=confidence,
+            human_review_required=human_review_required,
+            reason=reason,
+            matched_signals=matched_signals,
+            analysis=identity_theft_impersonation_v2_rc5_analysis,
+        )
+    )
+    category = str(identity_theft_impersonation_v2_rc5_fusion["category"])
+    severity = str(identity_theft_impersonation_v2_rc5_fusion["severity"])
+    action = str(identity_theft_impersonation_v2_rc5_fusion["action"])
+    confidence = float(identity_theft_impersonation_v2_rc5_fusion["confidence"])
+    human_review_required = bool(
+        identity_theft_impersonation_v2_rc5_fusion["human_review_required"]
+    )
+    reason = str(identity_theft_impersonation_v2_rc5_fusion["reason"])
+    matched_signals = list(identity_theft_impersonation_v2_rc5_fusion["matched_signals"])
+    identity_theft_impersonation_v2_rc5_applied = bool(
+        identity_theft_impersonation_v2_rc5_fusion["decision_applied"]
+    )
+
     fact_check_result: dict[str, Any]
     fact_check_error = ""
 
@@ -1807,7 +1830,7 @@ def fuse_moderation_decision(
                 else []
             )
             + (
-                ["identity_impersonation_detector"]
+                ["identity_impersonation_legacy_support"]
                 if identity_impersonation_detected
                 else []
             )
@@ -1879,6 +1902,11 @@ def fuse_moderation_decision(
             + (
                 ["intellectual_property_v1_rc1"]
                 if intellectual_property_v1_rc1_applied
+                else []
+            )
+            + (
+                ["identity_theft_impersonation_v2_rc5"]
+                if identity_theft_impersonation_v2_rc5_applied
                 else []
             )
             + (
@@ -1989,6 +2017,17 @@ def fuse_moderation_decision(
         "identity_impersonation": (
             identity_impersonation_analysis
         ),
+        "identity_theft_impersonation_v2_rc5_used": (
+            identity_theft_impersonation_v2_rc5_applied
+        ),
+        "identity_theft_impersonation_v2_rc5": (
+            identity_theft_impersonation_v2_rc5_analysis
+        ),
+        "identity_theft_impersonation_v2_rc5_fusion_status": (
+            identity_theft_impersonation_v2_rc5_fusion["fusion_status"]
+        ),
+        "identity_automatic_account_suspension_allowed": False,
+        "identity_automatic_enforcement_allowed": False,
         "private_information_detector_used": (
             private_information_detected
         ),

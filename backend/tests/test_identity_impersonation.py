@@ -33,11 +33,11 @@ def test_identity_signal_is_sent_for_review():
         == IDENTITY_CATEGORY
     )
 
-    assert result["confidence"] <= 0.75
+    assert result["confidence"] == 0.94
 
     assert (
         result["action"]
-        == "Refer to human review"
+        == "Restrict account activity and send for identity review"
     )
 
     assert (
@@ -51,6 +51,10 @@ def test_identity_signal_is_sent_for_review():
         ]
         is True
     )
+
+    assert result["identity_theft_impersonation_v2_rc5_used"] is True
+    assert result["identity_automatic_account_suspension_allowed"] is False
+    assert result["identity_automatic_enforcement_allowed"] is False
 
 
 def test_phishing_remains_primary_category():

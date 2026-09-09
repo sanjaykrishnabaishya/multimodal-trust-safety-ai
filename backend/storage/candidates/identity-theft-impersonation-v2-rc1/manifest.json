@@ -1,0 +1,104 @@
+{
+  "candidate": "identity-theft-impersonation-v2-rc1",
+  "component": "Identity Theft & Impersonation",
+  "candidate_type": "local deterministic evidence-aware identity review router",
+  "frozen_at_utc": "2026-09-07T10:32:15.724349+00:00",
+  "development_gate_passed": true,
+  "development_metrics": {
+    "records": 600,
+    "unique_texts": 600,
+    "accuracy": 1.0,
+    "identity_precision": 1.0,
+    "identity_recall": 1.0,
+    "safe_specificity": 1.0,
+    "f1": 1.0,
+    "minimum_group_accuracy": 1.0,
+    "action_contract_failures": 0,
+    "category_mix_failures": 0,
+    "data_contract_failures": 0,
+    "authority_contract_failures": 0,
+    "processing_errors": 0
+  },
+  "artifacts": [
+    {
+      "relative_path": "source_snapshot/identity_theft_impersonation_v2_rc1_service.py",
+      "size_bytes": 14605,
+      "sha256": "a90a6b6e8c2cd968fadf345f3c1fb7c0e0b7fbf93053a8d5c6c11a5b64268f88"
+    },
+    {
+      "relative_path": "policy_snapshot/identity_theft_impersonation_v2_rc1_policy.json",
+      "size_bytes": 2804,
+      "sha256": "ce39e97c757e4d98cce8fb7e826586d39e0f72ea66c9bc9e2ac15183de04f1ef"
+    },
+    {
+      "relative_path": "source_snapshot/evaluate_identity_theft_impersonation_v2_rc1_development.py",
+      "size_bytes": 17610,
+      "sha256": "65755c7c7b909cf74a86b32ca99cadd0161fc6acf138fbc44085adc23d648591"
+    },
+    {
+      "relative_path": "source_snapshot/freeze_identity_theft_impersonation_v2_rc1.py",
+      "size_bytes": 6787,
+      "sha256": "5cb3c22d2278f66f7e5efda9d994d7df2b06349f953d270fdb05070182bbf117"
+    },
+    {
+      "relative_path": "source_boundary/IDENTITY_THEFT_IMPERSONATION_SOURCE_BOUNDARY.md",
+      "size_bytes": 1655,
+      "sha256": "d328e519290334ae6d2ec4b6182b2328de5e167880064af7d3f640a07c409d00"
+    },
+    {
+      "relative_path": "development/development.csv",
+      "size_bytes": 150929,
+      "sha256": "cca2b8e53ac79fdab7cde076ff5ba10ee553d8747bbdd2e3ca2c468b520df4bf"
+    },
+    {
+      "relative_path": "development_evidence/report.json",
+      "size_bytes": 3028,
+      "sha256": "9446bd85bca35e24e93c97f358c402a87de033629a87958968a213d2803f59e8"
+    }
+  ],
+  "independent_gate_frozen_before_holdout": {
+    "minimum_accuracy": 0.95,
+    "minimum_identity_precision": 0.97,
+    "minimum_identity_recall": 0.95,
+    "minimum_safe_specificity": 0.99,
+    "minimum_f1": 0.96,
+    "minimum_group_accuracy": 0.92,
+    "maximum_action_contract_failures": 0,
+    "maximum_category_mix_failures": 0,
+    "maximum_data_contract_failures": 0,
+    "maximum_authority_contract_failures": 0,
+    "maximum_processing_errors": 0,
+    "require_zero_development_overlap": true,
+    "require_frozen_source_hashes": true,
+    "require_no_raw_holdout_storage": true
+  },
+  "independent_holdout_created_before_freeze": false,
+  "independent_holdout_used_before_freeze": false,
+  "independent_holdout_may_modify_rc1": false,
+  "real_identity_documents_used": false,
+  "raw_credentials_used": false,
+  "complete_personal_identifiers_used": false,
+  "face_recognition_used": false,
+  "voice_identity_matching_used": false,
+  "biometric_embeddings_used": false,
+  "appearance_based_identity_inference_allowed": false,
+  "external_provider_used": false,
+  "external_transmission_allowed": false,
+  "permitted_active_outputs": [
+    "Identity Theft & Impersonation",
+    "Uncertain"
+  ],
+  "required_identity_action": "Restrict account activity and send for identity review",
+  "human_review_required": true,
+  "independently_validated": false,
+  "eligible_for_guarded_live_integration": false,
+  "connected_to_live_moderation": false,
+  "automatic_account_suspension_allowed": false,
+  "automatic_enforcement_allowed": false,
+  "evaluation_reporting_contract": {
+    "store_raw_holdout_text": false,
+    "store_individual_predictions": false,
+    "print_individual_predictions": false,
+    "report_aggregate_metrics_only": true
+  }
+}
