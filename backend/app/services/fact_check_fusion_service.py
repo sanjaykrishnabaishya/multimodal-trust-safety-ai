@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import math
 import re
+from urllib.parse import urlparse
 from typing import Any
 
 from app.policy_config import ModerationCategory
@@ -9,6 +11,7 @@ from app.services.fact_check_source_registry import (
     build_fact_check_source_plan,
 )
 from app.services.structured_claim_service import parse_structured_claim
+from app.services.fact_check_context_guard import context_review_reason
 
 
 NORMAL_CATEGORY = ModerationCategory.NORMAL_IGNORE.value
@@ -181,6 +184,27 @@ def analyze_fact_check_for_fusion(
     text: str,
     current_category: str,
 ) -> dict[str, Any]:
+    if current_category == NORMAL_CATEGORY:
+        context_reason = context_review_reason(normalize_text(text))
+        if context_reason:
+            return {
+                **build_skipped_result(context_reason),
+                # Fusion consumes this flag for review routing; no evidence
+                # provider or model has run on this context-only path.
+                "fact_check_analysis_used": True,
+                "decision_override_allowed": True,
+                "category": UNCERTAIN_CATEGORY,
+                "evidence_status": "NOT_ENOUGH_INFO",
+                "action": "Refer to human review",
+                "human_review_required": True,
+                "analysis": {
+                    "reason": context_reason,
+                    "context_guard_used": True,
+                    "evidence_provider_used": False,
+                    "evidence": [],
+                    "warnings": [],
+                },
+            }
     should_run, route_reason = should_run_fact_check(
         text=text,
         current_category=current_category,
@@ -189,19 +213,72 @@ def analyze_fact_check_for_fusion(
     if not should_run:
         return build_skipped_result(route_reason)
 
-    analysis = analyze_fact_check(text)
+    try:
+        analysis = analyze_fact_check(text)
+    except Exception:
+        # Fail closed at this optional dependency boundary. Never expose
+        # exception text: providers may include private claims or credentials.
+        analysis = {"reason": "Fact-check evidence service failed."}
+
+    if not isinstance(analysis, dict):
+        analysis = {"reason": "Fact-check evidence response was malformed."}
 
     evidence_status = normalize_text(
         analysis.get("evidence_status", "NOT_ENOUGH_INFO")
     ).upper()
 
-    confidence = min(
-        0.80,
-        max(
-            0.0,
-            float(analysis.get("confidence", 0.50)),
-        ),
-    )
+    try:
+        raw_confidence = analysis.get("confidence")
+        confidence = float(raw_confidence)
+        valid_confidence = (
+            not isinstance(raw_confidence, bool)
+            and math.isfinite(confidence)
+            and 0.0 <= confidence <= 1.0
+        )
+    except (TypeError, ValueError, OverflowError):
+        confidence, valid_confidence = 0.0, False
+
+    evidence = analysis.get("evidence")
+    attributable_aligned_evidence = False
+    if isinstance(evidence, list):
+        for item in evidence:
+            if not isinstance(item, dict):
+                continue
+            try:
+                url = urlparse(str(item.get("source_url", "")))
+                attributable_aligned_evidence = (
+                    item.get("alignment_passed") is True
+                    and bool(item.get("source_name"))
+                    and url.scheme in {"https", "http"}
+                    and bool(url.hostname)
+                    and not url.username and not url.password
+                )
+            except ValueError:
+                continue
+            if attributable_aligned_evidence:
+                break
+
+    # This checks the internal handoff, not the truth of a source. Source
+    # quality, dates and claim matching remain the evidence engine's job.
+    if (
+        not valid_confidence
+        or analysis.get("available") is not True
+        or analysis.get("evidence_conflict_detected") is not False
+        or not attributable_aligned_evidence
+        or evidence_status not in {"SUPPORTS", "REFUTES"}
+    ):
+        evidence_status = "NOT_ENOUGH_INFO"
+        confidence = 0.0
+        analysis = {
+            "available": False,
+            "evidence_status": evidence_status,
+            "handoff_validation": "review_required",
+            "reason": "Fact-check evidence could not be validated; human review is required.",
+            "confidence": 0.0,
+            "evidence": [],
+            "warnings": [],
+        }
+    confidence = min(0.80, confidence)
 
     if evidence_status == "SUPPORTS":
         category = NORMAL_CATEGORY
