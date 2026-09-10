@@ -218,7 +218,12 @@ instructions.
 
 ## Next category
 
-The next planned category is **Misinformation & Fake News**. It will require a
+Misinformation work has started with **Phase 9A: safer evidence handoff**.
+See [the phase scope, rules and limitations](docs/MISINFORMATION_HANDOFF_STATUS.md).
+This adds reliability checks, not a new real-world accuracy result. Next is
+claim-routing and source-quality validation (Phase 9B).
+
+The current category is **Misinformation & Fake News**. It will require a
 checkable factual claim plus reliable supporting or contradicting evidence.
 Opinion, satire, fiction, questions, predictions, and corrections will not be
 treated as false claims merely because they contain strong words. Missing,
