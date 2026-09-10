@@ -11,6 +11,7 @@ from app.services.fact_check_source_registry import (
     build_fact_check_source_plan,
 )
 from app.services.structured_claim_service import parse_structured_claim
+from app.services.fact_check_context_guard import context_review_reason
 
 
 NORMAL_CATEGORY = ModerationCategory.NORMAL_IGNORE.value
@@ -183,6 +184,27 @@ def analyze_fact_check_for_fusion(
     text: str,
     current_category: str,
 ) -> dict[str, Any]:
+    if current_category == NORMAL_CATEGORY:
+        context_reason = context_review_reason(normalize_text(text))
+        if context_reason:
+            return {
+                **build_skipped_result(context_reason),
+                # Fusion consumes this flag for review routing; no evidence
+                # provider or model has run on this context-only path.
+                "fact_check_analysis_used": True,
+                "decision_override_allowed": True,
+                "category": UNCERTAIN_CATEGORY,
+                "evidence_status": "NOT_ENOUGH_INFO",
+                "action": "Refer to human review",
+                "human_review_required": True,
+                "analysis": {
+                    "reason": context_reason,
+                    "context_guard_used": True,
+                    "evidence_provider_used": False,
+                    "evidence": [],
+                    "warnings": [],
+                },
+            }
     should_run, route_reason = should_run_fact_check(
         text=text,
         current_category=current_category,

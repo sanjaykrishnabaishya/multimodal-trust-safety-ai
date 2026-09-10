@@ -220,8 +220,10 @@ instructions.
 
 Misinformation work has started with **Phase 9A: safer evidence handoff**.
 See [the phase scope, rules and limitations](docs/MISINFORMATION_HANDOFF_STATUS.md).
-This adds reliability checks, not a new real-world accuracy result. Next is
-claim-routing and source-quality validation (Phase 9B).
+This adds reliability checks, not a new real-world accuracy result.
+[Phase 9B](docs/MISINFORMATION_CONTEXT_STATUS.md) adds conservative context
+review for mixed claims. Next is source-quality validation and a separately
+labeled evidence-backed evaluation.
 
 The current category is **Misinformation & Fake News**. It will require a
 checkable factual claim plus reliable supporting or contradicting evidence.
